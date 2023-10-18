@@ -1,7 +1,7 @@
 const EventsCsExpo: React.FC = () => {
     return (
         <div>
-            <p>CS Expo</p>
+            <p>cs expo</p>
         </div>
     );
 };

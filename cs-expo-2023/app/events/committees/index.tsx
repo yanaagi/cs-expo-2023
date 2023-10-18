@@ -1,7 +1,7 @@
 const EventsCommittees: React.FC = () => {
     return (
         <div>
-            <p>Committees</p>
+            <p>committees</p>
         </div>
     );
 };

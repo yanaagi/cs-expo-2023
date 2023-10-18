@@ -1,7 +1,7 @@
 const EventsDevDay: React.FC = () => {
     return (
         <div>
-            <p>Dev Day</p>
+            <p>dev day</p>
         </div>
     );
 };
