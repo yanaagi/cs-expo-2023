@@ -2,7 +2,7 @@ const EventsDevDay: React.FC = () => {
     return (
         <main>
             <div className = "NavBar">
-                {/*INSERT NAV BAR HERE*/}
+                {/*INSERT NAV BAR HERE!!!*/}
             </div>
 
             <div className = "Dev-Day">

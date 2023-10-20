@@ -2,7 +2,7 @@ const EventsCsExpo: React.FC = () => {
     return (
         <main>
             <div className = "NavBar">
-                {/*INSERT NAV BAR HERE*/}
+                {/*INSERT NAV BAR HERE!!!*/}
             </div>
 
             <div className = "CS-Expo">
