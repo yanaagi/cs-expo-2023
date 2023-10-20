@@ -1,13 +1,9 @@
-import EventsDevDay from "../dev-day";
+import React from 'react'
 
-import { NextPage } from "next";
-
-const PageEventsCsExpo:NextPage = () => {
-    return (
-        <section id="events-cs-expo">
-            <EventsDevDay/>
-        </section>
-    )
+export const EventsDevDay = () => {
+  return (
+    <div>Events Dev Day</div>
+  )
 }
 
-export default PageEventsCsExpo
+export default EventsDevDay

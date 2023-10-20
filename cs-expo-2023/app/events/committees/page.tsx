@@ -1,12 +1,9 @@
-import Committees from "../committees";
-import { NextPage } from "next";
+import React from 'react'
 
-const PageEventsCommittees:NextPage = () => {
-    return (
-        <section id="events-committees">
-            <Committees/>
-        </section>
-    )
+export const EventsCommittees = () => {
+  return (
+    <div>Events Committees</div>
+  )
 }
 
-export default PageEventsCommittees
+export default EventsCommittees

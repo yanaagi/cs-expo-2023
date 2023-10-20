@@ -1,12 +1,10 @@
-import EventsCsExpo from "../cs-expo";
-import { NextPage } from "next";
+import React from 'react'
 
-const PageEventsCsExpo:NextPage = () => {
-    return (
-        <section id="events-cs-expo">
-            <EventsCsExpo/>
-        </section>
-    )
+export const EventsCsExpo = () => {
+  return (
+    
+    <div>Events CS Expo</div>
+  )
 }
 
-export default PageEventsCsExpo
+export default EventsCsExpo

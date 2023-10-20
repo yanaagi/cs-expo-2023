@@ -1,11 +1,11 @@
-import HallOfFame from "../hall-of-fame";
-import { NextPage } from "next";
-const PageProjectHallOfFame:NextPage = () => {
+import React from 'react'
+
+const Projects = () => {
   return (
-    <section id="project-hall-of-fame">
-      <HallOfFame/>
-    </section>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div>Hall of Fame</div>
+    </main>
   )
 }
 
-export default PageProjectHallOfFame;
+export default Projects
