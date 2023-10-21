@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'coral-pink': '#FF5A5F',
+        'eerie-black': '#1B1C20',
+        'timberwolf': '#E0D9D3',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
