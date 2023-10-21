@@ -15,9 +15,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< Updated upstream
-      <body className={inter.className}>{children}</body>
-=======
       <head>
         {/* Add the Inter font link here */}
         <link
@@ -30,7 +27,6 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
->>>>>>> Stashed changes
     </html>
   );
 }

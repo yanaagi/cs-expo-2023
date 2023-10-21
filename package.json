@@ -1,10 +1,6 @@
 {
   "dependencies": {
     "bootstrap-icons": "^1.11.1",
-<<<<<<< Updated upstream
     "bootstrap-icons-react": "^1.0.0"
-=======
-    "react-icons": "^4.11.0"
->>>>>>> Stashed changes
   }
 }
