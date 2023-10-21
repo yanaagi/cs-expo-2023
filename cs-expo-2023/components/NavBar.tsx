@@ -17,7 +17,11 @@ const NavBar: React.FC = () => (
         />
       </Link>
       <div className="ml-auto">
+<<<<<<< Updated upstream
         <Link href="/events" className="px-4">Events</Link>
+=======
+        <Link href="/events" className="px-4 border-blue-100 border-2">Events</Link>
+>>>>>>> Stashed changes
         <Link href="/projects" className="px-4">Projects</Link>
         <Link href="/partners" className="px-4">Partners</Link>
       </div>

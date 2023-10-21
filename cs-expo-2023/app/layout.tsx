@@ -15,7 +15,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< Updated upstream
       <body className={inter.className}>{children}</body>
+=======
+      <head>
+        {/* Add the Inter font link here */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        />
+      </head>
+      <body>
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
+>>>>>>> Stashed changes
     </html>
   );
 }
