@@ -15,13 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-          <head>
-               {/* Add the Inter font link here */}
-                    <link
-                         rel="stylesheet"
-                         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-                    />
-          </head>
+      <head>
+        {/* Add the Inter font link here */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        />
+      </head>
       <body>
         <NavBar />
         {children}
