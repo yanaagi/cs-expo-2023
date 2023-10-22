@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Projects = () => {
+const HallOfFame = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>Hall of Fame</div>
@@ -8,4 +8,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default HallOfFame
