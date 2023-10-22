@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import PartnersHeader from '@/components/PartnersHeader';
+import ThesisPosterCard from '@/components/ThesisPosterCard';
 
 const Projects = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>Projects</div>
+  <main>
+    <PartnersHeader/> 
+    <ThesisPosterCard/>
     </main>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
