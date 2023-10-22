@@ -1,5 +1,18 @@
 # CS EXPO 2023 2.0
 
+# Table of Contents
+1. [Navigating the repository](#🧭navigating-the-repository)
+2. [Working with multiple developers](#👨‍👦‍👦working-with-multiple-developers)
+3. [Cloning the repository](#cloning-the-repository)
+4. [Staying up-to-date with the latest changes](#✅-staying-up-to-date-with-the-latest-changes)
+5. [Creating a Pull Request (PR)](#📢-creating-a-pull-request-pr)
+6. [Commit Message Example](#commit-message-example)
+7. [Go to the GitHub repository on your web browser](#🌐-go-to-the-github-repository-on-your-web-browser)
+8. [If going back to the ```main``` branch](#🔙-if-going-back-to-the-main-branch)
+9. [Always stay up-to-date with the ```main``` branch](#✅-always-stay-up-to-date-with-the-main-branch)
+
+<br>
+
 # 🧭Navigating the repository
 - [Projects](https://github.com/yanaagi/cs-expo-2023/projects)
   - This is where tasks are assigned and converted as issues; and their Todo, In Progress, and Done status are noted.
