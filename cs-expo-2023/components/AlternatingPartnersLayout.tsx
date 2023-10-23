@@ -65,22 +65,18 @@ interface AlternatingPartnersLayoutProps {
 
 const AlternatingPartnersLayout: React.FC<AlternatingPartnersLayoutProps> = ({ partners }) => {
   const alternatingPartners = [];
-  let i = 0;
 
-  while (i < partners.length) {
-    alternatingPartners.push(
-      <PartnersLeftLayout key={i} partner={partners[i]} />
-    );
-
-    i++;
-
-    if (i < partners.length) {
+  for (let i = 0; i < partners.length; i++) {
+    if (((i+1)%2)==1) {
+      alternatingPartners.push(
+        <PartnersLeftLayout key={i} partner={partners[i]} />
+      );
+    }
+    else {
       alternatingPartners.push(
         <PartnersRightLayout key={i} partner={partners[i]} />
       );
     }
-
-    i++;
   }
 
   return <>{alternatingPartners}</>;
