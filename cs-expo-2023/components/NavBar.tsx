@@ -83,7 +83,11 @@ const NavBar: React.FC = () => {
 								</span>
 							</button>
 							{showEventsDropdown && (
-								<div ref={dropdownRef} className="absolute mt-2 bg-white border shadow-lg rounded-md text-left font-normal min-w-[150px]">
+								<div ref={dropdownRef} className="absolute mt-2 bg-white border shadow-lg rounded-md text-left font-normal w-max">
+									<Link href="/events" className="block px-4 py-2" onClick={handleDropdownLinkClick}>
+										Overview
+									</Link>
+
 									<Link href="/events/dev-day" className="block px-4 py-2" onClick={handleDropdownLinkClick}>
 										Dev Day
 									</Link>
@@ -107,9 +111,17 @@ const NavBar: React.FC = () => {
 								</span>
 							</button>
 							{showProjectsDropdown && (
-							<div ref={dropdownRef} className="absolute mt-2 bg-white border shadow-lg rounded-md font-normal min-w-[150px]">
+							<div ref={dropdownRef} className="absolute mt-2 bg-white border shadow-lg rounded-md font-normal w-max">
+								<Link href="/projects" className="block px-4 py-2" onClick={handleDropdownLinkClick}>
+									Overview
+								</Link>
+
 								<Link href="/projects/hall-of-fame" className="block px-4 py-2" onClick={handleDropdownLinkClick}>
 									Hall of Fame
+								</Link>
+
+								<Link href="/projects/collections-of-projects" className="block px-4 py-2" onClick={handleDropdownLinkClick}>
+									Collections of Projects
 								</Link>
 							</div>
 							)}
