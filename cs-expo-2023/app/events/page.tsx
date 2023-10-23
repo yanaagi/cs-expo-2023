@@ -13,4 +13,4 @@ const EventsOverviewHeader = () => {
   )
 }
 
-export default EventsOverviewHeader
+export default EventsOverviewHeader;
