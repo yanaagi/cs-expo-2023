@@ -8,6 +8,7 @@ const partners = ["/kekw-kek.gif", "/kekl.jpg", "/kekw.jpg","/kekw-kek.gif","/ke
 
 const Partners: NextPage = () => {
   const partnerArray = Object.values(partnersData);
+  const partners = partnerArray.map(partnersData => partnersData.imagePath); // Assuming 'imagePath' is the correct property
 
   return (
     <main className="p-24">

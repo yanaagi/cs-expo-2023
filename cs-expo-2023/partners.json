@@ -27,7 +27,7 @@
       "twitter": "https://twitter.com/partner3",
       "instagram": "https://instagram.com/partner3",
       "intro": "Intro for Partner 3",
-      "imagePath": "/kekl.jpg"
+      "imagePath": "/kekw.jpg"
     },
     {
       "id": 4,
@@ -47,8 +47,18 @@
       "twitter": "https://twitter.com/partner5",
       "instagram": "https://instagram.com/partner5",
       "intro": "Intro for Partner 5",
-      "imagePath": "/kekl.jpg"
+      "imagePath": "/kekw.jpg"
     },
+    {
+      "id": 6,
+      "name": "Partner 6",
+      "Web": "https://partner6.com",
+      "facebook": "https://facebook.com/partner6",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Intro for Partner 6",
+      "imagePath": "/kekl.jpg"
+    },    
     {
       "id": 6,
       "name": "Partner 6",
