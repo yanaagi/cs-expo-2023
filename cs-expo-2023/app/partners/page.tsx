@@ -1,19 +1,42 @@
-import React, { PropsWithoutRef } from 'react'
-import {NextPage} from "next";
+import React from 'react';
+import { NextPage } from "next";
 import PartnersItemLayout from "../../components/PartnersItemLayout";
+import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
+import partnersData from '../../partners.json';
 
-const partners = ["/kekw-kek.gif", "/kekl.jpg", "/kekw.jpg"];
+const partners = ["/kekw-kek.gif", "/kekl.jpg", "/kekw.jpg","/kekw-kek.gif","/kekw-kek.gif","/kekw-kek.gif"];
 
-const Partners:NextPage = () => {
+const Partners: NextPage = () => {
+  const partnerArray = Object.values(partnersData);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        {
-          partners.map((item,index) => (<PartnersItemLayout {...{src:item}}/>))
-        }
+    <main className="p-24">
+      <div className="ms-28">
+        <h1 className="font-regular text-7xl m-0 mb-[-1.5rem]">our</h1>
+        <h2 className="font-black text-8xl m-0 mt-[-1rem]">PARTNERS</h2>
+        <div className="flex items-center justify-center p-24">
+          {partners.map((item, index) => (
+            <PartnersItemLayout key={index} src={item} />
+          ))}
+        </div>
+        <div>
+          <AlternatingPartnersLayout partners={partnerArray} />
+        </div>
+        <div>
+          <h2 className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MINOR PARTNERS</h2>
+          <div>
+            <AlternatingPartnersLayout partners={partnerArray} />
+          </div>
+        </div>
+        <div>
+          <h2 className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MEDIA PARTNERS</h2>
+          <div>
+            <AlternatingPartnersLayout partners={partnerArray} />
+          </div>
+        </div>
       </div>
     </main>
-  )
+  );
 }
 
-export default Partners
+export default Partners;
