@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from "next";
-import PartnersItemLayout from "../../components/PartnersItemLayout";
+import PartnersItemLayout from "../../components/PartnersIcon";
 import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
 import partnersData from '../../partners.json';
 
