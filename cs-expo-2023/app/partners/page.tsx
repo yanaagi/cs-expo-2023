@@ -4,8 +4,6 @@ import PartnersItemLayout from "../../components/PartnersItemLayout";
 import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
 import partnersData from '../../partners.json';
 
-const partners = ["/kekw-kek.gif", "/kekl.jpg", "/kekw.jpg","/kekw-kek.gif","/kekw-kek.gif","/kekw-kek.gif"];
-
 const Partners: NextPage = () => {
   const partnerArray = Object.values(partnersData);
   const partners = partnerArray.map(partnersData => partnersData.imagePath); // Assuming 'imagePath' is the correct property
