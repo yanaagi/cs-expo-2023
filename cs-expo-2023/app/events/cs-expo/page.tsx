@@ -6,7 +6,7 @@ import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 
 
-export const EventsDevDay = () => {
+export const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
 
     const changeButton = (buttonNumber: number) => { 
@@ -164,4 +164,4 @@ export const EventsDevDay = () => {
     );
 };
 
-export default EventsDevDay;
+export default EventsCSExpo;
