@@ -9,7 +9,7 @@ import ButtonComponent from "@/components/ButtonComponent";
 export const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
 
-    const changeButton = (buttonNumber) => {
+    const changeButton = (buttonNumber: number) => { 
         setCurrentButton(buttonNumber);
     };
 
