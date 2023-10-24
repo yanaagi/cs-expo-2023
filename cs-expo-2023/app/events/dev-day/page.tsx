@@ -9,7 +9,7 @@ import ButtonComponent from "@/components/ButtonComponent";
 export const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
 
-    const changeButton = (buttonNumber) => {
+    const changeButton = (buttonNumber: number) => {
         setCurrentButton(buttonNumber);
     };
 
@@ -40,6 +40,8 @@ export const EventsDevDay = () => {
                 <hr className="border-t-1 border-black mb-4" />
             <AboutComponent
                     customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     sampleText="Sample Photo"
