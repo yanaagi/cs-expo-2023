@@ -72,9 +72,11 @@ export const EventsDevDay = () => {
             startAt: 0,
             perView: 2,
         };
-        new Glide(".carousel-2022", config).mount();
-        new Glide(".carousel-2023", config).mount();
-    });
+        const glide2022 = new Glide(".carousel-2022", config);
+        glide2022.mount();
+        const glide2023 = new Glide(".carousel-2023", config);
+        glide2023.mount();
+    }, []);
 
     return (
         <main className="flex min-h-screen flex-col p-24">    
