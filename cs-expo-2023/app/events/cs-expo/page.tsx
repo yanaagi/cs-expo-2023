@@ -1,8 +1,18 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import PhotoComponent from "@/components/PhotoComponent";
+import AboutComponent from "@/components/AboutComponent";
+import ButtonComponent from "@/components/ButtonComponent";
 
-const EventsCsExpo = () => {
+
+export const EventsCSExpo = () => {
+    const [currentButton, setCurrentButton] = useState(1);
+
+    const changeButton = (buttonNumber: number) => { 
+        setCurrentButton(buttonNumber);
+    };
+
     useEffect(() => {
         const config = {
             type: "carousel",
@@ -11,13 +21,34 @@ const EventsCsExpo = () => {
         };
         new Glide(".carousel-2022", config).mount();
         new Glide(".carousel-2023", config).mount();
-    });
+    }, []); 
 
     return (
         <main className="flex min-h-screen flex-col p-24">
-            <div className="container"></div>
-            <div className="ms-28">
-                <h1 className="font-black text-8xl">PREVIOUS CS EXPOS</h1>
+        <div className="container">
+            <PhotoComponent 
+                    currentButton={currentButton}
+                    customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+            <ButtonComponent 
+                    currentButton={currentButton} 
+                    changeButton={changeButton} 
+                />
+                <h1 className="font-black text-8xl text-center mb-20">CS EXPO</h1>
+                <hr className="border-t-1 border-black mb-4" />
+            <AboutComponent
+                    customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    
+                    sampleText="Sample Photo"
+                />
+                <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
                 <div className="grid grid-cols-12 mt-8 me-12">
                     <div className="col-span-3">
                         <h1 className="font-bold text-5xl">2022</h1>
@@ -133,4 +164,4 @@ const EventsCsExpo = () => {
     );
 };
 
-export default EventsCsExpo;
+export default EventsCSExpo;
