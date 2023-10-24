@@ -56,7 +56,6 @@ export default function Home() {
 
   return (
       <main className="">
-        <Navbar />
         <div className="h-48">
           <h1 ref={textElementRef} className=" whitespace-pre-line inline-block leading-normal h-90 text-gray-900 p-40 text-5xl font-helvetica font-bold">
 
@@ -76,7 +75,6 @@ export default function Home() {
           nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
           vitae suscipit tellus.`}
                     button="/events/dev-day" />
-        <Footer />
       </main>
   );
 }
