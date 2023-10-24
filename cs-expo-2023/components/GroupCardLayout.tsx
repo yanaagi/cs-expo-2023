@@ -15,11 +15,11 @@ interface GroupCardProps {
 
 const GroupCard: React.FC<GroupCardProps> = ({ groupName, group }) => {
   return (
-    <div className="w-[300px] h-[400px] bg-stone-400 s-full flexbox ">
-      <div className="h-80 s-full">
-      
+    <div className="flex flex-col w-[300px] h-[400px] bg-stone-400 s-full justify-end">
+      <div className="flex s-full">
+        <p></p>
       </div>
-      <div className="h-20 bg-rose-500 s-full text-white text-center text-2xl font-bold font-['Helvetica Now Text ']">
+      <div className="flex h-[100px] bg-rose-500 s-full text-white text-start text-2xl font-bold font-['Helvetica Now Text ']">
         <h1>{groupName}</h1>
       </div>
     </div>
@@ -33,10 +33,10 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   const groupNames = Object.keys(groupData);
   const groupCards = [];
 
-  groupNames.forEach(groupName => {
+  groupNames.forEach((groupName, index) => {
     // console.log(groupData[groupName]);
     groupCards.push(
-      <GroupCard groupName={groupName} group={groupData[groupName]}/>
+      <GroupCard key={index} groupName={groupName} group={groupData[groupName]}/>
     )
   });
 
