@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from "next";
-import PartnersItemLayout from "../../components/PartnersIcon";
+import PartnerIconsLayout from "../../components/ParterIconsLayout";
 import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
 import partnersData from '../../partners.json';
 
@@ -14,9 +14,7 @@ const Partners: NextPage = () => {
         <h1 className="font-regular text-7xl m-0 mb-[-1.5rem]">our</h1>
         <h2 className="font-black text-8xl m-0 mt-[-1rem]">PARTNERS</h2>
         <div className="flex items-center justify-center p-24">
-          {partners.map((item, index) => (
-            <PartnersItemLayout key={index} src={item} />
-          ))}
+          <PartnerIconsLayout partners={partnerArray} />
         </div>
         <div>
           <AlternatingPartnersLayout partners={partnerArray} />
