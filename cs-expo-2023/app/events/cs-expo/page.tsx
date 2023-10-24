@@ -1,4 +1,4 @@
-import Carousel from "@/components/PreviousCarousel";
+import Carousel from "@/components/Carousel";
 
 const EventsCsExpo = () => {
     return (
