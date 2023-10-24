@@ -25,10 +25,18 @@ const PartnersLeftLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
         />
       )}
       <div className="flex flex-col items-center ml-2">
-        <a href={partner.Web} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.facebook} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.twitter} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.instagram} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
+        <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
+          <img src="" className="w-8 h-8 mx-auto"/>
+        </a>
+        <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center"> 
+          <img src="/facebook.svg" className="w-8 h-8"/>
+        </a>
+        <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/twitter-x.svg" className="w-8 h-8"/>
+        </a>
+        <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/instagram.svg" className="w-8 h-8"/>
+        </a>
       </div>
       <div className="font-regular ml-10 text-2xl">{partner.intro}</div>
     </div>
@@ -44,10 +52,18 @@ const PartnersRightLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
     <div className="flex items-center justify-end p-12">
       <div className="font-regular mr-10 text-2xl">{partner.intro}</div>
       <div className="flex flex-col items-center mr-2">
-        <a href={partner.Web} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.facebook} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.twitter} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
-        <a href={partner.instagram} target="_blank" className="w-8 h-8 bg-coral-pink rounded-full mb-2"></a>
+        <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
+          <img src="" className="w-8 h-8 mx-auto"/>
+        </a>
+        <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/facebook.svg" className="w-8 h-8"/>
+        </a>
+        <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/twitter-x.svg" className="w-8 h-8"/>
+        </a>
+        <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/instagram.svg" className="w-8 h-8"/>
+        </a>
       </div>
       {partner.imagePath && (
         <div
