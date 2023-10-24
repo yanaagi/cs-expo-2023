@@ -41,7 +41,11 @@ export const EventsDevDay = () => {
             <AboutComponent
                     customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    
                     sampleText="Sample Photo"
                 />
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
