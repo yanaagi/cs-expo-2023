@@ -32,7 +32,7 @@ interface GroupCardLayoutProps {
 }
 const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   const groupNames = Object.keys(groupData);
-  const groupCards = [];
+  const groupCards: React.JSX.Element[] = [];
 
   groupNames.forEach((groupName, index) => {
     groupCards.push(
