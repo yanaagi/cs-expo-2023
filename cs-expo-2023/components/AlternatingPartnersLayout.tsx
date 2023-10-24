@@ -24,18 +24,18 @@ const PartnersLeftLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
           style={backgroundImageStyle}
         />
       )}
-      <div className="flex flex-col items-center ml-2">
-        <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
-          <img src="/web.svg" className="w-7 h-7 mx-auto"/>
+      <div className="flex flex-col items-start ml-2">
+        <a href={partner.Web} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
+          <img src="/web.svg" className="w-5 h-5 mx-auto"/>
         </a>
-        <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center"> 
-          <img src="/facebook.svg" className="w-7 h-7"/>
+        <a href={partner.facebook} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center"> 
+          <img src="/facebook.svg" className="w-5 h-5"/>
         </a>
-        <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/twitter-x.svg" className="w-7 h-7"/>
+        <a href={partner.twitter} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/twitter-x.svg" className="w-5 h-5"/>
         </a>
-        <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/instagram.svg" className="w-7 h-7"/>
+        <a href={partner.instagram} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/instagram.svg" className="w-5 h-5"/>
         </a>
       </div>
       <div className="font-regular ml-10 text-2xl">{partner.intro}</div>
@@ -52,17 +52,17 @@ const PartnersRightLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
     <div className="flex items-center justify-end p-12">
       <div className="font-regular mr-10 text-2xl">{partner.intro}</div>
       <div className="flex flex-col items-center mr-2">
-        <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
-          <img src="/web.svg" className="w-7 h-7 mx-auto"/>
+        <a href={partner.Web} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
+          <img src="/web.svg" className="w-5 h-5 mx-auto"/>
         </a>
-        <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/facebook.svg" className="w-7 h-7"/>
+        <a href={partner.facebook} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/facebook.svg" className="w-5 h-5"/>
         </a>
-        <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/twitter-x.svg" className="w-7 h-7"/>
+        <a href={partner.twitter} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/twitter-x.svg" className="w-5 h-5"/>
         </a>
-        <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/instagram.svg" className="w-7 h-7"/>
+        <a href={partner.instagram} target="_blank" className="w-9 h-9 bg-coral-pink rounded-full mb-2 grid place-items-center">
+          <img src="/instagram.svg" className="w-5 h-5"/>
         </a>
       </div>
       {partner.imagePath && (
