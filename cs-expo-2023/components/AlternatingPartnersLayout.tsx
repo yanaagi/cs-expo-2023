@@ -26,16 +26,16 @@ const PartnersLeftLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
       )}
       <div className="flex flex-col items-center ml-2">
         <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
-          <img src="" className="w-8 h-8 mx-auto"/>
+          <img src="/web.svg" className="w-7 h-7 mx-auto"/>
         </a>
         <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center"> 
-          <img src="/facebook.svg" className="w-8 h-8"/>
+          <img src="/facebook.svg" className="w-7 h-7"/>
         </a>
         <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/twitter-x.svg" className="w-8 h-8"/>
+          <img src="/twitter-x.svg" className="w-7 h-7"/>
         </a>
         <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/instagram.svg" className="w-8 h-8"/>
+          <img src="/instagram.svg" className="w-7 h-7"/>
         </a>
       </div>
       <div className="font-regular ml-10 text-2xl">{partner.intro}</div>
@@ -53,16 +53,16 @@ const PartnersRightLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
       <div className="font-regular mr-10 text-2xl">{partner.intro}</div>
       <div className="flex flex-col items-center mr-2">
         <a href={partner.Web} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 my-2 grid place-items-center">
-          <img src="" className="w-8 h-8 mx-auto"/>
+          <img src="/web.svg" className="w-7 h-7 mx-auto"/>
         </a>
         <a href={partner.facebook} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/facebook.svg" className="w-8 h-8"/>
+          <img src="/facebook.svg" className="w-7 h-7"/>
         </a>
         <a href={partner.twitter} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/twitter-x.svg" className="w-8 h-8"/>
+          <img src="/twitter-x.svg" className="w-7 h-7"/>
         </a>
         <a href={partner.instagram} target="_blank" className="w-10 h-10 bg-coral-pink rounded-full mb-2 grid place-items-center">
-          <img src="/instagram.svg" className="w-8 h-8"/>
+          <img src="/instagram.svg" className="w-7 h-7"/>
         </a>
       </div>
       {partner.imagePath && (
