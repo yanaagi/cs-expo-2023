@@ -15,7 +15,7 @@ const PartnerIcon: React.FC<PartnerIconProps> = ({ partner }) => {
     <div>
       {partner.imagePath && (
         <div
-          className="flex-shrink-0 w-48 h-48 bg-blue-500 rounded-full ml-3"
+          className="flex-shrink-0 w-[170px] h-[170px] bg-blue-500 rounded-full ml-3"
           style={backgroundImageStyle}
         />
       )}
