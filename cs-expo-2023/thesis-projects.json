@@ -11,7 +11,8 @@
         ],
         "category": "IoT",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Adorables"
     },
     "AiM": {
         "thesisTitle": "Colorectal Disease Detection Using You Only Look Once Algorithm",
@@ -25,9 +26,10 @@
         ],
         "category": "Health",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "AiM"
     },
-    "Array Co": {
+    "Array-Co": {
         "thesisTitle": "Composite Restoration Using Image Recognition for Teeth Shade Matching Using Deep Learning",
         "abstract": "Accurately matching the shade of dental composite restorations to  natural teeth is a crucial aspect of dental treatment, as it can  significantly impact patient satisfaction and treatment outcomes.  However, the subjective nature of manual shade selection often  leads to shade mismatch, with reports suggesting that  approximately 35% of composite restorations fail on the first visit.  To address this problem, this study proposes a novel approach that  utilizes image processing and deep learning techniques for  objective and consistent dental shade matching. The developed  system employs Convolutional Neural Network (CNN)-based  MediaPipe Facial Landmark Detection and Support Vector  Machines (SVMs) for objective and consistent dental shade  matching. The system achieved an estimated accuracy of 90%  compared to traditional manual shade matching. The system has  scored an overall average of 4.58 on an initial survey using the ISO  25010 guidelines and 4.64 on a subsequent resurvey, indicating its  high agreeability and satisfiability in achieving objective and  consistent dental shade matching. The implementation and  validation of this application offer a significant technological  advancement in dental shade matching, reducing the likelihood of  shade mismatch. The findings have significant implications for  clinical practice, empowering dental professionals with a reliable  tool to improve patient care and satisfaction. This study emphasizes  the importance of incorporating advanced technology into clinical  practice, ultimately improving patient outcomes. ",
         "summary": "Summary3",
@@ -40,7 +42,8 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Array Co"
     },
     "Codebebs": {
         "thesisTitle": "SirenaTech: A Water Quality Testing Algorithm for Detecting the Potability of Water",
@@ -55,7 +58,8 @@
         ],
         "category": "IoT",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Codebebs"
     },
     "DEoS": {
         "thesisTitle": "A BROWSER EXTENSION FOR IDENTIFYING RELEVANT PRODUCT REVIEWS ON ONLINE SHOPPING PLATFORMS USING IMAGE AND NATURAL LANGUAGE PROCESSING ALGORITHMS",
@@ -69,7 +73,8 @@
         ],
         "category": "NLP",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "DEoS"
     },
     "Engeenz": {
         "thesisTitle": "Recognizance: An Instagram-Based Recommender System using Naïve Bayes Classifier with TensorFlow for T-Cup-Zone in the City of Manila",
@@ -84,9 +89,10 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Engeenz"
     },
-    "Hello World": {
+    "Hello-World": {
         "thesisTitle": "Bloodline: an Emergency Blood Resource Locator Implemented Using Contraction Hierarchies In OSRMV1 and GPS Tracking",
         "abstract": "This research paper aims to improve the blood bank system by enhancing data accuracy, organizational structure, inventory management, and path optimization. It utilizes OSRMv1, GPS technology, and advanced routing algorithms for better accuracy and efficient tracking. The study emphasizes important aspects like functional suitability, maintainability, performance efficiency, compatibility, usability, reliability, security, and portability. The research uses both developmental and descriptive methodologies, involving 50 diverse respondents. Evaluation methods include alpha testing, black box testing, white box testing, and Cronbach's alpha for questionnaire reliability. Beta testing with end-users in real-world scenarios is also conducted. Findings show high participant satisfaction across all categories, validating the effectiveness of the system enhancements. Users strongly agreed with the functional suitability (3.538), maintainability (3.475), performance efficiency (3.472), compatibility (3.625), usability (3.508), reliability (3.508), security (3.503), and portability (3.511) of the system. These positive responses demonstrate that the implemented enhancements have significantly improved the blood bank system.",
         "summary": "Summary3",
@@ -98,7 +104,8 @@
         ],
         "category": "Health",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Hello World"
     },
     "INNOV8": {
         "thesisTitle": "Name3",
@@ -113,7 +120,8 @@
         ],
         "category": "IoT",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "INNOV8"
     },
     "Javangers": {
         "thesisTitle": "ALGPT: An AI-based Mobile Application for Generating Solution Steps in Solving Algebraic Word Problems",
@@ -127,9 +135,10 @@
         ],
         "category": "Educ",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Javangers"
     },
-    "Midnight Coders": {
+    "Midnight-Coders": {
         "thesisTitle": "GoGreen: A Novel Approach to Food Waste R2 - EDUCtion through Image Processing-Based Food Analyzer and Recommendation System",
         "abstract": "The urgent issue of food waste is addressed in this thesis using a novel system. The main goal of the study is to provide a unique method for reducing kitchen food waste using a recommendation system and image processing-driven food analysis. For the image processing-driven food analysis, the researchers employed the YOLOv5 (You Only Look Once version 5) model, a state-of-the-art deep learning model renowned for its real-time object detection capabilities. YOLOv5 enables the system to accurately identify and classify various food items within images, contributing to a more comprehensive understanding of food waste patterns. Simultaneously, a content-based recommendation system was implemented using cosine similarity. This recommendation system analyzes the ingredients of food items detected by the YOLOv5 model and compares them to suggest recipes that utilize similar ingredients. Cosine similarity, a mathematical measure of similarity between two vectors, is applied to determine the likeness between ingredient profiles. This innovative approach enhances the system's ability to suggest relevant recipes that align with the available ingredients in a user's kitchen. The importance of this study rests in its creative strategy for addressing the pressing problem of food waste. The \"GoGreen\" technology provides a workable approach to lowering kitchen waste by smoothly merging image processing for food analysis and a well-structured suggestion system. The results of this study offer useful information for both homes and culinary experts as food waste continues to pose ethical and environmental problems.",
         "summary": "Summary3",
@@ -141,9 +150,10 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Midnight Coders"
     },
-    "Peaky Blinders": {
+    "Peaky-Blinders": {
         "thesisTitle": "Intelligent Tutoring System for Learning Threads using Bayesian Network",
         "abstract": "This paper presented the development and evaluation of an  Intelligent Tutoring System (ITS) for learning Java threads.  The system utilized a Bayesian Network to predict student  certainty in Computer Science students at FEU Institute of  Technology. The main objective of the system is to help  students better understand the concept of Java threads and  improved their performance in this area. The research  approach follows a Descriptive-Developmental study  design, which evaluated the impact of the ITS on student learning outcomes. The system provided a concept thread  related activities, assesses student answers, and tracks  performance data. It benefits instructors by offering insights  into student knowledge, automating tasks, and providing  analytics for decision-making. To prove the effectiveness of  the system for tutoring computer science students. The  researchers conducted a survey involving 74 respondents,  including students and instructors. The software evaluation  received positive feedback regarding functional suitability,  usability, reliability, and efficiency. The ITS achieved a high  Likert scale average rating of 4.4 signified those respondents  were \"Very Satisfied\" with its overall performance. It  effectively supported tutoring and enhanced student learning  that highlighted the potential of Bayesian Networks in  Intelligent Tutoring Systems.",
         "summary": "Summary3",
@@ -155,7 +165,8 @@
         ],
         "category": "Educ",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Peaky Blinders"
     },
     "Quinta": {
         "thesisTitle": "LANGUAGE REVIVAL: GAMIFYING KAPAMPANGAN  USING LEITNER SYSTEM AND SUPERMEMO  ALGORITHMS ",
@@ -170,9 +181,10 @@
         ],
         "category": "Educ",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Quinta"
     },
-    "return to_sleep": {
+    "return-to_sleep": {
         "thesisTitle": "TomatoCare: A supply and demand forecasting support tool for tomatoes using ARIMA modeling.",
         "abstract": "The tomato industry plays a crucial role in the agricultural sector, necessitating accurate supply and demand forecasting to aid farmers and stakeholders in making informed decisions. This study aimed to design and develop TomatoCare, a forecasting system that leverages ARIMA (AutoRegressive Integrated Moving Average) modeling to provide reliable forecasts and valuable insights for effective resource allocation and market planning. The research followed a mixed-methods approach, combining various data collection methods such as interviews with Subject Matter Experts (SMEs), data scraping, and data mining from external sources, including the Department of Agriculture, Department of Trade and Industry, and Philippine Statistics Authority websites. These methods facilitated the collection of comprehensive and up-to-date data on tomato supply and demand.",
         "summary": "Summary3",
@@ -184,7 +196,8 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "return to_sleep"
     },
     "Rob_lux": {
         "thesisTitle": "Constraint-Based Intelligent Tutor for Augmentative and Alternative Communication for Filipino Preschoolers with Speech Delay: An Application of Decision Tree Algorithm",
@@ -198,7 +211,8 @@
         ],
         "category": "Educ",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Rob_lux"
     },
     "SOFTIES": {
         "thesisTitle": "PoseCheckr: Exercise Posture Correction Application Using Image Processing",
@@ -212,7 +226,8 @@
         ],
         "category": "Health",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "SOFTIES"
     },
     "Softyware": {
         "thesisTitle": "Email Phishing and Spam Detector using Backtracking Algorithm and Image Processing",
@@ -227,7 +242,8 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "Softyware"
     },
     "S.T.A.R.K.": {
         "thesisTitle": "Video Content Analysis through Computer Vision and Natural Language Processing",
@@ -240,7 +256,8 @@
             "Segundo Jr., Sally P."],
         "category": "NLP",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "S.T.A.R.K."
     },
     "TeaSis": {
         "thesisTitle": "GameFace: Head Tracking and Facial Recognition and Detection as Inputs for Gaming using Haar Cascade and MediaPipe Framework",
@@ -254,7 +271,8 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "TeaSis"
     },
     "TechniQ": {
         "thesisTitle": "Digital Action Officer: A Recommendation System using Machine Learning for the Streamlining of Workflow in Public Assistance Offices",
@@ -268,7 +286,8 @@
         ],
         "category": "NLP",
         "posterFilePath": "",
-        "AVPLink": ""
+        "AVPLink": "",
+        "groupName": "TechniQ"
     },
     "Yaymiko": {
       "thesisTitle": "Guide to Geometry (GtG) : Mobile App Intelligent Tutoring System for Grade 8 Geometry Using Logistic Regression",
@@ -279,10 +298,11 @@
         "Albano, Ivan Dominic", 
         "Claveria, Kyle Sebastian T.", 
         "Vicencio, Vernon GabrielAngelo A."
-    ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+      ],
+      "category": "Educ",
+      "posterFilePath": "",
+      "AVPLink": "",
+      "groupName": "Yaymiko"
     }
   } 
   
