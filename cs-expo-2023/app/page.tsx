@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Navbar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import HomeHeader from "@/components/HomeOverviewHeader";
 
 export default function Home() {
@@ -56,9 +54,8 @@ export default function Home() {
 
   return (
       <main className="">
-        <div className="h-48">
-          <h1 ref={textElementRef} className=" whitespace-pre-line inline-block leading-normal h-90 text-gray-900 p-40 text-5xl font-helvetica font-bold">
-
+        <div className="text-center">
+          <h1 ref={textElementRef} className="mt-52 mr-96 whitespace-pre-line text-left inline-block leading-normal h-96 text-gray-900 p-40 text-7xl font-helvetica font-bold">
           </h1>
         </div>
         <HomeHeader
