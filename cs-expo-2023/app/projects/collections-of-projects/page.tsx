@@ -1,9 +1,10 @@
 import React from 'react';
 import { NextPage } from "next";
+
+import CollectionOfProjectsHeader from '../../../components/CollectionOfProjectsHeader';
+import GroupCardLayout from '../../../components/GroupCardLayout'
 import ThesisProjectsList from '../../../components/ThesisProjectReader';
 import thesisData from '../../../thesis-projects.json';
-import CollectionOfProjectsHeader from '@/components/CollectionOfProjectsHeader';
-import GroupCardLayout from '@/components/GroupCardLayout'
 import GroupsData from '../../../thesis-projects.json';
 
 {/* <ThesisProjectsList />
@@ -36,7 +37,6 @@ const CollectionOfProjects: NextPage = () => {
       <CollectionOfProjectsHeader 
         headerText ="COLLECTION OF PROJECTS" 
         subheaderText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic doloribus pariatur sapiente error iste, reiciendis, minima odit tenetur, rerum consequatur harum? Rerum molestiae fugit cupiditate pariatur corrupti, error quo quas."/>
-
       <GroupCardLayout groupData={GroupsData}/>
     </main>
   )
