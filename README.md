@@ -1,5 +1,18 @@
 # CS EXPO 2023 2.0
 
+# Table of Contents
+1. [Navigating the repository](#🧭navigating-the-repository)
+2. [Working with multiple developers](#👨‍👦‍👦working-with-multiple-developers)
+3. [Cloning the repository](#cloning-the-repository)
+4. [Staying up-to-date with the latest changes](#✅-staying-up-to-date-with-the-latest-changes)
+5. [Creating a Pull Request (PR)](#📢-creating-a-pull-request-pr)
+6. [Commit Message Example](#commit-message-example)
+7. [Go to the GitHub repository on your web browser](#🌐-go-to-the-github-repository-on-your-web-browser)
+8. [If going back to the ```main``` branch](#🔙-if-going-back-to-the-main-branch)
+9. [Always stay up-to-date with the ```main``` branch](#✅-always-stay-up-to-date-with-the-main-branch)
+
+<br>
+
 # 🧭Navigating the repository
 - [Projects](https://github.com/yanaagi/cs-expo-2023/projects)
   - This is where tasks are assigned and converted as issues; and their Todo, In Progress, and Done status are noted.
@@ -24,7 +37,8 @@ git clone https://github.com/yanaagi/cs-expo-2023.git
 ```
 
 # ✅ Staying up-to-date with the latest changes
-- While on main branch, update your local repository with the latest changes, you need to pull the changes from the remote repository using `git pull`
+- While on main branch, update your local repository with the latest changes, you need to pull the changes from the remote repository using `git pull` <br>
+⚠ WARNING: Use git pull origin main ONLY if you are in main branch, NOT in other branches.
 
 <br>
 
@@ -96,7 +110,7 @@ git push --set-upstream origin branch-name
 ```
 <br>
 
-- TO create a pull request for established branches, you need to push your changes to the remote repository using `git push`
+- TO create a pull request for ESTABLISHED BRANCHES, you just need to push your changes to the remote repository using `git push`
 ```bash
 git push origin branch-name
 ```
