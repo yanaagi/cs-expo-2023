@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
+import SpeakerPanelistLayout from '../../../components/SpeakerPanelistLayout'; 
 
 
 export const EventsCSExpo = () => {
@@ -12,6 +13,52 @@ export const EventsCSExpo = () => {
     const changeButton = (buttonNumber: number) => { 
         setCurrentButton(buttonNumber);
     };
+
+    const EventsCSExpo = () => {
+
+    const speakerNames = [
+        "PANELIST 1",
+        "PANELIST 2",
+        "PANELIST 3",
+        "PANELIST 4",
+        "PANELIST 5",
+        "PANELIST 6",
+        "PANELIST 7",
+        "PANELIST 8",
+    ];
+    
+    const photoNumber = [
+        "Photo 1",
+        "Photo 2",
+        "Photo 3",
+        "Photo 4",
+        "Photo 5",
+        "Photo 6",
+        "Photo 7",
+        "Photo 8",
+    ];
+    
+    const speakerProfession = [
+        "Software Engineer",
+        "Software Analyst",
+        "Game Developer",
+        "Cyber Security",
+        "Computer Technician",
+        "Computer Engineer",
+        "Data Scientist",
+        "Software Consultant",
+    ];
+    
+    const intOrExt = [
+        "INTERNAL",
+        "EXTERNAL",
+        "INTERNAL",
+        "EXTERNAL",
+        "INTERNAL",
+        "EXTERNAL",
+        "INTERNAL",
+        "EXTERNAL",
+    ];
 
     useEffect(() => {
         const config = {
@@ -48,6 +95,15 @@ export const EventsCSExpo = () => {
                     
                     sampleText="Sample Photo"
                 />
+
+            <SpeakerPanelistLayout
+                    speakerNames={speakerNames}
+                    photoNumber={photoNumber}
+                    speakerProfession={speakerProfession}
+                    intOrExt={intOrExt}
+                    panelOrSpeaker="PANELIST"
+                  />
+
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
                 <div className="grid grid-cols-12 mt-8 me-12">
                     <div className="col-span-3">
@@ -162,6 +218,7 @@ export const EventsCSExpo = () => {
             </div>
         </main>
     );
+  };
 };
 
 export default EventsCSExpo;
