@@ -5,7 +5,6 @@ import CollectionOfProjectsHeader from '../../../components/CollectionOfProjects
 import GroupCardLayout from '../../../components/GroupCardLayout'
 import ThesisProjectsList from '../../../components/ThesisProjectReader';
 import thesisData from '../../../thesis-projects.json';
-import CollectionOfProjectsHeader from '@/components/CollectionOfProjectsHeader';
 import GroupsData from '../../../thesis-projects.json';
 
 {/* <ThesisProjectsList />

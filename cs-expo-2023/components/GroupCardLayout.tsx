@@ -24,7 +24,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ groupId, group }) => {
 
           </div>
           <div className="flex flex-col h-[140px] bg-rose-500 s-full text-white text-start text-2xl px-2 pr-2 pt-1">
-            <div className="font-bold font-['Helvetica Now Text']">{group.groupName}</div>
+            <div className="font-bold font-['Helvetica Now Text']">{group.groupname}</div>
             <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
           </div>
         </div>

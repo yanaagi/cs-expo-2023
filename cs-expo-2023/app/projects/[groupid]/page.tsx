@@ -15,7 +15,7 @@ const Page: React.FC<GroupProps> = ({params}) => {
   return (
     <main className="flex items-center justify-center p-24">
       <div className="">
-        <p>{groupData?.groupName}</p>
+        <p>{groupData?.groupname}</p>
         <p>{groupData?.thesisTitle}</p>
         <p>{groupData?.members}</p>
       </div>
