@@ -90,8 +90,28 @@ export const EventsDevDay = () => {
 
     return (
         <main className="flex min-h-screen flex-col p-24">    
-
             <div className="ms-28">
+            <div className="container">
+            <PhotoComponent 
+                    currentButton={currentButton}
+                    customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+            <ButtonComponent 
+                    currentButton={currentButton} 
+                    changeButton={changeButton} 
+                />
+                <h1 className="font-black text-8xl text-center mb-20">DEV DAY</h1>
+                <hr className="border-t-1 border-black mb-4" />
+            <AboutComponent
+                    customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    sampleText="Sample Photo"
+                />
                 <h1 className="font-black text-8xl" style={{ paddingLeft: '960px', fontFamily: 'Helvetica Now, sans-serif'}}>SPEAKERS</h1>
                 <div className="grid grid-cols-12 mt-8 me-12">
                     {/* Profession, Internal or External, Description Grid */}
