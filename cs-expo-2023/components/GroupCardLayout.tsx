@@ -1,3 +1,4 @@
+import Link from '@/node_modules/next/link';
 import React from 'react';
 
 interface GroupCardProps {
@@ -15,15 +16,19 @@ interface GroupCardProps {
 
 const GroupCard: React.FC<GroupCardProps> = ({ groupName, group }) => {
   return (
-    <div className="flex flex-col w-[300px] h-[450px] bg-stone-300 s-full justify-end">
-      <div className="flex ">
+    <main>
+      <Link href={groupName}>
+        <div className="flex flex-col w-[300px] h-[450px] bg-stone-300 s-full justify-end">
+          <div className="flex ">
 
-      </div>
-      <div className="flex flex-col h-[140px] bg-rose-500 s-full text-white text-start text-2xl px-2 pr-2 pt-1">
-        <div className="font-bold font-['Helvetica Now Text']">{groupName}</div>
-        <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
-      </div>
-    </div>
+          </div>
+          <div className="flex flex-col h-[140px] bg-rose-500 s-full text-white text-start text-2xl px-2 pr-2 pt-1">
+            <div className="font-bold font-['Helvetica Now Text']">{groupName}</div>
+            <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
+          </div>
+        </div>
+      </Link>
+    </main>
   );
 }
 
