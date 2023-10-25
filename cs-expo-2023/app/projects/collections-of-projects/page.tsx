@@ -1,9 +1,36 @@
-import React from 'react'
+import React from 'react';
 import { NextPage } from "next";
 
 import CollectionOfProjectsHeader from '../../../components/CollectionOfProjectsHeader';
 import GroupCardLayout from '../../../components/GroupCardLayout'
+import ThesisProjectsList from '../../../components/ThesisProjectReader';
+import thesisData from '../../../thesis-projects.json';
+import CollectionOfProjectsHeader from '@/components/CollectionOfProjectsHeader';
 import GroupsData from '../../../thesis-projects.json';
+
+{/* <ThesisProjectsList />
+/* Display Group Names
+<div>
+  <h3>Group Names</h3>
+  <ul>
+    {Object.keys(thesisDataTyped).map((key) => (
+      <li key={key}>{thesisDataTyped[key].groupname}</li> 
+    ))}
+    </ul> */}
+
+// Define a type for your data
+interface ThesisProjectData {
+  [key: string]: {
+    groupname: string;
+    thesisTitle: string;
+    abstract: string;
+    summary: string;
+    members: string[];
+    category: string;
+    posterFilePath: string;
+    AVPLink: string;
+  };
+}
 
 const CollectionOfProjects: NextPage = () => {
   return (
