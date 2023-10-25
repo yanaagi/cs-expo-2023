@@ -3,7 +3,7 @@
 import React from 'react';
 import SpeakerPanelistLayout from '../../../components/SpeakerPanelistLayout'; 
 
-const EventsDevDay = () => {
+const EventsCSExpo = () => {
 
   const speakerNames = [
     "PANELIST 1",
@@ -62,4 +62,4 @@ const EventsDevDay = () => {
   );
 };
 
-export default EventsDevDay;
+export default EventsCSExpo;
