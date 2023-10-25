@@ -1,21 +1,23 @@
-import { useRouter } from 'next/router'
-import { FC } from 'react';
+import React from 'react';
+
 import GroupsData from "../../../thesis-projects.json"
 
 interface GroupProps {
-  groupid: string;
+  params: {
+    groupid: string;
+  }
 }
 
- 
 const Page: React.FC<GroupProps> = ({params}) => {
-  console.log(params);
-  const groupData = GroupsData[params.groupid];
+  const groupsData = new Map(Object.entries(GroupsData));
+  const groupData = groupsData.get(params.groupid);
   console.log(groupData);
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <div className="flex flex-col">
-        <p>{groupData.thesisTitle}</p>
-        <p>{groupData.abstract}</p>
+    <main className="flex items-center justify-center p-24">
+      <div className="">
+        <p>{groupData?.groupName}</p>
+        <p>{groupData?.thesisTitle}</p>
+        <p>{groupData?.members}</p>
       </div>
     </main>
   );
