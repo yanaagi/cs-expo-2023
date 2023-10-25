@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
 
                <div className="flex flex-col pl-10 ml-auto">
                     <Image 
-                         src="/cs-expo-logo.png" 
+                         src="/cs-expo-logo-black.png" 
                          alt="Description of your image" 
                          width={160} 
                          height={120}
