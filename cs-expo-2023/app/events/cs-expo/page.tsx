@@ -14,8 +14,6 @@ export const EventsCSExpo = () => {
         setCurrentButton(buttonNumber);
     };
 
-    const EventsCSExpo = () => {
-
     const speakerNames = [
         "PANELIST 1",
         "PANELIST 2",
@@ -219,6 +217,5 @@ export const EventsCSExpo = () => {
         </main>
     );
   };
-};
 
 export default EventsCSExpo;
