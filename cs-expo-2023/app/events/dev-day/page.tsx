@@ -87,6 +87,11 @@ export const EventsDevDay = () => {
         const glide2023 = new Glide(".carousel-2023", config);
         glide2023.mount();
     }, []);
+        const glide2022 = new Glide(".carousel-2022", config);
+        glide2022.mount();
+        const glide2023 = new Glide(".carousel-2023", config);
+        glide2023.mount();
+    }, []);
 
     return (
         <main className="flex min-h-screen flex-col p-24">    
@@ -197,12 +202,6 @@ export const EventsDevDay = () => {
                                                 "var(--timberwolf)",
                                         }}
                                     />
-                                    <li
-                                        className="glide__slide w-120 h-52"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--timberwolf)",
-                                        }}
                                     />
                                     <li
                                         className="glide__slide w-120 h-52"
@@ -210,6 +209,15 @@ export const EventsDevDay = () => {
                                             backgroundColor:
                                                 "var(--timberwolf)",
                                         }}
+                                    />
+                                    />
+                                    <li
+                                        className="glide__slide w-120 h-52"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--timberwolf)",
+                                        }}
+                                    />
                                     />
                                 </ul>
                             </div>
@@ -236,6 +244,7 @@ export const EventsDevDay = () => {
                 <div className="grid grid-cols-12 mt-8 me-12">
                     <div className="col-span-3">
                         <h1 className="font-bold text-5xl">2023</h1>
+                        <h1 className="font-bold text-5xl">2023</h1>
                         <p className="font-medium pe-12">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.
@@ -252,12 +261,6 @@ export const EventsDevDay = () => {
                                                 "var(--timberwolf)",
                                         }}
                                     />
-                                    <li
-                                        className="glide__slide w-120 h-52"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--timberwolf)",
-                                        }}
                                     />
                                     <li
                                         className="glide__slide w-120 h-52"
@@ -265,6 +268,15 @@ export const EventsDevDay = () => {
                                             backgroundColor:
                                                 "var(--timberwolf)",
                                         }}
+                                    />
+                                    />
+                                    <li
+                                        className="glide__slide w-120 h-52"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--timberwolf)",
+                                        }}
+                                    />
                                     />
                                 </ul>
                             </div>
@@ -288,6 +300,7 @@ export const EventsDevDay = () => {
                         </div>
                     </div>
                 </div>
+             </div>
              </div>
         </main>
     );

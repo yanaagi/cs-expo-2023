@@ -37,7 +37,8 @@ git clone https://github.com/yanaagi/cs-expo-2023.git
 ```
 
 # ✅ Staying up-to-date with the latest changes
-- While on main branch, update your local repository with the latest changes, you need to pull the changes from the remote repository using `git pull`
+- While on main branch, update your local repository with the latest changes, you need to pull the changes from the remote repository using `git pull` <br>
+⚠ WARNING: Use git pull origin main ONLY if you are in main branch, NOT in other branches.
 
 <br>
 
@@ -109,7 +110,7 @@ git push --set-upstream origin branch-name
 ```
 <br>
 
-- TO create a pull request for established branches, you need to push your changes to the remote repository using `git push`
+- TO create a pull request for ESTABLISHED BRANCHES, you just need to push your changes to the remote repository using `git push`
 ```bash
 git push origin branch-name
 ```
