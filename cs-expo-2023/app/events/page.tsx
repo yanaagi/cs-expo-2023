@@ -1,14 +1,16 @@
 import React from 'react'
 import EventsHeader from "@/components/EventsOverviewHeader";
 
+const titles = ["EVENTS", "CS EXPO", "DEV DAY", "COMMITTEES"];
+const desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n vitae suscipit tellus", 
+              "Melon ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n vitae suscipit tellus", 
+              "Rolem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n vitae suscipit tellus", 
+              "Erlom ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n vitae suscipit tellus"];
 
 const EventsOverviewHeader = () => {
   return (
     <main className=''>
-      <EventsHeader headerText ="EVENTS" subheaderText="Lorem ipsum"></EventsHeader>
-      <EventsHeader headerText ="CS EXPO" subheaderText="Lorem ipsum"></EventsHeader>
-      <EventsHeader headerText ="DEV DAY" subheaderText="Lorem ipsum"></EventsHeader>
-      <EventsHeader headerText ="COMMITTEES" subheaderText="Lorem ipsum"></EventsHeader>
+      <EventsHeader title={titles} description={desc}></EventsHeader>
     </main>
   )
 }

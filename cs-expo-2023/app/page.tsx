@@ -54,8 +54,8 @@ export default function Home() {
 
   return (
       <main className="">
-        <div className="text-center">
-          <h1 ref={textElementRef} className="mt-52 mr-96 whitespace-pre-line text-left inline-block leading-normal h-96 text-gray-900 p-40 text-7xl font-helvetica font-bold">
+        <div>
+          <h1 ref={textElementRef} className="mt-32 mr-56 whitespace-pre-line text-left inline-block leading-normal text-eerie-black p-40 text-5xl font-helvetica font-bold">
 
           </h1>
         </div>
