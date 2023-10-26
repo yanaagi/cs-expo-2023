@@ -15,16 +15,6 @@ const CommitteesGrid = () => {
 
   const [hovered, setHovered] = useState<number | null>(null);
 
-  const committeeSquareStyle =
-    'w-60 h-60 p-4 bg-coral-pink text-white text-right text-3xl font-bold relative transition-transform duration-200 transform scale-100 hover:scale-105';
-
-  const learnMoreStyle =
-    'text-sm absolute bottom-4 right-4 text-white no-underline cursor-pointer';
-
-  const boldTextStyle = 'font-bold';
-
-  const gridStyle = 'grid grid-cols-4 gap-4 ml-28 mt-4';
-
   const handleMouseEnter = (index: number) => {
     setHovered(index);
   };
@@ -34,18 +24,18 @@ const CommitteesGrid = () => {
   };
 
   return (
-    <div className={gridStyle}>
+    <div className="grid grid-cols-4 gap-4 ml-28 mt-4">
       {committeeNames.map((committeeName, index) => (
         <div
           key={index}
-          className={`${committeeSquareStyle} ${
+          className={`w-60 h-60 p-4 bg-coral-pink text-white text-right text-3xl font-bold relative transition-transform duration-200 transform scale-100 hover:scale-105 ${
             hovered === index ? 'scale-105' : ''
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className={boldTextStyle}>{committeeName}</div>
-          <a href="#" className={learnMoreStyle}>
+          <div className="font-bold">{committeeName}</div>
+          <a href="#" className="text-sm absolute bottom-4 right-4 text-white no-underline cursor-pointer font-bold">
             LEARN MORE &gt;
           </a>
         </div>
