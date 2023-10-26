@@ -88,7 +88,7 @@ const ThesisPoster = () => {
       <div className="w-[1400px] relative overflow-x-auto">
         <div className="my-carousel flex">
           {categories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="stack border">
+            <div key={categoryIndex} className="stack">
               {/* daisyUI's stack images component */}
               {/* <img> needs to be optimized for production */}
               <img
