@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 
 const CommitteesGrid = () => {
-  // Define an array of committee names
   const committeeNames = [
     'Committee Name 1',
     'Committee Name 2',
@@ -14,74 +13,41 @@ const CommitteesGrid = () => {
     'Committee Name 8',
   ];
 
-  const [hovered, setHovered] = useState<number | null>(null); // State to track the index of the hovered square
+  const [hovered, setHovered] = useState<number | null>(null);
 
-  const committeeSquareStyle = {
-    backgroundColor: 'rgb(255, 90, 95)',
-    color: 'white',
-    textAlign: 'right' as 'right',
-    width: '230px',
-    height: '230px',
-    padding: '20px',
-    fontSize: '2.5rem',
-    fontFamily: 'Helvetica Now Text',
-    position: 'relative' as 'relative',
-    transition: 'transform 0.2s', // Add a transition for smooth hover effect
-  };
+  const committeeSquareStyle =
+    'w-60 h-60 p-4 bg-coral-pink text-white text-right text-3xl font-bold relative transition-transform duration-200 transform scale-100 hover:scale-105';
 
-  const textRightStyle = {
-    textAlign: 'right' as 'right',
-  };
+  const learnMoreStyle =
+    'text-sm absolute bottom-4 right-4 text-white no-underline cursor-pointer';
 
-  const learnMoreStyle = {
-    textAlign: 'right' as 'right',
-    fontSize: '1rem',
-    position: 'absolute' as 'absolute',
-    bottom: '10px',
-    right: '10px',
-    color: 'white',
-    textDecoration: 'none', // Remove underline
-    cursor: 'pointer',
-    fontWeight: 'bold', // Add bold font
-  };
+  const boldTextStyle = 'font-bold';
 
-  const boldTextStyle = {
-    fontWeight: 'bold',
-  };
-
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '15px',
-    marginLeft: '115px',
-    marginTop: '15px',
-  };
+  const gridStyle = 'grid grid-cols-4 gap-4 ml-28 mt-4';
 
   const handleMouseEnter = (index: number) => {
-    // Set the index of the hovered square
     setHovered(index);
   };
 
   const handleMouseLeave = () => {
-    // Remove the hover effect when the cursor leaves any square
     setHovered(null);
   };
 
   return (
-    <div style={gridStyle} className="committees-grid">
+    <div className={gridStyle}>
       {committeeNames.map((committeeName, index) => (
         <div
           key={index}
-          style={{
-            ...committeeSquareStyle,
-            transform: hovered === index ? 'scale(1.05)' : 'scale(1)', // Apply the hover effect using transform
-          }}
-          className="committee-square"
+          className={`${committeeSquareStyle} ${
+            hovered === index ? 'scale-105' : ''
+          }`}
           onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave} // Use the same handler for all squares
+          onMouseLeave={handleMouseLeave}
         >
-          <div style={boldTextStyle}>{committeeName}</div>
-          <a href="#" style={learnMoreStyle}>LEARN MORE &gt;</a>
+          <div className={boldTextStyle}>{committeeName}</div>
+          <a href="#" className={learnMoreStyle}>
+            LEARN MORE &gt;
+          </a>
         </div>
       ))}
     </div>
