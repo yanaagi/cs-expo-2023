@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "speakerName": "Speaker 1",
+        "profession": "Professor",
+        "typeSpeaker": "Internal",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
+        "photo": "speaker1.webp"
+    },
+    {
+        "id": 2,
+        "speakerName": "Speaker 2",
+        "profession": "Software Engineer",
+        "typeSpeaker": "External",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
+        "photo": "speaker2.webp"
+    }
+]

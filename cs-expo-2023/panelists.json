@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "panelistName": "Panelist 1",
+        "profession": "Professor",
+        "typePanelist": "Internal",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
+        "photo": "panelist1.webp"
+    },
+    {
+        "id": 2,
+        "panelistName": "Panelist 2",
+        "profession": "Software Engineer",
+        "typePanelist": "External",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
+        "photo": "panelist2.webp"
+    }
+]
