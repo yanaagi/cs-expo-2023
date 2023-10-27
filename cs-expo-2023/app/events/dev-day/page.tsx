@@ -74,8 +74,6 @@ export const EventsDevDay = () => {
 
     return (
         <main className="flex min-h-screen flex-col p-24">
-            <div className="ms-28">
-                <div className="container">
                     <PhotoComponent
                         currentButton={currentButton}
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -100,8 +98,6 @@ export const EventsDevDay = () => {
                         intOrExt={intOrExt}
                         panelOrSpeaker="SPEAKER"
                     />
-                </div>
-            </div>
 
             <div className="ms-28">
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
