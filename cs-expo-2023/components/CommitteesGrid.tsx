@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 
 const CommitteesGrid = () => {
   const committeeNames = [
-    'Committee Name 1',
-    'Committee Name 2',
-    'Committee Name 3',
-    'Committee Name 4',
-    'Committee Name 5',
-    'Committee Name 6',
-    'Committee Name 7',
-    'Committee Name 8',
+    'COMMITTEE NAME 1',
+    'COMMITTEE NAME 2',
+    'COMMITTEE NAME 3',
+    'COMMITTEE NAME 4',
+    'COMMITTEE NAME 5',
+    'COMMITTEE NAME 6',
+    'COMMITTEE NAME 7',
+    'COMMITTEE NAME 8',
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);
@@ -28,13 +28,14 @@ const CommitteesGrid = () => {
       {committeeNames.map((committeeName, index) => (
         <div
           key={index}
-          className={`w-60 h-60 p-4 bg-coral-pink text-white text-right text-3xl font-bold relative transition-transform duration-200 transform scale-100 hover:scale-105 ${
+          className={`p-4 bg-coral-pink text-white text-right font-bold relative transform scale-100 hover:scale-105 ${
             hovered === index ? 'scale-105' : ''
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
+          style={{ width: '100%', maxWidth: '250px', minHeight: '250px' }}
         >
-          <div className="font-bold">{committeeName}</div>
+          <div className="font-bold text-3xl">{committeeName}</div>
           <a href="#" className="text-sm absolute bottom-4 right-4 text-white no-underline cursor-pointer font-bold">
             LEARN MORE &gt;
           </a>
