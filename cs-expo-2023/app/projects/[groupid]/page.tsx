@@ -1,6 +1,5 @@
 import React from 'react';
-
-import GroupsData from "../../../thesis-projects.json"
+import ProjectArticle from '../../../components/ProjectArticle'
 
 interface GroupProps {
   params: {
@@ -9,16 +8,9 @@ interface GroupProps {
 }
 
 const Page: React.FC<GroupProps> = ({params}) => {
-  const groupsData = new Map(Object.entries(GroupsData));
-  const groupData = groupsData.get(params.groupid);
-  console.log(groupData);
   return (
-    <main className="flex items-center justify-center p-24">
-      <div className="">
-        <p>{groupData?.groupname}</p>
-        <p>{groupData?.thesisTitle}</p>
-        <p>{groupData?.members}</p>
-      </div>
+    <main className="flex items-center justify-center static ">
+      <ProjectArticle groupid={params.groupid}/>
     </main>
   );
 }
