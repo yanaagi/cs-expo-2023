@@ -7,7 +7,7 @@ interface ButtonComponentProps {
 
 const ButtonComponent: React.FC<ButtonComponentProps> = ({ currentButton, changeButton }) => {
   return (
-    <div className="flex space-x-3 ml-28 mt-1">
+    <div className="flex space-x-3 ml-4 sm:ml-28 mt-1">
       <div className="flex space-x-4">
         <div
           className={`border border-gray-300 p-2 rounded-md cursor-pointer ${

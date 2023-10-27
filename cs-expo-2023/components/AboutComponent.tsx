@@ -1,5 +1,3 @@
-import React from "react";
-
 interface AboutComponentProps {
   customText: string;
   sampleText: string;
@@ -7,15 +5,15 @@ interface AboutComponentProps {
 
 const AboutComponent: React.FC<AboutComponentProps> = ({ customText, sampleText }) => {
   return (
-    <div className="flex flex-col items-center sm:flex-row sm:items-start mb-4 mx-4 sm:mx-0 mt-20 mb-52">
-      <div className="max-w-2xl p-4 sm:p-12 mb-10">
+    <div className="max-w-screen-lg mx-auto flex flex-col ml-28 items-center sm:flex-row">
+      <div className="max-w-2xl p-4 sm:p-12 mb-14 text-center sm:text-left">
         <h1 className="font-black text-5xl sm:text-8xl mb-20">ABOUT</h1>
         <p className="font-medium text-base sm:text-2xl">
           {customText}
         </p>
       </div>
-      <div className="p-20 sm:p-72 bg-timberwolf mt-8 sm:mt-0 ml-0 sm:ml-40 sm:text-2xl font-medium">
-        {sampleText}
+      <div className="max-w-full sm:max-w-4xl p-8 sm:p-64 bg-timberwolf mt-8 sm:ml-64">
+        <img src="/samplePhoto.png" alt="SamplePhoto2" className="max-w-full" />
       </div>
     </div>
   );

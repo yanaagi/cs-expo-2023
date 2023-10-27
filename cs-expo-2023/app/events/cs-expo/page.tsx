@@ -60,6 +60,7 @@ export const EventsCSExpo = () => {
 
     return (
         <main className="flex min-h-screen flex-col p-24">
+             <div className="my-1 ms-20 border-l border-black">
             <PhotoComponent
                 currentButton={currentButton}
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -71,7 +72,7 @@ export const EventsCSExpo = () => {
                 changeButton={changeButton}
             />
             <h1 className="font-black text-8xl text-center mb-20">CS EXPO</h1>
-            <hr className="border-t-1 border-black mb-4" />
+            <hr className="border-t-1 border-black mb-4 ml-20" />
             <AboutComponent
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -119,6 +120,7 @@ export const EventsCSExpo = () => {
                     perView={2}
                     id="carousel-2023"
                 />
+                </div>
             </div>
         </main>
     );

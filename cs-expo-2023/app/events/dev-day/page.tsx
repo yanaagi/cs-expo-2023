@@ -12,7 +12,7 @@ export const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const changeButton = (buttonNumber) => {
+    const changeButton = (buttonNumber: number) => {
         setCurrentButton(buttonNumber);
     };
 
@@ -37,6 +37,8 @@ export const EventsDevDay = () => {
 
     return (
         <main className="flex min-h-screen flex-col p-24">
+            <div className="my-1 ms-20 border-l border-black">
+
                     <PhotoComponent
                         currentButton={currentButton}
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -48,12 +50,11 @@ export const EventsDevDay = () => {
                     <h1 className="font-black text-8xl text-center mb-20">
                         DEV DAY
                     </h1>
-                    <hr className="border-t-1 border-black mb-4" />
+                    <hr className="border-t-1 border-black mb-4 ml-20" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        sampleText="Sample Photo"
+                        sampleText="SamplePhoto2"
                     />
-
                     <SpeakerPanelistLayout
                         speakerNames={speakerNames}
                         photoNumber={photoNumber}
@@ -91,6 +92,7 @@ export const EventsDevDay = () => {
                     perView={2}
                     id="carousel-2023"
                 />
+              </div>
             </div>
         </main>
     );
