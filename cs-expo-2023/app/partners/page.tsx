@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import PartnerIconsLayout from "../../components/PartnerIconsLayout";
 import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
 import partnersData from '../../partners.json';
+import CircularSidebar from '@/components/PartnersSidebar';
 
 const Partners: NextPage = () => {
   const partnerArray = Object.values(partnersData);
@@ -32,6 +33,7 @@ const Partners: NextPage = () => {
           </div>
         </div>
       </div>
+      <CircularSidebar />
     </main>
   );
 }
