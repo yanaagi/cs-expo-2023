@@ -1,18 +1,61 @@
-[
-    {
-        "id": 1,
-        "panelistName": "Panelist 1",
-        "profession": "Professor",
-        "typePanelist": "Internal",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
-        "photo": "panelist1.webp"
-    },
-    {
-        "id": 2,
-        "panelistName": "Panelist 2",
+{
+    "panelists": [
+      {
+        "name": "PANELIST 1",
+        "photoNumber": "Photo 1",
         "profession": "Software Engineer",
-        "typePanelist": "External",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu elementum dui. Donec id tempus nunc, vel porta elit. Donec non tincidunt nunc, non varius tellus.",
-        "photo": "panelist2.webp"
-    }
-]
+        "intOrExt": "INTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 2",
+        "photoNumber": "Photo 2",
+        "profession": "Software Analyst",
+        "intOrExt": "EXTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 3",
+        "photoNumber": "Photo 3",
+        "profession": "Game Developer",
+        "intOrExt": "INTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 4",
+        "photoNumber": "Photo 4",
+        "profession": "Cyber Security",
+        "intOrExt": "EXTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 5",
+        "photoNumber": "Photo 5",
+        "profession": "Computer Technician",
+        "intOrExt": "INTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 6",
+        "photoNumber": "Photo 6",
+        "profession": "Computer Engineer",
+        "intOrExt": "EXTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 7",
+        "photoNumber": "Photo 7",
+        "profession": "Data Scientist",
+        "intOrExt": "INTERNAL",
+        "photo": ""
+      },
+      {
+        "name": "PANELIST 8",
+        "photoNumber": "Photo 8",
+        "profession": "Software Consultant",
+        "intOrExt": "EXTERNAL",
+        "photo": ""
+      }
+    ]
+  }
+  
