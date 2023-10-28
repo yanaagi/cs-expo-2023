@@ -54,11 +54,11 @@ export default function Home() {
 
   return (
       <main className="">
-        <div>
-          <h1 ref={textElementRef} className="mt-32 mr-56 whitespace-pre-line text-left inline-block leading-normal text-eerie-black p-40 text-5xl font-helvetica font-bold">
-
+        <div className="mt-32 mr-56 whitespace-pre-line text-left inline-block text-eerie-black p-40 font-helvetica font-bold">
+          <h1 ref={textElementRef} className="lg:text-5xl sm:text-2xl sm:inline-block sm:leading-normal lg:leading-normal">
           </h1>
         </div>
+
         <HomeHeader
             title="CS EXPO"
             description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
