@@ -135,7 +135,7 @@ const defaultMenu = () => {
                     </button>
 
                     {showProjectsDropdown && (
-                         <div ref={dropdownRef} className="absolute mt-2 border rounded-md font-normal w-max">
+                         <div ref={dropdownRef} className="absolute mt-2 bg-white border rounded-md font-normal w-max">
                               <Link href="/projects" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Overview
                               </Link>

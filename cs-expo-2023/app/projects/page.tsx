@@ -4,6 +4,7 @@ import { AiOutlineRight } from "react-icons/ai";
 import ProjectsHeader from "@/components/ProjectsHeader";
 import ThesisPosterCard from "@/components/ThesisPosterCard";
 
+
 const Projects = () => {
     return (
         <main className="flex flex-col items-center justify-between p-24">
