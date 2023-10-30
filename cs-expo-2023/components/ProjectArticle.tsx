@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, MouseEvent } from 'react';
 import { AiOutlineRight, AiOutlineUp } from 'react-icons/ai';
-import ProjectArticleCarousel from "../components/ProjectArticleCarousel";
+import ProjectArticleCarousel from "./ProjectGalleryCarousel";
 
 interface ProjectArticleProps {
   groupname: string | undefined;
@@ -38,12 +38,18 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
         <div className="flex flex-col items-center justify-start pt-5">
           <div className="relative bg-timberwolf h-[550px] w-[400px] s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
             
+            <div className="absolute top-[30px] left-[-70px] h-[110px] w-[110px] rounded-full bg-yellow-300">
+
+            </div>
+            <div className="absolute top-[170px] left-[-70px] h-[110px] w-[110px] rounded-full bg-yellow-600">
+
+            </div>
             <div className="absolute top-[80px] right-[-60px] bg-red-200 h-[250px] w-[250px]">
               
             </div>
           </div>
         </div>
-        <div className="flex flex-col mr-10 mt-10">
+        <div className="flex flex-col ml-5 mr-10 my-10">
           <div className="text-3xl font-bold text-end row-start-1">{thesisTitle}</div>
           <div className="text-2xl font-bold text-end row-start-2">{"-"+groupname}</div>
         </div>
@@ -59,17 +65,20 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
               </div>
             </div>
               { isReadMore ? (
-              <div id="abstract" className="max-h-none overflow-ellipsis text-xl">
+              <div id="abstract" className="max-h-none overflow-hidden text-xl">
                   {abstract}
               </div>
               ): (
-                <div id="abstract" className="max-h-20 overflow-ellipsis text-xl">
+                <div id="abstract" className="max-h-20 overflow-hidden text-xl">
                   {abstract}
                 </div>
               )}
-            <div>
-              <div className="w-full h-[25px] bg-timberwolf opacity-60"></div>
-              <div className="flex flex-row justify-end w-full bg-timberwolf pb-4">
+            <div className="flex flex-col">
+              <div className="flex flex-row justify-end w-full bg-timberwolf pb-4 relative">
+                {isReadMore?
+                  (<></>):
+                  (<div className="w-full h-[20px] bg-timberwolf opacity-90 absolute bottom-9"/>)}
+                
                 <button onClick={toggleReadMore} className="flex items-center text-coral-pink font-bold cursor-pointer">
                   {isReadMore?(<>Read less</>):(<>Read more</>)}
                   <span className="ml-2">
@@ -103,8 +112,8 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
               <div className="flex col-span-3 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center">
                 <p>AVP</p>
               </div>
-              <div className="flex flex-col col-span-1 bg-zinc-400 s-full">
-                
+              <div className="flex flex-col">
+
               </div>
             </div>
           </div>
