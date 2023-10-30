@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 
 const CommitteesGrid = () => {
   const committeeNames = [
-    'COMMITTEE NAME 1',
-    'COMMITTEE NAME 2',
-    'COMMITTEE NAME 3',
-    'COMMITTEE NAME 4',
-    'COMMITTEE NAME 5',
-    'COMMITTEE NAME 6',
-    'COMMITTEE NAME 7',
-    'COMMITTEE NAME 8',
+    'PROGRAMS COMMITTEE',
+    'SECRETARIAT COMMITTEE',
+    'SPONSORSHIP & PARTNERSHIP COMMITTEE',
+    'SPEAKERS AND PANELIST COMMITTEE',
+    'LOGISTICS COMMITTEE',
+    'PUBLICITY & PUBLICATION COMMITTEE',
+    'CREATIVES & MEDIA COMMITTEE',
+    'DEVELOPERS COMMITTEE',
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);
@@ -35,8 +35,8 @@ const CommitteesGrid = () => {
           onMouseLeave={handleMouseLeave}
           style={{ width: '100%', maxWidth: '250px', minHeight: '250px' }}
         >
-          <div className="font-bold text-3xl">{committeeName}</div>
-          <a href="#" className="text-sm absolute bottom-4 right-4 text-white no-underline cursor-pointer font-bold">
+          <div className="font-bold text-1xl sm:text-1xl md:text-1xl lg:text-1xl xl:text-2xl">{committeeName}</div>
+          <a href="#" className="text-sm sm:text-base absolute bottom-4 right-4 text-white no-underline cursor-pointer font-bold">
             LEARN MORE &gt;
           </a>
         </div>
