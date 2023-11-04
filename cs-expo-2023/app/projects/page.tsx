@@ -8,70 +8,76 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 import { title } from "process";
 
 const Projects = () => {
-    return (
-        <main className="flex flex-col items-center justify-between p-24">
-            <ProjectsHeader
-                headerText="PROJECTS"
-                subheaderText="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, optio. Nam numquam ratione laboriosam architecto commodi?"
-            />
+  return (
+    <main className="flex flex-col items-center justify-between p-24">
+      {/* Call  ProjectsHeader component */}
+      <ProjectsHeader
+        headerText="PROJECTS"
+        subheaderText="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, optio. Nam numquam ratione laboriosam architecto commodi?"
+      />
 
-            <div className="flex justify-center p-4 w-full">
-                <Link
-                    href="/projects/hall-of-fame"
-                    className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
-                >
-                    Hall of Fame{" "}
-                    <span className="flex-auto">
-                        <AiOutlineRight />
-                    </span>
-                </Link>
-                <Link
-                    href="/projects/collections-of-projects"
-                    className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
-                >
-                    Collections of Projects{" "}
-                    <span>
-                        <AiOutlineRight />
-                    </span>
-                </Link>
-            </div>
+      <div className="flex justify-center p-4 w-full">
+        <Link
+          href="/projects/hall-of-fame"
+          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
+        >
+          Hall of Fame{" "}
+          <span className="flex-auto">
+            <AiOutlineRight />
+          </span>
+        </Link>
+        <Link
+          href="/projects/collections-of-projects"
+          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
+        >
+          Collections of Projects{" "}
+          <span>
+            <AiOutlineRight />
+          </span>
+        </Link>
+      </div>
 
-            <ProjectsCarousel
-                slides={[
-                    {
-                        title: "Data Analytics",
-                        imageLink: "/data-analytics/chart-pie-solid.svg",
-                        backgroundColor: "pink",
-                    },
-                    {
-                        title: "Education",
-                        imageLink: "/education/book-open-solid.svg",
-                        backgroundColor: "black",
-                    },
-                    {
-                        title: "Health",
-                        imageLink: "/health/heart-pulse-solid.svg",
-                        backgroundColor: "pink",
-                    },
-                    {
-                        title: "Image Processing / Computer Vision",
-                        imageLink: "/imgproc-cv/eye-solid.svg",
-                        backgroundColor: "black",
-                    },
-                    {
-                        title: "Internet of Things",
-                        imageLink: "/iot/microchip-solid.svg",
-                        backgroundColor: "pink",
-                    },
-                    {
-                        title: "Natural Language Processing",
-                        imageLink: "/nlp/comments-solid.svg",
-                        backgroundColor: "black",
-                    },
-                ]}
-            />
-        </main>
-    );
+      {/* The `<ProjectsCarousel>` component is rendering a carousel of projects. It takes an
+            array of slides as a prop, where each slide represents a project caregory. Each slide has a
+            title, an image link, and a background color. The carousel component will display each
+            project slide in a carousel format, allowing the user to scroll through the projects
+            horizontally. */}
+      <ProjectsCarousel
+        slides={[
+          {
+            title: "Data Analytics",
+            imageLink: "/data-analytics/chart-pie-solid.svg",
+            backgroundColor: "pink",
+          },
+          {
+            title: "Education",
+            imageLink: "/education/book-open-solid.svg",
+            backgroundColor: "black",
+          },
+          {
+            title: "Health",
+            imageLink: "/health/heart-pulse-solid.svg",
+            backgroundColor: "pink",
+          },
+          {
+            title: "Image Processing / Computer Vision",
+            imageLink: "/imgproc-cv/eye-solid.svg",
+            backgroundColor: "black",
+          },
+          {
+            title: "Internet of Things",
+            imageLink: "/iot/microchip-solid.svg",
+            backgroundColor: "pink",
+          },
+          {
+            title: "Natural Language Processing",
+            imageLink: "/nlp/comments-solid.svg",
+            backgroundColor: "black",
+          },
+        ]}
+      /> 
+    </main>
+  );
 };
 
 export default Projects;
