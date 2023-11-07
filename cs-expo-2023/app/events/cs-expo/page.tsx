@@ -6,61 +6,40 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
+import panelistsData from '@/panelists.json'; 
+
 
 export const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const changeButton = (buttonNumber: number) => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakerNames = [
-        "PANELIST 1",
-        "PANELIST 2",
-        "PANELIST 3",
-        "PANELIST 4",
-        "PANELIST 5",
-        "PANELIST 6",
-        "PANELIST 7",
-        "PANELIST 8",
-    ];
+    const speakers = panelistsData.panelists;
 
-    const photoNumber = [
-        "Photo 1",
-        "Photo 2",
-        "Photo 3",
-        "Photo 4",
-        "Photo 5",
-        "Photo 6",
-        "Photo 7",
-        "Photo 8",
-    ];
+    const speakerNames = speakers.map(panelist => panelist.name);
+    const photoNumber = speakers.map(panelist => panelist.photoNumber);
+    const speakerProfession = speakers.map(panelist => panelist.profession);
+    const intOrExt = speakers.map(panelist => panelist.intOrExt);
+    const description = speakers.map(panelists => panelists.description);
+    const photo = speakers.map(panelists => panelists.photo);
 
-    const speakerProfession = [
-        "Software Engineer",
-        "Software Analyst",
-        "Game Developer",
-        "Cyber Security",
-        "Computer Technician",
-        "Computer Engineer",
-        "Data Scientist",
-        "Software Consultant",
-    ];
-
-    const intOrExt = [
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-    ];
-
+    const changeSpeaker = (direction) => {
+        if (direction === "above") {
+            setCurrentIndex((prevIndex) =>
+                prevIndex - 1 >= 0 ? prevIndex - 1 : speakerNames.length - 1
+            );
+        } else if (direction === "below") {
+            setCurrentIndex((prevIndex) =>
+                prevIndex + 1 < speakerNames.length ? prevIndex + 1 : 0
+            );
+        }
+    };
     return (
         <main className="flex min-h-screen flex-col p-24">
-             <div className="my-1 ms-20 border-l border-black">
+            <div className="my-1 ms-20 border-l border-black">
             <PhotoComponent
                 currentButton={currentButton}
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -88,7 +67,9 @@ export const EventsCSExpo = () => {
                 photoNumber={photoNumber}
                 speakerProfession={speakerProfession}
                 intOrExt={intOrExt}
-                panelOrSpeaker="PANELIST"
+                description={description}
+                photo={photo}
+                panelOrSpeaker="PANELISTS"
             />
 
             <div className="ms-28">

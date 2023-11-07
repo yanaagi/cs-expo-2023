@@ -22,6 +22,8 @@ export const EventsDevDay = () => {
     const photoNumber = speakers.map(speaker => speaker.photoNumber);
     const speakerProfession = speakers.map(speaker => speaker.profession);
     const intOrExt = speakers.map(speaker => speaker.intOrExt);
+    const description = speakers.map(speakers => speakers.description);
+    const photo = speakers.map(speakers => speakers.photo);
 
     const changeSpeaker = (direction) => {
         if (direction === "above") {
@@ -60,7 +62,9 @@ export const EventsDevDay = () => {
                         photoNumber={photoNumber}
                         speakerProfession={speakerProfession}
                         intOrExt={intOrExt}
-                        panelOrSpeaker="SPEAKER"
+                        description={description}
+                        photo={photo}
+                        panelOrSpeaker="SPEAKERS"
                     />
 
             <div className="ms-28">
