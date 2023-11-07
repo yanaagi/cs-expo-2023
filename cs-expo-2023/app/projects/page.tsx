@@ -75,7 +75,7 @@ const Projects = () => {
             backgroundColor: "black",
           },
         ]}
-      /> 
+      />
     </main>
   );
 };
