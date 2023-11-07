@@ -48,7 +48,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
         </div>
         <div className="flex flex-col ml-5 mr-10 my-10">
           <div className="text-4xl font-bold text-end row-start-1">{thesisTitle}</div>
-          <div className="text-2xl text-coral-pink font-bold text-end row-start-2 pt-5">{"-"+groupname}</div>
+          <div className="text-3xl font-bold text-end row-start-2 text-coral-pink pt-5">{groupname}</div>
         </div>
       </div>
 
