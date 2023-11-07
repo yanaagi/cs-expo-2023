@@ -2,8 +2,6 @@
 
 import {AiOutlineUp,  AiOutlineDown} from 'react-icons/ai';
 import React, { useState, useEffect } from 'react';
-import Splide from '@splidejs/splide';
-
 
 interface Slide {
   link: string;

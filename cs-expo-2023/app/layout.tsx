@@ -29,6 +29,9 @@ export default function RootLayout({
                 />
 
                 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+                {/* SplideJS */}
+                <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"/>
             </head>
             <body>
                 <NavBar />
