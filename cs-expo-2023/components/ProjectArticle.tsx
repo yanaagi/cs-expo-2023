@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect, useRef, MouseEvent } from 'react';
-import { AiOutlineRight, AiOutlineUp } from 'react-icons/ai';
-import ProjectArticleCarousel from "./ProjectGalleryCarousel";
+import React, { useState, useEffect } from 'react';
+import { AiOutlineRight, AiOutlineUp} from 'react-icons/ai';
+import GallerySlider from "../components/ProjectArticleGallerySlider"
 
 interface ProjectArticleProps {
   groupname: string | undefined;
@@ -25,9 +25,6 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   AVPLink
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
-
-  const abs = "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis aliquid modi! Praesentium dicta impedit pariatur adipisci dolorem deserunt vitae ea nobis provident? Quos voluptatum officia nulla nemo obcaecati eligendi!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis aliquid modi! Praesentium dicta impedit pariatur adipisci dolorem deserunt vitae ea nobis provident? Quos voluptatum officia nulla nemo obcaecati eligendi!"
-
   const toggleReadMore = () => {
     setReadMoreState(!isReadMore);
   };
@@ -108,14 +105,22 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                   <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
                 </div>
             </div>
-            <div className="grid grid-cols-4 h-[300px] bg-timberwolf gap-10 place-items-stretch mb-10">
+            <div className="grid grid-cols-4 h-[300px] bg-timberwolf gap-10 mb-10">
               <div className="flex col-span-3 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center">
                 <p>AVP</p>
               </div>
-              <div className="flex flex-col">
-
-              </div>
+              
+              <GallerySlider 
+                slides={
+                  [
+                    {link: "/kekw-kek.gif"},
+                    {link: "/kekw-kek.gif"},
+                    {link: "/kekw-kek.gif"}
+                  ]
+                }
+              />
             </div>
+
           </div>
         </div>
       </div>
