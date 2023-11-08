@@ -6,7 +6,11 @@
         button: string;
     }
 
+<<<<<<< Updated upstream
     const EventComponent: React.FC<HomeOverviewHeaderProps> = ({ title, description, button }) => {
+=======
+    const EventComponent: React.FC<HomeOverviewHeaderProps> = ({ title, description, button}) => {
+>>>>>>> Stashed changes
         const desc = description.split('\n').map((line, index) => (
         <React.Fragment key={index}>
         {line}
