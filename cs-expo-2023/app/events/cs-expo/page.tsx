@@ -1,5 +1,3 @@
-cs expo main page panelist
-
 "use client";
 
 import React, { useState } from "react";
