@@ -17,18 +17,24 @@ const Partners: NextPage = () => {
         <div className="flex items-center justify-center p-24">
           <PartnerIconsLayout partners={partnerArray} />
         </div>
+        <section id="partners-major">
         <h2 id="major" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MAJOR PARTNERS</h2>
+        </section>
         <div>
           <AlternatingPartnersLayout partners={partnerArray} />
         </div>
         <div>
+        <section id="partners-minor">
           <h2 id="minor" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MINOR PARTNERS</h2>
+        </section>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>
         </div>
         <div>
+          <section id="partners-media">
           <h2 id="media" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MEDIA PARTNERS</h2>
+          </section>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>

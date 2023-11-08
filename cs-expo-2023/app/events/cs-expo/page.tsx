@@ -72,6 +72,7 @@ export const EventsCSExpo = () => {
             />
             <h1 className="font-black text-8xl text-center mb-20">CS EXPO</h1>
             <hr className="border-t-1 border-black mb-4" />
+            <section id="cs-expo-about">
             <AboutComponent
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -81,7 +82,9 @@ export const EventsCSExpo = () => {
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 sampleText="Sample Photo"
             />
-
+            </section>
+            
+            <section id="cs-expo-panelists">
             <SpeakerPanelistLayout
                 speakerNames={speakerNames}
                 photoNumber={photoNumber}
@@ -89,9 +92,12 @@ export const EventsCSExpo = () => {
                 intOrExt={intOrExt}
                 panelOrSpeaker="PANELIST"
             />
+            </section>
 
             <div className="ms-28">
+            <section id="cs-expo-gallery">
                 <h1 className="font-black text-8xl">PREVIOUS CS EXPOS</h1>
+                </section>
 
                 {/* 2022 */}
                 <Carousel
