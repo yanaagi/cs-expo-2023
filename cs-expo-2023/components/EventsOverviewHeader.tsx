@@ -1,5 +1,4 @@
 'use client'
-
 import React, {useState} from 'react'
 
 interface EventsOverviewHeaderProps {
@@ -11,8 +10,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   const [currentEvent, setCurrentEvent] = useState<number>(0);
 
   // Define an array of dot sizes
-  const dotSizes: string[] = ['h-9 w-9', 'h-7 w-7', 'h-5 w-5', 'h-3 w-3'];
-
+  const dotSizes: string[] = ['h-10 w-10', 'h-8 w-8', 'h-6 w-6', 'h-4 w-4'];
   const detailclassName: string = "text-base bg-transparent flex py-4 px-8 lex justify-center items-center text-coral-pink";
 
   const nextEvent = () => {
@@ -27,14 +25,14 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
     <div>
       <div className="text-slider">
         {title.map((word, index) => (
-          <div key={index} className={`text-eerie-black text-7xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
+          <div key={index} className={`text-eerie-black text-8xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
             index === currentEvent ? 'block' : 'hidden'
         }`}>
             {word}
           </div>
         ))}
       </div>
-      <div className="tracking-widest text-slider-description whitespace-pre-line text-eerie-black text-base mt-2 mb-16 flex flex-col items-center font-family-montserrat text-center">
+      <div className="max-w-screen-md mx-auto tracking-widest text-eerie-black text-xl mt-2 mb-16 flex flex-col justify-center items-center font-family-montserrat text-center">
       {description[currentEvent].split('\n').map((line, index) => (
           <p key={index}>{line}</p>
         ))}
@@ -55,23 +53,17 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           </a>
         )}
       </div>
-      <ul className="dots flex flex-col items-center space-y-5 mb-56">
+      <ul className="mx-auto dots flex flex-col items-center space-y-5 mb-56">
         {[0, 1, 2, 3].map((index) => (
           <li
             key={index}
             className={`${
               index === currentEvent ? 'bg-coral-pink' : 'bg-gray-400'
-            } ${dotSizes[index]} rounded-full my-2 cursor-pointer`}
+            } ${dotSizes[index]} grow-1 shrink-1 rounded-full my-2 cursor-pointer`}
             onClick={() => setCurrentEvent(index)}
           ></li>
         ))}
       </ul>
-      <button onClick={prevEvent} className="prev-button">
-        &lt;
-      </button>
-      <button onClick={nextEvent} className="next-button">
-        &gt;
-      </button>
     </div>
   );
 }
