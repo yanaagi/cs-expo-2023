@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import PartnerIconsLayout from "../../components/PartnerIconsLayout";
 import AlternatingPartnersLayout from '../../components/AlternatingPartnersLayout';
 import partnersData from '../../partners.json';
+import CircularSidebar from '@/components/PartnersSidebar';
 
 const Partners: NextPage = () => {
   const partnerArray = Object.values(partnersData);
@@ -16,22 +17,24 @@ const Partners: NextPage = () => {
         <div className="flex items-center justify-center p-24">
           <PartnerIconsLayout partners={partnerArray} />
         </div>
+        <h2 id="major" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MAJOR PARTNERS</h2>
         <div>
           <AlternatingPartnersLayout partners={partnerArray} />
         </div>
         <div>
-          <h2 className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MINOR PARTNERS</h2>
+          <h2 id="minor" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MINOR PARTNERS</h2>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>
         </div>
         <div>
-          <h2 className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MEDIA PARTNERS</h2>
+          <h2 id="media" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MEDIA PARTNERS</h2>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>
         </div>
       </div>
+      <CircularSidebar />
     </main>
   );
 }

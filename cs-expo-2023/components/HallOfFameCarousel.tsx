@@ -237,7 +237,7 @@ const Carousel: React.FC<CarouselProps> = ({
                 >
                     <button
                         data-glide-dir="<"
-                        className="absolute top-40 text-5xl font-bold"
+                        className="absolute top-40 -left-2.5 text-5xl font-bold"
                     >
                         <span className="flex-auto">
                             <AiOutlineLeft />
