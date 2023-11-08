@@ -59,8 +59,8 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
           }
         });
         
-        currentIndex === 0? (setIsMaxSlideUp(true)):(setIsMaxSlideUp(false));
-        slideElements.length === currentIndex+1? (setIsMaxSlideDown(true)):(setIsMaxSlideDown(false));
+        setIsMaxSlideUp(currentIndex === 0);
+        setIsMaxSlideDown(slideElements.length === currentIndex+1);
       });
   
       splide.on(["click"], (slide: { index: any; },e: any) =>{
