@@ -54,7 +54,12 @@ export const EventsDevDay = () => {
                     </h1>
                     <hr className="border-t-1 border-black mb-4 ml-20" />
                     <AboutComponent
-                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        customText="CS Expo 2023 V.2.0, hosted by Far Eastern University Institute of Technology's fourth-year students,
+                        is a three-day event showcasing groundbreaking thesis projects and their impact on the ever-changing tech landscape.
+                        With the theme Paving The New Technospace Through Paradigm Shifting Innovations participants aim to challenge the status quo
+                        with fresh technology and approaches. The event kicks off on November 22, 2023 with DevDay, A symposium featuring talks from industry
+                        experts. The main event happens on November 28 and 29, where students present their projects to faculty and industry professionals,
+                        with awards recognizing innovation and research edxcellence. A must attend for all FEU Tech Computer Science students."
                         sampleText="SamplePhoto2"
                     />
                     <SpeakerPanelistLayout
