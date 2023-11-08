@@ -7,10 +7,10 @@ interface ButtonComponentProps {
 
 const ButtonComponent: React.FC<ButtonComponentProps> = ({ currentButton, changeButton }) => {
   return (
-    <div className="flex space-x-3 ml-4 sm:ml-28 mt-1">
-      <div className="flex space-x-4">
+    <div className="flex space-x-2 sm:space-x-3 ml-20 sm:ml-28 mt-1">
+      <div className="flex space-x-2 sm:space-x-4">
         <div
-          className={`border border-gray-300 p-2 rounded-md cursor-pointer ${
+          className={`border border-gray-300 p-1 sm:p-2 rounded-md cursor-pointer ${
             currentButton === 1
               ? "bg-coral-pink"
               : "bg-timberwolf"
@@ -18,7 +18,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ currentButton, change
           onClick={() => changeButton(1)}
         ></div>
         <div
-          className={`border border-gray-300 p-2 rounded-md cursor-pointer ${
+          className={`border border-gray-300 p-1 sm:p-2 rounded-md cursor-pointer ${
             currentButton === 2
               ? "bg-coral-pink"
               : "bg-timberwolf"
@@ -26,7 +26,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ currentButton, change
           onClick={() => changeButton(2)}
         ></div>
         <div
-          className={`border border-gray-300 p-2 rounded-md cursor-pointer ${
+          className={`border border-gray-300 p-1 sm:p-2 rounded-md cursor-pointer ${
             currentButton === 3
               ? "bg-coral-pink"
               : "bg-timberwolf"
