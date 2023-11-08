@@ -48,6 +48,9 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.js"
           async
         ></script>
+        
+        {/* SplideJS */}
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"/>
       </head>
       <body>
         <NavBar />
