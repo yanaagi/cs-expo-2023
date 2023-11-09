@@ -10,30 +10,32 @@ import { title } from "process";
 
 const Projects = () => {
   return (
-    <main className="flex flex-col items-center justify-between p-24">
+    <main className="flex flex-col items-center justify-between p-24 mt-6">
       {/* Call  ProjectsHeader component */}
       <ProjectsHeader
         headerText="PROJECTS"
-        subheaderText="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, optio. Nam numquam ratione laboriosam architecto commodi?"
+        subheaderText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus."
       />
 
       <div className="flex justify-center p-4 w-full">
         <Link
           href="/projects/hall-of-fame"
-          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
+          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink whitespace-nowrap"
+          // `whitespace-nowrap` prevents Hall of Fame text from wrapping to the next line on smaller screens
         >
           Hall of Fame{" "}
           <span className="flex-auto">
-            <AiOutlineRight />
+            <AiOutlineRight className="sm:text-base md:text-lg lg:text-xl" />
           </span>
         </Link>
         <Link
           href="/projects/collections-of-projects"
-          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink"
+          className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink whitespace-nowrap"
+          // `whitespace-nowrap` prevents Collections of Projects text from wrapping to the next line on smaller screens
         >
           Collections of Projects{" "}
           <span>
-            <AiOutlineRight />
+            <AiOutlineRight className="sm:text-base md:text-lg lg:text-xl" />
           </span>
         </Link>
       </div>
@@ -76,7 +78,7 @@ const Projects = () => {
             backgroundColor: "black",
           },
         ]}
-      /> 
+      />
     </main>
   );
 };

@@ -5,60 +5,25 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
+import speakersData from '@/speakers.json'; 
+
 
 export const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const changeButton = (buttonNumber) => {
+    const changeButton = (buttonNumber: number) => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakerNames = [
-        "SPEAKER 1",
-        "SPEAKER 2",
-        "SPEAKER 3",
-        "SPEAKER 4",
-        "SPEAKER 5",
-        "SPEAKER 6",
-        "SPEAKER 7",
-        "SPEAKER 8",
-    ];
+    const speakers = speakersData.speakers;
 
-    const photoNumber = [
-        "Photo 1",
-        "Photo 2",
-        "Photo 3",
-        "Photo 4",
-        "Photo 5",
-        "Photo 6",
-        "Photo 7",
-        "Photo 8",
-    ];
-
-    const speakerProfession = [
-        "Software Engineer",
-        "Software Analyst",
-        "Game Developer",
-        "Cyber Security",
-        "Computer Technician",
-        "Computer Engineer",
-        "Data Scientist",
-        "Software Consultant",
-    ];
-
-    const intOrExt = [
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-    ];
-
-    const description = ["Photo 1", "Photo 2", "Photo 3", "Photo 4"];
+    const speakerNames = speakers.map(speaker => speaker.name);
+    const photoNumber = speakers.map(speaker => speaker.photoNumber);
+    const speakerProfession = speakers.map(speaker => speaker.profession);
+    const intOrExt = speakers.map(speaker => speaker.intOrExt);
+    const description = speakers.map(speakers => speakers.description);
+    const photo = speakers.map(speakers => speakers.photo);
 
     const changeSpeaker = (direction) => {
         if (direction === "above") {
@@ -74,8 +39,8 @@ export const EventsDevDay = () => {
 
     return (
         <main className="flex min-h-screen flex-col p-24">
-            <div className="ms-28">
-                <div className="container">
+            <div className="my-1 ms-20 border-l border-black">
+
                     <PhotoComponent
                         currentButton={currentButton}
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -93,22 +58,18 @@ export const EventsDevDay = () => {
                     <hr className="border-t-1 border-black mb-4" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        sampleText="Sample Photo"
+                        sampleText="SamplePhoto2"
                     />
-                    
-                    <section id="dev-day-speakers">
-                    <hr className="border-t-1 border-white mb-20" /> 
-                    </section>
-                    <hr className="border-t-1 border-white mb-20" /> 
+
                     <SpeakerPanelistLayout
                         speakerNames={speakerNames}
                         photoNumber={photoNumber}
                         speakerProfession={speakerProfession}
                         intOrExt={intOrExt}
-                        panelOrSpeaker="SPEAKER"
+                        description={description}
+                        photo={photo}
+                        panelOrSpeaker="SPEAKERS"
                     />
-                </div>
-            </div>
 
             <div className="ms-28">
                 <section id="dev-day-gallery">
@@ -144,9 +105,11 @@ export const EventsDevDay = () => {
                     perView={2}
                     id="carousel-2023"
                 />
+              </div>
             </div>
         </main>
     );
 };
 
 export default EventsDevDay;
+	
