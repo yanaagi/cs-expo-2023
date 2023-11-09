@@ -38,7 +38,7 @@ const Carousel: React.FC<CarouselProps> = ({
                 <h1 className="font-bold text-5xl">{title}</h1>
                 <p className="font-medium pe-12">{description}</p>
             </div>
-            <div className="col-span-12 md:col-span-9 relative">
+            <div className="col-span-9 relative">
                 <div className={`${id} glide`} id={id}>
                     <div className="mx-16 overflow-x-hidden">
                         <div className="w-[2000px]">
