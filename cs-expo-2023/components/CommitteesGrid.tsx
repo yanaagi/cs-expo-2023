@@ -28,7 +28,7 @@ const CommitteesGrid = () => {
       {committeeNames.map((committeeName, index) => (
         <div
           key={index}
-          className={`p-4 bg-coral-pink text-white text-right font-bold relative transform scale-100 hover:scale-105 ${
+          className={`p-4 bg-coral-pink text-white text-center sm:text-right font-bold relative transform scale-100 hover:scale-105 ${
             hovered === index ? 'scale-105' : ''
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
@@ -46,4 +46,3 @@ const CommitteesGrid = () => {
 };
 
 export default CommitteesGrid;
-
