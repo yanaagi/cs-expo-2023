@@ -185,7 +185,7 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
 
   return (
     <main>
-      <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 pt-20">
+      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 pt-20">
         <>{groupCards}</>
       </div>
       <Sidebar sideBarCallback={sideBarCallback}/>
