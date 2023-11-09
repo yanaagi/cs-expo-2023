@@ -12,7 +12,7 @@ const CollectionOfProjectsHeader: React.FC<CollectionOfProjectsProps> = ({ heade
         <div className="w-full top-0 text-center text-zinc-900 text-5xl font-bold font-['Helvetica Now Text ']">
           {headerText}
         </div>
-        <div className="flex sm:w-full md:w-1/2 lg:w-1/2 mx-auto text-center text-zinc-900 sm:text-base md:text-lg lg:text-xl font-normal font-['Helvetica Now Text ']">
+        <div className="flex sm:w-full md:w-4/5 lg:w-4/5 mx-auto text-center text-zinc-900 sm:text-base md:text-lg lg:text-xl font-normal font-['Helvetica Now Text ']">
           {subheaderText}
         </div>
       </div>
