@@ -33,7 +33,7 @@ const CommitteesGrid = () => {
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
-          style={{ width: '90%', minHeight: '250px' }} 
+          style={{ width: '89%', minHeight: '250px' }} 
         >
           <div className="font-bold text-1xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl">{committeeName}</div>
           <a href="#" className="text-sm sm:text-base absolute bottom-4 right-4 text-white no-underline cursor-pointer font-bold">
