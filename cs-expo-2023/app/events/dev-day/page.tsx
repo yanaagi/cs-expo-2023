@@ -89,7 +89,7 @@ export const EventsDevDay = () => {
                         { backgroundColor: "var(--timberwolf)" },
                         { backgroundColor: "var(--timberwolf)" },
                     ]}
-                    perView={2}
+                    perView={6}
                     id="carousel-2022"
                 />
 
@@ -102,7 +102,7 @@ export const EventsDevDay = () => {
                         { backgroundColor: "var(--timberwolf)" },
                         { backgroundColor: "var(--timberwolf)" },
                     ]}
-                    perView={2}
+                    perView={6}
                     id="carousel-2023"
                 />
               </div>
