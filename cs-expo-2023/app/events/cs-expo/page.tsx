@@ -51,7 +51,11 @@ export const EventsCSExpo = () => {
                 changeButton={changeButton}
             />
             <h1 className="font-black text-8xl text-center mb-20">CS EXPO</h1>
-            <hr className="border-t-1 border-black mb-4 ml-20" />
+            <section id="cs-expo-about">
+                    <hr className="border-t-1 border-white mb-20" /> 
+                    </section>
+                    <hr className="border-t-1 border-black mb-4" />
+
             <AboutComponent
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -61,7 +65,10 @@ export const EventsCSExpo = () => {
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 sampleText="Sample Photo"
             />
-
+            <section id="cs-expo-panelists">
+                <hr className="border-t-1 border-white mb-20" /> 
+            </section>
+                <hr className="border-t-1 border-white mb-20" />
             <SpeakerPanelistLayout
                 speakerNames={speakerNames}
                 photoNumber={photoNumber}
@@ -71,7 +78,10 @@ export const EventsCSExpo = () => {
                 photo={photo}
                 panelOrSpeaker="PANELISTS"
             />
-
+            <section id="cs-expo-gallery">
+                <hr className="border-t-1 border-white mb-20" /> 
+            </section>
+                <hr className="border-t-1 border-white mb-20" />
             <div className="ms-28">
                 <h1 className="font-black text-8xl">PREVIOUS CS EXPOS</h1>
 

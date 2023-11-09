@@ -52,12 +52,16 @@ export const EventsDevDay = () => {
                     <h1 className="font-black text-8xl text-center mb-20">
                         DEV DAY
                     </h1>
-                    <hr className="border-t-1 border-black mb-4 ml-20" />
+                    <section id="dev-day-about">
+                    <hr className="border-t-1 border-white mb-20" /> 
+                    </section>
+                    <hr className="border-t-1 border-black mb-4" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                         sampleText="SamplePhoto2"
                     />
-                    <SpeakerPanelistLayout	
+
+                    <SpeakerPanelistLayout
                         speakerNames={speakerNames}
                         photoNumber={photoNumber}
                         speakerProfession={speakerProfession}
@@ -68,6 +72,11 @@ export const EventsDevDay = () => {
                     />
 
             <div className="ms-28">
+                <section id="dev-day-gallery">
+                <hr className="border-t-1 border-white mb-20" /> 
+                </section>
+                <hr className="border-t-1 border-white mb-20" /> 
+
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
 
                 {/* 2022 */}
