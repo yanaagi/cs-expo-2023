@@ -25,7 +25,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
     <div>
       <div className="text-slider">
         {title.map((word, index) => (
-          <div key={index} className={`text-eerie-black text-8xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
+          <div key={index} className={`text-eerie-black lg:text-8xl xs:text-6xl md:text-8xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
             index === currentEvent ? 'block' : 'hidden'
         }`}>
             {word}
