@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
-const Sidebar = () => {
+const Sidebar = ({sideBarCallback}) => {
   const [showArrow, setShowArrow] = useState(false);
   const [showArrowColor, setShowArrowColor] = useState('coral-pink');
 
@@ -10,8 +10,8 @@ const Sidebar = () => {
   };
 
   const handleBoxClick = (boxNumber) => {
-    console.log(`Clicked on Box ${boxNumber}`);
     // Action
+    sideBarCallback(boxNumber);
   };
 
   const handleScroll = () => {
@@ -38,13 +38,13 @@ const Sidebar = () => {
         </div>
       )}
       <div className="mb-2 mr-5 ml-5 flex-col text-white items-center justify-center">
-        {[1, 2, 3, 4, 5, 6, 7].map((boxNumber) => (
+        {["All", "Data Analytics", "Education", "Health", "Img Proc - CV", "IOT", "NLP"].map((boxNumber) => (
           <div
             key={boxNumber}
             className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"
             onClick={() => handleBoxClick(boxNumber)}
           >
-            Category {boxNumber}
+            {boxNumber}
           </div>
         ))}
       </div>
