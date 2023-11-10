@@ -24,7 +24,7 @@ interface ProjectsCarouselProps {
 // Configuration options for the Glide.js carousel.
 const config = {
   type: "carousel",
-  autoplay: 3000,
+  autoplay: 4000,
   hoverpause: true,
   startAt: 0,
   perView: 7, // number of slides to show at once in desktop, 7 is an allowance for smooth transition
@@ -37,13 +37,13 @@ const config = {
       perView: 5, // number of slides to show at once for medium screens
     },
     768: {
-      perView: 7, // number of slides to show at once for small screens
+      perView: 3, // number of slides to show at once for small screens
     },
-    400: {
-      perView: 3,
+    600: {
+      perView: 2,
     },
-    360: {
-      perView: 4,
+    480: {
+      perView: 1,
     },
   },
 };
@@ -54,7 +54,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
   }, []);
 
   return (
-    <main className="flex justify-center mt-[-20px]">
+    <main className="flex justify-center">
       {/* Structure of Glide.js*/}
       <div className="glide relative">
         {" "}
@@ -63,23 +63,23 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
           <div className="flex justify-center overflow-hidden">
             <div className="w-[2500px]">
               <div className="glide__track w-full" data-glide-el="track">
-                <ul className="glide__slides h-[420px]">
+                <ul className="glide__slides h-[400px]">
                   {/* Data Analytics*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -104,19 +104,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Education*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative mx-0">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
@@ -141,19 +141,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Health*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -178,19 +178,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Image Processing / Computer Vision*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
@@ -215,19 +215,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Internet of Things*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -252,19 +252,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Natural Language Processing*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
@@ -290,19 +290,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Data Analytics*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -327,19 +327,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Education*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative mx-0">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
@@ -364,19 +364,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Health*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -401,19 +401,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Image Processing / Computer Vision*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
@@ -438,19 +438,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Internet of Things*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#7E7E7E", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#5C5C5C", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "#353535", // foreBackgroundColor
                       }}
@@ -475,19 +475,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* Natural Language Processing*/}
                   <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
                     <div
-                      className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] bg-slate-200 absolute left-10 bottom-10"
                       style={{
                         backgroundColor: "#973235", // backBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] left-6 bottom-8 bg-slate-300 absolute"
                       style={{
                         backgroundColor: "#B43E41", // midBackgroundColor
                       }}
                     ></div>
                     <div
-                      className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
+                      className="w-full h-full sm:w-[250px] sm:h-[333px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
                       style={{
                         backgroundColor: "var(--coral-pink)", // foreBackgroundColor
                       }}
