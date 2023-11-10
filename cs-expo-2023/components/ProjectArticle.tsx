@@ -31,7 +31,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 
   return (
     <div className="flex lg:flex-row md:flex-col sm:flex-col min-[100px]:flex-col max-w-full">
-      <div className="flex flex-col w-screen pt-24">
+      <div className="flex flex-col w-screen pt-24 max-sm:w-[640px]">
         <div className="flex flex-col items-center justify-start pt-5">
           <div className="flex relative bg-timberwolf h-[560px] w-[450px] s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
 
@@ -52,7 +52,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
         </div>
       </div>
 
-      <div className="flex bg-timberwolf w-screen pt-24">
+      <div className="flex bg-timberwolf w-screen pt-24 max-sm:w-[640px]">
         <div className="flex flex-col px-6">
           <div className="flex flex-col">
             <div className="flex flex-row"> 
