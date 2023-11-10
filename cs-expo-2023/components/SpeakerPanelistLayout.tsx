@@ -128,7 +128,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
               <h1 className="col-span-1 font-black text-2xl text-coral-pink text-center font-sans">
                 {speakerNames[currentIndex]}
               </h1>
-              <div className="col-span-1 text-right pr-40 text-coral-pink ml-20">
+              <div className="col-span-1 text-right text-coral-pink ml-20">
                 <button onClick={() => changeButton("below")}><AiOutlineRight className="stroke-current w-10 h-12" /></button>
               </div> 
             </div>
