@@ -47,32 +47,7 @@ useEffect(() => {
   };
 }, []);
 
-<<<<<<< Updated upstream
-  return (
-      <main className="">
-        <div className="mt-32 mr-56 whitespace-pre-line text-left inline-block text-eerie-black p-40 font-helvetica font-bold">
-          <h1 ref={textElementRef} className="lg:text-5xl sm:text-2xl sm:inline-block sm:leading-normal lg:leading-normal">
-          </h1>
-        </div>
-
-        <HomeHeader
-            title="CS EXPO"
-            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-          tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-          nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-          vitae suscipit tellus.`}
-            button="/events/cs-expo"
-        />
-        <HomeHeader title="DEV DAY"
-                    description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-          tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-          nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-          vitae suscipit tellus.`}
-                    button="/events/dev-day" />
-      </main>
-  );
-=======
-// Reset the typewriter animation
+  // Reset the typewriter animation
 const resetTypewriterAnimation = () => {
   setText("");
 };
@@ -80,8 +55,9 @@ const resetTypewriterAnimation = () => {
 
 return (
     <main>
-      <div className="mt-80 mr-56 whitespace-pre-line text-left inline-block text-eerie-black p-40 font-helvetica font-bold">
-        <h1 ref={textElementRef} className="lg:text-5xl sm:text-2xl sm:inline-block sm:leading-normal lg:leading-normal"></h1>
+      <div>
+          <h1 ref={textElementRef} className="text-[min(3.5vw,12rem)] mt-32 text-left text-eerie-black p-40 font-helvetica font-bold">
+          </h1>
       </div>
 
       <details class="group py-1 text-lg relative">
@@ -102,7 +78,7 @@ return (
             ></path>
           </svg>
         </summary>
-          <p class="mt-48 text-eerie-black text-6xl font-bold font-family-helvetica text-center absolute top-0 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
+          <p class="mt-48 text-eerie-black text-5xl font-bold font-family-helvetica text-center absolute top-0 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
             SPONSORS
           </p>
       </details>;
@@ -123,5 +99,5 @@ return (
                   button="/events/dev-day" />
     </main>
 );
->>>>>>> Stashed changes
 }
+
