@@ -19,13 +19,13 @@ import React from 'react';
                 <br />
 
                 <div>
-                <p className="text-[min(10vw,4.5rem)] mt-50 mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
+                <p className="text-[min(12vw,7rem)] mt-50 xl:mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica min-[320px]:mt-4">
                     {title}
                 </p>
                 </div>
                 
                 <div>
-                <p className="text-[min(2vw,4rem)] text-eerie-black text-center mt-5 mb-14 flex flex-col items-center font-family-montserrat leading-5 tracking-widest">
+                <p className="text-[min(2vw,2rem)] text-eerie-black text-center mt-5 mb-14 flex flex-col items-center font-family-montserrat xl:leading-5 min-[320px]:leading-12 tracking-widest">
                     {desc}
                 </p>
                 </div>

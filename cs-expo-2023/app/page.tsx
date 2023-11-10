@@ -56,7 +56,7 @@ const resetTypewriterAnimation = () => {
 return (
     <main>
       <div>
-          <h1 ref={textElementRef} className="text-[min(3.5vw,12rem)] mt-32 text-left text-eerie-black p-40 font-helvetica font-bold">
+          <h1 ref={textElementRef} className="text-[min(4.5vw,11rem)] mt-56 xl:ml-52 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-center min-[320px]:ml-2">
           </h1>
       </div>
 
