@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Carousel from "@/components/Carousel";
 import PhotoComponent from "@/components/PhotoComponent";
@@ -38,21 +39,21 @@ export const EventsDevDay = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col p-24">
-            <div className="my-1 ms-20 border-l border-black">
-
+        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+            <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                     <PhotoComponent
                         currentButton={currentButton}
-                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     />
                     <ButtonComponent
                         currentButton={currentButton}
                         changeButton={changeButton}
                     />
-                    <h1 className="font-black text-8xl text-center mb-20">
-                        DEV DAY
+                    <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
+                    DEV DAY
+                    
                     </h1>
-                    <hr className="border-t-1 border-black mb-4 ml-20" />
+                    <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                         sampleText="SamplePhoto2"
@@ -66,7 +67,6 @@ export const EventsDevDay = () => {
                         photo={photo}
                         panelOrSpeaker="SPEAKERS"
                     />
-
             <div className="ms-28">
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
 
@@ -100,7 +100,7 @@ export const EventsDevDay = () => {
             </div>
         </main>
     );
-};
+}
 
 export default EventsDevDay;
 	

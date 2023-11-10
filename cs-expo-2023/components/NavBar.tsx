@@ -223,7 +223,7 @@ const mobileMenu = () => {
 
      return (
           <header ref={mobileNavbarRef} className={`w-full fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'h-auto' : 'bg-eerie-black'}`}>
-               <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
+               <nav className="w-screen mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
                     <Link href="/">
                          <Image
                               src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}

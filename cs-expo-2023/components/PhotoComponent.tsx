@@ -6,13 +6,25 @@ interface PhotoComponentProps {
 }
 
 const PhotoComponent: React.FC<PhotoComponentProps> = ({ currentButton, customText }) => {
+  let imageSource = ''; // Define a variable to hold the image source
+
+  if (currentButton === 1) {
+    imageSource = '/path-to-photo1.jpg';
+  } else if (currentButton === 2) {
+    imageSource = '/path-to-photo2.jpg';
+  } else if (currentButton === 3) {
+    imageSource = '/path-to-photo3.jpg';
+  }
+
   return (
-    <div className="p-72 pb-72 text-center font-medium sm:text-2xl bg-timberwolf ml-28 mt-10 mr-16 mb-4 h-62 relative">
-      Sample Photo {currentButton}
-      <div className="absolute bottom-[-2rem] right-[-3rem] p-12 font-medium bg-coral-pink text-white h-72 w-96 text-left sm:text-xl">
-        <div className="absolute top-0 right-[-1rem] w-6 h-10 bg-white transform skew-x-[-320deg]"></div>
-        <div className="absolute bottom-0 left-[-1rem] w-6 h-8 bg-white transform skew-x-[-320deg]"></div>
-        {customText}
+    <div className="p-32 text-center font-medium bg-timberwolf w-auto h-auto mt-11 mb-2 ml-6 mr-10 sm:p-64 sm:mt-2 sm:mb-4 sm:ml-28 sm:mr-28 relative">
+    Sample Photo {currentButton}
+    <img
+      src={imageSource}
+      className="object-cover w-full h-full"
+    />
+   <div className="absolute bottom-[-2.5rem] right-[-1.5rem] p-4 sm:p-6 font-medium bg-coral-pink text-white mb-6 h-40 sm:h-64 w-40 sm:w-72 text-left sm:bottom-[-3.8rem] sm:right-[-4rem] text-sm sm:text-base md:text-lg lg:text-xl">
+    {customText}
       </div>
     </div>
   );
