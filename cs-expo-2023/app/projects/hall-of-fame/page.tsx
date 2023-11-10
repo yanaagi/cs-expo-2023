@@ -4,7 +4,7 @@ import Carousel from "@/components/HallOfFameCarousel";
 
 const HallOfFame = () => {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="flex flex-col items-center justify-between pt-24 md:p-24 overflow-x-hidden">
             <ProjectsHeader
                 headerText="HALL OF FAME"
                 subheaderText="
