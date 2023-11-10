@@ -56,14 +56,14 @@ const resetTypewriterAnimation = () => {
 return (
     <main>
       <div>
-          <h1 ref={textElementRef} className="text-[min(4.5vw,11rem)] mt-56 xl:ml-52 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-center min-[320px]:ml-2">
+          <h1 ref={textElementRef} className="absolute text-[min(4.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-center min-[320px]:ml-12">
           </h1>
       </div>
 
-      <details class="group py-1 text-lg relative">
-        <summary class="shadow-2xl flex cursor-pointer justify-center flex-row items-center py-1 font-bold text-coral-pink marker:[font-size:0px]">
+      <details className="group xl:py-64 min-[320px]:py-28 text-lg">
+        <summary class="xl:mt-80 min-[320px]:mt-56 shadow-2xl flex cursor-pointer justify-center flex-row items-center font-bold text-coral-pink marker:[font-size:0px]">
           <svg
-            class="mt-64 h-20 w-20 rotate-0 transform font-bold text-coral-pink group-open:rotate-180"
+            className="xl:mt-72 min-[320px]:mt-24 xl:h-56 xl:w-20 min-[320px]:h-44 min-[320px]:w-8 rotate-0 transform font-bold text-coral-pink group-open:rotate-180"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ return (
             ></path>
           </svg>
         </summary>
-          <p class="mt-48 text-eerie-black text-5xl font-bold font-family-helvetica text-center absolute top-0 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
+          <p className="xl:mt-72 min-[320px]:mt-48 text-eerie-black xl:text-5xl min-[320px]:text-xs font-bold font-family-helvetica text-center absolute xl:top-96 min-[320px]:top-60 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
             SPONSORS
           </p>
       </details>;
