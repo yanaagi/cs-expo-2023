@@ -80,28 +80,27 @@ const Carousel: React.FC<CarouselProps> = ({
         const config = {
             type: "slider",
             startAt: 0,
-            perView: perView || 3,
-            gap: 0,
+            perView: 2,
             peek: {
                 before: 0,
                 after: 100,
             },
-            breakpoints: {
-                1300: {
-                    perView: 2,
-                    peek: {
-                        before: 0,
-                        after: 0,
-                    },
-                },
-                1100: {
-                    perView: 1,
-                    peek: {
-                        before: 0,
-                        after: 0,
-                    },
-                },
-            },
+            // breakpoints: {
+            //     1300: {
+            //         perView: 2,
+            //         peek: {
+            //             before: 0,
+            //             after: 0,
+            //         },
+            //     },
+            //     1100: {
+            //         perView: 1,
+            //         peek: {
+            //             before: 0,
+            //             after: 0,
+            //         },
+            //     },
+            // },
         };
 
         const glide = new Glide(`#${id}`, config);
@@ -137,7 +136,7 @@ const Carousel: React.FC<CarouselProps> = ({
     }, []);
 
     return (
-        <div className="w-screen max-w-[1300px] h-[500px] grid grid-cols-12 mt-16">
+        <div className="w-full max-w-[1300px] grid grid-cols-12 mt-16">
             <div className="relative col-span-3 h-3/4 flex flex-col">
                 <div className="grid grid-cols-2 h-full">
                     <div className="col-span-1 flex flex-col items-center justify-end">
@@ -158,7 +157,7 @@ const Carousel: React.FC<CarouselProps> = ({
                     </div>
                     <div className=" col-span-1 grid grid-cols-2">
                         <div className="col-span-1 flex flex-col md:pe-6">
-                            <div className="flex justify-start">
+                            <div className="flex justify-end">
                                 <h1
                                     className="font-bold md:text-2xl h-36 text-right"
                                     style={{ writingMode: "vertical-rl" }}
@@ -205,68 +204,72 @@ const Carousel: React.FC<CarouselProps> = ({
                 className="relative carousel-${id} glide overflow-hidden col-span-9"
                 id={id}
             >
-                <div className="glide__track h-full" data-glide-el="track">
-                    <ul className="glide__slides flex h-full">
-                        {slides.map((slide) => (
-                            <li className="glide__slide flex flex-col items-center justify-center">
-                                <div
-                                    id={`slide-image-${id}`}
-                                    className="w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
-                                    style={{
-                                        backgroundColor:
-                                            slide.backgroundColor ||
-                                            "var(--timberwolf)",
-                                    }}
-                                ></div>
-                                <div className="mt-4 p-4 sm:p-0">
-                                    <div className="font-bold text-2xl">
-                                        {slide.ranking}
-                                    </div>
-                                    <div className="font-bold text-4xl">
-                                        {slide.group}
-                                    </div>
-                                    <p className="">{slide.thesis}</p>
-
-                                    <div className="flex justify-end">
-                                        <Link
-                                            href={slide.link || "/"}
-                                            className="font-medium hover:underline flex items-center"
+                <div className="mx-10 md:mx-20 overflow-x-hidden">
+                    <div className="w-[500px] sm:w-[1000px]">
+                        <div className="glide__track" data-glide-el="track">
+                            <ul className="glide__slides">
+                                {slides.map((slide) => (
+                                    <li className="glide__slide flex flex-col items-center justify-center">
+                                        <div
+                                            id={`slide-image-${id}`}
+                                            className="w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px]"
                                             style={{
-                                                color: "var(--coral-pink)",
+                                                backgroundColor:
+                                                    slide.backgroundColor ||
+                                                    "var(--timberwolf)",
                                             }}
-                                        >
-                                            Learn more{" "}
-                                            <span className="ms-2 text-sm">
-                                                <AiOutlineRight />
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                                        ></div>
+                                        <div className="mt-4 p-4 sm:p-0">
+                                            <div className="font-bold text-2xl">
+                                                {slide.ranking}
+                                            </div>
+                                            <div className="font-bold text-4xl">
+                                                {slide.group}
+                                            </div>
+                                            <p className="">{slide.thesis}</p>
 
-                <div
-                    data-glide-el="controls"
-                    style={{ color: "var(--coral-pink)" }}
-                >
-                    <button
-                        data-glide-dir="<"
-                        className="absolute top-36 -left-2.5 text-5xl font-bold"
+                                            <div className="flex justify-end">
+                                                <Link
+                                                    href={slide.link || "/"}
+                                                    className="font-medium hover:underline flex items-center"
+                                                    style={{
+                                                        color: "var(--coral-pink)",
+                                                    }}
+                                                >
+                                                    Learn more{" "}
+                                                    <span className="ms-2 text-sm">
+                                                        <AiOutlineRight />
+                                                    </span>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        data-glide-el="controls"
+                        style={{ color: "var(--coral-pink)" }}
                     >
-                        <span className="flex-auto">
-                            <AiOutlineLeft />
-                        </span>
-                    </button>
-                    <button
-                        data-glide-dir=">"
-                        className="absolute right-0 top-36 text-5xl font-bold"
-                    >
-                        <span className="flex-auto">
-                            <AiOutlineRight />
-                        </span>
-                    </button>
+                        <button
+                            data-glide-dir="<"
+                            className="absolute top-36 left-3 sm:-left-2.5 text-4xl sm:text-5xl font-bold"
+                        >
+                            <span className="flex-auto">
+                                <AiOutlineLeft />
+                            </span>
+                        </button>
+                        <button
+                            data-glide-dir=">"
+                            className="absolute right-0 top-36 text-4xl sm:text-5xl font-bold"
+                        >
+                            <span className="flex-auto">
+                                <AiOutlineRight />
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

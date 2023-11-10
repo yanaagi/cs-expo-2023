@@ -22,13 +22,35 @@ export default function RootLayout({
                     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
                 />
 
-                {/* GlideJS */}
+                {/* GlideJS's two CDN (both required) */}
                 <link
                     rel="stylesheet"
-                    href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+                    href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
                 />
 
-                <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
+                />
+
+                <script
+                    src="https://cdn.jsdelivr.net/npm/@glidejs/glide"
+                    async
+                ></script>
+
+                {/* Scroll Carousel's CDN */}
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.css"
+                />
+
+                <script
+                    src="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.js"
+                    async
+                ></script>
+
+                {/* SplideJS */}
+                <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" />
             </head>
             <body>
                 <NavBar />
