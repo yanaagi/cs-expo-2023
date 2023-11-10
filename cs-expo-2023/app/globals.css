@@ -20,19 +20,4 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
-
-/* Adds CSS to ThesisPosterCard component */
-@keyframes fadeIn {
-    from {
-      opacity: 0; /* Start with 0 opacity (completely transparent) */
-    }
-    to {
-      opacity: 1; /* End with 1 opacity (fully visible) */
-    }
-  }
-  
-  /* Apply the "fadeIn" animation to the images */
-  img {
-    animation: fadeIn 2s; /* Use the "fadeIn" animation with a 2-second duration */
-  }
   
