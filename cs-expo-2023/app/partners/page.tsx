@@ -38,5 +38,5 @@ const Partners: NextPage = () => {
     </main>
   );
 }
-
+/* awawd*/
 export default Partners;
