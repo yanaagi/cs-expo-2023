@@ -28,10 +28,10 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
         />
 
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
-        />
+        /> */}
 
         <script
           src="https://cdn.jsdelivr.net/npm/@glidejs/glide"
