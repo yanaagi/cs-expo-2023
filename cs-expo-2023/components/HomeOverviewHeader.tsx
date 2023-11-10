@@ -1,4 +1,4 @@
-    import React from 'react';
+import React from 'react';
 
     interface HomeOverviewHeaderProps {
         title: string;
@@ -6,11 +6,7 @@
         button: string;
     }
 
-<<<<<<< Updated upstream
     const EventComponent: React.FC<HomeOverviewHeaderProps> = ({ title, description, button }) => {
-=======
-    const EventComponent: React.FC<HomeOverviewHeaderProps> = ({ title, description, button}) => {
->>>>>>> Stashed changes
         const desc = description.split('\n').map((line, index) => (
         <React.Fragment key={index}>
         {line}
@@ -21,13 +17,15 @@
         return (
             <div className="align-center mt-64">
                 <br />
-                <div className="lg:text-8xl sm:text-5xl">
-                <p className=" mt-50 mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
+
+                <div>
+                <p className="text-[min(10vw,4.5rem)] mt-50 mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
                     {title}
                 </p>
                 </div>
-                <div className="lg:text-base sm:text-base lg:leading-3 sm:leading-3 lg:tracking-widest sm:tracking-widest">
-                <p className="text-eerie-black text-center mt-5 mb-14 flex flex-col items-center font-family-montserrat">
+                
+                <div>
+                <p className="text-[min(2vw,4rem)] text-eerie-black text-center mt-5 mb-14 flex flex-col items-center font-family-montserrat leading-5 tracking-widest">
                     {desc}
                 </p>
                 </div>
