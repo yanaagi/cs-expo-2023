@@ -38,8 +38,8 @@ export const EventsDevDay = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col p-24">
-            <div className="my-1 ms-20 border-l border-black">
+        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+            <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
 
                     <PhotoComponent
                         currentButton={currentButton}
@@ -52,16 +52,12 @@ export const EventsDevDay = () => {
                     <h1 className="font-black text-8xl text-center mb-20">
                         DEV DAY
                     </h1>
-                    <section id="dev-day-about">
-                    <hr className="border-t-1 border-white mb-20" /> 
-                    </section>
-                    <hr className="border-t-1 border-black mb-4" />
+                    <hr className="border-t-1 border-black mb-4 ml-20" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                         sampleText="SamplePhoto2"
                     />
-
-                    <SpeakerPanelistLayout
+                    <SpeakerPanelistLayout	
                         speakerNames={speakerNames}
                         photoNumber={photoNumber}
                         speakerProfession={speakerProfession}
@@ -72,11 +68,6 @@ export const EventsDevDay = () => {
                     />
 
             <div className="ms-28">
-                <section id="dev-day-gallery">
-                <hr className="border-t-1 border-white mb-20" /> 
-                </section>
-                <hr className="border-t-1 border-white mb-20" /> 
-
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
 
                 {/* 2022 */}
@@ -89,7 +80,7 @@ export const EventsDevDay = () => {
                         { backgroundColor: "var(--timberwolf)" },
                         { backgroundColor: "var(--timberwolf)" },
                     ]}
-                    perView={6}
+                    perView={2}
                     id="carousel-2022"
                 />
 
@@ -102,7 +93,7 @@ export const EventsDevDay = () => {
                         { backgroundColor: "var(--timberwolf)" },
                         { backgroundColor: "var(--timberwolf)" },
                     ]}
-                    perView={6}
+                    perView={2}
                     id="carousel-2023"
                 />
               </div>
