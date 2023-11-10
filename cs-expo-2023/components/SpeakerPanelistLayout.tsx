@@ -41,8 +41,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
       {/* WEB VIEW */}
       <div className="ms-1 me-1 p-10 hidden lg:block">
         {/* Title */}
-        <hr className="border-t-1 border-black mb-4 ml-20"></hr>
-        <h1 className="font-black text-8xl mb-5 mt-10 ml-10 text-right">{panelOrSpeaker}</h1>
+        <h1 className="font-black text-8xl mb-5 ml-10 text-right">{panelOrSpeaker}</h1>
 
         {/* Grid Wrapper */}
         <div className="grid grid-cols-1 grid-cols-3">
@@ -107,29 +106,28 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
             </div>
           </div>
         </div>
-        <hr className="border-t-1 border-black mb-4 ml-20"></hr>
+        
       </div>
       
       {/* MOBILE VIEW */}
-      <div className="md:ms-1 md:me-1 p-10 lg:hidden">
+      <div className="md:ms-1 md:me-1 mx-7 mb-10 lg:hidden">
         {/* Title */}
-        <hr className="border-t-1 border-black mb-4"></hr>
-        <h1 className="font-black text-4xl mt-10 text-center">{panelOrSpeaker}</h1>
+        <h1 className="font-black text-5xl text-center">{panelOrSpeaker}</h1>
 
         {/* Grid Wrapper */}
         <div className="grid grid-cols-1 grid-cols-1">
 
           {/* Panelist's Names Grid */}
-          <div className="col-span-1 p-5 justfiy-center">
-            <div className="grid grid-cols-3">
-              <div className="col-span-1 text-left text-coral-pink">
-                <button onClick={() => changeButton("above")}><AiOutlineLeft className="stroke-current w-10 h-12" /></button>
+          <div className="col-span-1 justfiy-center">
+            <div className="grid grid-cols-8 pb-4 pt-2">
+              <div className="col-span-1 text-center text-coral-pink">
+                <button onClick={() => changeButton("above")}><AiOutlineLeft className="stroke-current w-12 h-12" /></button>
               </div>
-              <h1 className="col-span-1 font-black text-2xl text-coral-pink text-center font-sans">
+              <h1 className="col-span-6 font-black text-2xl pt-2 text-coral-pink text-center font-sans">
                 {speakerNames[currentIndex]}
               </h1>
-              <div className="col-span-1 text-right text-coral-pink ml-20">
-                <button onClick={() => changeButton("below")}><AiOutlineRight className="stroke-current w-10 h-12" /></button>
+              <div className="col-span-1 text-center text-coral-pink">
+                <button onClick={() => changeButton("below")}><AiOutlineRight className="stroke-current w-12 h-12" /></button>
               </div> 
             </div>
           </div>
@@ -148,20 +146,19 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
           </div>
 
           {/* Profession and Description Grid */}  
-          <div className="col-span-1 p-4 mb-1 text-center"> 
+          <div className="col-span-1 pt-4 mb-1 text-center"> 
             <h1 className="font-black text-2xl text-center">
               {speakerProfession[currentIndex]}
             </h1>
             <h2 className="font-black text-2xl text-center font-sans">
               {intOrExt[currentIndex]}
             </h2>
-            <p className="font-medium text-2x1 text-center">
+            <p className="font-medium text-2x1 text-justify">
               {description[currentIndex]}
             </p>
           </div>
 
         </div>
-        <hr className="border-t-1 border-black mb-4"></hr>
       </div>
     </div>
   );

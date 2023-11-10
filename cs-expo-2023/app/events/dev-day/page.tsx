@@ -39,18 +39,17 @@ export const EventsCSExpo = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col mt-12 p-1 sm:p-8 lg:p-12">
-            <div className="my-1 mx-2 sm:mx-20 border-l border-black">
+        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+            <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
             <PhotoComponent
                 currentButton={currentButton}
-                customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. halu halu"
             />
             <ButtonComponent
                 currentButton={currentButton}
                 changeButton={changeButton}
             />
-            <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">CS EXPO</h1>
+            <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">DEV DAY</h1>
             <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12"/>
             <AboutComponent
                 customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -72,7 +71,7 @@ export const EventsCSExpo = () => {
             />
 
             <div className="ms-28">
-                <h1 className="font-black text-8xl">PREVIOUS CS EXPOS</h1>
+                <h1 className="font-black text-8xl">PREVIOUS DEV DAY</h1>
 
                 {/* 2022 */}
                 <Carousel

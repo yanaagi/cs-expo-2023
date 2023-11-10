@@ -43,21 +43,21 @@ export const EventsDevDay = () => {
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                     <PhotoComponent
                         currentButton={currentButton}
-                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. halu halu"
                     />
                     <ButtonComponent
                         currentButton={currentButton}
                         changeButton={changeButton}
                     />
                     <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                    DEV DAY
-                    
+                        CS EXPO
                     </h1>
                     <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                     <AboutComponent
                         customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                         sampleText="SamplePhoto2"
                     />
+                    <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                     <SpeakerPanelistLayout	
                         speakerNames={speakerNames}
                         photoNumber={photoNumber}
@@ -67,8 +67,9 @@ export const EventsDevDay = () => {
                         photo={photo}
                         panelOrSpeaker="SPEAKERS"
                     />
+                    <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <div className="ms-28">
-                <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
+                <h1 className="font-black text-8xl">PREVIOUS DEV DAY</h1>
 
                 {/* 2022 */}
                 <Carousel
