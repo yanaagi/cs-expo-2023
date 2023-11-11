@@ -45,6 +45,9 @@ const Footer: React.FC = () => {
                     <a href="/projects/hall-of-fame">
                     <span className="hover:underline cursor-pointer">Hall of Fame</span>
                     </a>
+                    <a href="/projects/collections-of-projects">
+                    <span className="hover:underline cursor-pointer">Collection of Projects</span>
+                    </a>
                </div>
 
                <div className="flex flex-col pl-2 pr-5 sm:pl-10">
@@ -76,7 +79,7 @@ const Footer: React.FC = () => {
                </div>
           </div >
           <hr className="w-full"/>
-          <div className="relative justify-center flex py-5 pl-10 mx-auto pr-5 sm:hidden ms:flex">
+          <div className="relative justify-center flex py-5 pl-10 mx-auto pr-10 sm:hidden ms:flex">
                <Link href="/">
                     <Image 
                          src="/cs-expo-logo-black.png" 
