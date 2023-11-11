@@ -9,7 +9,7 @@ import { title } from "process";
 
 const Projects = () => {
   return (
-    <main className="flex flex-col items-center justify-between p-24 mt-6">
+    <main className="flex flex-col items-center justify-center p-24 mt-10">
       {/* Call  ProjectsHeader component */}
       <ProjectsHeader
         headerText="PROJECTS"
