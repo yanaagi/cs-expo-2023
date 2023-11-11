@@ -13,6 +13,10 @@ const EventsCommittees = () => {
         />
         <CommitteesGrid />
         <CommitteesPic />
+        <CommitteesPic />
+        <CommitteesPic />
+        <CommitteesPic />
+        <CommitteesPic />
       </div>
       
     </main>
