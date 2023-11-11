@@ -23,13 +23,13 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
 
   return (
     <div className='my-52'>
-      <div className="text-slider">
+      <div className="w-screen h-25 flex justify-center items-center mx-auto mb-4">
         {title.map((word, index) => (
-            <div key={index} className={`text-eerie-black xxs:text-5xl xs:text-7xl sm:text-8xl md:text-8xl lg:text-8xl mb-4 flex flex-col items-center font-bold font-family-helvetica ${  
+              <p key={index} className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center text-eerie-black font-bold font-family-helvetica ${  
             index === currentEvent ? 'block' : 'hidden'
         }`}>
             {word}
-          </div>
+          </p>
         ))}
       </div>
       <div className="max-w-[75%] mx-auto max-h-[75%] my-auto text-eerie-black text-xl flex flex-col font-family-montserrat text-center">
