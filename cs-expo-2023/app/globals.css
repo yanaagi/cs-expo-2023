@@ -20,4 +20,13 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
-  
+
+.hall-of-fame-header {
+    writing-mode: vertical-rl;
+}
+
+@media (max-width: 1024px) {
+    .hall-of-fame-header {
+        writing-mode: initial;
+    }
+}

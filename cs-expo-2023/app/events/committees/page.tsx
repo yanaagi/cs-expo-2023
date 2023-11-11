@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import MeetTheCommitteesHeader from '@/components/MeetTheCommitteesHeader';
+import CommitteesGrid from '@/components/CommitteesGrid';
+import CommitteesPic from '@/components/CommitteesPic';
 
-export const EventsCommittees = () => {
+const EventsCommittees = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>Committees</div>
+    <main className="flex min-h-screen justify-between p-24">
+      <div>
+        <MeetTheCommitteesHeader
+          headerText="meet the"
+          subheaderText="COMMITTEES"
+        />
+        <CommitteesGrid />
+        <CommitteesPic />
+      </div>
+      
     </main>
-  )
-}
+  );
+};
 
-export default EventsCommittees
+export default EventsCommittees;

@@ -27,43 +27,47 @@ const Carousel: React.FC<CarouselProps> = ({
             type: "carousel",
             startAt: 0,
             perView: perView || 3,
+            autoplay: 2000,
         };
         new Glide(`#${id}`, config).mount();
     }, []);
 
     return (
-        <div className="grid grid-cols-12 mt-8 me-12">
-            <div className="col-span-3">
+        <div className="grid grid-cols-12 mt-8 me-12 h-[200px]">
+            <div className="col-span-12 md:col-span-3">
                 <h1 className="font-bold text-5xl">{title}</h1>
                 <p className="font-medium pe-12">{description}</p>
             </div>
             <div className="col-span-9 relative">
-                <div
-                    className={`carousel-${id} glide w-full overflow-hidden`}
-                    id={id}
-                >
-                    <div className="glide__track" data-glide-el="track">
-                        <ul className="glide__slides flex">
-                            {slides.map((slide, index) => (
-                                <li
-                                    key={index}
-                                    className="glide__slide w-120 h-52"
-                                    style={{
-                                        backgroundColor:
-                                            slide.backgroundColor ||
-                                            "var(--timberwolf)",
-                                    }}
-                                ></li>
-                            ))}
-                        </ul>
+                <div className={`${id} glide`} id={id}>
+                    <div className="mx-16 overflow-x-hidden">
+                        <div className="w-[2000px]">
+                            <div className="glide__track" data-glide-el="track">
+                                <ul className="glide__slides">
+                                    {slides.map((slide) => (
+                                        <li className="glide__slide">
+                                            <div
+                                                className="w-[320px] h-[180px]"
+                                                style={{
+                                                    backgroundColor:
+                                                        slide.backgroundColor ||
+                                                        "var(--timberwolf)",
+                                                }}
+                                            ></div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
                     <div
                         data-glide-el="controls"
                         style={{ color: "var(--coral-pink)" }}
                     >
                         <button
                             data-glide-dir="<"
-                            className="absolute top-16 -left-12 mt-4 text-5xl font-bold"
+                            className="absolute top-10 left-0 mt-4 text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineLeft />
@@ -71,7 +75,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </button>
                         <button
                             data-glide-dir=">"
-                            className="absolute top-16 -right-12 mt-4 text-5xl font-bold"
+                            className="absolute top-10 right-0 mt-4 text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineRight />
