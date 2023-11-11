@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
     return (
           <footer className="relative bottom-0 right-0 left-0 w-full bg-white text-black py-6">
 
-          <div className="w-full mx-auto flex px-6 py-4">
+          <div className="md:justify-center w-full mx-auto flex px-6 py-4">
 
-               <div className="flex flex-col pl-10">
+               <div className="flex flex-col">
                     <Link href="/events/cs-expo">
                     <span className="font-bold hover:underline cursor-pointer">CS Expo</span>
                     </Link>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                     </a>
                </div>
 
-               <div className="flex flex-col pl-10">
+               <div className="flex flex-col pl-5 sm:pl-10">
                     <Link href="/events/dev-day">
                     <span className="font-bold hover:underline cursor-pointer">Dev Day</span>
                     </Link>
@@ -38,16 +38,19 @@ const Footer: React.FC = () => {
                     </a>
                </div>
 
-               <div className="flex flex-col pl-10">
+               <div className="flex flex-col pl-5 sm:pl-10">
                     <Link href="/projects">
                     <span className="font-bold hover:underline cursor-pointer">Projects</span>
                     </Link>
                     <a href="/projects/hall-of-fame">
                     <span className="hover:underline cursor-pointer">Hall of Fame</span>
                     </a>
+                    <a href="/projects/collections-of-projects">
+                    <span className="hover:underline cursor-pointer">Collection of Projects</span>
+                    </a>
                </div>
 
-               <div className="flex flex-col pl-10">
+               <div className="flex flex-col pl-2 pr-5 sm:pl-10">
                     <Link href="/partners">
                     <span className="font-bold hover:underline cursor-pointer">Partners</span>
                     </Link>
@@ -64,7 +67,7 @@ const Footer: React.FC = () => {
      
                </div>
 
-               <div className="flex flex-col pl-10 ml-auto">
+               <div className="flex flex-col ml-auto hidden sm:flex ms:hidden">
                <Link href="/">
                     <Image 
                          src="/cs-expo-logo-black.png" 
@@ -74,11 +77,22 @@ const Footer: React.FC = () => {
                     />
                </Link>
                </div>
-          </div>
+          </div >
+          <hr className="w-full"/>
+          <div className="relative justify-center flex py-5 pl-10 mx-auto pr-10 sm:hidden ms:flex">
+               <Link href="/">
+                    <Image 
+                         src="/cs-expo-logo-black.png" 
+                         alt="Description of your image" 
+                         width={120} 
+                         height={80}
+                    />
+               </Link>
+               </div>
 
-          <hr/>
+          <hr className="w-full"/>
 
-          <div className="w-full mx-auto flex justify-between items-center px-10 py-4">
+          <div className=" relative justify-center mx-auto flex px-10 py-7 ">
 
                <Link href="https://www.facebook.com/csexpo2023">
                <div className="hover:underline px-6">
@@ -101,7 +115,7 @@ const Footer: React.FC = () => {
                </div>
                </Link>
                <Link href="https://www.instagram.com/fit_cs_expo/">
-               <div className="hover:underline px-6">
+               <div className="hover:underline px-6 ">
                     <Image
                          src="/instagram.svg"
                          alt="Instagram logo"
@@ -110,7 +124,11 @@ const Footer: React.FC = () => {
                     />
                </div>
                </Link>
-               <span className="ml-auto">&copy; Copyright 2023</span>
+               <span className="ml-auto hidden sm:flex">&copy; Copyright 2023</span>
+          </div>
+
+          <div className=" relative flex w-full mx-auto justify-center">
+          <span className="flex py-5 sm:hidden ms:flex">&copy; Copyright 2023</span>
           </div>
         </footer>
     );
