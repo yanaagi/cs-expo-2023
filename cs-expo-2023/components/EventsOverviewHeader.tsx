@@ -22,17 +22,17 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   };
 
   return (
-    <div>
+    <div className='my-52'>
       <div className="text-slider">
         {title.map((word, index) => (
-          <div key={index} className={`text-eerie-black lg:text-8xl xs:text-6xl md:text-8xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
+            <div key={index} className={`text-eerie-black xxs:text-5xl xs:text-7xl sm:text-8xl md:text-8xl lg:text-8xl mb-4 flex flex-col items-center font-bold font-family-helvetica ${  
             index === currentEvent ? 'block' : 'hidden'
         }`}>
             {word}
           </div>
         ))}
       </div>
-      <div className="max-w-screen-md mx-auto tracking-widest text-eerie-black text-xl mt-2 mb-16 flex flex-col justify-center items-center font-family-montserrat text-center">
+      <div className="max-w-[75%] mx-auto max-h-[75%] my-auto text-eerie-black text-xl flex flex-col font-family-montserrat text-center">
       {description[currentEvent].split('\n').map((line, index) => (
           <p key={index}>{line}</p>
         ))}
@@ -53,7 +53,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           </a>
         )}
       </div>
-      <ul className="mx-auto dots flex flex-col items-center space-y-5 mb-56">
+      <ul className="mx-auto dots flex flex-col items-center space-y-5">
         {[0, 1, 2, 3].map((index) => (
           <li
             key={index}
