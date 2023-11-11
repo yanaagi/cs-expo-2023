@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NextPage } from "next";
 
 import CollectionOfProjectsHeader from '../../../components/CollectionOfProjectsHeader';
@@ -31,7 +31,8 @@ interface ThesisProjectData {
   };
 }
 
-const CollectionOfProjects: NextPage = () => {
+
+const CollectionOfProjects: NextPage = async () => {
   return (
     <main className="flex min-h-screen flex-col p-24">
       <CollectionOfProjectsHeader 
@@ -42,4 +43,4 @@ const CollectionOfProjects: NextPage = () => {
   )
 }
 
-export default CollectionOfProjects
+export default  CollectionOfProjects;
