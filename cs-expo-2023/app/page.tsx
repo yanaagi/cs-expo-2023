@@ -60,8 +60,8 @@ return (
           </h1>
       </div>
 
-      <details className="group xl:py-64 min-[320px]:py-28 text-lg">
-        <summary class="xl:mt-80 min-[320px]:mt-56 shadow-2xl flex cursor-pointer justify-center flex-row items-center font-bold text-coral-pink marker:[font-size:0px]">
+      <details className="group xl:py-72 min-[320px]:py-28 text-lg">
+        <summary className="xl:mt-42 min-[320px]:mt-56  shadow-[0_56px_56px_-36px_rgba(0,0,0,0.2)] flex cursor-pointer justify-center flex-row items-center font-bold text-coral-pink marker:[font-size:0px]">
           <svg
             className="xl:mt-72 min-[320px]:mt-24 xl:h-56 xl:w-20 min-[320px]:h-44 min-[320px]:w-8 rotate-0 transform font-bold text-coral-pink group-open:rotate-180"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ return (
             ></path>
           </svg>
         </summary>
-          <p className="xl:mt-72 min-[320px]:mt-48 text-eerie-black xl:text-5xl min-[320px]:text-xs font-bold font-family-helvetica text-center absolute xl:top-96 min-[320px]:top-60 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
+          <p className="xl:mt-80 min-[320px]:mt-48 text-eerie-black xl:text-5xl min-[320px]:text-xs font-bold font-family-helvetica text-center absolute xl:top-96 min-[320px]:top-60 left-0 right-0 bg-white z-0 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out transform translate-y-[-110%] group-open:opacity-100 group-open:translate-y-0">
             SPONSORS
           </p>
       </details>;
