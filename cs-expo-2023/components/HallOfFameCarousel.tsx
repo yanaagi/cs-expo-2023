@@ -85,22 +85,6 @@ const Carousel: React.FC<CarouselProps> = ({
                 before: 0,
                 after: 100,
             },
-            // breakpoints: {
-            //     1300: {
-            //         perView: 2,
-            //         peek: {
-            //             before: 0,
-            //             after: 0,
-            //         },
-            //     },
-            //     1100: {
-            //         perView: 1,
-            //         peek: {
-            //             before: 0,
-            //             after: 0,
-            //         },
-            //     },
-            // },
         };
 
         const glide = new Glide(`#${id}`, config);
@@ -137,38 +121,30 @@ const Carousel: React.FC<CarouselProps> = ({
 
     return (
         <div className="w-full max-w-[1300px] grid grid-cols-12 mt-16">
-            <div className="relative col-span-3 h-3/4 flex flex-col">
-                <div className="grid grid-cols-2 h-full">
-                    <div className="col-span-1 flex flex-col items-center justify-end">
+            <div className="relative col-span-12 lg:col-span-3 h-20 lg:h-3/4 flex flex-col">
+                <div className="grid grid-cols-12 lg:grid-cols-2 h-full">
+                    <div className="col-span-1 hidden lg:flex flex-col items-center justify-end">
                         <AiOutlineUp
                             id={`carousel-up-${id}`}
                             className={`text-5xl text-[var(--coral-pink)] cursor-pointer m-2 ${carouselUp}`}
                         />
-                        <h1
-                            className="font-bold text-3xl"
-                            style={{ writingMode: "vertical-rl" }}
-                        >
-                            {carouselNumber}
-                        </h1>
+                        <h1 className="font-bold text-3xl">{carouselNumber}</h1>
                         <AiOutlineDown
                             id={`carousel-down-${id}`}
                             className={`text-5xl text-[var(--coral-pink)] cursor-pointer m-2 ${carouselDown}`}
                         />
                     </div>
-                    <div className=" col-span-1 grid grid-cols-2">
-                        <div className="col-span-1 flex flex-col md:pe-6">
-                            <div className="flex justify-end">
-                                <h1
-                                    className="font-bold md:text-2xl h-36 text-right"
-                                    style={{ writingMode: "vertical-rl" }}
-                                >
+                    <div className="col-span-12 lg:col-span-1 grid grid-cols-3 lg:grid-cols-3 md:ms-16">
+                        <div className="col-span-2 flex flex-col md:pe-6">
+                            <div className="flex justify-start">
+                                <h1 className="hall-of-fame-header font-bold text-2xl md:text-2xl h-36 md:text-right ms-12 md:ms-0 me-4 md:me-0">
                                     {title}
                                 </h1>
                             </div>
                             <div className="flex-grow relative">
                                 <Image
                                     src={"/halftone.png"}
-                                    className="mt-4"
+                                    className="mt-4 ms-2"
                                     layout="fill"
                                     objectFit="cover"
                                     alt="halftone"
@@ -176,23 +152,20 @@ const Carousel: React.FC<CarouselProps> = ({
                             </div>
                         </div>
 
-                        <div className="col-span-1 flex flex-col ms-4">
+                        <div className="col-span-1 flex flex-col md:ms-4">
                             <div className="flex justify-left">
-                                <h1
-                                    className="font-bold md:text-xl flex items-end"
-                                    style={{ writingMode: "vertical-rl" }}
-                                >
+                                <h1 className="hall-of-fame-header font-bold md:text-xl flex items-center">
                                     EXPO&nbsp;
                                     <span className="text-[var(--coral-pink)]">
                                         2023
                                     </span>
                                     &nbsp;
-                                    <span className="font-bold text-sm">
+                                    <span className="font-bold text-xs md:text-sm">
                                         2.0
                                     </span>
                                 </h1>
                             </div>
-                            <div className="flex-grow mt-4 ms-3">
+                            <div className="flex-grow mt-4 ms-3 hidden lg:block">
                                 <div className="w-0.5 h-full bg-black"></div>
                             </div>
                         </div>
@@ -201,18 +174,18 @@ const Carousel: React.FC<CarouselProps> = ({
             </div>
 
             <div
-                className="relative carousel-${id} glide overflow-hidden col-span-9"
+                className="relative carousel-${id} glide overflow-hidden col-span-12 lg:col-span-9"
                 id={id}
             >
                 <div className="mx-10 md:mx-20 overflow-x-hidden">
-                    <div className="w-[500px] sm:w-[1000px]">
+                    <div className="w-[650px] sm:w-[1000px]">
                         <div className="glide__track" data-glide-el="track">
                             <ul className="glide__slides">
                                 {slides.map((slide) => (
                                     <li className="glide__slide flex flex-col items-center justify-center">
                                         <div
                                             id={`slide-image-${id}`}
-                                            className="w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px]"
+                                            className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]"
                                             style={{
                                                 backgroundColor:
                                                     slide.backgroundColor ||
@@ -220,13 +193,13 @@ const Carousel: React.FC<CarouselProps> = ({
                                             }}
                                         ></div>
                                         <div className="mt-4 p-4 sm:p-0">
-                                            <div className="font-bold text-2xl">
+                                            <div className="font-bold text-lg">
                                                 {slide.ranking}
                                             </div>
-                                            <div className="font-bold text-4xl">
+                                            <div className="font-bold text-3xl">
                                                 {slide.group}
                                             </div>
-                                            <p className="">{slide.thesis}</p>
+                                            <p>{slide.thesis}</p>
 
                                             <div className="flex justify-end">
                                                 <Link
@@ -255,7 +228,7 @@ const Carousel: React.FC<CarouselProps> = ({
                     >
                         <button
                             data-glide-dir="<"
-                            className="absolute top-36 left-3 sm:-left-2.5 text-4xl sm:text-5xl font-bold"
+                            className="absolute top-24 md:top-36 left-3 sm:-left-2.5 text-4xl sm:text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineLeft />
@@ -263,7 +236,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </button>
                         <button
                             data-glide-dir=">"
-                            className="absolute right-0 top-36 text-4xl sm:text-5xl font-bold"
+                            className="absolute top-24 md:top-36 right-0 text-4xl sm:text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineRight />
