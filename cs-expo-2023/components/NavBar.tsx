@@ -8,6 +8,24 @@ import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 
 const NavBar: React.FC = () => {
+
+     const useWindowSize = () => {
+          const [size, setSize] = useState([0, 0]);
+      
+          useEffect(() => {
+              const updateSize = () => {
+                  setSize([window.innerWidth, window.innerHeight]);
+              };
+              window.addEventListener('resize', updateSize);
+              updateSize();
+              return () => window.removeEventListener('resize', updateSize);
+          }, []);
+      
+          return size;
+      };
+      
+      const [width] = useWindowSize(); 
+      const isMobile = width < 768;
 const [showEventsDropdown, setShowEventsDropdown] = useState(false);
 const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
 const [showMobileEventsDropdown, setShowMobileEventsDropdown] = useState(false);
@@ -92,11 +110,16 @@ useEffect(() => {
      };
 }, [mobileMenuVisible]);
 
+const [menuOpen, setMenuOpen] = useState(false);
+const handleNav = () => {
+     setMenuOpen(!menuOpen);
+}
+
 const defaultMenu = () => {
      return (
           <>
                <div className="relative group">
-                    <button onClick={toggleEventsDropdown} className="flex items-center cursor-pointer font-medium hover:text-coral-pink">
+                    <button onClick={toggleEventsDropdown} className="flex items-center cursor-pointer font-medium hover:text-coral-pink hidden md:flex">
                          Events
 
                          <span className="pl-2">
@@ -126,7 +149,7 @@ const defaultMenu = () => {
                </div>
 
                <div className="relative group">
-                    <button onClick={toggleProjectsDropdown} className="flex items-center cursor-pointer ml-4 font-medium hover:text-coral-pink">
+                    <button onClick={toggleProjectsDropdown} className="flex items-center cursor-pointer ml-4 font-medium hover:text-coral-pink hidden md:flex">
                          Projects
 
                     <span className="pl-2">
@@ -157,9 +180,12 @@ const defaultMenu = () => {
           </>
      );};
 
-const mobileMenu = () => {
-     return (
-          <div className="mobile-menu flex flex-col px-6 py-3 items-start font-semibold text-timberwolf">
+     const mobileMenu = () => {
+          // Dynamic class for text color
+          const textColorClass = isNavbarAtTop ? 'text-black' : 'text-timberwolf';
+     
+          return (
+               <div className={`mobile-menu flex flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
                <div className="relative group">
                     <button onClick={toggleMobileEventsDropdown} className="flex items-center cursor-pointer hover:text-coral-pink">
                          Events
@@ -223,30 +249,33 @@ const mobileMenu = () => {
 
      return (
           <header ref={mobileNavbarRef} className={`w-full fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'h-auto' : 'bg-eerie-black'}`}>
-               <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
-                    <Link href="/">
-                         <Image
-                              src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
-                              alt="logo"
-                              width={117}
-                              height={85}
-                              className="object-contain"
-                         />
-                    </Link>
-
-                    <div className="cursor-pointer ml-auto flex" onClick={toggleMobileMenu}>
-                         {isNavbarAtTop ? (defaultMenu()) : (
-                              mobileMenuVisible ? (
-                                   <div className='text-coral-pink'><IoClose /></div>) : (
-                                        (!mobileMenuVisible && isNavbarAtTop) ? (<> {toggleMobileMenu()} {defaultMenu()} </>) : (
-                                        <div className='text-coral-pink'><FaBars /></div>)))
-                              }
-                    </div>
-               </nav>
-
-               {mobileMenuVisible && !isNavbarAtTop ? mobileMenu() : null}
+              <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
+                  <Link href="/">
+                      <Image
+                          src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
+                          alt="logo"
+                          width={117}
+                          height={85}
+                          className="object-contain"
+                      />
+                  </Link>
+  
+                  <div className="cursor-pointer ml-auto flex" onClick={toggleMobileMenu}>
+                      {isMobile ? (
+                          mobileMenuVisible ? <div className='text-coral-pink'><IoClose /></div> : <div className='text-coral-pink'><FaBars /></div>
+                      ) : (
+                         isNavbarAtTop ? (defaultMenu()) : (
+                         mobileMenuVisible ? (
+                              <div className='text-coral-pink'><IoClose /></div>) : (
+                                   (!mobileMenuVisible && isNavbarAtTop) ? (<> {toggleMobileMenu()} {defaultMenu()} </>) : (
+                                   <div className='text-coral-pink'><FaBars /></div>)))
+                      )}
+                  </div>
+              </nav>
+  
+              {((isMobile && mobileMenuVisible) || (mobileMenuVisible && !isNavbarAtTop)) ? mobileMenu() : null}
           </header>
-     );
-     };
-     
-     export default NavBar;
+      );
+  };
+  
+  export default NavBar;
