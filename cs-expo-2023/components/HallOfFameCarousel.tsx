@@ -224,11 +224,12 @@ const Carousel: React.FC<CarouselProps> = ({
 
                     <div
                         data-glide-el="controls"
+                        className="hidden lg:block"
                         style={{ color: "var(--coral-pink)" }}
                     >
                         <button
                             data-glide-dir="<"
-                            className="absolute top-24 md:top-36 left-3 sm:-left-2.5 text-4xl sm:text-5xl font-bold"
+                            className="absolute top-24 md:top-36 left-3 sm:left-3.5 text-4xl sm:text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineLeft />
