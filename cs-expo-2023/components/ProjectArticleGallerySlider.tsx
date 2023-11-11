@@ -85,8 +85,8 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         <div className="splide__track">
           <ul className="splide__list h-[100px]">
             {
-              slides.map((slide, index)=>(
-                <li key={index} className="splide__slide flex justify-center">
+              slides.map((slide)=>(
+                <li className="splide__slide flex justify-center">
                   <div id="slide-card" className="h-[108px] flex justify-center items-center">
                     <img src={slide.link} className="w-48 h-[100px]"></img>
                   </div>
