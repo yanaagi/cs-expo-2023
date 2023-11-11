@@ -33,7 +33,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col">
       <div className="flex flex-col w-screen pt-24">
         <div className="flex flex-col items-center justify-start pt-5">
-          <div className="flex relative bg-timberwolf h-[560px] w-[450px] max-sm:h-[460px] max-sm:w-[320px]  max-sm:pr-100 s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+          <div className="flex relative bg-timberwolf h-[560px] w-[500px] max-md:w-[500px] max-sm:h-[460px] max-sm:w-4/5  s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
 
             <div className="absolute top-[30px] left-[-30px] h-[110px] w-[110px] rounded-full bg-yellow-300">
 
@@ -41,14 +41,14 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
             <div className="absolute top-[170px] left-[-30px] h-[110px] w-[110px] rounded-full bg-yellow-600">
 
             </div>
-            <div className="absolute top-[80px] right-[-40px] bg-red-200 h-[200px] w-[200px]">
+            <div className="absolute top-[80px] right-[-20px] bg-red-200 h-[250px] w-[250px] max-sm:h-[150px] max-sm:w-[150px]">
               
             </div>
           </div>
         </div>
         <div className="flex flex-col ml-5 mr-5 my-10">
-          <div className="text-4xl font-bold text-end row-start-1">{thesisTitle}</div>
-          <div className="text-3xl font-bold text-end row-start-2 text-coral-pink pt-5">{groupname}</div>
+          <div className="text-4xl max-sm:text-2xl font-bold text-end row-start-1">{thesisTitle}</div>
+          <div className="text-3xl max-sm:text-xl font-bold text-end row-start-2 text-coral-pink pt-5">{groupname}</div>
         </div>
       </div>
 
