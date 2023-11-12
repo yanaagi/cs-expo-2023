@@ -80,7 +80,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                       src="/education/EDUCATION.svg" // path to image
                       className="justify-center"
                       fill={true}
-                      alt="Data Analytics"
+                      alt="Education"
                     />
                   </li>{" "}
                   {/* End of Education */}
@@ -90,7 +90,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                       src="/health/HEALTH.svg" // path to image
                       className="justify-center"
                       fill={true}
-                      alt="Data Analytics"
+                      alt="Health"
                     />
                   </li>{" "}
                   {/* End of Health */}
@@ -141,7 +141,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                       src="/education/EDUCATION.svg" // path to image
                       className="justify-center"
                       fill={true}
-                      alt="Data Analytics"
+                      alt="Education"
                     />
                   </li>{" "}
                   {/* End of Education */}
@@ -151,7 +151,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                       src="/health/HEALTH.svg" // path to image
                       className="justify-center"
                       fill={true}
-                      alt="Data Analytics"
+                      alt="Health"
                     />
                   </li>{" "}
                   {/* End of Health */}
