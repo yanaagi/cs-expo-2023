@@ -2,20 +2,22 @@ import React from 'react';
 
 interface MeetTheCommitteesProps {
     headerText: string;
-    subheaderText: string;
 }
 
-const MeetTheCommitteesHeader: React.FC<MeetTheCommitteesProps> = ({ headerText, subheaderText }) => {
+const MeetTheCommitteesHeader: React.FC<MeetTheCommitteesProps> = ({ headerText }) => {
     return (
         <main>
-            <div className="p-23">
-                <div className="ms-28">
-                    <div className="font-regular text-6xl md:text-6xl lg:text-6xl xl:text-7xl m-0 mb-[-1.5rem]">
-                        <p>{headerText}</p>
-                    </div>
-                    <div className="font-black text-6xl md:text-7xl lg:text-7xl xl:text-8xl m-0 mt-[1rem]">
-                        <p>{subheaderText}</p>
-                    </div>
+            <div className="w-full text-left ml-[13%]">
+                <div className="w-full top-0 text-zinc-900 text-5xl font-['Helvetica Now Text']">
+                    <p>
+                        <span className="text-left text-5xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"> {/* Larger font for "meet the" on large screens */}
+                            meet the
+                        </span>
+                        <br />
+                        <span className="text-left font-bold text-5xl sm:text-4xl md-text-5xl lg:text-6xl xl:text-7xl"> {/* Larger font for headerText on large screens */}
+                            {headerText}
+                        </span>
+                    </p>
                 </div>
             </div>
         </main>

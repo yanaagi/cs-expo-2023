@@ -31,7 +31,7 @@ const CommitteesGrid = () => {
       }
     };
 
-    handleResize(); // Set the initial number of columns
+    handleResize(); // Set initial number of columns
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -58,8 +58,8 @@ const CommitteesGrid = () => {
   };
 
   return (
-    <div className={`flex ${gridCols === 1 ? 'justify-start' : 'justify-center'}`}> {/* Left-justify on smaller screens */}
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 ml-5 sm:ml-5 md:ml-5 mt-4`}>
+    <div className="flex justify-center"> {/* Center the columns in smaller screens */}
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-[%12] mt-4`}>
         {committeeNames.map((committeeName, index) => (
           <a
             key={index}
