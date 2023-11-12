@@ -60,6 +60,7 @@ export const EventsCSExpo = () => {
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 sampleText="Sample Photo"
             />
+            <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <SpeakerPanelistLayout
                 speakerNames={speakerNames}
                 photoNumber={photoNumber}
@@ -69,8 +70,9 @@ export const EventsCSExpo = () => {
                 photo={photo}
                 panelOrSpeaker="PANELISTS"
             />
-
+            <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <div className="ms-28">
+            
                 <h1 className="font-black text-8xl">PREVIOUS DEV DAY</h1>
 
                 {/* 2022 */}
