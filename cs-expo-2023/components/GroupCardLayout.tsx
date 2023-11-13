@@ -22,16 +22,20 @@ interface GroupCardProps {
 
 const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filterState} ) => {
   return (
-    (allFilter || filterState) && (<Link href={groupId}>
-      <div className="flex flex-col w-[300px] h-[450px] bg-stone-300 s-full justify-end">
-        <div className="flex ">
+    
+      (allFilter || filterState) && (
+      <Link href={groupId}>
+        <div className="flex flex-col bg-stone-300 s-full justify-end">
+          <div className="flex">
+            <img src="/data-analytics/engeenz.png"></img>
+          </div>
+          <div className="flex flex-col h-[140px] bg-coral-pink s-full text-white text-start text-2xl px-2 pr-2 pt-1">
+            <div className="font-bold font-['Helvetica Now Text']">{group.groupname}</div>
+            <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
+          </div>
         </div>
-        <div className="flex flex-col h-[140px] bg-coral-pink s-full text-white text-start text-2xl px-2 pr-2 pt-1">
-          <div className="font-bold font-['Helvetica Now Text']">{group.groupname}</div>
-          <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
-        </div>
-      </div>
-    </Link>)
+      </Link>
+      )
   );
 }
 
@@ -183,7 +187,7 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   });
 
   return (
-    <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:justify-items-center gap-20 pt-20 justify-items-center">
+    <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:justify-items-center gap-10 pt-20 justify-items-center">
       {groupCards}
       <Sidebar sideBarCallback={sideBarCallback}/>
     </div>
