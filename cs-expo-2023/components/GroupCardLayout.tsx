@@ -27,7 +27,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filter
       <Link href={groupId}>
         <div className="flex flex-col bg-stone-300 s-full max-sm:min-w-[300px]">
           <div className="flex h-3/4">
-            <img src={group.posterFilePath}></img>
+            <img src={group.posterFilePath} className="w-auto h-auto"></img>
           </div>
           <div className="flex flex-col h-[140px] bg-coral-pink s-full text-white text-start py-3 px-2 pr-2 pt-1">
             <div className="text-2xl font-bold">{group.groupname}</div>
