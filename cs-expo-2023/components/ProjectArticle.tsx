@@ -105,7 +105,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                   <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
                 </div>
             </div>
-            <div className="grid grid-cols-4 h-[300px] bg-timberwolf gap-10 mb-10">
+            <div className="grid grid-cols-4 h-[300px] bg-timberwolf gap-10 max-sm:gap-2 mb-10">
               <div className="flex col-span-3 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center">
                 <p>AVP</p>
               </div>
