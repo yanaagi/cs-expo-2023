@@ -49,6 +49,13 @@ const config = {
     480: {
       perView: 1,
     },
+    320: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 0, // amount of next slide visible
+      },
+    },
   },
 };
 
@@ -64,10 +71,11 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
         {" "}
         {/* ps-40 me-40 is for padding on the left and margin on the right */}
         <div className="w-screen lg:ps-40 lg:me-40 ps-10 me-40">
-          <div className="flex justify-center overflow-hidden">
-            <div className="w-[2450px] ms-8 ps-8">
+          <div className="flex justify-center overflow-hidden sm:text-base">
+            {/* ms and ps sizing affects the impression of layers in the svg images */}
+            <div className="w-[2400px] ms-8 ps-6">
               <div className="glide__track w-full" data-glide-el="track">
-                <ul className="glide__slides h-[350px]">
+                <ul className="glide__slides h-[300px]">
                   {/* Data Analytics*/}
                   <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
                     <Image
@@ -201,7 +209,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
           data-glide-el="controls"
         >
           <button
-            className="glide__arrow glide__arrow--left absolute left-24 text-5xl sm:m-0 sm:p-0"
+            className="glide__arrow glide__arrow--left absolute left-24 text-5xl sm:m-2 sm:p-2"
             data-glide-dir="<"
             style={{ color: "var(--coral-pink)" }} // color of left arrow
           >
