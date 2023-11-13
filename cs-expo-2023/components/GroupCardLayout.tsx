@@ -29,9 +29,9 @@ const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filter
           <div className="flex">
             <img src="/data-analytics/engeenz.png"></img>
           </div>
-          <div className="flex flex-col h-[140px] bg-coral-pink s-full text-white text-start text-2xl px-2 pr-2 pt-1">
-            <div className="font-bold font-['Helvetica Now Text']">{group.groupname}</div>
-            <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
+          <div className="flex flex-col h-[160px] bg-coral-pink s-full text-white text-start px-2 pr-2 pt-1">
+            <div className="text-2xl font-bold">{group.groupname}</div>
+            <div className="text-md overflow-y-auto">{group.thesisTitle}</div>
           </div>
         </div>
       </Link>
