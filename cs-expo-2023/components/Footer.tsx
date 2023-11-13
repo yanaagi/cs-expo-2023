@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     return (
           <footer className="relative bottom-0 right-0 left-0 w-full bg-white text-black py-6">
 
-          <div className="w-full mx-auto flex px-6 py-4">
+          <div className="w-full mx-auto flex px-6 py-4 max-sm:grid grid-cols-2 gap-2">
 
                <div className="flex flex-col pl-10">
                     <span className="font-bold hover:underline cursor-pointer">CS Expo</span>
