@@ -25,11 +25,11 @@ const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filter
     
       (allFilter || filterState) && (
       <Link href={groupId}>
-        <div className="flex flex-col bg-stone-300 s-full justify-end">
-          <div className="flex">
+        <div className="flex flex-col bg-stone-300 s-full max-sm:min-w-[300px]">
+          <div className="flex h-3/4">
             <img src="/data-analytics/engeenz.png"></img>
           </div>
-          <div className="flex flex-col h-[160px] bg-coral-pink s-full text-white text-start px-2 pr-2 pt-1">
+          <div className="flex flex-col h-[120px] bg-coral-pink s-full text-white text-start px-2 pr-2 pt-1">
             <div className="text-2xl font-bold">{group.groupname}</div>
             <div className="text-md overflow-y-auto">{group.thesisTitle}</div>
           </div>
@@ -187,7 +187,7 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   });
 
   return (
-    <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:justify-items-center gap-10 pt-20 justify-items-center">
+    <div className="grid gap-10 pt-20 justify-items-center 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
       {groupCards}
       <Sidebar sideBarCallback={sideBarCallback}/>
     </div>
