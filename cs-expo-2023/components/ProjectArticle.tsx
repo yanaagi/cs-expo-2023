@@ -30,7 +30,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   };
 
   return (
-    <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
+    <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col max-w-full">
       <div className="relative flex flex-col w-screen pt-24">
         <div className="flex flex-col items-center justify-start pt-5">
           <div className="flex relative bg-timberwolf h-[670px] max-lg:h-[600px] max-md:h-[550px] max-sm:h-[500px] w-9/12 max-lg:w-6/12 max-md:w-8/12 max-sm:w-9/12 s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">

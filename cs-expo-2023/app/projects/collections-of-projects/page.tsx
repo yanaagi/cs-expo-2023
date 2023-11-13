@@ -34,8 +34,8 @@ interface ThesisProjectData {
 
 const CollectionOfProjects: NextPage = () => {
   return (
-    <main className="flex ">
-      <div className="flex flex-col justify-center p-24">
+    <main className="">
+      <div className="flex flex-col justify-center items-center p-24">
         <CollectionOfProjectsHeader 
           headerText ="COLLECTION OF PROJECTS" 
           subheaderText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic doloribus pariatur sapiente error iste, reiciendis, minima odit tenetur, rerum consequatur harum? Rerum molestiae fugit cupiditate pariatur corrupti, error quo quas."/>
