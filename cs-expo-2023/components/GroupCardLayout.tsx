@@ -57,104 +57,35 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   const [currentFilter, setCurrentFilter] = useState(()=> {
     if (typeof localStorage !== 'undefined') {
       const filterData = localStorage.getItem('currentFilter');
-      return filterData ? JSON.parse(filterData) : 'All';
+      return filterData ? Number(JSON.parse(filterData)) : 0;
     } 
     else 
     {
-      return 'All'
+      return 0
     }
   });
-  const updateCurrentFilter = (filter:string) => {
+  const updateCurrentFilter = (filter:number) => {
     setCurrentFilter(filter);
     localStorage.setItem("currentFilter", JSON.stringify(filter));
   }
 
   useEffect(() => {
     filterProjects(currentFilter);
-    // console.log(currentFilter);
   }, []);
 
-  const filterProjects = (category:string) => {
-    if (category === "All") {
-      setAllFilter(true);
-
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("All");
-    }
-    else if (category === "Data Analytics") {
-      setDataanalyticFilter(true);
-
-      setAllFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Data Analytics");
-    }
-    else if (category === "Education") {
-      setEducationFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Education");
-    }
-    else if (category === "Health") {
-      setHealthFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Health");
-    }
-    else if (category === "Img Proc - CV") {
-      setImageprooccvFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Img Proc - CV");
-    }
-    else if (category === "IOT") {
-      setIotFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("IOT");
-    }
-    else if (category === "NLP") {
-      setNlpFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      updateCurrentFilter("NLP");
-    }
+  const filterProjects = (category:number) => {
+    let tmp = 1<<category;
+    setAllFilter(Boolean((tmp >> 0) & 0x1));
+    setDataanalyticFilter(Boolean((tmp >> 1) & 0x1));
+    setEducationFilter(Boolean((tmp >> 2) & 0x1));
+    setHealthFilter(Boolean((tmp >> 3) & 0x1));
+    setImageprooccvFilter(Boolean((tmp >> 4) & 0x1));
+    setIotFilter(Boolean((tmp >> 5) & 0x1));
+    setNlpFilter(Boolean((tmp >> 6) & 0x1));
+    updateCurrentFilter(category);
   }
 
-  const sideBarCallback = (m:string) => {
+  const sideBarCallback = (m:number) => {
     filterProjects(m);
   }
 
