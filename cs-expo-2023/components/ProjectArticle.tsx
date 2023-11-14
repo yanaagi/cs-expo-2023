@@ -33,7 +33,9 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
       <div className="flex flex-col w-full pt-24">
         <div className="flex flex-col items-center justify-start pt-5 ">
-          <div className="flex relative bg-timberwolf h-[650px] max-xl:h-[650px] max-lg:h-[600px] max-md:h-[600px] max-sm:h-[500px] w-8/12 max-xl:w-10/12 max-lg:w-7/12 max-md:w-8/12 max-sm:w-9/12 s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+          <div className="flex relative bg-timberwolf h-[650px] max-xl:h-[650px] max-lg:h-[600px] 
+            max-md:h-[600px] max-sm:h-[500px] w-7/12 max-[1450px]:w-8/12 max-[1100px]:w-9/12  
+            max-xl:w-9/12  max-lg:w-6/12 max-md:w-8/12 max-sm:w-9/12 s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
             <img src={posterFilePath} className="w-auto h-auto"></img>
             {/* <div className="absolute top-[30px] left-[-30px] h-[110px] w-[110px] rounded-full bg-yellow-300">
 
