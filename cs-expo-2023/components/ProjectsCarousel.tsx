@@ -67,15 +67,15 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
   return (
     <main className="flex justify-center mt-4">
       {/* Structure of Glide.js*/}
-      <div className="glide relative">
+      <div className="glide sm:p-8 relative">
         {" "}
         {/* ps-40 me-40 is for padding on the left and margin on the right */}
         <div className="w-screen lg:ps-40 lg:me-40 ps-10 me-40">
           <div className="flex justify-center overflow-hidden sm:text-base">
             {/* ms and ps sizing affects the impression of layers in the svg images */}
-            <div className="w-[2400px] ms-8 ps-6">
+            <div className="w-[1500px] sm:w-[2500px] ps-16 ms-6 sm:ps-4">
               <div className="glide__track w-full" data-glide-el="track">
-                <ul className="glide__slides h-[300px]">
+                <ul className="glide__slides h-[205px] sm:h-[300px]">
                   {/* Data Analytics*/}
                   <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
                     <Image
@@ -205,11 +205,11 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
         {/* End of glide__track w-full */}
         {/* Arrow buttons for Glide.js */}
         <div
-          className="glide__arrows w-screen absolute top-[calc(50%-2rem)]" // sm:block hidden is for hiding the arrows on small screens
+          className="glide__arrows w-screen absolute bottom-0 sm:top-[calc(50%-2rem)]" // sm:block hidden is for hiding the arrows on small screens
           data-glide-el="controls"
         >
           <button
-            className="glide__arrow glide__arrow--left absolute left-24 text-5xl sm:m-2 sm:p-2"
+            className="glide__arrow glide__arrow--left absolute left-28 sm:left-24 text-5xl sm:text-5xl sm:m-2 sm:p-2"
             data-glide-dir="<"
             style={{ color: "var(--coral-pink)" }} // color of left arrow
           >
@@ -218,7 +218,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
             </span>
           </button>
           <button
-            className="glide__arrow glide__arrow--right absolute -right-14 text-5xl sm:m-0 sm:p-0"
+            className="glide__arrow glide__arrow--right absolute -right-8 sm:-right-14 text-5xl sm:text-5xl sm:m-0 sm:p-0"
             data-glide-dir=">"
             style={{ color: "var(--coral-pink)" }} // color of right arrow
           >
