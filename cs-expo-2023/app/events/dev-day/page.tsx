@@ -1,64 +1,30 @@
 "use client";
+
 import React, { useState } from "react";
 import Carousel from "@/components/Carousel";
 import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
+import panelistsData from '@/panelists.json'; 
 
-export const EventsDevDay = () => {
+
+export const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const changeButton = (buttonNumber) => {
+    const changeButton = (buttonNumber: number) => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakerNames = [
-        "SPEAKER 1",
-        "SPEAKER 2",
-        "SPEAKER 3",
-        "SPEAKER 4",
-        "SPEAKER 5",
-        "SPEAKER 6",
-        "SPEAKER 7",
-        "SPEAKER 8",
-    ];
+    const speakers = panelistsData.panelists;
 
-    const photoNumber = [
-        "Photo 1",
-        "Photo 2",
-        "Photo 3",
-        "Photo 4",
-        "Photo 5",
-        "Photo 6",
-        "Photo 7",
-        "Photo 8",
-    ];
-
-    const speakerProfession = [
-        "Software Engineer",
-        "Software Analyst",
-        "Game Developer",
-        "Cyber Security",
-        "Computer Technician",
-        "Computer Engineer",
-        "Data Scientist",
-        "Software Consultant",
-    ];
-
-    const intOrExt = [
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-        "INTERNAL",
-        "EXTERNAL",
-    ];
-
-    const description = ["Photo 1", "Photo 2", "Photo 3", "Photo 4"];
+    const speakerNames = speakers.map(panelist => panelist.name);
+    const photoNumber = speakers.map(panelist => panelist.photoNumber);
+    const speakerProfession = speakers.map(panelist => panelist.profession);
+    const intOrExt = speakers.map(panelist => panelist.intOrExt);
+    const description = speakers.map(panelists => panelists.description);
+    const photo = speakers.map(panelists => panelists.photo);
 
     const changeSpeaker = (direction) => {
         if (direction === "above") {
@@ -73,38 +39,41 @@ export const EventsDevDay = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col p-24">
+        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+            <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
+            <PhotoComponent
+                currentButton={currentButton}
+                customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. halu halu"
+            />
+            <ButtonComponent
+                currentButton={currentButton}
+                changeButton={changeButton}
+            />
+            <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">DEV DAY</h1>
+            <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12"/>
+            <AboutComponent
+                customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                sampleText="Sample Photo"
+            />
+            <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+            <SpeakerPanelistLayout
+                speakerNames={speakerNames}
+                photoNumber={photoNumber}
+                speakerProfession={speakerProfession}
+                intOrExt={intOrExt}
+                description={description}
+                photo={photo}
+                panelOrSpeaker="PANELISTS"
+            />
+            <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <div className="ms-28">
-                <div className="container">
-                    <PhotoComponent
-                        currentButton={currentButton}
-                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    />
-                    <ButtonComponent
-                        currentButton={currentButton}
-                        changeButton={changeButton}
-                    />
-                    <h1 className="font-black text-8xl text-center mb-20">
-                        DEV DAY
-                    </h1>
-                    <hr className="border-t-1 border-black mb-4" />
-                    <AboutComponent
-                        customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        sampleText="Sample Photo"
-                    />
-
-                    <SpeakerPanelistLayout
-                        speakerNames={speakerNames}
-                        photoNumber={photoNumber}
-                        speakerProfession={speakerProfession}
-                        intOrExt={intOrExt}
-                        panelOrSpeaker="SPEAKER"
-                    />
-                </div>
-            </div>
-
-            <div className="ms-28">
-                <h1 className="font-black text-8xl">PREVIOUS DEV DAYS</h1>
+            
+                <h1 className="font-black text-8xl">PREVIOUS DEV DAY</h1>
 
                 {/* 2022 */}
                 <Carousel
@@ -132,9 +101,11 @@ export const EventsDevDay = () => {
                     perView={2}
                     id="carousel-2023"
                 />
+                </div>
             </div>
         </main>
     );
-};
+}
 
-export default EventsDevDay;
+export default EventsCSExpo;
+	

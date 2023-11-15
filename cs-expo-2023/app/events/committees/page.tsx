@@ -1,8 +1,7 @@
-
-
 import React from 'react';
 import MeetTheCommitteesHeader from '@/components/MeetTheCommitteesHeader';
 import CommitteesGrid from '@/components/CommitteesGrid';
+import CommitteesPic from '@/components/CommitteesPic';
 
 const EventsCommittees = () => {
   return (
@@ -13,7 +12,9 @@ const EventsCommittees = () => {
           subheaderText="COMMITTEES"
         />
         <CommitteesGrid />
+        <CommitteesPic />
       </div>
+      
     </main>
   );
 };
