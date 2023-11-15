@@ -10,7 +10,7 @@ const desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 const EventsOverviewHeader = () => {
   return (
-    <main className='h-full flex flex-col p-24 justify-center items-center mt-10'>
+    <main className='h-screen justify-center flex flex-col'>
       <EventsHeader title={titles} description={desc}></EventsHeader>
       </main>
   )

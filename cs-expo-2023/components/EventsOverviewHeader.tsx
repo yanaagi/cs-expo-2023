@@ -19,12 +19,12 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   const detailclassName: string = 'text-base font-bold bg-transparent flex my-4 justify-center items-center text-coral-pink';
 
   return (
-    <div className='w-screen'>
-      <div className=''>
+    <div className='flex flex-col items-center'>
+      <div className='flex flex-col'>
         {title.map((word, index) => (
           <p
             key={index}
-            className={`flex flex-col my-5 text-center text-eerie-black font-bold font-family-helvetica ${
+            className={`flex flex-col text-eerie-black font-bold font-family-helvetica ${
               index === currentEvent ? 'block' : 'hidden'
             }`}
             style={{
@@ -35,11 +35,11 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           </p>
         ))}
       </div>
-      <div className="w-full flex flex-col text-eerie-black text-xl sm:text-xl font-family-montserrat text-center" 
-      style={{
-        paddingLeft: 'clamp(20px, 30vw, 900px)',
-        paddingRight: 'clamp(20px, 30vw, 900px)',
-      }}>
+      <div className="w-screen flex flex-col text-eerie-black text-xl sm:text-xl font-family-montserrat text-center" 
+        style={{
+          paddingLeft: 'clamp(20px, 30vw, 900px)',
+          paddingRight: 'clamp(20px, 30vw, 900px)',
+        }}>
         {description[currentEvent].split('\n').map((line, index) => (
           <p key={index}>{line}</p>
           ))}
@@ -60,8 +60,8 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           </Link>
         )}
       </div>
-      <div className='flex flex-col items-center'>
-        <ul className="mx-auto w-[clamp(200px, 50%, 400px)] dots-container flex flex-col items-center space-y-5">
+      <div className='flex flex-col'>
+        <ul className="w-[clamp(200px, 50%, 400px)] flex flex-col items-center space-y-5">
           {[0, 1, 2, 3].map((index) => (
             <li
               key={index}
