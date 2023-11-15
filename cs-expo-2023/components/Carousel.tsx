@@ -39,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <div className="col-span-12 lg:col-span-9 relative">
                 <div className={`${id} glide`} id={id}>
                     <div className="mx-12 lg:mx-16 overflow-x-hidden">
-                        <div className="w-[1500px]">
+                        <div className="w-[1200px] lg:w-[1500px]">
                             <div className="glide__track" data-glide-el="track">
                                 <ul className="glide__slides">
                                     {slides.map((slide) => (
