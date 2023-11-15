@@ -19,19 +19,20 @@ import React from 'react';
                 <br />
 
                 <div>
-                <p className="text-[min(12vw,7rem)] xl:mt-0.5 min-[320px]:mt-0.5 xl:mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
+                <p className="text-[min(12vw,7rem)] min-[320px]:py-2 xl:mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
                     {title}
                 </p>
                 </div>
                 
+                
                 <div>
-                <p className="text-[min(2vw,2rem)] text-eerie-black text-center mt-5 xl:mb-14 min-[320px]:mb-2 flex flex-col items-center font-family-montserrat xl:leading-5 min-[320px]:leading-12 tracking-widest">
+                <p className="text-[min(2.2vw,8rem)] text-eerie-black text-center mt-5 xl:mb-14 min-[320px]:mb-8 flex flex-col items-center font-family-montserrat xl:leading-6 min-[320px]:leading-16 tracking-widest xl:font-medium min-[320px]:font-bold">
                     {desc}
                 </p>
                 </div>
 
-                <div className="flex flex-col items-center">
-                <div className="border-opacity-50 border border-eerie-black h-16 pt-2.5 w-56 xl:mt-5 xl:mb-56 min-[320px]:mb-48 flex flex-col items-center font-family-helvetica">
+                <div className="min-[320px]:mb-2 flex flex-col items-center">
+                <div className="border-opacity-50 border border-eerie-black h-16 pt-2.5 w-56 xl:mt-5 flex flex-col items-center font-family-helvetica">
                     <a href={button} className="hover:shadow-[inset_13rem_0_0_0] hover:shadow-eerie-black duration-[400ms,700ms] transition-[color,box-shadow] mb-56 text-base bg-coral-pink flex py-2 px-9 justify-center items-center text-white">
                     <div className="absolute left-1/2 w-2 h-10 bg-white -translate-x-28"></div>
                     <div className="absolute right-1/2 w-2 h-10 bg-white translate-x-28"></div>
