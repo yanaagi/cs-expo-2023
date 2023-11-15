@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     return (
           <footer className="relative bottom-0 right-0 left-0 w-full bg-white text-black py-6">
 
-          <div className="md:justify-center w-full mx-auto flex px-6 py-4">
+          <div className="md:justify-center w-full mx-auto flex px-6 py-4 max-sm:grid grid-cols-2 gap-2">
 
                <div className="flex flex-col">
                     <Link href="/events/cs-expo">
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                     </a>
                </div>
 
-               <div className="flex flex-col pl-5 sm:pl-10">
+               <div className="flex flex-col sm:pl-10">
                     <Link href="/events/dev-day">
                     <span className="font-bold hover:underline cursor-pointer">Dev Day</span>
                     </Link>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                     </a>
                </div>
 
-               <div className="flex flex-col pl-5 sm:pl-10">
+               <div className="flex flex-col sm:pl-10">
                     <Link href="/projects">
                     <span className="font-bold hover:underline cursor-pointer">Projects</span>
                     </Link>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                     </a>
                </div>
 
-               <div className="flex flex-col pl-2 pr-5 sm:pl-10">
+               <div className="flex flex-col pr-5 sm:pl-10">
                     <Link href="/partners">
                     <span className="font-bold hover:underline cursor-pointer">Partners</span>
                     </Link>
