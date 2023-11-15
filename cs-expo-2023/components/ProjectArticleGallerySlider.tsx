@@ -1,6 +1,6 @@
 "use client";
 
-import {AiOutlineUp,  AiOutlineDown} from 'react-icons/ai';
+import {AiOutlineUp,  AiOutlineDown, AiOutlineLeft, AiOutlineRight} from 'react-icons/ai';
 import React, { useState, useEffect } from 'react';
 
 interface Slide {
@@ -22,8 +22,9 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         type: 'slide',
         arrows: false,
         gap: 20,
-        height : '100px',
-        direction: 'ttb',
+        width : '390px',
+        height : '130px',
+        direction: 'ltr',
       };
       const splide = new Splide('#my_splide', splideOptions);
       const slideUp = document.getElementById('slideup');
@@ -71,24 +72,24 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
     },[]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-4/12">
+    <div className="flex flex-row items-center justify-center w-full h-1/12">
       <div id="slideup" className="flex justify-center h-[30px] w-[30px]">
         { 
         !isMaxSlideUp && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineUp/>
+            <AiOutlineLeft/>
           </button>
         )}
       </div>
                 
-      <div id="my_splide" className="splide h-[250px] w-full overflow-hidden">
+      <div id="my_splide" className="splide overflow-hidden h-[134px] max-sm:w-[130px]">
         <div className="splide__track">
-          <ul className="splide__list h-[100px]">
+          <ul className="splide__list flex flex-row h-[130px] items-center">
             {
               slides.map((slide, index)=>(
                 <li key={index} className="splide__slide flex justify-center">
-                  <div id="slide-card" className="h-[108px] flex justify-center items-center">
-                    <img src={slide.link} className="w-48 h-[100px]"></img>
+                  <div id="slide-card" className="h-[130px] w-[130px]">
+                    <img src={slide.link} className=""></img>
                   </div>
                 </li>
               ))
@@ -101,7 +102,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         { 
         !isMaxSlideDown && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineDown/>
+            <AiOutlineRight/>
           </button>
         )}
       </div>
