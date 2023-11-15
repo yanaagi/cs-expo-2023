@@ -71,7 +71,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
     },[]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-4/12">
       <div id="slideup" className="flex justify-center h-[30px] w-[30px]">
         { 
         !isMaxSlideUp && (

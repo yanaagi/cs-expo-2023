@@ -32,8 +32,8 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   return (
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
       <div className="flex flex-col w-full pt-24">
-        <div className="flex flex-col items-center justify-start pt-5 ">
-          <div className="flex relative bg-timberwolf h-[650px] w-[450px] max-sm:w-[320px] max-sm:h-[520px] s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col items-center justify-start pt-5">
+          <div className="flex relative bg-timberwolf h-[650px] w-[450px] max-sm:w-[260px] max-sm:h-[460px] s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
             <img src={posterFilePath} className="w-auto h-auto"></img>
             {/* <div className="absolute top-[30px] left-[-30px] h-[110px] w-[110px] rounded-full bg-yellow-300">
 
@@ -105,12 +105,12 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                   <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
                 </div>
             </div>
-            <div className="grid grid-cols-4 h-[300px] bg-timberwolf gap-10 max-sm:gap-2 mb-10">
-              <div className="flex col-span-3 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center">
+            <div className="flex flex-row h-[300px] bg-timberwolf gap-10 max-sm:gap-2 mb-10 justify-center items-center">
+              <div className="flex flex-grow max-h-[304.42px] max-w-[541.2px] max-lg:max-h-[300.28px] max-lg:max-w-[533.86px] aspect-video w-11/12 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center">
                 <p>AVP</p>
               </div>
               
-              <GallerySlider 
+              <GallerySlider
                 slides={
                   [
                     {link: "/kekw-kek.gif"},
@@ -120,6 +120,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                 }
               />
             </div>
+      
 
           </div>
         </div>
