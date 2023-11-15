@@ -105,10 +105,10 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                   <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
                 </div>
             </div>
-            <div className="flex flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 justify-center items-center">
+            <div className="flex flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 justify-start items-center">
               
               {/* <div className="flex flex-grow max-h-[304.42px] max-w-[541.2px] max-lg:max-h-[300.28px] max-lg:max-w-[533.86px] aspect-video w-11/12 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center"> */}
-              <div className="flex aspect-video bg-zinc-800 s-full w-11/12 h-11/12 text-timberwolf text-3xl font-bold justify-center items-center">
+              <div className="flex aspect-video bg-zinc-800 s-full w-10/12 h-10/12 text-timberwolf text-3xl font-bold justify-center items-center">
                 <p>AVP</p>
               </div>
 
