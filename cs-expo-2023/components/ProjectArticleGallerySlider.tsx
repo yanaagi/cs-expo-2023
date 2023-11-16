@@ -1,7 +1,8 @@
 "use client";
 
 import {AiOutlineUp,  AiOutlineDown, AiOutlineLeft, AiOutlineRight} from 'react-icons/ai';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
 
 interface Slide {
   link: string;
@@ -16,27 +17,54 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   }) => {
     const [isMaxSlideUp, setIsMaxSlideUp] = useState(true);
     const [isMaxSlideDown, setIsMaxSlideDown] = useState(false);
-  
+    const [windowWidth, setWindowWidth] = useState(0);
+    const [isMobileMode, setIsMobileMode] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    }
+    useEffect(()=> {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      }
+    }, []);
+
+    useEffect(()=>{
+      setWindowWidth(window.innerWidth);
+
+      if (windowWidth > 640 && isMobileMode) {
+        setIsMobileMode(false);
+      }
+      else if (windowWidth <= 640 && !isMobileMode) {
+        setIsMobileMode(true);
+      }
+      console.log(windowWidth);
+    }, [windowWidth]);
+
     useEffect(() => {
-      const splideOptions = {
+      setWindowWidth(window.innerWidth);
+      let splideOptions = {
         type: 'slide',
         arrows: false,
         gap: 20,
-        width : '390px',
-        height : '130px',
-        direction: 'ltr',
+        // width : '390px',
+        height : '100px',
+        direction: isMobileMode?'ltr':'ttb',
       };
-      const splide = new Splide('#my_splide', splideOptions);
+      const splide = new Splide('#my_splide',splideOptions);
       const slideUp = document.getElementById('slideup');
       const slideDown = document.getElementById('slidedown');
       
-  
       slideUp?.addEventListener("click", () => {
         splide.go('-1');
+        setCurrentSlide(splide.index);
       });
   
       slideDown?.addEventListener("click", () => {
         splide.go('+1');
+        setCurrentSlide(splide.index);
       });
   
       splide.on(["mounted", "move"], () => {
@@ -69,26 +97,33 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       });
   
       splide.mount();
-    },[]);
+
+      splide.go(currentSlide);
+      return () => {
+        splide.destroy();
+      }
+    },[isMobileMode]);
 
   return (
-    <div className="flex flex-row items-center justify-center w-full h-1/12">
+    <div className="flex flex-col max-sm:flex-row items-center justify-center w-2/12 max-sm:w-full max-sm:h-1/12">
       <div id="slideup" className="flex justify-center h-[30px] w-[30px]">
         { 
         !isMaxSlideUp && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineLeft/>
+            {
+              isMobileMode ? (<AiOutlineLeft/>) : (<AiOutlineUp/>)
+            }
           </button>
         )}
       </div>
                 
-      <div id="my_splide" className="splide overflow-hidden h-[134px] max-sm:w-[130px]">
+      <div id="my_splide" className="splide overflow-hidden w-[120px] h-[300px] max-sm:h-[100px] max-sm:w-[100px]">
         <div className="splide__track">
-          <ul className="splide__list flex flex-row h-[130px] items-center">
+          <ul className="splide__list flex flex-col max-sm:flex-row h-[100px] items-center">
             {
               slides.map((slide, index)=>(
                 <li key={index} className="splide__slide flex justify-center">
-                  <div id="slide-card" className="h-[130px] w-[130px]">
+                  <div id="slide-card" className="h-[100px] w-[100px]">
                     <img src={slide.link} className=""></img>
                   </div>
                 </li>
@@ -102,7 +137,9 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         { 
         !isMaxSlideDown && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineRight/>
+            {
+              isMobileMode ? (<AiOutlineRight/>) : (<AiOutlineDown/>)
+            }
           </button>
         )}
       </div>
