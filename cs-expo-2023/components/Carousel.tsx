@@ -11,7 +11,6 @@ interface CarouselProps {
     title: string;
     description: string;
     slides: Slide[];
-    perView?: number;
     id: string;
 }
 
@@ -19,35 +18,34 @@ const Carousel: React.FC<CarouselProps> = ({
     title,
     description,
     slides,
-    perView,
     id,
 }) => {
     useEffect(() => {
         const config = {
             type: "carousel",
             startAt: 0,
-            perView: perView || 3,
+            perView: 4,
             autoplay: 2000,
         };
         new Glide(`#${id}`, config).mount();
     }, []);
 
     return (
-        <div className="grid grid-cols-12 mt-8 me-12 h-[200px]">
-            <div className="col-span-12 md:col-span-3">
+        <div className="grid grid-cols-12 mt-8">
+            <div className="col-span-12 lg:col-span-3">
                 <h1 className="font-bold text-5xl">{title}</h1>
                 <p className="font-medium pe-12">{description}</p>
             </div>
-            <div className="col-span-9 relative">
+            <div className="col-span-12 lg:col-span-9 relative">
                 <div className={`${id} glide`} id={id}>
-                    <div className="mx-16 overflow-x-hidden">
-                        <div className="w-[2000px]">
+                    <div className="mx-12 lg:mx-16 overflow-x-hidden">
+                        <div className="w-[1200px] lg:w-[1500px]">
                             <div className="glide__track" data-glide-el="track">
                                 <ul className="glide__slides">
                                     {slides.map((slide) => (
                                         <li className="glide__slide">
                                             <div
-                                                className="w-[320px] h-[180px]"
+                                                className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]"
                                                 style={{
                                                     backgroundColor:
                                                         slide.backgroundColor ||
@@ -67,7 +65,7 @@ const Carousel: React.FC<CarouselProps> = ({
                     >
                         <button
                             data-glide-dir="<"
-                            className="absolute top-10 left-0 mt-4 text-5xl font-bold"
+                            className="absolute top-10 left-0 lg:mt-4 text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineLeft />
@@ -75,7 +73,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </button>
                         <button
                             data-glide-dir=">"
-                            className="absolute top-10 right-0 mt-4 text-5xl font-bold"
+                            className="absolute top-10 right-0 lg:mt-4 text-5xl font-bold"
                         >
                             <span className="flex-auto">
                                 <AiOutlineRight />
