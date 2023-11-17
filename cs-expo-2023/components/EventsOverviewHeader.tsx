@@ -11,7 +11,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
 
   // Define an array of dot sizes
   const dotSizes: string[] = ['h-10 w-10', 'h-8 w-8', 'h-6 w-6', 'h-4 w-4'];
-  const detailclassName: string = "text-base font-bold bg-transparent flex py-4 px-8 lex justify-center items-center text-coral-pink";
+  const detailclassName: string = "text-base bg-transparent flex py-4 px-8 lex justify-center items-center text-coral-pink";
 
   const nextEvent = () => {
     setCurrentEvent((prev) => (prev < 3 ? prev + 1 : 0)); // Assuming there are 4 events
