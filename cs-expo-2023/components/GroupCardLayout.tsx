@@ -116,7 +116,7 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
       setNlpFilter(false);
       updateCurrentFilter("Health");
     }
-    else if (category === "Img Proc - CV") {
+    else if (category === "Computer Vision") {
       setImageprooccvFilter(true);
 
       setAllFilter(false);
@@ -125,7 +125,7 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
       setHealthFilter(false);
       setIotFilter(false);
       setNlpFilter(false);
-      updateCurrentFilter("Img Proc - CV");
+      updateCurrentFilter("Computer Vision");
     }
     else if (category === "IOT") {
       setIotFilter(true);
