@@ -15,7 +15,8 @@
     },
     "plugins": [
       "@typescript-eslint",
-      "react"
+      "react",
+      "next"
     ],
     "settings": {
       "react": {
