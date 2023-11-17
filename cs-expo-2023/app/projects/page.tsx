@@ -10,14 +10,14 @@ import { title } from "process";
 
 const Projects = () => {
   return (
-    <main className="flex flex-col items-center justify-between p-24 mt-6">
+    <main className="flex flex-col items-center justify-center p-24 mt-10">
       {/* Call  ProjectsHeader component */}
       <ProjectsHeader
         headerText="PROJECTS"
         subheaderText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus."
       />
 
-      <div className="flex justify-center p-4 w-full">
+      <div className="flex justify-center p-4 w-full mt-0 relative">
         <Link
           href="/projects/hall-of-fame"
           className="flex items-center cursor-pointer ml-4 font-medium text-coral-pink whitespace-nowrap"

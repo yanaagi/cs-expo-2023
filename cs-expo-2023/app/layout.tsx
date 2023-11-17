@@ -27,12 +27,6 @@ export default function RootLayout({
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
                 />
-
-                <link
-                    rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
-                />
-
                 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
             </head>
             <body>
