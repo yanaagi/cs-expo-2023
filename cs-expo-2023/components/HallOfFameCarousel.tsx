@@ -181,8 +181,8 @@ const Carousel: React.FC<CarouselProps> = ({
                     <div className="w-[650px] sm:w-[1000px]">
                         <div className="glide__track" data-glide-el="track">
                             <ul className="glide__slides">
-                                {slides.map((slide) => (
-                                    <li className="glide__slide flex flex-col items-center justify-center">
+                                {slides.map((slide, index) => (
+                                    <li key={index} className="glide__slide flex flex-col items-center justify-center">
                                         <div
                                             id={`slide-image-${id}`}
                                             className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]"

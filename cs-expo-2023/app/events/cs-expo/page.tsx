@@ -25,7 +25,7 @@ export const EventsDevDay = () => {
     const description = speakers.map((speakers) => speakers.description);
     const photo = speakers.map((speakers) => speakers.photo);
 
-    const changeSpeaker = (direction) => {
+    const changeSpeaker = (direction: string) => {
         if (direction === "above") {
             setCurrentIndex((prevIndex) =>
                 prevIndex - 1 >= 0 ? prevIndex - 1 : speakerNames.length - 1
