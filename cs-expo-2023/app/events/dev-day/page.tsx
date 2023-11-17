@@ -42,7 +42,7 @@ export const EventsCSExpo = () => {
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
-                    customText="DEV DAY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. halu halu"
+                    customText="Join us at DevDay, the first event of CS EXPO 2023 V2.0. Discover what it's like to be in the tech world today as experts talk about new ideas, share tips, and help students."
                 />
                 <ButtonComponent
                     currentButton={currentButton}
@@ -53,12 +53,7 @@ export const EventsCSExpo = () => {
                 </h1>
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
-                    customText="CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    CS EXPO Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
                     sampleText="Sample Photo"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />

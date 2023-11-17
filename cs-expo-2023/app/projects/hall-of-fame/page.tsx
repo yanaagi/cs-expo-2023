@@ -8,7 +8,7 @@ const HallOfFame = () => {
             <ProjectsHeader
                 headerText="HALL OF FAME"
                 subheaderText="
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nesciunt voluptatum in, minus quis eos placeat dolorum repellendus rem sint, ex excepturi accusamus."
+                Excellence must not only be achieved, but also rewarded with recognition. The following are the standouts of the CS EXPO 2023 V2.0, acknowledged for their relentless pursuit of knowledge through exemplary research and industry-ready technical skills."
             />
 
             {/* Overall Best Thesis */}

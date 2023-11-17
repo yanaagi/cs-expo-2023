@@ -38,7 +38,7 @@ const CollectionOfProjects: NextPage = () => {
       <div className="flex flex-col justify-center items-center p-24">
         <CollectionOfProjectsHeader 
           headerText ="COLLECTION OF PROJECTS" 
-          subheaderText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic doloribus pariatur sapiente error iste, reiciendis, minima odit tenetur, rerum consequatur harum? Rerum molestiae fugit cupiditate pariatur corrupti, error quo quas."/>
+          subheaderText="Explore the culmination of the students' academic journey through their impactful thesis projects. Dive into this collection of projects — sorted below by category — which highlights the dedication, creativity, and skill of each thesis group, exemplifying the depth of knowledge these students bring to not only their academic pursuits, but also the advancement of society."/>
         <GroupCardLayout groupData={GroupsData}/>
       </div>
     </main>
