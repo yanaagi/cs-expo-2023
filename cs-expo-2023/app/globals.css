@@ -30,3 +30,13 @@
         writing-mode: initial;
     }
 }
+
+@font-face {
+    font-family: 'sagu-exora'; /* Name to reference the font */
+    src: url('../fonts/sagu-exora.ttf') format('truetype'); /* URL of your font file */
+    /* Add other font formats (e.g., woff, ttf) and their URLs for better browser compatibility */
+  }
+
+.custom-font {
+    font-family: 'sagu-exora', sans-serif;
+}

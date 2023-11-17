@@ -14,7 +14,7 @@ const MeetTheCommitteesHeader: React.FC<MeetTheCommitteesProps> = ({ headerText 
                             meet the
                         </span>
                         <br />
-                        <span className="text-left font-bold text-5xl sm:text-4xl md-text-5xl lg:text-6xl xl:text-7xl"> {/* Larger font for headerText on large screens */}
+                        <span className="text-left custom-font text-5xl sm:text-4xl md-text-5xl lg:text-6xl xl:text-7xl"> {/* Larger font for headerText on large screens */}
                             {headerText}
                         </span>
                     </p>
