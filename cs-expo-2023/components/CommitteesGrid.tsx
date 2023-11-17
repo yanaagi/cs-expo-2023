@@ -22,9 +22,9 @@ const CommitteesGrid = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 640) {
         setGridCols(1);
-      } else if (screenWidth < 768) {
+      } else if (screenWidth < 770) {
         setGridCols(2);
-      } else if (screenWidth < 1024) {
+      } else if (screenWidth < 1100) {
         setGridCols(2);
       } else {
         setGridCols(4);
@@ -59,7 +59,7 @@ const CommitteesGrid = () => {
 
   return (
     <div className="flex justify-center"> {/* Center the columns in smaller screens */}
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-[%12] mt-4`}>
+      <div className={`grid grid-cols-1 sm:grid-cols-${gridCols} md:grid-cols-${gridCols} lg:grid-cols-${gridCols} gap-4 ml-[%12] mt-4`}>
         {committeeNames.map((committeeName, index) => (
           <a
             key={index}
@@ -74,7 +74,7 @@ const CommitteesGrid = () => {
               onMouseLeave={handleMouseLeave}
               style={{ minWidth: '200px', maxWidth: '240px', minHeight: '200px', maxHeight: '240px', position: 'relative' }}
             >
-              <div className="font-bold text-1xl sm:text-1xl md:text-2xl lg:text-2xl xl:text-2xl">
+              <div className="font-bold text-1xl sm:text-1xl md:text-2xl lg:text-2xl">
                 {committeeName}
               </div>
               <div className="text-white text-right absolute bottom-4 right-4">
