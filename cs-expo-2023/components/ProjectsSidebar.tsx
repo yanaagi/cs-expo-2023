@@ -11,6 +11,7 @@ const Sidebar = ({sideBarCallback}) => {
 
   const handleBoxClick = (boxNumber) => {
     // Action
+    console.log(boxNumber);
     sideBarCallback(boxNumber);
     
   };
@@ -77,6 +78,15 @@ const Sidebar = ({sideBarCallback}) => {
             </div>
           )
         )}
+        {["All", "Data Analytics", "Education", "Health", "Img Proc - CV", "IOT", "NLP"].map((boxNumber,index) => (
+          <div
+            key={boxNumber}
+            className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"
+            onClick={() => handleBoxClick(index)}
+          >
+            {boxNumber}
+          </div>
+        ))}
       </div>
     </div>
   );

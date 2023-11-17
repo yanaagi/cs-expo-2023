@@ -11,7 +11,7 @@
             "Evangelista, Erica Francia G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
+        "posterFilePath": "/iot/adorables.png",
         "AVPLink": ""
     },
     "AiM": {
@@ -26,7 +26,7 @@
             "Jan Miguel A. Pinlac"
         ],
         "category": "Health",
-        "posterFilePath": "",
+        "posterFilePath": "/health/aim.png",
         "AVPLink": ""
     },
     "Array-Co": {
@@ -42,7 +42,7 @@
             "Yap, John Angelo B."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
+        "posterFilePath": "/imgproc-cv/arrayco.png",
         "AVPLink": ""
     },
     "Codebebs": {
@@ -58,7 +58,7 @@
             "Paul Andre A. Gabriel"
         ],
         "category": "IoT",
-        "posterFilePath": "",
+        "posterFilePath": "/iot/codebebs.png",
         "AVPLink": ""
     },
     "DEoS": {
@@ -73,7 +73,7 @@
             "John Felix M. Agda"
         ],
         "category": "NLP",
-        "posterFilePath": "",
+        "posterFilePath": "/nlp/deos.png",
         "AVPLink": ""
     },
     "Engeenz": {
@@ -89,7 +89,7 @@
             "Gerald Z. Gueco"
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
+        "posterFilePath": "/data-analytics/engeenz.png",
         "AVPLink": ""
     },
     "Hello-World": {
@@ -104,7 +104,7 @@
             "Valerio, Andre Martee G."
         ],
         "category": "Health",
-        "posterFilePath": "",
+        "posterFilePath": "/health/helloworld.png",
         "AVPLink": ""
     },
     "INNOV8": {
@@ -120,7 +120,7 @@
             "Dela Cruz, Cyrill James G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
+        "posterFilePath": "/iot/innov8.jpg",
         "AVPLink": ""
     },
     "Javangers": {
@@ -135,7 +135,7 @@
             "Limyu, Alan Gabriel D.A."
         ],
         "category": "Educ",
-        "posterFilePath": "",
+        "posterFilePath": "/education/javangers.png",
         "AVPLink": ""
     },
     "Midnight-Coders": {
@@ -150,7 +150,7 @@
             "Bucsit, Mark Wilson W."        
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
+        "posterFilePath": "/imgproc-cv/midnightcoders.png",
         "AVPLink": ""
     },
     "Peaky-Blinders": {
@@ -165,7 +165,7 @@
             "Sapnu, Dioshua D."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
+        "posterFilePath": "/education/peakyblinders.png",
         "AVPLink": ""
     },
     "Quinta": {
@@ -181,7 +181,7 @@
             "Sapida, Charles Christian D."            
         ],
         "category": "Educ",
-        "posterFilePath": "",
+        "posterFilePath": "/education/quinta.jpg",
         "AVPLink": ""
     },
     "return-to_sleep": {
@@ -196,7 +196,7 @@
             "Ramoso, Zedric James D."  
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
+        "posterFilePath": "/data-analytics/returntosleep.png",
         "AVPLink": ""
     },
     "Rob_lux": {
@@ -211,7 +211,7 @@
             "Fragata, Mark Revin G."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
+        "posterFilePath": "/education/roblux.png",
         "AVPLink": ""
     },
     "SOFTIES": {
@@ -226,7 +226,7 @@
             "Mazo, Alijah Ethan E."
         ],
         "category": "Health",
-        "posterFilePath": "",
+        "posterFilePath": "/health/softies.png",
         "AVPLink": ""
     },
     "Softyware": {
@@ -242,7 +242,7 @@
             "Andrada, Micko Alhwin T."
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
+        "posterFilePath": "/data-analytics/softyware.png",
         "AVPLink": ""
     },
     "S.T.A.R.K.": {
@@ -256,7 +256,7 @@
             "Español, Kyle G.", 
             "Segundo Jr., Sally P."],
         "category": "NLP",
-        "posterFilePath": "",
+        "posterFilePath": "/nlp/stark.png",
         "AVPLink": ""
     },
     "TeaSis": {
@@ -271,7 +271,7 @@
             "Contreras, John Dominic S."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
+        "posterFilePath": "/imgproc-cv/teasis.png",
         "AVPLink": ""
     },
     "TechniQ": {
@@ -286,7 +286,7 @@
             "Alido, Rico Ray R."
         ],
         "category": "NLP",
-        "posterFilePath": "",
+        "posterFilePath": "/nlp/techniq.png",
         "AVPLink": ""
     },
     "Yaymiko": {
@@ -301,7 +301,7 @@
         "Vicencio, Vernon GabrielAngelo A."
     ],
         "category": "Educ",
-        "posterFilePath": "",
+        "posterFilePath": "/education/yaymiko.png",
         "AVPLink": ""
     }
   } 
