@@ -109,7 +109,7 @@
     },
     "INNOV8": {
         "groupname": "INNOV8",
-        "thesisTitle": "Name3",
+        "thesisTitle": "Indoor Air Quality Monitoring and Recommendation System",
         "abstract": "An Android-based mobile application called the Indoor Air Quality  Monitoring and Recommendation System (AIRZEN) can help the  FEU Tech’s Facilities Office (FO) and general Indoor spaces in  assessing the Air Quality inside indoor spaces. This system is a tool  used to monitor and check the Air Quality inside Indoor spaces as  well as give recommendations to help mitigate the effects of bad  Indoor Air Quality. The KNN algorithm was utilized for the  prediction of the AQI value and classification of  Recommendations. To determine whether the system works as  intended, testing was administered together with a survey  participated by 50 respondents consisting of professionals from the  IT/CS/IAQ Industry, IT/CS/CPE students, IT/CS Faculty, and  Office workers. This capstone project’s output received an Above  Average rating of (4.56) in terms of Functionality, Reliability, and  Efficiency. Future researchers can make system improvements by  adding a Backup and Restore feature for times of data outage as  well as an Ios integration for a bigger range of users. An additional  Recommendation is also to add feedback from existing users inside  the application as well as a notification system that notifies users  while they are out of their homes. The proponents also recommend  the implementation of multiple monitoring device support for  bigger scalability. ",
         "summary": "Summary3",
         "members": [
