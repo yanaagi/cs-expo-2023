@@ -28,7 +28,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
         {title.map((word, index) => (
           <p
             key={index}
-            className={`flex flex-col text-eerie-black font-bold font-family-helvetica ${
+            className={`flex flex-col text-eerie-black custom-font ${
               index === currentEvent ? 'block' : 'hidden'
             }`}
             style={{

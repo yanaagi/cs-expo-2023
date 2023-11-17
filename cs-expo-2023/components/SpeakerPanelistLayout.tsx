@@ -41,7 +41,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
       {/* WEB VIEW */}
       <div className="ms-1 me-1 p-10 hidden lg:block">
         {/* Title */}
-        <h1 className="font-black text-8xl mb-5 ml-10 text-right">{panelOrSpeaker}</h1>
+        <h1 className="custom-font text-8xl mb-5 ml-10 text-right">{panelOrSpeaker}</h1>
 
         {/* Grid Wrapper */}
         <div className="grid grid-cols-1 grid-cols-3">
