@@ -119,12 +119,14 @@ export default function Home() {
 
     return (
         <main>
-            <div className="h-screen">
-                <h1
-                    ref={textElementRef}
-                    className="absolute text-[min(4.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-12"
-                ></h1>
+            <div className="h-screen w-screen flex items-center justify-center">
+            <h1
+                ref={textElementRef}
+                className="absolute left-0 top-1/2 ml-10 transform -translate-y-1/2 text-clamp(48px, 5vw, 128px) text-eerie-black font-helvetica font-bold"/>
             </div>
+
+
+
 
             {/*<details className="group xl:py-32 min-[320px]:py-28 text-lg">
         <summary className="xl:mt-70 min-[320px]:mt-56 shadow-[0_56px_56px_-36px_rgba(0,0,0,0.2)] flex cursor-pointer justify-center flex-row items-center font-bold">
