@@ -8,8 +8,7 @@ const EventsCommittees = () => {
     <main className="flex min-h-screen justify-between p-24">
       <div>
         <MeetTheCommitteesHeader
-          headerText="meet the"
-          subheaderText="COMMITTEES"
+          headerText="COMMITTEES"
         />
         <CommitteesGrid />
         <CommitteesPic />
