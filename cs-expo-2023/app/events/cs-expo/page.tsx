@@ -68,7 +68,7 @@ export const EventsDevDay = () => {
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
-                    <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
+                    <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
                         PREVIOUS CS EXPO
                     </h1>
 
