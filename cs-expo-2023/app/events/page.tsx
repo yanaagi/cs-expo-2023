@@ -12,7 +12,6 @@ const EventsOverviewHeader = () => {
     <main className='h-screen justify-center flex flex-col'>
       <EventsHeader title={titles} description={desc}></EventsHeader>
     </main>
-      </main>
   )
 }
 
