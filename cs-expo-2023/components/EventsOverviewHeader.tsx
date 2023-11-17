@@ -1,5 +1,6 @@
 'use client'
 import React, {useState} from 'react'
+import Link from 'next/link';
 
 interface EventsOverviewHeaderProps {
   title: string[];
@@ -22,48 +23,60 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   };
 
   return (
-    <div>
-      <div className="text-slider">
+    <div className='flex flex-col items-center'>
+      <div className='flex flex-col'>
         {title.map((word, index) => (
-          <div key={index} className={`text-eerie-black text-8xl mt-72 mb-8 flex flex-col items-center font-bold font-family-helvetica ${
-            index === currentEvent ? 'block' : 'hidden'
-        }`}>
+          <p
+            key={index}
+            className={`flex flex-col text-eerie-black font-bold font-family-helvetica ${
+              index === currentEvent ? 'block' : 'hidden'
+            }`}
+            style={{
+              fontSize: index === 3 ? 'clamp(48px, 5vw, 128px)' : 'clamp(48px, 5vw, 128px)',
+            }}
+            >
             {word}
-          </div>
+          </p>
         ))}
       </div>
-      <div className="max-w-screen-md mx-auto tracking-widest text-eerie-black text-xl mt-2 mb-16 flex flex-col justify-center items-center font-family-montserrat text-center">
-      {description[currentEvent].split('\n').map((line, index) => (
+      <div className="w-screen flex flex-col text-eerie-black text-xl sm:text-xl font-family-montserrat text-center" 
+        style={{
+          paddingLeft: 'clamp(20px, 30vw, 900px)',
+          paddingRight: 'clamp(20px, 30vw, 900px)',
+        }}>
+        {description[currentEvent].split('\n').map((line, index) => (
           <p key={index}>{line}</p>
-        ))}
-        {currentEvent === 0 && <p className="mb-14"></p>}
-        {currentEvent === 1 && (
-          <a href="/events/cs-expo" className={detailclassName}>
+          ))}
+          {currentEvent === 0 && <p className="mb-14"></p>}
+          {currentEvent === 1 && (
+          <Link href="/events/cs-expo" className={detailclassName}>
             View event details &gt;
-          </a>
+          </Link>
         )}
         {currentEvent === 2 && (
-          <a href="/events/dev-day" className={detailclassName}>
+          <Link href="/events/dev-day" className={detailclassName}>
             View event details &gt;
-          </a>
+          </Link>
         )}
         {currentEvent === 3 && (
-          <a href="/events/committees" className={detailclassName}>
+          <Link href="/events/committees" className={detailclassName}>
             View event details &gt;
-          </a>
+          </Link>
         )}
       </div>
-      <ul className="mx-auto dots flex flex-col items-center space-y-5 mb-56">
-        {[0, 1, 2, 3].map((index) => (
-          <li
-            key={index}
-            className={`${
-              index === currentEvent ? 'bg-coral-pink' : 'bg-gray-400'
-            } ${dotSizes[index]} grow-1 shrink-1 rounded-full my-2 cursor-pointer`}
-            onClick={() => setCurrentEvent(index)}
-          ></li>
-        ))}
-      </ul>
+      <div className='flex flex-col'>
+        <ul className="w-[clamp(200px, 50%, 400px)] flex flex-col items-center space-y-5">
+          {[0, 1, 2, 3].map((index) => (
+            <li
+              key={index}
+              className={`dot ${
+                index === currentEvent ? 'bg-coral-pink' : 'bg-gray-400'
+              } ${dotSizes[index]} rounded-full my-2 cursor-pointer`}
+              onClick={() => setCurrentEvent(index)}>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

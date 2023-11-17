@@ -27,7 +27,7 @@ const Partners: NextPage = () => {
         </div>
         <div>
         <section id="partners-minor">
-          <h2 id="minor" className="font-black text-[clamp(48px,5vw,72px)] m-0 mt-[-1rem] flex justify-center">MINOR PARTNERS</h2>
+          <h2 id="minor" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MINOR PARTNERS</h2>
         </section>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />
@@ -35,7 +35,7 @@ const Partners: NextPage = () => {
         </div>
         <div>
           <section id="partners-media">
-          <h2 id="media" className="font-black text-[clamp(48px,5vw,72px)] m-0 mt-[-1rem] flex justify-center">MEDIA PARTNERS</h2>
+          <h2 id="media" className="font-black text-9xl m-0 mt-[-1rem] flex justify-center p-24">MEDIA PARTNERS</h2>
           </section>
           <div>
             <AlternatingPartnersLayout partners={partnerArray} />

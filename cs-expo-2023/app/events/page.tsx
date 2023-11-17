@@ -9,7 +9,7 @@ const desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 const EventsOverviewHeader = () => {
   return (
-    <main className=''>
+    <main className='h-screen justify-center flex flex-col'>
       <EventsHeader title={titles} description={desc}></EventsHeader>
     </main>
   )
