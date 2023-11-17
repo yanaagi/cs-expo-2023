@@ -133,17 +133,17 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
                               
-                              <Link href="/events/dev-day" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Dev Day
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/events/cs-expo" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   CS Expo
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   CS Expo {/** /events/cs-expo */}
                               </Link>
 
-                              <Link href="/events/committees" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Committees
-                              </Link>
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Committees {/** /events/dev-day */}
+                              </Link> 
                          </div>
                     )}
                </div>
@@ -163,8 +163,8 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/projects/hall-of-fame" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Hall of Fame
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
                               <Link href="/projects/collections-of-projects" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
@@ -174,8 +174,8 @@ const defaultMenu = () => {
                     )}
                </div>
 
-               <Link href="/partners" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
-                    Partners
+               <Link href="/progress" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
+                    Partners {/** /partners */}
                </Link>
           </>
      );};
@@ -200,16 +200,16 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/events/dev-day" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Dev Day
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/events/cs-expo" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   CS Expo
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   CS Expo {/** /events/cs-expo */}
                               </Link>
 
-                              <Link href="/events/committees" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Committees
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Committees {/** /events/committees */}
                               </Link>
                          </div>
                     )}
@@ -229,19 +229,19 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/projects/hall-of-fame" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Hall of Fame
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
                               <Link href="/projects/collections-of-projects" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Collections of Projects
+                                   Collections of Projects 
                               </Link>
                          </div>
                     )}
                </div>
 
-               <Link href="/partners" className="cursor-pointer hover:text-coral-pink">
-                    Partners
+               <Link href="/progress" className="cursor-pointer hover:text-coral-pink">
+                    Partners {/** /partners */}
                </Link>
           </div>
      );
