@@ -27,6 +27,10 @@ const config = {
   autoplay: 4000,
   hoverpause: true,
   startAt: 0,
+  peek: {
+    before: 100,
+    after: 50,
+  },
   perView: 7, // number of slides to show at once in desktop, 7 is an allowance for smooth transition
   gap: 0,
   breakpoints: {
@@ -36,11 +40,15 @@ const config = {
     1024: {
       perView: 5, // number of slides to show at once for medium screens
     },
-    768: {
-      perView: 7, // number of slides to show at once for small screens
+    480: {
+      perView: 1,
     },
-    360: {
-      perView: 4,
+    320: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 0, // amount of next slide visible
+      },
     },
   },
 };
@@ -51,491 +59,171 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
   }, []);
 
   return (
-    <main className="flex justify-center">
-      <div className="w-[2500px] overflow-x-hidden flex justify-center">
-        {/* Structure of Glide.js*/}
-        <div className="glide w-full flex justify-center items-center mt-[-80px]">
-          {" "}
-          {/* `mt` is for top margin of Glide before the PROJECTS header */}
-          <div className="glide__track w-full" data-glide-el="track">
-            <ul className="glide__slides h-[500px]">
-              {/* Data Analytics*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/data-analytics/chart-pie-solid.svg" // path to image
-                    className="justify-center"
-                    width={120} //
-                    height={120}
-                    alt="Data Analytics"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Data Analytics
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Data Analytics */}
-              {/* Education*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative mx-0">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/education/book-open-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Education"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Education
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Education */}
-              {/* Health*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/health/heart-pulse-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Health"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Health
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Health */}
-              {/* Image Processing / Computer Vision*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/imgproc-cv/eye-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Image Processing / Computer Vision"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Image Processing / Computer Vision
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Image Processing / Computer Vision*/}
-              {/* Internet of Things*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/iot/microchip-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Internet of Things"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Internet of Things
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Internet of Things*/}
-              {/* Natural Language Processing*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/nlp/comments-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Natural Language Processing"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Natural Language Processing
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Natural Language Processing */}
-              {/* ANOTHER LIST <li> to smoothen the transition between the last (NLP) and first (Data Analytics) slides */}
-              {/* Data Analytics*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/data-analytics/chart-pie-solid.svg" // path to image
-                    className="justify-center"
-                    width={120} //
-                    height={120}
-                    alt="Data Analytics"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Data Analytics
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Data Analytics */}
-              {/* Education*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative mx-0">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/education/book-open-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Education"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Education
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Education */}
-              {/* Health*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/health/heart-pulse-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Health"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Health
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Health */}
-              {/* Image Processing / Computer Vision*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/imgproc-cv/eye-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Image Processing / Computer Vision"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Image Processing / Computer Vision
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Image Processing / Computer Vision*/}
-              {/* Internet of Things*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#7E7E7E", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#5C5C5C", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "#353535", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/iot/microchip-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Internet of Things"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Internet of Things
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Internet of Things*/}
-              {/* Natural Language Processing*/}
-              <li className="glide__slide w-[200px] h-[400px] flex justify-center items-start relative">
-                <div
-                  className="w-[250px] h-[333.33px] bg-slate-200 absolute left-10 bottom-10"
-                  style={{
-                    backgroundColor: "#973235", // backBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] left-6 bottom-8 bg-slate-300 absolute"
-                  style={{
-                    backgroundColor: "#B43E41", // midBackgroundColor
-                  }}
-                ></div>
-                <div
-                  className="w-[250px] h-[333.33px] absolute left-3 bottom-6 flex flex-col justify-center items-center"
-                  style={{
-                    backgroundColor: "var(--coral-pink)", // foreBackgroundColor
-                  }}
-                >
-                  <Image
-                    src="/nlp/comments-solid.svg"
-                    className="justify-center"
-                    width={120}
-                    height={120}
-                    alt="Natural Language Processing"
-                    style={{
-                      filter: "invert(1)",
-                    }}
-                  />
-
-                  <h1 className="font-medium uppercase text-white text-center w-60 mt-5">
-                    Natural Language Processing
-                  </h1>
-                </div>
-              </li>{" "}
-              {/* End of Natural Language Processing */}
-            </ul>{" "}
-            {/* End of glide__slides */}
-          </div>{" "}
-          {/* End of glide__track w-full */}
-          {/* Arrow buttons for Glide.js */}
-          <div
-            className="glide__arrows w-screen absolute sm:block hidden" // sm:block hidden is for hiding the arrows on small screens
-            data-glide-el="controls"
-          >
-            <button
-              className="glide__arrow glide__arrow--left left-0 text-5xl transition-opacity duration-300 hover:opacity-50"
-              data-glide-dir="<"
-              style={{ color: "var(--coral-pink)", backgroundColor: "white" }} // color of left arrow
-            >
-              <span className="flex-auto">
-                <AiOutlineLeft />
-              </span>
-            </button>
-            <button
-              className="glide__arrow glide__arrow--right right-0 text-5xl transition-opacity duration-300 hover:opacity-50"
-              data-glide-dir=">"
-              style={{ color: "var(--coral-pink)", backgroundColor: "white" }} // color of right arrow
-            >
-              <span className="flex-auto">
-                <AiOutlineRight />
-              </span>
-            </button>
+    <main className="flex justify-center mt-4">
+      {/* Structure of Glide.js*/}
+      <div className="glide sm:p-8 relative">
+        {" "}
+        {/* ps-40 me-40 is for padding on the left and margin on the right */}
+        <div className="w-screen ps-12 me-12 sm:ps-40 sm:me-40">
+          <div className="flex justify-center overflow-hidden sm:text-base">
+            {/* ms and ps sizing affects the impression of layers in the svg images */}
+            {/* pe-11 for small (iPhone, Pixel, Galaxy S) */}
+            <div className="w-[1400px] sm:w-[2500px] max-[320px]:ps-8 ps-2 pe-11">
+              <div className="glide__track w-full" data-glide-el="track">
+                <ul className="glide__slides h-[210px] sm:h-[300px]">
+                  {/* Data Analytics*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/data-analytics/DATAANALYTICS.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Data Analytics"
+                    />
+                  </li>{" "}
+                  {/* End of Data Analytics */}
+                  {/* Education*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                    <Image
+                      src="/education/EDUCATION.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Education"
+                    />
+                  </li>{" "}
+                  {/* End of Education */}
+                  {/* Health*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/health/HEALTH.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Health"
+                    />
+                  </li>{" "}
+                  {/* End of Health */}
+                  {/* Image Processing / Computer Vision*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Image Processing / Computer Vision"
+                    />
+                  </li>{" "}
+                  {/* End of Image Processing / Computer Vision*/}
+                  {/* Internet of Things*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/iot/IOT.svg"
+                      className="justify-center"
+                      fill={true}
+                      alt="Internet of Things"
+                    />
+                  </li>{" "}
+                  {/* End of Internet of Things*/}
+                  {/* Natural Language Processing*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/nlp/NLP.svg"
+                      className="justify-center"
+                      fill={true}
+                      alt="Natural Language Processing"
+                    />
+                  </li>{" "}
+                  {/* End of Natural Language Processing */}
+                  {/* 🚧🚧🚧ANOTHER LIST <li> to smoothen the transition between the last (NLP) and first (Data Analytics) slides */}
+                  {/* Data Analytics*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/data-analytics/DATAANALYTICS.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Data Analytics"
+                    />
+                  </li>{" "}
+                  {/* End of Data Analytics */}
+                  {/* Education*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                    <Image
+                      src="/education/EDUCATION.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Education"
+                    />
+                  </li>{" "}
+                  {/* End of Education */}
+                  {/* Health*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/health/HEALTH.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Health"
+                    />
+                  </li>{" "}
+                  {/* End of Health */}
+                  {/* Image Processing / Computer Vision*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
+                      className="justify-center"
+                      fill={true}
+                      alt="Image Processing / Computer Vision"
+                    />
+                  </li>{" "}
+                  {/* End of Image Processing / Computer Vision*/}
+                  {/* Internet of Things*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/iot/IOT.svg"
+                      className="justify-center"
+                      fill={true}
+                      alt="Internet of Things"
+                    />
+                  </li>{" "}
+                  {/* End of Internet of Things*/}
+                  {/* Natural Language Processing*/}
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Image
+                      src="/nlp/NLP.svg"
+                      className="justify-center"
+                      fill={true}
+                      alt="Natural Language Processing"
+                    />
+                  </li>{" "}
+                </ul>{" "}
+                {/* End of glide__slides */}
+              </div>{" "}
+            </div>
           </div>
-        </div>{" "}
-        {/* End of glide__arrows */}
+        </div>
+        {/* End of glide__track w-full */}
+        {/* Arrow buttons for Glide.js */}
+        <div
+          className="glide__arrows w-screen absolute -bottom-2 sm:top-[calc(50%-2rem)]" // sm:block hidden is for hiding the arrows on small screens
+          data-glide-el="controls"
+        >
+          <button
+            className="glide__arrow glide__arrow--left absolute left-8 sm:left-24 text-5xl sm:text-5xl sm:m-2 sm:p-2"
+            data-glide-dir="<"
+            style={{ color: "var(--coral-pink)" }} // color of left arrow
+          >
+            <span className="flex-auto">
+              <AiOutlineLeft />
+            </span>
+          </button>
+          <button
+            className="glide__arrow glide__arrow--right absolute -right-4 sm:-right-14 text-5xl sm:text-5xl sm:m-0 sm:p-0"
+            data-glide-dir=">"
+            style={{ color: "var(--coral-pink)" }} // color of right arrow
+          >
+            <span className="flex-auto">
+              <AiOutlineRight />
+            </span>
+          </button>
+        </div>
       </div>{" "}
-      {/* End of glide */}
+      {/* End of glide__arrows */}
     </main>
   );
 };

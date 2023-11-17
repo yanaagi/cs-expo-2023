@@ -12,7 +12,7 @@ const Page: React.FC<GroupProps> = ({params}) => {
   const groupsData = new Map(Object.entries(GroupsData));
   const groupData = groupsData.get(params.groupid);
   return (
-    <main className="flex items-center justify-center">
+    <main className="">
       <ProjectArticle 
         groupname={groupData?.groupname} 
         thesisTitle={groupData?.thesisTitle} 
