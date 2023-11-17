@@ -6,7 +6,8 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from "@/panelists.json";
+import panelistsData from '@/panelists.json'; 
+
 
 export const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
@@ -18,14 +19,14 @@ export const EventsCSExpo = () => {
 
     const speakers = panelistsData.panelists;
 
-    const speakerNames = speakers.map((panelist) => panelist.name);
-    const photoNumber = speakers.map((panelist) => panelist.photoNumber);
-    const speakerProfession = speakers.map((panelist) => panelist.profession);
-    const intOrExt = speakers.map((panelist) => panelist.intOrExt);
-    const description = speakers.map((panelists) => panelists.description);
-    const photo = speakers.map((panelists) => panelists.photo);
+    const speakerNames = speakers.map(panelist => panelist.name);
+    const photoNumber = speakers.map(panelist => panelist.photoNumber);
+    const speakerProfession = speakers.map(panelist => panelist.profession);
+    const intOrExt = speakers.map(panelist => panelist.intOrExt);
+    const description = speakers.map(panelists => panelists.description);
+    const photo = speakers.map(panelists => panelists.photo);
 
-    const changeSpeaker = (direction) => {
+    const changeSpeaker = (direction: string) => {
         if (direction === "above") {
             setCurrentIndex((prevIndex) =>
                 prevIndex - 1 >= 0 ? prevIndex - 1 : speakerNames.length - 1
