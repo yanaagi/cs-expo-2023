@@ -67,18 +67,7 @@ const Sidebar = ({sideBarCallback}) => {
         </div>
       )}
       <div className="mb-2 mr-5 ml-5 flex-col text-white items-center justify-center">
-        {["All", "Data Analytics", "Education", "Health", "Computer Vision", "IOT", "NLP"].map(
-          (boxNumber) => (
-            <div
-              key={boxNumber}
-              className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"
-              onClick={() => handleBoxClick(boxNumber)}
-            >
-              {boxNumber}
-            </div>
-          )
-        )}
-        {["All", "Data Analytics", "Education", "Health", "Img Proc - CV", "IOT", "NLP"].map((boxNumber,index) => (
+        {["All", "Data Analytics", "Education", "Health", "Computer Vision", "IOT", "NLP"].map((boxNumber,index) => (
           <div
             key={boxNumber}
             className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"

@@ -185,7 +185,7 @@ const defaultMenu = () => {
           const textColorClass = isNavbarAtTop ? 'text-black' : 'text-timberwolf';
      
           return (
-               <div className={`mobile-menu flex flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
+               <div className={`mobile-menu relative flex flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
                <div className="relative group">
                     <button onClick={toggleMobileEventsDropdown} className="flex items-center cursor-pointer hover:text-coral-pink">
                          Events
@@ -248,7 +248,7 @@ const defaultMenu = () => {
      };
 
      return (
-          <header ref={mobileNavbarRef} className={`w-full fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
+          <header ref={mobileNavbarRef} className={`w-full relative fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
               <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
                   <Link href="/">
                       <Image

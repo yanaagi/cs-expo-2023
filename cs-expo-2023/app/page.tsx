@@ -119,35 +119,11 @@ export default function Home() {
 
     return (
         <main>
-            <div className="h-screen">
-                <h1
-                    ref={textElementRef}
-                    className="absolute text-[min(4.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-12"
-                ></h1>
+            <div className="h-screen w-screen flex items-center justify-center">
+            <h1
+                ref={textElementRef}
+                className="absolute left-0 top-1/2 ml-10 transform -translate-y-1/2 text-[min(4.5vw,10rem)] text-eerie-black font-helvetica font-bold"/>
             </div>
-
-            {/*<details className="group xl:py-32 min-[320px]:py-28 text-lg">
-        <summary className="xl:mt-70 min-[320px]:mt-56 shadow-[0_56px_56px_-36px_rgba(0,0,0,0.2)] flex cursor-pointer justify-center flex-row items-center font-bold">
-          <svg
-            className="xl:translate-y-52 xl:mt-72 min-[320px]:mt-24 xl:h-56 xl:w-20 min-[320px]:h-44 min-[320px]:w-8 rotate-0 transform font-bold text-coral-pink group-open:rotate-180"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-          <div className="absolute mt-56 flex items-center justify-center p-52 top-0 left-0 right-0 z-0 opacity-0 pointer-events-none opacity-100 translate-y-80">
-        <PartnerIconsLayout partners={partnersArray} />
-        </div>
-        </summary>
-</details>*/}
 
             <details
                 id="details"
@@ -207,19 +183,20 @@ export default function Home() {
 
             <HomeHeader
                 title="CS EXPO"
-                description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-        tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-        nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-        vitae suscipit tellus.`}
+                description={`The culmination of CS EXPO 2023 V2.0 is a two-day presentation of the students'\n
+                projects to internal panelists and industry professionals. All thesis groups\n
+                will be represented by a member of their own choosing, with awards granted for\n
+                outstanding research and innovation. This event will also feature talks from key\n
+                figures in tech, providing a medium for healthy discourse about current trends.`}
                 button="/events/cs-expo"
             />
 
             <HomeHeader
                 title="DEV DAY"
-                description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-        tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-        nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-        vitae suscipit tellus.`}
+                description={`DevDay, the inaugural event of CS EXPO 2023 V2.0 on November 22, 2023, explores\n
+                what it means to be a person in technology today. Industry leaders will discuss\n
+                innovations, offer insights for the attendees, and guide students on upskilling\n
+                and keeping their tech stack relevant in an evolving landscape.`}
                 button="/events/dev-day"
             />
 
