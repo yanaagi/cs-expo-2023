@@ -8,7 +8,7 @@ import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
 import panelistsData from '@/panelists.json'; 
 
-export const EventsCSExpo = () => {
+const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 

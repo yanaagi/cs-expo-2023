@@ -57,7 +57,7 @@ export default function NotFound() {
             md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-helvetica font-bold m-0 p-4">
         </h1>
         <h2 className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl">
-          We're making improvements and will be back soon!
+          We&apos;re making improvements and will be back soon!
         </h2>
         <p className="text-base sm:text-lg p-2">
           Go back to{' '}

@@ -2,6 +2,8 @@
 
 import {AiOutlineUp,  AiOutlineDown, AiOutlineLeft, AiOutlineRight} from 'react-icons/ai';
 import React, { useState, useEffect, useRef } from 'react';
+import Splide from '@splidejs/splide';
+import { Options } from '@splidejs/splide';
 
 
 interface Slide {
@@ -45,7 +47,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
 
     useEffect(() => {
       setWindowWidth(window.innerWidth);
-      let splideOptions = {
+      const splideOptions: Options = {
         type: 'slide',
         arrows: false,
         gap: 20,
