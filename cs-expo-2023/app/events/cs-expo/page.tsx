@@ -6,7 +6,7 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import speakersData from '@/speakers.json'; 
+import panelistsData from '@/panelists.json'; 
 
 
 export const EventsDevDay = () => {
@@ -17,14 +17,13 @@ export const EventsDevDay = () => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakers = speakersData.speakers;
+    const speakers = panelistsData.panelists;
 
-    const speakerNames = speakers.map(speaker => speaker.name);
-    const photoNumber = speakers.map(speaker => speaker.photoNumber);
-    const speakerProfession = speakers.map(speaker => speaker.profession);
-    const intOrExt = speakers.map(speaker => speaker.intOrExt);
-    const description = speakers.map(speakers => speakers.description);
-    const photo = speakers.map(speakers => speakers.photo);
+    const speakerNames = speakers.map(panelist => panelist.name);
+    const speakerProfession = speakers.map(panelist => panelist.profession);
+    const intOrExt = speakers.map(panelist => panelist.intOrExt);
+    const description = speakers.map(panelists => panelists.description);
+    const photo = speakers.map(panelists => panelists.photo);
 
     const changeSpeaker = (direction) => {
         if (direction === "above") {
@@ -60,12 +59,11 @@ export const EventsDevDay = () => {
                     <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                     <SpeakerPanelistLayout	
                         speakerNames={speakerNames}
-                        photoNumber={photoNumber}
                         speakerProfession={speakerProfession}
                         intOrExt={intOrExt}
                         description={description}
                         photo={photo}
-                        panelOrSpeaker="SPEAKERS"
+                        panelOrSpeaker="PANELISTS"
                     />
                     <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <div className="ms-28">

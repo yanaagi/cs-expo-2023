@@ -6,7 +6,7 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from '@/panelists.json'; 
+import speakersData from '@/speakers.json'; 
 
 
 export const EventsCSExpo = () => {
@@ -17,14 +17,13 @@ export const EventsCSExpo = () => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakers = panelistsData.panelists;
+    const speakers = speakersData.speakers;
 
-    const speakerNames = speakers.map(panelist => panelist.name);
-    const photoNumber = speakers.map(panelist => panelist.photoNumber);
-    const speakerProfession = speakers.map(panelist => panelist.profession);
-    const intOrExt = speakers.map(panelist => panelist.intOrExt);
-    const description = speakers.map(panelists => panelists.description);
-    const photo = speakers.map(panelists => panelists.photo);
+    const speakerNames = speakers.map(speaker => speaker.name);
+    const speakerProfession = speakers.map(speaker => speaker.profession);
+    const intOrExt = speakers.map(speaker => speaker.intOrExt);
+    const description = speakers.map(speakers => speakers.description);
+    const photo = speakers.map(speakers => speakers.photo);
 
     const changeSpeaker = (direction) => {
         if (direction === "above") {
@@ -63,12 +62,11 @@ export const EventsCSExpo = () => {
             <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <SpeakerPanelistLayout
                 speakerNames={speakerNames}
-                photoNumber={photoNumber}
                 speakerProfession={speakerProfession}
                 intOrExt={intOrExt}
                 description={description}
                 photo={photo}
-                panelOrSpeaker="PANELISTS"
+                panelOrSpeaker="SPEAKERS"
             />
             <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
             <div className="ms-28">
