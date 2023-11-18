@@ -2,6 +2,7 @@ import React from 'react';
 import MeetTheCommitteesHeader from '@/components/MeetTheCommitteesHeader';
 import CommitteesGrid from '@/components/CommitteesGrid';
 import CommitteesPic from '@/components/CommitteesPic';
+import Image from 'next/image';
 
 const EventsCommittees = () => {
   return (
@@ -12,7 +13,23 @@ const EventsCommittees = () => {
         />
 
         <CommitteesGrid />
-        <CommitteesPic />
+        <CommitteesPic 
+          committeeName='SECRETARIAT AND AWARDS COMMITTEE'
+          committeePic={[
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+            '/cs-expo-logo-black.png',
+
+
+          ]}
+          />
       </div>
       
     </main>
