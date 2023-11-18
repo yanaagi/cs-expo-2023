@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from next
 
 /* The `interface Slide` defines the structure of an object that represents a slide in the
 ProjectsCarousel component. It has three properties: `title`, `imageLink`, and `backgroundColor`,
@@ -32,6 +33,7 @@ const config = {
     after: 50,
   },
   perView: 7, // number of slides to show at once in desktop, 7 is an allowance for smooth transition
+  swipeThreshold: 80,
   gap: 0,
   breakpoints: {
     1200: {
@@ -58,21 +60,24 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
     new Glide(".glide", config).mount(); // Glide is called from `layout.tsx` as a CDN, so don't worry about "Cannot find name 'Glide'"
   }, []);
 
+  const handleSlideClick = (category: string) => {
+    // No need for router.push, use Link for navigation
+  };
+
   return (
     <main className="flex justify-center mt-4">
       {/* Structure of Glide.js*/}
-      <div className="glide sm:p-8 relative">
-        {" "}
-        {/* ps-40 me-40 is for padding on the left and margin on the right */}
+      <div className="glide sm:p-8 relative cursor-pointer">
         <div className="w-screen ps-12 me-12 sm:ps-40 sm:me-40">
           <div className="flex justify-center overflow-hidden sm:text-base">
-            {/* ms and ps sizing affects the impression of layers in the svg images */}
-            {/* pe-11 for small (iPhone, Pixel, Galaxy S) */}
             <div className="w-[1400px] sm:w-[2500px] max-[320px]:ps-8 ps-2 pe-11">
               <div className="glide__track w-full" data-glide-el="track">
                 <ul className="glide__slides h-[210px] sm:h-[300px]">
                   {/* Data Analytics*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("data-analytics")}
+                  >
                     <Image
                       src="/data-analytics/DATAANALYTICS.svg" // path to image
                       className="justify-center"
@@ -82,7 +87,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Data Analytics */}
                   {/* Education*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0"
+                    onClick={() => handleSlideClick("education")}
+                  >
                     <Image
                       src="/education/EDUCATION.svg" // path to image
                       className="justify-center"
@@ -92,7 +100,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Education */}
                   {/* Health*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("health")}
+                  >
                     <Image
                       src="/health/HEALTH.svg" // path to image
                       className="justify-center"
@@ -102,7 +113,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Health */}
                   {/* Image Processing / Computer Vision*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("imgproc-cv")}
+                  >
                     <Image
                       src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
                       className="justify-center"
@@ -112,7 +126,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Image Processing / Computer Vision*/}
                   {/* Internet of Things*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("iot")}
+                  >
                     <Image
                       src="/iot/IOT.svg"
                       className="justify-center"
@@ -122,7 +139,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Internet of Things*/}
                   {/* Natural Language Processing*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("nlp")}
+                  >
                     <Image
                       src="/nlp/NLP.svg"
                       className="justify-center"
@@ -133,7 +153,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   {/* End of Natural Language Processing */}
                   {/* 🚧🚧🚧ANOTHER LIST <li> to smoothen the transition between the last (NLP) and first (Data Analytics) slides */}
                   {/* Data Analytics*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("data-analytics")}
+                  >
                     <Image
                       src="/data-analytics/DATAANALYTICS.svg" // path to image
                       className="justify-center"
@@ -143,7 +166,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Data Analytics */}
                   {/* Education*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0"
+                    onClick={() => handleSlideClick("education")}
+                  >
                     <Image
                       src="/education/EDUCATION.svg" // path to image
                       className="justify-center"
@@ -153,7 +179,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Education */}
                   {/* Health*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("health")}
+                  >
                     <Image
                       src="/health/HEALTH.svg" // path to image
                       className="justify-center"
@@ -163,7 +192,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Health */}
                   {/* Image Processing / Computer Vision*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("imgproc-cv")}
+                  >
                     <Image
                       src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
                       className="justify-center"
@@ -173,7 +205,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Image Processing / Computer Vision*/}
                   {/* Internet of Things*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("iot")}
+                  >
                     <Image
                       src="/iot/IOT.svg"
                       className="justify-center"
@@ -183,7 +218,10 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
                   </li>{" "}
                   {/* End of Internet of Things*/}
                   {/* Natural Language Processing*/}
-                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                  <li
+                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
+                    onClick={() => handleSlideClick("nlp")}
+                  >
                     <Image
                       src="/nlp/NLP.svg"
                       className="justify-center"
@@ -227,4 +265,5 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
     </main>
   );
 };
+
 export default ProjectsCarousel;
