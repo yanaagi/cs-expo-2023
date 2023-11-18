@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
-import Glide from "@glidejs/glide";
 
 /* The `interface Slide` defines the structure of an object that represents a slide in the
 ProjectsCarousel component. It has three properties: `title`, `imageLink`, and `backgroundColor`,
