@@ -25,6 +25,8 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   AVPLink
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
+  const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
+
   const toggleReadMore = () => {
     setReadMoreState(!isReadMore);
   };
@@ -109,20 +111,18 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
               
               {/* <div className="flex flex-grow max-h-[304.42px] max-w-[541.2px] max-lg:max-h-[300.28px] max-lg:max-w-[533.86px] aspect-video w-11/12 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center"> */}
               <div className="flex aspect-video bg-zinc-800 s-full w-10/12 h-10/12 text-timberwolf text-3xl font-bold justify-center items-center">
-                <p>AVP</p>
+                <iframe src={AVPLink} 
+                  width="100%" height="100%">
+                </iframe>
               </div>
 
               <GallerySlider
                 slides={
                   [
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekl.jpg"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                  ]
-                }
+                    {url: "/kekw-kek.gif"},
+                    {url: "/kekl.jpg"},
+                    {url: "/kekw-kek.gif"},
+                  ]}
               />
             </div>
       

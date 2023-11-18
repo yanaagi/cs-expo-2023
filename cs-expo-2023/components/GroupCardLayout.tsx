@@ -13,7 +13,7 @@ interface GroupCardProps {
     category: any;
     posterFilePath?: any;
     AVPLink?: any;
-    groupName:string
+    groupname:string
   },
 
   allFilter: any;
