@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import HomeHeader from "@/components/HomeOverviewHeader";
-import partnersData from "@/partners.json";
-import { AiOutlineDown } from "react-icons/ai";
 
 export default function Home() {
     const [text, setText] = useState("");
@@ -215,4 +213,3 @@ export default function Home() {
         </main>
     );
 }
-
