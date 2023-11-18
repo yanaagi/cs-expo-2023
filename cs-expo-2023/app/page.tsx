@@ -2,19 +2,12 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import HomeHeader from "@/components/HomeOverviewHeader";
-import PartnerIconsLayout from "@/components/PartnerIconsLayout";
-import partnersData from "@/partners.json";
-import { AiOutlineDown } from "react-icons/ai";
 
 export default function Home() {
     const [text, setText] = useState("");
     const textElementRef = useRef(null);
-    let timer: ReturnType<typeof setTimeout>;
 
-    const partnersArray = Object.values(partnersData);
-    const partners = partnersArray.map(
-        (partnersData) => partnersData.imagePath
-    );
+    let timer: ReturnType<typeof setTimeout>;
 
     useEffect(() => {
         const textToType =
@@ -71,113 +64,183 @@ export default function Home() {
         setText("");
     };
 
-    // Toggles for details
-    let [isDetailsOpen, setIsDetailsOpen] = useState(false);
-    const firstRun = useRef(true);
-
     const handleDetailsToggle = () => {
+        // Disable details toggle
+        const details = document.getElementById("details");
+        if (details) {
+            details.classList.add("pointer-events-none");
+        }
+
+        // Hide the blur
         const blur = document.getElementById("details-blur");
+        if (blur) {
+            blur.classList.remove("opacity-100");
+            blur.classList.add("opacity-0");
+        }
+
+        // Hide the button
         const detailsDownButton = document.getElementById(
             "details-down-button"
         );
-        setIsDetailsOpen(!isDetailsOpen);
-
-        if (!firstRun.current && !isDetailsOpen) {
-            if (blur) {
-                blur.classList.remove("opacity-0");
-                blur.classList.add("opacity-100");
-            }
-            if (detailsDownButton) {
-                detailsDownButton.classList.add("opacity-100");
-                detailsDownButton.classList.remove("opacity-0");
-            }
-        } else {
-            firstRun.current = false;
-            if (blur) {
-                blur.classList.remove("opacity-100");
-                blur.classList.add("opacity-0");
-            }
-            if (detailsDownButton) {
-                detailsDownButton.classList.remove("opacity-100");
-                detailsDownButton.classList.add("opacity-0");
-            }
-
-            if (!isDetailsOpen) {
-                if (blur) {
-                    blur.classList.remove("opacity-100");
-                    blur.classList.add("opacity-0");
-                }
-                if (detailsDownButton) {
-                    detailsDownButton.classList.remove("opacity-100");
-                    detailsDownButton.classList.add("opacity-0");
-                }
-
-                setIsDetailsOpen(isDetailsOpen);
-            }
+        if (detailsDownButton) {
+            detailsDownButton.classList.remove("opacity-100");
+            detailsDownButton.classList.add("opacity-0");
         }
     };
 
     return (
         <main>
-            <div className="h-screen w-screen flex items-center justify-center">
-            <h1
-                ref={textElementRef}
-                className="absolute left-0 top-1/2 ml-10 transform -translate-y-1/2 text-[min(4.5vw,10rem)] text-eerie-black font-helvetica font-bold"/>
+            <div className="h-screen">
+                <h1
+                    ref={textElementRef}
+                    className="absolute text-[min(3.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
+                ></h1>
             </div>
 
             <details
                 id="details"
-                className="cursor-pointer"
-                open={isDetailsOpen}
+                className="min-[320px]:-mt-80 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
             >
                 <summary
-                    className="h-[290px] relative"
+                    className="h-[180px] md:h-[240px] relative list-none"
                     onClick={handleDetailsToggle}
                 >
                     <div
                         id="details-down-button"
-                        className="absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
+                        className="cursor-pointer absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
                     >
-                        <AiOutlineDown
-                            className={`text-7xl text-[var(--coral-pink)]`}
-                        />
+                        <svg
+                            className="xl:scale-[-1] min-[320px]:scale-[-1] mt-96 h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="4"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="square"
+                                stroke-linejoin="square"
+                                d="M19 9l-7 7-7-7"
+                            ></path>
+                        </svg>
                     </div>
 
                     <div
                         id="details-blur"
-                        className="absolute bottom-0 w-full bg-white h-28 blur-lg z-10 opacity-100"
+                        className="absolute -bottom-4 w-full bg-white h-20 blur-lg z-10 opacity-100"
                     ></div>
 
-                    <div className="flex justify-evenly">
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    </div>
-                    <div className="flex justify-evenly mt-20">
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                        <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
+                    <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2 gap-y-2">
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+
+                        {/* BLOCK: These will disappear when medium or below viewport */}
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        {/* ENDBLOCK */}
                     </div>
                 </summary>
-                <div className="mt-8 flex justify-evenly">
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
-                    <div className="scale-[-2] h-16 w-16 rounded-full bg-gray-300"></div>
+                <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2">
+                    {/* BLOCK: This will appear when medium or below viewport */}
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    {/* ENDBLOCK */}
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
                 </div>
             </details>
 
