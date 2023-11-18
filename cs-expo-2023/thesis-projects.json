@@ -12,7 +12,7 @@
         ],
         "category": "IoT",
         "posterFilePath": "/iot/adorables.png",
-        "AVPLink": "https://drive.google.com/file/d/1QPj0XjRm_lqWDkPiOwanLXO1kVOUQskg/preview"
+        "AVPLink": ""
     },
     "AiM": {
         "groupname": "Aim",
@@ -27,7 +27,7 @@
         ],
         "category": "Health",
         "posterFilePath": "/health/aim.png",
-        "AVPLink": "https://drive.google.com/file/d/1vK5J6w24ncX65UqzTDmSYehr2QWSM1uL/preview"
+        "AVPLink": ""
     },
     "Array-Co": {
         "groupname": "Array Co",
@@ -43,7 +43,7 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "/imgproc-cv/arrayco.png",
-        "AVPLink": "https://drive.google.com/file/d/1KZ6sRZaOgkFTOa5j8E89X7cckK2B_j8Y/preview"
+        "AVPLink": ""
     },
     "Codebebs": {
         "groupname": "Codebebs",
@@ -59,7 +59,7 @@
         ],
         "category": "IoT",
         "posterFilePath": "/iot/codebebs.png",
-        "AVPLink": "https://drive.google.com/file/d/1MKOPu9cs_AzTCYLvsK3nT0fYhaRNHS9y/preview"
+        "AVPLink": ""
     },
     "DEoS": {
         "groupname": "DEoS",
@@ -74,7 +74,7 @@
         ],
         "category": "NLP",
         "posterFilePath": "/nlp/deos.png",
-        "AVPLink": "https://drive.google.com/file/d/13yYbBI7J0ghzBcqiB3UOVHf3u70nwE9Y/preview"
+        "AVPLink": ""
     },
     "Engeenz": {
         "groupname": "Engeenaz",
@@ -90,7 +90,7 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "/data-analytics/engeenz.png",
-        "AVPLink": "https://drive.google.com/file/d/1elwQr-RI6sfMFjoA29pBj8KkLv7m9Ktd/preview"
+        "AVPLink": ""
     },
     "Hello-World": {
         "groupname": "Hello World",
@@ -105,7 +105,7 @@
         ],
         "category": "Health",
         "posterFilePath": "/health/helloworld.png",
-        "AVPLink": "https://drive.google.com/file/d/1Ap5HsAQuSDjvPxs891_Vo6nqQdweW2MT/preview"
+        "AVPLink": ""
     },
     "INNOV8": {
         "groupname": "INNOV8",
@@ -121,7 +121,7 @@
         ],
         "category": "IoT",
         "posterFilePath": "/iot/innov8.jpg",
-        "AVPLink": "https://drive.google.com/file/d/1jI0Zk-jC1yFCbDa2lViqrq0ZrO3Qv0YJ/preview"
+        "AVPLink": ""
     },
     "Javangers": {
         "groupname": "Javangers",
@@ -136,7 +136,7 @@
         ],
         "category": "Educ",
         "posterFilePath": "/education/javangers.png",
-        "AVPLink": "https://drive.google.com/file/d/1AvKnErfCDHLSjA_fl23odV-XfuJjn_cu/preview"
+        "AVPLink": ""
     },
     "Midnight-Coders": {
         "groupname": "Midnight Coders",
@@ -151,7 +151,7 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "/imgproc-cv/midnightcoders.png",
-        "AVPLink": "https://drive.google.com/file/d/1-PdvUB8mUwMF4m7oIjZwYWuHwB85eO04/preview"
+        "AVPLink": ""
     },
     "Peaky-Blinders": {
         "groupname": "Peaky Blinders",
@@ -166,7 +166,7 @@
         ],
         "category": "Educ",
         "posterFilePath": "/education/peakyblinders.png",
-        "AVPLink": "https://drive.google.com/file/d/1YfCi3mrcoPHpHwxqPCzeJFKymnvvwwOq/preview"
+        "AVPLink": ""
     },
     "Quinta": {
         "groupname": "Quinta",
@@ -182,7 +182,7 @@
         ],
         "category": "Educ",
         "posterFilePath": "/education/quinta.jpg",
-        "AVPLink": "https://drive.google.com/file/d/1o4xQP7iULSTcVHWUKOfVtNKjAW_2JoUG/preview"
+        "AVPLink": ""
     },
     "return-to_sleep": {
         "groupname": "return to_sleep",
@@ -197,7 +197,7 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "/data-analytics/returntosleep.png",
-        "AVPLink": "https://drive.google.com/file/d/1j9q44bbxFP8qRx01XJNpVcBD6ji1FyKI/preview"
+        "AVPLink": ""
     },
     "Rob_lux": {
         "groupname": "Rob_lux",
@@ -212,7 +212,7 @@
         ],
         "category": "Educ",
         "posterFilePath": "/education/roblux.png",
-        "AVPLink": "https://drive.google.com/file/d/1AYxeW0t9jwUgscwaUpCEzZswtAlq9fjp/preview"
+        "AVPLink": ""
     },
     "SOFTIES": {
         "groupname": "SOFTIES",
@@ -227,7 +227,7 @@
         ],
         "category": "Health",
         "posterFilePath": "/health/softies.png",
-        "AVPLink": "https://drive.google.com/file/d/1285hI_OPFX3-AwXaYGtjob-Hpxals0Wd/preview"
+        "AVPLink": ""
     },
     "Softyware": {
         "groupname": "Softyware",
@@ -243,7 +243,7 @@
         ],
         "category": "Data analytics",
         "posterFilePath": "/data-analytics/softyware.png",
-        "AVPLink": "https://drive.google.com/file/d/1geymhwOn-jNkYWz5gXrxM0WUokt2w6wA/preview"
+        "AVPLink": ""
     },
     "S.T.A.R.K.": {
         "groupname": "S.T.A.R.K.",
@@ -257,7 +257,7 @@
             "Segundo Jr., Sally P."],
         "category": "NLP",
         "posterFilePath": "/nlp/stark.png",
-        "AVPLink": "https://drive.google.com/file/d/18nOirihdg6jokZgvMMa0A13LtlcGDfy1/preview"
+        "AVPLink": ""
     },
     "TeaSis": {
         "groupname": "TeaSis",
@@ -272,7 +272,7 @@
         ],
         "category": "Img proc/CV",
         "posterFilePath": "/imgproc-cv/teasis.png",
-        "AVPLink": "https://drive.google.com/file/d/1f1F5IyFr_t8aJGVlPHu8dLwfqZN-wt4q/preview"
+        "AVPLink": ""
     },
     "TechniQ": {
         "groupname": "TechniQ",
@@ -287,7 +287,7 @@
         ],
         "category": "NLP",
         "posterFilePath": "/nlp/techniq.png",
-        "AVPLink": "https://drive.google.com/file/d/19OZR5ZUlm2vlj6vgTTUmOR0yxJTJ4uoA/preview"
+        "AVPLink": ""
     },
     "Yaymiko": {
         "groupname": "Yaymiko",
@@ -302,7 +302,7 @@
     ],
         "category": "Educ",
         "posterFilePath": "/education/yaymiko.png",
-        "AVPLink": "https://drive.google.com/file/d/1kXsabLJ9iQg3yQOQeLr2dK-HzHXUwjAC/preview"
+        "AVPLink": ""
     }
   } 
   
