@@ -2,11 +2,11 @@ import React from 'react'
 
 export const EventsCommittees = () => {
   return (
-  <main className="flex min-h-screen flex-col p-24">
+  <main className="flex flex-col items-center justify-center p-24 mt-10">
   <div id="PROGRAMS COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [PROGRAMS COMMITTEE] MEMBERS
       </div>
     </div>
@@ -70,7 +70,7 @@ export const EventsCommittees = () => {
   <div id="SECRETARIAT COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [SECRETARIAT COMMITTEE] MEMBERS
       </div>
     </div>
@@ -134,7 +134,7 @@ export const EventsCommittees = () => {
   <div id="SPONSORSHIP & PARTNERSHIP COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [SPONSORSHIP AND PARTNERSHIP COMMITTEE] MEMBERS
       </div>
     </div>
@@ -198,7 +198,7 @@ export const EventsCommittees = () => {
   <div id="SPEAKERS & PANELIST COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [SPEAKERS AND PANELIST COMMITTEE] MEMBERS
       </div>
     </div>
@@ -262,7 +262,7 @@ export const EventsCommittees = () => {
   <div id="LOGISTICS COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [LOGISTICS COMMITTEE] MEMBERS
       </div>
     </div>
@@ -326,7 +326,7 @@ export const EventsCommittees = () => {
   <div id="PUBLICITY & PUBLICATION COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [PUBLICITY AND PUBLICATION COMMITTEE] MEMBERS
       </div>
     </div>
@@ -391,7 +391,7 @@ export const EventsCommittees = () => {
   <div id="CREATIVES & MEDIA COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [CREATIVES AND MEDIA COMMITTEE] MEMBERS
       </div>
     </div>
@@ -456,7 +456,7 @@ export const EventsCommittees = () => {
   <div id="DEVELOPERS COMMITTEE"></div>
   <div className="md:ms-1 md:me-1 mt-10">
     <div className="grid grid-cols-1">
-      <div className="col-span-1 custom-font text-center text-8xl"> 
+      <div className="flex justify-center text-center text-zinc-900 text-4xl custom-font"> 
         [DEVELOPERS COMMITTEE] MEMBERS
       </div>
     </div>
