@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
+import Glide from '@glidejs/glide';
 
 interface Slide {
     backgroundColor: string;
@@ -48,7 +49,7 @@ const Carousel: React.FC<CarouselProps> = ({
         const targetDivUp = document.getElementById(carouselUpTarget);
         const targetDivDown = document.getElementById(carouselDownTarget);
 
-        carouselUp.addEventListener("click", () => {
+        carouselUp?.addEventListener("click", () => {
             console.log("up clicked");
             if (targetDivUp) {
                 const targetPosition = targetDivUp.offsetTop;
@@ -62,7 +63,7 @@ const Carousel: React.FC<CarouselProps> = ({
             }
         });
 
-        carouselDown.addEventListener("click", () => {
+        carouselDown?.addEventListener("click", () => {
             console.log("down clicked");
             if (targetDivDown) {
                 const targetPosition = targetDivDown.offsetTop;
@@ -77,7 +78,7 @@ const Carousel: React.FC<CarouselProps> = ({
         });
 
         // Carousel
-        const config = {
+        const config: Partial<Glide.Options> = {
             type: "slider",
             startAt: 0,
             perView: 2,

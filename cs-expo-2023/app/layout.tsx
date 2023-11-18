@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "CS Expo 2023 2.0",
   description: "", //to follow
 };
@@ -50,7 +50,7 @@ export default function RootLayout({
         ></script>
         
         {/* SplideJS */}
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"/>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" async/>
       </head>
       <body>
         <NavBar />

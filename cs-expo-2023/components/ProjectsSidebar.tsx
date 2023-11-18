@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, MouseEventHandler, TouchEventHandler } from 'react';
 
-const Sidebar = ({sideBarCallback}) => {
+interface SidebarProps {
+  sideBarCallback: (boxNumber: number) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ sideBarCallback }: SidebarProps) => {
   const [showArrow, setShowArrow] = useState(false);
   const [showArrowColor, setShowArrowColor] = useState('coral-pink');
   const [hovered, setHovered] = useState(false);
@@ -9,11 +13,10 @@ const Sidebar = ({sideBarCallback}) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleBoxClick = (boxNumber) => {
+  const handleBoxClick = (boxNumber: number) => {
     // Action
     console.log(boxNumber);
     sideBarCallback(boxNumber);
-    
   };
 
   const handleScroll = () => {
@@ -54,7 +57,6 @@ const Sidebar = ({sideBarCallback}) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
-      
     >
       {showArrow && (
         <div
@@ -67,7 +69,7 @@ const Sidebar = ({sideBarCallback}) => {
         </div>
       )}
       <div className="mb-2 mr-5 ml-5 flex-col text-white items-center justify-center">
-        {["All", "Data Analytics", "Education", "Health", "Computer Vision", "IOT", "NLP"].map((boxNumber,index) => (
+        {["All", "Data Analytics", "Education", "Health", "Computer Vision", "IOT", "NLP"].map((boxNumber, index) => (
           <div
             key={boxNumber}
             className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"

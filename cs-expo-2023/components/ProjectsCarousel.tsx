@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import Glide from "@glidejs/glide";
 
 /* The `interface Slide` defines the structure of an object that represents a slide in the
 ProjectsCarousel component. It has three properties: `title`, `imageLink`, and `backgroundColor`,
@@ -21,9 +22,8 @@ interface ProjectsCarouselProps {
   slides: Slide[];
 }
 
-// Configuration options for the Glide.js carousel.
 const config = {
-  type: "carousel",
+  type: "carousel" as const, // Set the type to "carousel"
   autoplay: 4000,
   hoverpause: true,
   startAt: 0,
@@ -31,14 +31,14 @@ const config = {
     before: 100,
     after: 50,
   },
-  perView: 7, // number of slides to show at once in desktop, 7 is an allowance for smooth transition
+  perView: 7,
   gap: 0,
   breakpoints: {
     1200: {
-      perView: 6, // number of slides to show at once for large screens
+      perView: 6,
     },
     1024: {
-      perView: 5, // number of slides to show at once for medium screens
+      perView: 5,
     },
     480: {
       perView: 1,
@@ -47,11 +47,12 @@ const config = {
       perView: 1,
       peek: {
         before: 0,
-        after: 0, // amount of next slide visible
+        after: 0,
       },
     },
   },
 };
+
 
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
   useEffect(() => {

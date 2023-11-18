@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const EventsCommittees = () => {
+const EventsCommittees = () => {
   return (
   <main className="flex min-h-screen flex-col p-24">
   <div id="PROGRAMS COMMITTEE"></div>

@@ -8,7 +8,7 @@ import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
 import speakersData from "@/speakers.json";
 
-export const EventsDevDay = () => {
+const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
