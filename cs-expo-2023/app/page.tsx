@@ -4,58 +4,46 @@ import React, { useState, useEffect, useRef } from "react";
 import HomeHeader from "@/components/HomeOverviewHeader";
 
 export default function Home() {
-    const [text, setText] = useState("");
-    const textElementRef = useRef(null);
-
-    let timer: ReturnType<typeof setTimeout>;
-
+    const [text, setText] = useState('');
+    const textElementRef = useRef<HTMLDivElement>(null); // Add type assertion here
+    let timer: NodeJS.Timeout | null = null;
+  
     useEffect(() => {
-        const textToType =
-            "PAVING THE NEW TECHNOSPACE \n THROUGH PARADIGM SHIFTING \nINNOVATIONS";
-        let index = 0;
-        let isCursorVisible = true;
-
-        function typeText() {
-            if (index <= textToType.length) {
-                const currentText = textToType
-                    .slice(0, index)
-                    .replace(/\n/g, "<br />");
-                if (textElementRef.current) {
-                    (
-                        textElementRef.current as HTMLElement
-                    ).innerHTML = `${currentText}<span class="${isCursorVisible ? "text-coral-pink" : "text-transparent"
-                        }">__</span>`;
-                }
-                isCursorVisible = !isCursorVisible;
-                index++;
-            } else {
-                // Once typing is complete, you can set a timeout to continue blinking the cursor.
-                isCursorVisible = true; // Ensure the cursor is visible initially.
-                setTimeout(blinkCursor, 500); // Adjust the blinking speed as needed.
-            }
-            timer = setTimeout(typeText, 65);
+      const textToType = 'PAVING THE NEW TECHNOSPACE \n THROUGH PARADIGM SHIFTING \nINNOVATIONS';
+      let index = 0;
+      let isCursorVisible = true;
+  
+      function typeText() {
+        if (index <= textToType.length) {
+          const currentText = textToType.slice(0, index).replace(/\n/g, '<br />');
+          if (textElementRef.current) {
+            textElementRef.current.innerHTML = `${currentText}<span class="${isCursorVisible ? 'text-coral-pink' : 'text-transparent'}">__</span>`;
+          }
+          isCursorVisible = !isCursorVisible;
+          index++;
+        } else {
+          // Clear the interval once the full text is typed
+          if (timer) clearInterval(timer);
+  
+          // Set up blinking cursor forever
+          timer = setInterval(blinkCursor, 500); // Adjust the blinking speed as needed.
         }
-
-        function blinkCursor() {
-            isCursorVisible = !isCursorVisible;
-            if (textElementRef.current) {
-                (
-                    textElementRef.current as HTMLElement
-                ).innerHTML = `${textToType.replace(
-                    /\n/g,
-                    "<br />"
-                )}<span class="${"text-coral-pink"}">__</span>`;
-                //setTimeout(blinkCursor, 500); // Adjust the blinking speed as needed. // Uncomment this line if you want the cursor to keep blinking.
-            }
+      }
+  
+      function blinkCursor() {
+        isCursorVisible = !isCursorVisible;
+        if (textElementRef.current) {
+          textElementRef.current.innerHTML = `${textToType.replace(/\n/g, '<br />')}<span class="${isCursorVisible ? 'text-coral-pink' : 'text-transparent'}">__</span>`;
         }
-
-        // Start the animation when the component mounts
-        typeText();
-
-        return () => {
-            // Clean up the animation when the component unmounts
-            clearTimeout(timer);
-        };
+      }
+  
+      // Start the animation when the component mounts
+      timer = setInterval(typeText, 90);
+  
+      // Clean up the animation when the component unmounts
+      return () => {
+        if (timer) clearInterval(timer);
+      };
     }, []);
 
     // Reset the typewriter animation
@@ -63,51 +51,27 @@ export default function Home() {
         setText("");
     };
 
-    // Toggles for details
-    let [isDetailsOpen, setIsDetailsOpen] = useState(false);
-    const firstRun = useRef(true);
-
     const handleDetailsToggle = () => {
+        // Disable details toggle
+        const details = document.getElementById("details");
+        if (details) {
+            details.classList.add("pointer-events-none");
+        }
+
+        // Hide the blur
         const blur = document.getElementById("details-blur");
+        if (blur) {
+            blur.classList.remove("opacity-100");
+            blur.classList.add("opacity-0");
+        }
+
+        // Hide the button
         const detailsDownButton = document.getElementById(
             "details-down-button"
         );
-        setIsDetailsOpen(!isDetailsOpen);
-
-        if (!firstRun.current && !isDetailsOpen) {
-            if (blur) {
-                blur.classList.remove("opacity-0");
-                blur.classList.add("opacity-100");
-            }
-            if (detailsDownButton) {
-                detailsDownButton.classList.add("opacity-100");
-                detailsDownButton.classList.remove("opacity-0");
-            }
-        } else {
-            firstRun.current = false;
-            if (blur) {
-                blur.classList.remove("opacity-100");
-                blur.classList.add("opacity-0");
-            }
-            if (detailsDownButton) {
-                detailsDownButton.classList.remove("opacity-100");
-                detailsDownButton.classList.add("opacity-0");
-                detailsDownButton.classList.remove("cursor-pointer");
-                detailsDownButton.classList.add("cursor-default");
-            }
-
-            if (!isDetailsOpen) {
-                if (blur) {
-                    blur.classList.remove("opacity-100");
-                    blur.classList.add("opacity-0");
-                }
-                if (detailsDownButton) {
-                    detailsDownButton.classList.remove("opacity-100");
-                    detailsDownButton.classList.add("opacity-0");
-                }
-
-                setIsDetailsOpen(isDetailsOpen);
-            }
+        if (detailsDownButton) {
+            detailsDownButton.classList.remove("opacity-100");
+            detailsDownButton.classList.add("opacity-0");
         }
     };
 
@@ -116,25 +80,24 @@ export default function Home() {
             <div className="h-screen">
                 <h1
                     ref={textElementRef}
-                    className="absolute text-[min(3.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
+                    className="absolute text-[min(5vw,4rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
                 ></h1>
             </div>
 
             <details
                 id="details"
                 className="min-[320px]:-mt-80 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
-                open={isDetailsOpen}
             >
                 <summary
-                    className="h-[290px] relative list-none"
+                    className="h-[180px] md:h-[240px] relative list-none"
                     onClick={handleDetailsToggle}
                 >
                     <div
                         id="details-down-button"
-                        className="cursor-pointer min-[320px]:-mt-32 xl:mt-24 absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
+                        className="cursor-pointer absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
                     >
                         <svg
-                            className="xl:scale-[-1] min-[320px]:scale-[-1] mt-96 h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
+                            className="xl:scale-[-1] min-[320px]:scale-[-1] h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -152,60 +115,138 @@ export default function Home() {
 
                     <div
                         id="details-blur"
-                        className="absolute bottom-0 w-full bg-white h-28 blur-lg z-10 opacity-100"
+                        className="absolute -bottom-4 w-full bg-white h-20 blur-lg z-10 opacity-100"
                     ></div>
 
-                    {/*<div className="min-[320px]:mb-0.5 min-[320px]:mt-20 xl:-mt-20 flex justify-evenly"></div>*/}
+                    <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2 gap-y-2">
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
 
-                    <div className="min-[320px]:mb-0.5 mt-[min(8vw,8rem)] flex justify-evenly">
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:ml-8 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:mr-8 rounded-full bg-gray-300"></div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+
+                        {/* BLOCK: These will disappear when medium or below viewport */}
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
+                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        </div>
+                        {/* ENDBLOCK */}
                     </div>
-                    <div className="flex justify-evenly xl:mt-28 min-[320px]:-mt-2">
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:ml-8 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                        <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:mr-8 rounded-full bg-gray-300"></div>
-                    </div>
-                
                 </summary>
-                <div className="min-[320px]:-mt-56 xl:mt-20 flex justify-evenly">
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:ml-8 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 rounded-full bg-gray-300"></div>
-                    <div className="xl:scale-[-2] min-[320px]:-scale-50 xl:h-16 xl:w-16 min-[320px]:h-[min(12vw,4rem)] min-[320px]:w-16 min-[320px]:mr-8 rounded-full bg-gray-300"></div>
+                <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2">
+                    {/* BLOCK: This will appear when medium or below viewport */}
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    {/* ENDBLOCK */}
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                    </div>
                 </div>
             </details>
 
             <HomeHeader
                 title="CS EXPO"
-                description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-        tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-        nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-        vitae suscipit tellus.`}
+                description={`The culmination of CS EXPO 2023 V2.0 is a two-day presentation of the students'\n
+                projects to internal panelists and industry professionals. All thesis groups\n
+                will be represented by a member of their own choosing, with awards granted for\n
+                outstanding research and innovation. This event will also feature talks from key\n
+                figures in tech, providing a medium for healthy discourse about current trends.`}
                 button="/events/cs-expo"
             />
 
             <HomeHeader
                 title="DEV DAY"
-                description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n
-        tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
-        nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
-        vitae suscipit tellus.`}
+                description={`DevDay, the inaugural event of CS EXPO 2023 V2.0 on November 22, 2023, explores\n
+                what it means to be a person in technology today. Industry leaders will discuss\n
+                innovations, offer insights for the attendees, and guide students on upskilling\n
+                and keeping their tech stack relevant in an evolving landscape.`}
                 button="/events/dev-day"
             />
 
