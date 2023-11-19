@@ -26,7 +26,7 @@ import React from 'react';
                 
                 
                 <div>
-                <p className="text-[min(1.5vw,8rem)] text-eerie-black text-center mt-3 xl:mb-14 min-[320px]:mb-8 flex flex-col items-center font-family-montserrat xl:leading-4 min-[320px]:leading-16 tracking-tight">
+                <p className="text-[min(2.5vw,2rem)] text-eerie-black text-center mt-3 xl:mb-14 min-[320px]:mb-8 flex flex-col items-center font-family-montserrat xl:leading-7 min-[320px]:leading-16 tracking-tighter">
                     {desc}
                 </p>
                 </div>

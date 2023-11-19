@@ -86,7 +86,7 @@ export default function Home() {
 
             <details
                 id="details"
-                className="min-[320px]:-mt-80 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
+                className="min-[320px]:-mt-52 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
             >
                 <summary
                     className="h-[180px] md:h-[240px] relative list-none"
