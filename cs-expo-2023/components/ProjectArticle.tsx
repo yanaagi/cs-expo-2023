@@ -30,7 +30,6 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
   const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
-  const [groupMemberCount, setGroupMemberCount] = useState(0);
 
   const toggleReadMore = () => {
     setReadMoreState(!isReadMore);
@@ -40,10 +39,6 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   groupPictures?.at(groupPictures?.length-1)?.forEach((picture, index) => {
     galleryPictures.push(picture);
   });
-
-  useEffect(() => {
-    setGroupMemberCount(groupPictures!.length-1);
-  }, []);
   
   return (
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
@@ -100,7 +95,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                 </button>
               </div>
             </div>
-            <div className={`grid grid-cols-${groupMemberCount} bg-timberwolf gap-3 `}>
+            <div className={`grid grid-cols-5 bg-timberwolf gap-3 `}>
               {
                 groupPictures?.map((member, index) => (
                   (index <= groupPictures?.length-2) && 
