@@ -2,8 +2,7 @@
 
 import React, { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import Glide from '@glidejs/glide';
-
+import Glide from "@glidejs/glide";
 
 interface Slide {
     backgroundColor: string;
@@ -23,15 +22,13 @@ const Carousel: React.FC<CarouselProps> = ({
     id,
 }) => {
     useEffect(() => {
-        const config: Partial<Glide.Options> = {
+        new Glide(`#${id}`, {
             type: "carousel",
             startAt: 0,
             perView: 4,
             autoplay: 2000,
-        };
-        new Glide(`#${id}`, config).mount();
+        }).mount();
     }, [id]); // Add 'id' to the dependency array
-    
 
     return (
         <div className="grid grid-cols-12 mt-8">
@@ -45,13 +42,17 @@ const Carousel: React.FC<CarouselProps> = ({
                         <div className="w-[1200px] lg:w-[1500px]">
                             <div className="glide__track" data-glide-el="track">
                                 <ul className="glide__slides">
-                                {slides.map((slide, index) => (
-                                        <li className="glide__slide" key={index}>
+                                    {slides.map((slide, index) => (
+                                        <li
+                                            className="glide__slide"
+                                            key={index}
+                                        >
                                             <div
                                                 className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]"
                                                 style={{
                                                     backgroundColor:
-                                                        slide.backgroundColor || "var(--timberwolf)",
+                                                        slide.backgroundColor ||
+                                                        "var(--timberwolf)",
                                                 }}
                                             ></div>
                                         </li>
