@@ -18,7 +18,7 @@ const Projects = () => {
 
       <div className="flex justify-center p-4 w-full mt-0 relative">
         <Link
-          href="/projects/hall-of-fame"
+          href="/progress"
           className="flex items-center cursor-pointer ml-4 font-normal sm:font-medium text-coral-pink whitespace-nowrap"
           // `whitespace-nowrap` prevents Hall of Fame text from wrapping to the next line on smaller screens
         >

@@ -1,7 +1,11 @@
+// importing Glide carousel specifically in this component in order to compile during build
+import Glide from "@glidejs/glide";
 import React from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 /* The `interface Slide` defines the structure of an object that represents a slide in the
 ProjectsCarousel component. It has three properties: `title`, `imageLink`, and `backgroundColor`,
@@ -23,7 +27,7 @@ interface ProjectsCarouselProps {
 
 const config = {
   type: "carousel" as const, // Set the type to "carousel"
-  autoplay: 4000,
+  autoplay: 3000,
   hoverpause: true,
   startAt: 0,
   peek: {
@@ -53,7 +57,6 @@ const config = {
   },
 };
 
-
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
   useEffect(() => {
     new Glide(".glide", config).mount(); // Glide is called from `layout.tsx` as a CDN, so don't worry about "Cannot find name 'Glide'"
@@ -73,160 +76,220 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
               <div className="glide__track w-full" data-glide-el="track">
                 <ul className="glide__slides h-[210px] sm:h-[300px]">
                   {/* Data Analytics*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("data-analytics")}
-                  >
-                    <Image
-                      src="/data-analytics/DATAANALYTICS.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Data Analytics"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Data Analytics" },
+                      }}
+                    >
+                      <Image
+                        src="/data-analytics/DATAANALYTICS.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Data Analytics"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Data Analytics */}
                   {/* Education*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0"
-                    onClick={() => handleSlideClick("education")}
-                  >
-                    <Image
-                      src="/education/EDUCATION.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Education"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Education" },
+                      }}
+                    >
+                      <Image
+                        src="/education/EDUCATION.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Education"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Education */}
                   {/* Health*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("health")}
-                  >
-                    <Image
-                      src="/health/HEALTH.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Health"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Health" },
+                      }}
+                    >
+                      <Image
+                        src="/health/HEALTH.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Health"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Health */}
                   {/* Image Processing / Computer Vision*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("imgproc-cv")}
-                  >
-                    <Image
-                      src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Image Processing / Computer Vision"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Computer Vision" },
+                      }}
+                    >
+                      <Image
+                        src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Image Processing / Computer Vision"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Image Processing / Computer Vision*/}
                   {/* Internet of Things*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("iot")}
-                  >
-                    <Image
-                      src="/iot/IOT.svg"
-                      className="justify-center"
-                      fill={true}
-                      alt="Internet of Things"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "IOT" },
+                      }}
+                    >
+                      <Image
+                        src="/iot/IOT.svg"
+                        className="justify-center"
+                        fill={true}
+                        alt="Internet of Things"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Internet of Things*/}
                   {/* Natural Language Processing*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("nlp")}
-                  >
-                    <Image
-                      src="/nlp/NLP.svg"
-                      className="justify-center"
-                      fill={true}
-                      alt="Natural Language Processing"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "NLP" },
+                      }}
+                    >
+                      <Image
+                        src="/nlp/NLP.svg"
+                        className="justify-center"
+                        fill={true}
+                        alt="Natural Language Processing"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Natural Language Processing */}
                   {/* 🚧🚧🚧ANOTHER LIST <li> to smoothen the transition between the last (NLP) and first (Data Analytics) slides */}
                   {/* Data Analytics*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("data-analytics")}
-                  >
-                    <Image
-                      src="/data-analytics/DATAANALYTICS.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Data Analytics"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Data Analytics" },
+                      }}
+                    >
+                      <Image
+                        src="/data-analytics/DATAANALYTICS.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Data Analytics"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Data Analytics */}
                   {/* Education*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0"
-                    onClick={() => handleSlideClick("education")}
-                  >
-                    <Image
-                      src="/education/EDUCATION.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Education"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative mx-0">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Education" },
+                      }}
+                    >
+                      <Image
+                        src="/education/EDUCATION.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Education"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Education */}
                   {/* Health*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("health")}
-                  >
-                    <Image
-                      src="/health/HEALTH.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Health"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Health" },
+                      }}
+                    >
+                      <Image
+                        src="/health/HEALTH.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Health"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Health */}
                   {/* Image Processing / Computer Vision*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("imgproc-cv")}
-                  >
-                    <Image
-                      src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
-                      className="justify-center"
-                      fill={true}
-                      alt="Image Processing / Computer Vision"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "Computer Vision" },
+                      }}
+                    >
+                      <Image
+                        src="/imgproc-cv/IMAGEPROCESSING.svg" // path to image
+                        className="justify-center"
+                        fill={true}
+                        alt="Image Processing / Computer Vision"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Image Processing / Computer Vision*/}
                   {/* Internet of Things*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("iot")}
-                  >
-                    <Image
-                      src="/iot/IOT.svg"
-                      className="justify-center"
-                      fill={true}
-                      alt="Internet of Things"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "IOT" },
+                      }}
+                    >
+                      <Image
+                        src="/iot/IOT.svg"
+                        className="justify-center"
+                        fill={true}
+                        alt="Internet of Things"
+                      />
+                    </Link>
                   </li>{" "}
                   {/* End of Internet of Things*/}
                   {/* Natural Language Processing*/}
-                  <li
-                    className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative"
-                    onClick={() => handleSlideClick("nlp")}
-                  >
-                    <Image
-                      src="/nlp/NLP.svg"
-                      className="justify-center"
-                      fill={true}
-                      alt="Natural Language Processing"
-                    />
+                  <li className="glide__slide w-[120px] h-[350px] sm:w-[25px] sm:h-[150px] flex justify-center items-start relative">
+                    <Link
+                      className=""
+                      href={{
+                        pathname: "/projects/collections-of-projects",
+                        query: { filter: "NLP" },
+                      }}
+                    >
+                      <Image
+                        src="/nlp/NLP.svg"
+                        className="justify-center"
+                        fill={true}
+                        alt="Natural Language Processing"
+                      />
+                    </Link>
                   </li>{" "}
                 </ul>{" "}
                 {/* End of glide__slides */}
@@ -237,7 +300,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
         {/* End of glide__track w-full */}
         {/* Arrow buttons for Glide.js */}
         <div
-          className="glide__arrows w-screen absolute -bottom-2 sm:top-[calc(50%-2rem)]" // sm:block hidden is for hiding the arrows on small screens
+          className="glide__arrows w-screen absolute -bottom-210 sm:top-[calc(50%-2rem)]" // sm:block hidden is for hiding the arrows on small screens
           data-glide-el="controls"
         >
           <button
