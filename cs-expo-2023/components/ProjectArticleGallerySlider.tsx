@@ -6,12 +6,8 @@ import Splide from '@splidejs/splide';
 import { Options } from '@splidejs/splide';
 
 
-interface Slide {
-  link: string;
-}
-
 interface GallerySliderProps {
-  slides: Slide[];
+  slides: string[];
 }
 
 const GallerySlider: React.FC<GallerySliderProps> = ({
@@ -42,7 +38,6 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       else if (windowWidth <= 640 && !isMobileMode) {
         setIsMobileMode(true);
       }
-      console.log(windowWidth);
     }, [windowWidth]);
 
     useEffect(() => {
@@ -61,12 +56,14 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       
       slideUp?.addEventListener("click", () => {
         splide.go('-1');
-        setCurrentSlide(splide.index);
+        const slideIndex = splide.index;
+        setCurrentSlide(slideIndex);
       });
   
       slideDown?.addEventListener("click", () => {
         splide.go('+1');
-        setCurrentSlide(splide.index);
+        const slideIndex = splide.index;
+        setCurrentSlide(slideIndex);
       });
   
       splide.on(["mounted", "move"], () => {
@@ -126,7 +123,9 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
               slides.map((slide, index)=>(
                 <li key={index} className="splide__slide flex justify-center">
                   <div id="slide-card" className="h-[100px] w-[100px]">
-                    <img src={slide.link} className=""></img>
+                    <iframe src={slide} 
+                      width="100%" height="100%">
+                    </iframe>
                   </div>
                 </li>
               ))
