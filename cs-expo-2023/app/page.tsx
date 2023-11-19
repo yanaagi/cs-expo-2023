@@ -251,7 +251,7 @@ export default function Home() {
                 will be represented by a member of their own choosing, with awards granted for\n
                 outstanding research and innovation. This event will also feature talks from key\n
                 figures in tech, providing a medium for healthy discourse about current trends.`}
-                button="/events/cs-expo"
+                button="/progress"
             />
 
             <HomeHeader
@@ -260,7 +260,7 @@ export default function Home() {
                 what it means to be a person in technology today. Industry leaders will discuss\n
                 innovations, offer insights for the attendees, and guide students on upskilling\n
                 and keeping their tech stack relevant in an evolving landscape.`}
-                button="/events/dev-day"
+                button="/progress"
             />
 
             <div className="min-[320px]:mb-60 xl:mb-80"></div>
