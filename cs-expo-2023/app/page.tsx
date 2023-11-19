@@ -4,59 +4,46 @@ import React, { useState, useEffect, useRef } from "react";
 import HomeHeader from "@/components/HomeOverviewHeader";
 
 export default function Home() {
-    const [text, setText] = useState("");
-    const textElementRef = useRef(null);
-
-    let timer: ReturnType<typeof setTimeout>;
-
+    const [text, setText] = useState('');
+    const textElementRef = useRef<HTMLDivElement>(null); // Add type assertion here
+    let timer: NodeJS.Timeout | null = null;
+  
     useEffect(() => {
-        const textToType =
-            "PAVING THE NEW TECHNOSPACE \n THROUGH PARADIGM SHIFTING \nINNOVATIONS";
-        let index = 0;
-        let isCursorVisible = true;
-
-        function typeText() {
-            if (index <= textToType.length) {
-                const currentText = textToType
-                    .slice(0, index)
-                    .replace(/\n/g, "<br />");
-                if (textElementRef.current) {
-                    (
-                        textElementRef.current as HTMLElement
-                    ).innerHTML = `${currentText}<span class="${
-                        isCursorVisible ? "text-coral-pink" : "text-transparent"
-                    }">__</span>`;
-                }
-                isCursorVisible = !isCursorVisible;
-                index++;
-            } else {
-                // Once typing is complete, you can set a timeout to continue blinking the cursor.
-                isCursorVisible = true; // Ensure the cursor is visible initially.
-                setTimeout(blinkCursor, 500); // Adjust the blinking speed as needed.
-            }
-            timer = setTimeout(typeText, 65);
+      const textToType = 'PAVING THE NEW TECHNOSPACE \n THROUGH PARADIGM SHIFTING \nINNOVATIONS';
+      let index = 0;
+      let isCursorVisible = true;
+  
+      function typeText() {
+        if (index <= textToType.length) {
+          const currentText = textToType.slice(0, index).replace(/\n/g, '<br />');
+          if (textElementRef.current) {
+            textElementRef.current.innerHTML = `${currentText}<span class="${isCursorVisible ? 'text-coral-pink' : 'text-transparent'}">__</span>`;
+          }
+          isCursorVisible = !isCursorVisible;
+          index++;
+        } else {
+          // Clear the interval once the full text is typed
+          if (timer) clearInterval(timer);
+  
+          // Set up blinking cursor forever
+          timer = setInterval(blinkCursor, 500); // Adjust the blinking speed as needed.
         }
-
-        function blinkCursor() {
-            isCursorVisible = !isCursorVisible;
-            if (textElementRef.current) {
-                (
-                    textElementRef.current as HTMLElement
-                ).innerHTML = `${textToType.replace(
-                    /\n/g,
-                    "<br />"
-                )}<span class="${"text-coral-pink"}">__</span>`;
-                //setTimeout(blinkCursor, 500); // Adjust the blinking speed as needed. // Uncomment this line if you want the cursor to keep blinking.
-            }
+      }
+  
+      function blinkCursor() {
+        isCursorVisible = !isCursorVisible;
+        if (textElementRef.current) {
+          textElementRef.current.innerHTML = `${textToType.replace(/\n/g, '<br />')}<span class="${isCursorVisible ? 'text-coral-pink' : 'text-transparent'}">__</span>`;
         }
-
-        // Start the animation when the component mounts
-        typeText();
-
-        return () => {
-            // Clean up the animation when the component unmounts
-            clearTimeout(timer);
-        };
+      }
+  
+      // Start the animation when the component mounts
+      timer = setInterval(typeText, 90);
+  
+      // Clean up the animation when the component unmounts
+      return () => {
+        if (timer) clearInterval(timer);
+      };
     }, []);
 
     // Reset the typewriter animation
@@ -93,13 +80,13 @@ export default function Home() {
             <div className="h-screen">
                 <h1
                     ref={textElementRef}
-                    className="absolute text-[min(3.5vw,10rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
+                    className="absolute text-[min(5vw,4rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
                 ></h1>
             </div>
 
             <details
                 id="details"
-                className="min-[320px]:-mt-80 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
+                className="min-[320px]:-mt-52 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
             >
                 <summary
                     className="h-[180px] md:h-[240px] relative list-none"
@@ -110,7 +97,7 @@ export default function Home() {
                         className="cursor-pointer absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
                     >
                         <svg
-                            className="xl:scale-[-1] min-[320px]:scale-[-1] mt-96 h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
+                            className="xl:scale-[-1] min-[320px]:scale-[-1] h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -251,7 +238,7 @@ export default function Home() {
                 will be represented by a member of their own choosing, with awards granted for\n
                 outstanding research and innovation. This event will also feature talks from key\n
                 figures in tech, providing a medium for healthy discourse about current trends.`}
-                button="/progress"
+                button="/events/cs-expo"
             />
 
             <HomeHeader
@@ -260,7 +247,7 @@ export default function Home() {
                 what it means to be a person in technology today. Industry leaders will discuss\n
                 innovations, offer insights for the attendees, and guide students on upskilling\n
                 and keeping their tech stack relevant in an evolving landscape.`}
-                button="/progress"
+                button="/events/dev-day"
             />
 
             <div className="min-[320px]:mb-60 xl:mb-80"></div>
