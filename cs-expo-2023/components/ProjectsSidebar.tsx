@@ -1,7 +1,8 @@
+import Link from '@/node_modules/next/link';
 import React, { useState, useEffect, MouseEventHandler, TouchEventHandler } from 'react';
 
 interface SidebarProps {
-  sideBarCallback: (boxNumber: number) => void;
+  sideBarCallback: (boxNumber: string) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ sideBarCallback }: SidebarProps) => {
@@ -13,9 +14,8 @@ const Sidebar: React.FC<SidebarProps> = ({ sideBarCallback }: SidebarProps) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleBoxClick = (boxNumber: number) => {
+  const handleBoxClick = (boxNumber: string) => {
     // Action
-    console.log(boxNumber);
     sideBarCallback(boxNumber);
   };
 
@@ -73,9 +73,10 @@ const Sidebar: React.FC<SidebarProps> = ({ sideBarCallback }: SidebarProps) => {
           <div
             key={boxNumber}
             className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"
-            onClick={() => handleBoxClick(index)}
           >
-            {boxNumber}
+            <Link className="h-full w-full flex items-center justify-center" onClick={()=>handleBoxClick(boxNumber)} href={{pathname:"/projects/collections-of-projects", query:{filter:boxNumber}}} >
+              {boxNumber}
+            </Link>
           </div>
         ))}
       </div>

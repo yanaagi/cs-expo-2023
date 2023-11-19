@@ -167,7 +167,7 @@ const defaultMenu = () => {
                                    Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
-                              <Link href="/projects/collections-of-projects" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                              <Link href={{pathname:"/projects/collections-of-projects", query:{filter:"All"}}}  className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Collections of Projects
                               </Link>
                          </div>
