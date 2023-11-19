@@ -14,30 +14,6 @@ const CommitteesGrid = () => {
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);
-  const [gridCols, setGridCols] = useState<number>(4); // Number of columns in the grid
-
-  useEffect(() => {
-    // Adjust the number of columns based on screen width
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth < 640) {
-        setGridCols(1);
-      } else if (screenWidth < 768) {
-        setGridCols(2);
-      } else if (screenWidth < 1024) {
-        setGridCols(2);
-      } else {
-        setGridCols(4);
-      }
-    };
-
-    handleResize(); // Set initial number of columns
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const handleMouseEnter = (index: number) => {
     setHovered(index);
@@ -58,8 +34,8 @@ const CommitteesGrid = () => {
   };
 
   return (
-    <div className="flex justify-center"> {/* Center the columns in smaller screens */}
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-[%12] mt-4`}>
+    <div className="flex flex-col justify-center items-center"> {/* Center the columns in smaller screens */}
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4`}>
         {committeeNames.map((committeeName, index) => (
           <a
             key={index}

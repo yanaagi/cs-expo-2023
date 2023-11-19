@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineRight, AiOutlineUp} from 'react-icons/ai';
 import GallerySlider from "../components/ProjectArticleGallerySlider"
 
+
+
 interface ProjectArticleProps {
   groupname: string | undefined;
   thesisTitle: string | undefined;
@@ -12,6 +14,7 @@ interface ProjectArticleProps {
   category: string | undefined;
   posterFilePath: string | undefined;
   AVPLink: string | undefined;
+  groupPictures: string[][] | undefined;
 }
 
 const ProjectArticle: React.FC<ProjectArticleProps> = ({
@@ -22,13 +25,26 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   members,
   category,
   posterFilePath,
-  AVPLink
+  AVPLink,
+  groupPictures
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
+  const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
+  const [groupMemberCount, setGroupMemberCount] = useState(0);
+
   const toggleReadMore = () => {
     setReadMoreState(!isReadMore);
   };
 
+  let galleryPictures:string[]=[];
+  groupPictures?.at(groupPictures?.length-1)?.forEach((picture, index) => {
+    galleryPictures.push(picture);
+  });
+
+  useEffect(() => {
+    setGroupMemberCount(groupPictures!.length-1);
+  }, []);
+  
   return (
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
       <div className="flex flex-col w-full pt-24">
@@ -84,17 +100,15 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-5 bg-timberwolf gap-3 place-items-stretch">
-              <div className="h-[200px] bg-zinc-400 s-full">
-              </div>
-              <div className="h-[200px] bg-zinc-400 s-full">
-              </div>
-              <div className="h-[200px] bg-zinc-400 s-full">
-              </div>
-              <div className="h-[200px] bg-zinc-400 s-full">
-              </div>
-              <div className="h-[200px] bg-zinc-400 s-full">
-              </div>
+            <div className={`grid grid-cols-${groupMemberCount} bg-timberwolf gap-3 `}>
+              {
+                groupPictures?.map((member, index) => (
+                  (index <= groupPictures?.length-2) && 
+                  (<div key={index} className="flex h-[200px] bg-zinc-400 s-full"> 
+                    <iframe src={member[0]} width="100%" height="100%"></iframe>
+                  </div>)
+                ))
+              }
             </div>
           </div>
 
@@ -106,26 +120,17 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                 </div>
             </div>
             <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center">
-              
               {/* <div className="flex flex-grow max-h-[304.42px] max-w-[541.2px] max-lg:max-h-[300.28px] max-lg:max-w-[533.86px] aspect-video w-11/12 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center"> */}
               <div className="flex aspect-video bg-zinc-800 s-full w-10/12 h-10/12 text-timberwolf text-3xl font-bold justify-center items-center">
-                <p>AVP</p>
+                <iframe src={AVPLink} 
+                  width="100%" height="100%" allowFullScreen>
+                </iframe>
               </div>
 
               <GallerySlider
-                slides={
-                  [
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekl.jpg"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                    {link: "/kekw-kek.gif"},
-                  ]
-                }
+                slides={galleryPictures}
               />
             </div>
-      
 
           </div>
         </div>
