@@ -13,7 +13,7 @@ interface GroupCardProps {
     category: any;
     posterFilePath?: any;
     AVPLink?: any;
-    groupName:string
+    groupname:string
   },
 
   allFilter: any;
@@ -22,27 +22,32 @@ interface GroupCardProps {
 
 const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filterState} ) => {
   return (
-    (allFilter || filterState) && (<Link href={groupId}>
-      <div className="flex flex-col w-[300px] h-[450px] bg-stone-300 s-full justify-end">
-        <div className="flex ">
-
+      (allFilter || filterState) && (
+      <Link href={groupId}>
+        <div className="flex flex-col bg-stone-300 s-full max-sm:min-w-[300px]">
+          <div className="flex h-3/4">
+            <img src={group.posterFilePath} className="w-auto h-auto"></img>
+          </div>
+          <div className="flex flex-col h-[140px] bg-coral-pink s-full text-white text-start py-3 px-2 pr-2 pt-1">
+            <div className="text-2xl font-bold">{group.groupname}</div>
+            <div className="text-md overflow-y-auto">{group.thesisTitle}</div>
+          </div>
         </div>
-        <div className="flex flex-col h-[140px] bg-rose-500 s-full text-white text-start text-2xl px-2 pr-2 pt-1">
-          <div className="font-bold font-['Helvetica Now Text']">{group.groupname}</div>
-          <div className="text-sm font-['Helvetica Now Text']">{group.thesisTitle}</div>
-        </div>
-      </div>
-    </Link>)
+      </Link>
+      )
   );
 }
 
 interface GroupCardLayoutProps {
   groupData: any;
+  initialFilter:string;
 }
-const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
+const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData , initialFilter}) => {
   const groupNames = Object.keys(groupData);
   const groupCards: React.JSX.Element[] = [];
-  
+
+  const filterKey:{[key:string]:number} = {"All":0, "Data Analytics":1, "Education":2, "Health":3, "Computer Vision":4, "IOT":5, "NLP":6};
+    
   const [allFilter, setAllFilter] = useState(true);
   const [dataanalyticFilter, setDataanalyticFilter] = useState(false);
   const [educationFilter, setEducationFilter] = useState(false);
@@ -51,108 +56,42 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   const [iotFilter, setIotFilter] = useState(false);
   const [nlpFilter, setNlpFilter] = useState(false);
 
-  const [currentFilter, setCurrentFilter] = useState(()=> {
-    if (typeof localStorage !== 'undefined') {
-      const filterData = localStorage.getItem('currentFilter');
-      return filterData ? JSON.parse(filterData) : 'All';
-    } 
-    else 
-    {
-      return 'All'
-    }
-  });
-  const updateCurrentFilter = (filter:string) => {
-    setCurrentFilter(filter);
-    localStorage.setItem("currentFilter", JSON.stringify(filter));
-  }
+  // const [currentFilter, setCurrentFilter] = useState(()=> {
+  //   if (typeof localStorage !== 'undefined') {
+  //     const filterData = localStorage.getItem('currentFilter');
+  //     return filterData ? Number(JSON.parse(filterData)) : 0;
+  //   } 
+  //   else 
+  //   {
+  //     return 0
+  //   }
+  // });
+  // const updateCurrentFilter = (filter:number) => {
+  //   setCurrentFilter(filter);
+  //   localStorage.setItem("currentFilter", JSON.stringify(filter));
+  // }
 
   useEffect(() => {
-    filterProjects(currentFilter);
-    // console.log(currentFilter);
+    if (filterKey[initialFilter] !== undefined) {
+      filterProjects(filterKey[initialFilter]);
+      // updateCurrentFilter(filterKey[initialFilter]);
+    }
   }, []);
 
-  const filterProjects = (category:string) => {
-    if (category === "All") {
-      setAllFilter(true);
-
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("All");
-    }
-    else if (category === "Data Analytics") {
-      setDataanalyticFilter(true);
-
-      setAllFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Data Analytics");
-    }
-    else if (category === "Education") {
-      setEducationFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Education");
-    }
-    else if (category === "Health") {
-      setHealthFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Health");
-    }
-    else if (category === "Img Proc - CV") {
-      setImageprooccvFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setIotFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("Img Proc - CV");
-    }
-    else if (category === "IOT") {
-      setIotFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setNlpFilter(false);
-      updateCurrentFilter("IOT");
-    }
-    else if (category === "NLP") {
-      setNlpFilter(true);
-
-      setAllFilter(false);
-      setDataanalyticFilter(false);
-      setEducationFilter(false);
-      setHealthFilter(false);
-      setImageprooccvFilter(false);
-      setIotFilter(false);
-      updateCurrentFilter("NLP");
-    }
+  const filterProjects = (category:number) => {
+    let tmp = 1<<category;
+    setAllFilter(Boolean((tmp >> 0) & 0x1));
+    setDataanalyticFilter(Boolean((tmp >> 1) & 0x1));
+    setEducationFilter(Boolean((tmp >> 2) & 0x1));
+    setHealthFilter(Boolean((tmp >> 3) & 0x1));
+    setImageprooccvFilter(Boolean((tmp >> 4) & 0x1));
+    setIotFilter(Boolean((tmp >> 5) & 0x1));
+    setNlpFilter(Boolean((tmp >> 6) & 0x1));
   }
 
-  const sideBarCallback = (m:string) => {
-    filterProjects(m);
+  const sideBarCallback = (filter:string) => {
+    filterProjects(filterKey[filter]);
+    // updateCurrentFilter(filterKey[filter]);
   }
 
   let gCategoryFilter:boolean = false;
@@ -184,12 +123,10 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   });
 
   return (
-    <main>
-      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:justify-items-start lg:grid-cols-2 sm:grid-cols-1 sm:justify-items-center  gap-10 pt-20 justify-items-center">
-        {groupCards}
-      </div>
+    <div className="grid gap-10 pt-20 justify-items-center 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+      {groupCards}
       <Sidebar sideBarCallback={sideBarCallback}/>
-    </main>
+    </div>
   );
 }
 

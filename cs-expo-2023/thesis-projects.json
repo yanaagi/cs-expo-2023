@@ -11,8 +11,8 @@
             "Evangelista, Erica Francia G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/adorables.png",
+        "AVPLink": "https://drive.google.com/file/d/1QPj0XjRm_lqWDkPiOwanLXO1kVOUQskg/preview"
     },
     "AiM": {
         "groupname": "Aim",
@@ -26,8 +26,8 @@
             "Jan Miguel A. Pinlac"
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/aim.png",
+        "AVPLink": "https://drive.google.com/file/d/1vK5J6w24ncX65UqzTDmSYehr2QWSM1uL/preview"
     },
     "Array-Co": {
         "groupname": "Array Co",
@@ -42,8 +42,8 @@
             "Yap, John Angelo B."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/arrayco.png",
+        "AVPLink": "https://drive.google.com/file/d/1KZ6sRZaOgkFTOa5j8E89X7cckK2B_j8Y/preview"
     },
     "Codebebs": {
         "groupname": "Codebebs",
@@ -58,8 +58,8 @@
             "Paul Andre A. Gabriel"
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/codebebs.png",
+        "AVPLink": "https://drive.google.com/file/d/1MKOPu9cs_AzTCYLvsK3nT0fYhaRNHS9y/preview"
     },
     "DEoS": {
         "groupname": "DEoS",
@@ -73,8 +73,8 @@
             "John Felix M. Agda"
         ],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/deos.png",
+        "AVPLink": "https://drive.google.com/file/d/13yYbBI7J0ghzBcqiB3UOVHf3u70nwE9Y/preview"
     },
     "Engeenz": {
         "groupname": "Engeenaz",
@@ -89,8 +89,8 @@
             "Gerald Z. Gueco"
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/engeenz.png",
+        "AVPLink": "https://drive.google.com/file/d/1elwQr-RI6sfMFjoA29pBj8KkLv7m9Ktd/preview"
     },
     "Hello-World": {
         "groupname": "Hello World",
@@ -104,12 +104,12 @@
             "Valerio, Andre Martee G."
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/helloworld.png",
+        "AVPLink": "https://drive.google.com/file/d/1Ap5HsAQuSDjvPxs891_Vo6nqQdweW2MT/preview"
     },
     "INNOV8": {
         "groupname": "INNOV8",
-        "thesisTitle": "Name3",
+        "thesisTitle": "Indoor Air Quality Monitoring and Recommendation System",
         "abstract": "An Android-based mobile application called the Indoor Air Quality  Monitoring and Recommendation System (AIRZEN) can help the  FEU Tech’s Facilities Office (FO) and general Indoor spaces in  assessing the Air Quality inside indoor spaces. This system is a tool  used to monitor and check the Air Quality inside Indoor spaces as  well as give recommendations to help mitigate the effects of bad  Indoor Air Quality. The KNN algorithm was utilized for the  prediction of the AQI value and classification of  Recommendations. To determine whether the system works as  intended, testing was administered together with a survey  participated by 50 respondents consisting of professionals from the  IT/CS/IAQ Industry, IT/CS/CPE students, IT/CS Faculty, and  Office workers. This capstone project’s output received an Above  Average rating of (4.56) in terms of Functionality, Reliability, and  Efficiency. Future researchers can make system improvements by  adding a Backup and Restore feature for times of data outage as  well as an Ios integration for a bigger range of users. An additional  Recommendation is also to add feedback from existing users inside  the application as well as a notification system that notifies users  while they are out of their homes. The proponents also recommend  the implementation of multiple monitoring device support for  bigger scalability. ",
         "summary": "Summary3",
         "members": [
@@ -120,8 +120,8 @@
             "Dela Cruz, Cyrill James G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/innov8.jpg",
+        "AVPLink": "https://drive.google.com/file/d/1jI0Zk-jC1yFCbDa2lViqrq0ZrO3Qv0YJ/preview"
     },
     "Javangers": {
         "groupname": "Javangers",
@@ -135,8 +135,8 @@
             "Limyu, Alan Gabriel D.A."
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/javangers.png",
+        "AVPLink": "https://drive.google.com/file/d/1AvKnErfCDHLSjA_fl23odV-XfuJjn_cu/preview"
     },
     "Midnight-Coders": {
         "groupname": "Midnight Coders",
@@ -150,8 +150,8 @@
             "Bucsit, Mark Wilson W."        
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/midnightcoders.png",
+        "AVPLink": "https://drive.google.com/file/d/1-PdvUB8mUwMF4m7oIjZwYWuHwB85eO04/preview"
     },
     "Peaky-Blinders": {
         "groupname": "Peaky Blinders",
@@ -165,8 +165,8 @@
             "Sapnu, Dioshua D."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/peakyblinders.png",
+        "AVPLink": "https://drive.google.com/file/d/1YfCi3mrcoPHpHwxqPCzeJFKymnvvwwOq/preview"
     },
     "Quinta": {
         "groupname": "Quinta",
@@ -181,8 +181,8 @@
             "Sapida, Charles Christian D."            
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/quinta.jpg",
+        "AVPLink": "https://drive.google.com/file/d/1o4xQP7iULSTcVHWUKOfVtNKjAW_2JoUG/preview"
     },
     "return-to_sleep": {
         "groupname": "return to_sleep",
@@ -196,8 +196,8 @@
             "Ramoso, Zedric James D."  
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/returntosleep.png",
+        "AVPLink": "https://drive.google.com/file/d/1j9q44bbxFP8qRx01XJNpVcBD6ji1FyKI/preview"
     },
     "Rob_lux": {
         "groupname": "Rob_lux",
@@ -211,8 +211,8 @@
             "Fragata, Mark Revin G."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/roblux.png",
+        "AVPLink": "https://drive.google.com/file/d/1AYxeW0t9jwUgscwaUpCEzZswtAlq9fjp/preview"
     },
     "SOFTIES": {
         "groupname": "SOFTIES",
@@ -226,8 +226,8 @@
             "Mazo, Alijah Ethan E."
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/softies.png",
+        "AVPLink": "https://drive.google.com/file/d/1285hI_OPFX3-AwXaYGtjob-Hpxals0Wd/preview"
     },
     "Softyware": {
         "groupname": "Softyware",
@@ -242,8 +242,8 @@
             "Andrada, Micko Alhwin T."
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/softyware.png",
+        "AVPLink": "https://drive.google.com/file/d/1geymhwOn-jNkYWz5gXrxM0WUokt2w6wA/preview"
     },
     "S.T.A.R.K.": {
         "groupname": "S.T.A.R.K.",
@@ -256,8 +256,8 @@
             "Español, Kyle G.", 
             "Segundo Jr., Sally P."],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/stark.png",
+        "AVPLink": "https://drive.google.com/file/d/18nOirihdg6jokZgvMMa0A13LtlcGDfy1/preview"
     },
     "TeaSis": {
         "groupname": "TeaSis",
@@ -271,8 +271,8 @@
             "Contreras, John Dominic S."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/teasis.png",
+        "AVPLink": "https://drive.google.com/file/d/1f1F5IyFr_t8aJGVlPHu8dLwfqZN-wt4q/preview"
     },
     "TechniQ": {
         "groupname": "TechniQ",
@@ -286,8 +286,8 @@
             "Alido, Rico Ray R."
         ],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/techniq.png",
+        "AVPLink": "https://drive.google.com/file/d/19OZR5ZUlm2vlj6vgTTUmOR0yxJTJ4uoA/preview"
     },
     "Yaymiko": {
         "groupname": "Yaymiko",
@@ -301,8 +301,8 @@
         "Vicencio, Vernon GabrielAngelo A."
     ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/yaymiko.png",
+        "AVPLink": "https://drive.google.com/file/d/1kXsabLJ9iQg3yQOQeLr2dK-HzHXUwjAC/preview"
     }
   } 
   

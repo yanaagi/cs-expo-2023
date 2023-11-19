@@ -1,14 +1,13 @@
 "use client";
 
-import {AiOutlineUp,  AiOutlineDown} from 'react-icons/ai';
-import React, { useState, useEffect } from 'react';
+import {AiOutlineUp,  AiOutlineDown, AiOutlineLeft, AiOutlineRight} from 'react-icons/ai';
+import React, { useState, useEffect, useRef } from 'react';
+import Splide from '@splidejs/splide';
+import { Options } from '@splidejs/splide';
 
-interface Slide {
-  link: string;
-}
 
 interface GallerySliderProps {
-  slides: Slide[];
+  slides: string[];
 }
 
 const GallerySlider: React.FC<GallerySliderProps> = ({
@@ -16,26 +15,55 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   }) => {
     const [isMaxSlideUp, setIsMaxSlideUp] = useState(true);
     const [isMaxSlideDown, setIsMaxSlideDown] = useState(false);
-  
+    const [windowWidth, setWindowWidth] = useState(0);
+    const [isMobileMode, setIsMobileMode] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    }
+    useEffect(()=> {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      }
+    }, []);
+
+    useEffect(()=>{
+      setWindowWidth(window.innerWidth);
+
+      if (windowWidth > 640 && isMobileMode) {
+        setIsMobileMode(false);
+      }
+      else if (windowWidth <= 640 && !isMobileMode) {
+        setIsMobileMode(true);
+      }
+    }, [windowWidth]);
+
     useEffect(() => {
-      const splideOptions = {
+      setWindowWidth(window.innerWidth);
+      const splideOptions: Options = {
         type: 'slide',
         arrows: false,
         gap: 20,
+        // width : '390px',
         height : '100px',
-        direction: 'ttb',
+        direction: isMobileMode?'ltr':'ttb',
       };
-      const splide = new Splide('#my_splide', splideOptions);
+      const splide = new Splide('#my_splide',splideOptions);
       const slideUp = document.getElementById('slideup');
       const slideDown = document.getElementById('slidedown');
       
-  
       slideUp?.addEventListener("click", () => {
         splide.go('-1');
+        const slideIndex = splide.index;
+        setCurrentSlide(slideIndex);
       });
   
       slideDown?.addEventListener("click", () => {
         splide.go('+1');
+        const slideIndex = splide.index;
+        setCurrentSlide(slideIndex);
       });
   
       splide.on(["mounted", "move"], () => {
@@ -68,27 +96,36 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       });
   
       splide.mount();
-    },[]);
+
+      splide.go(currentSlide);
+      return () => {
+        splide.destroy();
+      }
+    },[isMobileMode]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col max-sm:flex-row items-center justify-center w-2/12 max-sm:w-full max-sm:h-1/12">
       <div id="slideup" className="flex justify-center h-[30px] w-[30px]">
         { 
         !isMaxSlideUp && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineUp/>
+            {
+              isMobileMode ? (<AiOutlineLeft/>) : (<AiOutlineUp/>)
+            }
           </button>
         )}
       </div>
                 
-      <div id="my_splide" className="splide h-[250px] w-full overflow-hidden">
+      <div id="my_splide" className="splide overflow-hidden w-[120px] h-[300px] max-sm:h-[100px] max-sm:w-[100px]">
         <div className="splide__track">
-          <ul className="splide__list h-[100px]">
+          <ul className="splide__list flex flex-col max-sm:flex-row h-[100px] items-center">
             {
-              slides.map((slide)=>(
-                <li className="splide__slide flex justify-center">
-                  <div id="slide-card" className="h-[108px] flex justify-center items-center">
-                    <img src={slide.link} className="w-48 h-[100px]"></img>
+              slides.map((slide, index)=>(
+                <li key={index} className="splide__slide flex justify-center">
+                  <div id="slide-card" className="h-[100px] w-[100px]">
+                    <iframe src={slide} 
+                      width="100%" height="100%">
+                    </iframe>
                   </div>
                 </li>
               ))
@@ -101,7 +138,9 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         { 
         !isMaxSlideDown && (
           <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            <AiOutlineDown/>
+            {
+              isMobileMode ? (<AiOutlineRight/>) : (<AiOutlineDown/>)
+            }
           </button>
         )}
       </div>

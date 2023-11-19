@@ -27,7 +27,7 @@ interface PartnersIconLayoutProps {
   partners: Array<any>;
 }
 const PartnerIconsLayout: React.FC<PartnersIconLayoutProps> = ({ partners }) => {
-  const partnerIcons = [];
+  const partnerIcons: React.ReactElement[] = [];
 
   partners.forEach((partner,index) => {
     partnerIcons.push(<PartnerIcon key={index} partner={partner}/>);
