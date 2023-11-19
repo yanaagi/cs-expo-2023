@@ -22,6 +22,7 @@ interface GroupCardProps {
 
 const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filterState} ) => {
   return (
+    
       (allFilter || filterState) && (
       <Link href={groupId}>
         <div className="flex flex-col bg-stone-300 s-full max-sm:min-w-[300px]">
@@ -40,14 +41,11 @@ const GroupCard: React.FC<GroupCardProps> = ({ groupId, group, allFilter, filter
 
 interface GroupCardLayoutProps {
   groupData: any;
-  initialFilter:string;
 }
-const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData , initialFilter}) => {
+const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
   const groupNames = Object.keys(groupData);
   const groupCards: React.JSX.Element[] = [];
-
-  const filterKey:{[key:string]:number} = {"All":0, "Data Analytics":1, "Education":2, "Health":3, "Computer Vision":4, "IOT":5, "NLP":6};
-    
+  
   const [allFilter, setAllFilter] = useState(true);
   const [dataanalyticFilter, setDataanalyticFilter] = useState(false);
   const [educationFilter, setEducationFilter] = useState(false);
@@ -56,26 +54,23 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData , initialFi
   const [iotFilter, setIotFilter] = useState(false);
   const [nlpFilter, setNlpFilter] = useState(false);
 
-  // const [currentFilter, setCurrentFilter] = useState(()=> {
-  //   if (typeof localStorage !== 'undefined') {
-  //     const filterData = localStorage.getItem('currentFilter');
-  //     return filterData ? Number(JSON.parse(filterData)) : 0;
-  //   } 
-  //   else 
-  //   {
-  //     return 0
-  //   }
-  // });
-  // const updateCurrentFilter = (filter:number) => {
-  //   setCurrentFilter(filter);
-  //   localStorage.setItem("currentFilter", JSON.stringify(filter));
-  // }
+  const [currentFilter, setCurrentFilter] = useState(()=> {
+    if (typeof localStorage !== 'undefined') {
+      const filterData = localStorage.getItem('currentFilter');
+      return filterData ? Number(JSON.parse(filterData)) : 0;
+    } 
+    else 
+    {
+      return 0
+    }
+  });
+  const updateCurrentFilter = (filter:number) => {
+    setCurrentFilter(filter);
+    localStorage.setItem("currentFilter", JSON.stringify(filter));
+  }
 
   useEffect(() => {
-    if (filterKey[initialFilter] !== undefined) {
-      filterProjects(filterKey[initialFilter]);
-      // updateCurrentFilter(filterKey[initialFilter]);
-    }
+    filterProjects(currentFilter);
   }, []);
 
   const filterProjects = (category:number) => {
@@ -87,11 +82,11 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData , initialFi
     setImageprooccvFilter(Boolean((tmp >> 4) & 0x1));
     setIotFilter(Boolean((tmp >> 5) & 0x1));
     setNlpFilter(Boolean((tmp >> 6) & 0x1));
+    updateCurrentFilter(category);
   }
 
-  const sideBarCallback = (filter:string) => {
-    filterProjects(filterKey[filter]);
-    // updateCurrentFilter(filterKey[filter]);
+  const sideBarCallback = (m:number) => {
+    filterProjects(m);
   }
 
   let gCategoryFilter:boolean = false;
