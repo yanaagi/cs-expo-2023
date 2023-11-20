@@ -19,7 +19,6 @@ const EventsDevDay = () => {
     const speakers = speakersData.speakers;
 
     const speakerNames = speakers.map((speaker) => speaker.name);
-    const photoNumber = speakers.map((speaker) => speaker.photoNumber);
     const speakerProfession = speakers.map((speaker) => speaker.profession);
     const intOrExt = speakers.map((speaker) => speaker.intOrExt);
     const description = speakers.map((speakers) => speakers.description);
@@ -59,7 +58,6 @@ const EventsDevDay = () => {
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
                     speakerNames={speakerNames}
-                    photoNumber={photoNumber}
                     speakerProfession={speakerProfession}
                     intOrExt={intOrExt}
                     description={description}

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import EventsHeader from "@/components/EventsOverviewHeader";
 
@@ -9,7 +10,7 @@ const desc = ["CS EXPO 2023 V2.0 is the 11th iteration of the annual capstone ev
 
 const EventsOverviewHeader = () => {
   return (
-    <main className='h-screen justify-center flex flex-col'>
+    <main className='min-h-screen justify-center text-center items-center flex flex-col'>
       <EventsHeader title={titles} description={desc}></EventsHeader>
     </main>
   )
