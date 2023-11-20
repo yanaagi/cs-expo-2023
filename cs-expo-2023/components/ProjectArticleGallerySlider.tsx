@@ -53,17 +53,8 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       slideDown?.addEventListener("click", () => {
         splide.go('+1');
       });
-
-      splide.on( 'pagination:mounted', function ( data ) {
-        // data.list.classList.add( 'custompage' );
-      
-        // // `items` contains all dot items
-        // data.items.forEach( function ( item ) {
-        //   (item as HTMLButtonElement).
-        // });
-      } );
   
-      splide.on(["mounted", "move"], () => {
+      splide.on(['pagination:mounted',"mounted", "move"], () => {
         const currentIndex = splide.index;
         
         const slideElements = document.querySelectorAll(
