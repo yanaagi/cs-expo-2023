@@ -22,15 +22,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
         />
 
-        {/* GlideJS's two CDN (both required) */}
+        {/* GlideJS's CDN */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
-        />
-
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
         />
 
         <script
