@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { AiOutlineRight, AiOutlineUp} from 'react-icons/ai';
+import Image from "next/image";
 import GallerySlider from "../components/ProjectArticleGallerySlider"
 
 
@@ -14,7 +15,7 @@ interface ProjectArticleProps {
   category: string | undefined;
   posterFilePath: string | undefined;
   AVPLink: string | undefined;
-  groupPictures: string[][] | undefined;
+  galleryDirectory: string | undefined;
 }
 
 const ProjectArticle: React.FC<ProjectArticleProps> = ({
@@ -26,7 +27,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   category,
   posterFilePath,
   AVPLink,
-  groupPictures
+  galleryDirectory
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
   const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
@@ -35,17 +36,17 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
     setReadMoreState(!isReadMore);
   };
 
-  let galleryPictures:string[]=[];
-  groupPictures?.at(groupPictures?.length-1)?.forEach((picture, index) => {
-    galleryPictures.push(picture);
-  });
+  // let galleryPicturesUrl:string[]=[];
+  // for (let index = members!.length*3+3; index >= 13; index--) {
+  //   galleryPicturesUrl.push("/group-images/"+galleryDirectory+"/"+(index)+".jpg");
+  // }
   
   return (
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
       <div className="flex flex-col w-full pt-24">
         <div className="flex flex-col items-center justify-start pt-5">
-          <div className="flex relative bg-timberwolf h-[650px] w-[450px] max-sm:w-[260px] max-sm:h-[460px] s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-            <img src={posterFilePath} className="w-auto h-auto"></img>
+          <div className="flex w-9/12 h-9/12 bg-timberwolf s-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            <img src={posterFilePath} className=""></img>
             {/* <div className="absolute top-[30px] left-[-30px] h-[110px] w-[110px] rounded-full bg-yellow-300">
 
             </div>
@@ -65,10 +66,56 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 
       <div className="flex bg-timberwolf w-full pt-24">
         <div className="flex flex-col px-6">
+
+          <div className="flex flex-col bg-timberwolf">
+            <div className="flex flex-row py-5"> 
+                <div className="flex items-center justify-center w-full">
+                <div className="text-3xl font-bold">AVP</div>
+                  <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
+                </div>
+            </div>
+            <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center justify-center">
+              <div className="flex aspect-video bg-zinc-800 s-full w-10/12 h-10/12 text-timberwolf text-3xl font-bold justify-center items-center">
+                <iframe src={AVPLink} 
+                  width="100%" height="100%" allowFullScreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col bg-timberwolf">
+            <div className="flex flex-row py-5"> 
+                <div className="flex items-center justify-center w-full">
+                <div className="text-3xl font-bold">Gallery</div>
+                  <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
+                </div>
+            </div>
+            <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center justify-center">
+              <GallerySlider
+                slides={
+                  [
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  "/nlp/stark.png",
+                  ]
+                }
+              />
+            </div>
+          </div>
+
           <div className="flex flex-col">
             <div className="flex flex-row"> 
               <div className="flex items-center justify-center w-full">
-                <div className="text-2xl font-bold">Abstract</div>
+                <div className="text-3xl font-bold">Abstract</div>
                 <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
               </div>
             </div>
@@ -95,39 +142,10 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                 </button>
               </div>
             </div>
-            <div className={`grid grid-cols-5 bg-timberwolf gap-3 `}>
-              {
-                groupPictures?.map((member, index) => (
-                  (index <= groupPictures?.length-2) && 
-                  (<div key={index} className="flex h-[200px] bg-zinc-400 s-full"> 
-                    <iframe src={member[0]} width="100%" height="100%"></iframe>
-                  </div>)
-                ))
-              }
-            </div>
+
+            
           </div>
 
-          <div className="flex flex-col bg-timberwolf h-full">
-            <div className="flex flex-row py-5"> 
-                <div className="flex items-center justify-center w-full">
-                <div className="text-2xl font-bold">Gallery</div>
-                  <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
-                </div>
-            </div>
-            <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center">
-              {/* <div className="flex flex-grow max-h-[304.42px] max-w-[541.2px] max-lg:max-h-[300.28px] max-lg:max-w-[533.86px] aspect-video w-11/12 bg-zinc-800 s-full text-timberwolf text-3xl font-bold justify-center items-center"> */}
-              <div className="flex aspect-video bg-zinc-800 s-full w-10/12 h-10/12 text-timberwolf text-3xl font-bold justify-center items-center">
-                <iframe src={AVPLink} 
-                  width="100%" height="100%" allowFullScreen>
-                </iframe>
-              </div>
-
-              <GallerySlider
-                slides={galleryPictures}
-              />
-            </div>
-
-          </div>
         </div>
       </div>
     </div>
@@ -135,3 +153,4 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 }
 
 export default ProjectArticle;
+

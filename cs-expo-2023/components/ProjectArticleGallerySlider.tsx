@@ -2,8 +2,8 @@
 
 import {AiOutlineUp,  AiOutlineDown, AiOutlineLeft, AiOutlineRight} from 'react-icons/ai';
 import React, { useState, useEffect, useRef } from 'react';
-import Splide from '@splidejs/splide';
-import { Options } from '@splidejs/splide';
+import Splide, {Options, PaginationItem } from '@splidejs/splide';
+// import { Splide, SplideSlide, Options } from '@splidejs/react-splide';
 
 
 interface GallerySliderProps {
@@ -13,82 +13,88 @@ interface GallerySliderProps {
 const GallerySlider: React.FC<GallerySliderProps> = ({
     slides,
   }) => {
-    const [isMaxSlideUp, setIsMaxSlideUp] = useState(true);
-    const [isMaxSlideDown, setIsMaxSlideDown] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(0);
-    const [isMobileMode, setIsMobileMode] = useState(false);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isMaxSlideLeft, setIsMaxSlideLeft] = useState(true);
+    const [isMaxSlideRight, setIsMaxSlideRight] = useState(false);
 
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    }
-    useEffect(()=> {
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      }
-    }, []);
-
-    useEffect(()=>{
-      setWindowWidth(window.innerWidth);
-
-      if (windowWidth > 640 && isMobileMode) {
-        setIsMobileMode(false);
-      }
-      else if (windowWidth <= 640 && !isMobileMode) {
-        setIsMobileMode(true);
-      }
-    }, [windowWidth]);
+    const splideOptions: Options = {
+      type: 'slide',
+      arrows: false,
+      perPage  : 2,
+      focus    : 'center',
+      trimSpace: false,
+      gap: 20,
+      pagination:true,
+      paginationDirection: 'ltr',
+      classes: {
+        pagination: 'splide__pagination custompagination',
+		    page: 'splide__pagination__page custompage',
+      },
+      direction: 'ltr',
+      mediaQuery: 'max',
+      breakpoints: {
+        420: {
+          width: "210px",
+        },
+        640: {
+          perPage:1
+        }
+      },
+    };
 
     useEffect(() => {
-      setWindowWidth(window.innerWidth);
-      const splideOptions: Options = {
-        type: 'slide',
-        arrows: false,
-        gap: 20,
-        // width : '390px',
-        height : '100px',
-        direction: isMobileMode?'ltr':'ttb',
-      };
-      const splide = new Splide('#my_splide',splideOptions);
+      const splide = new Splide('#splide',splideOptions);
       const slideUp = document.getElementById('slideup');
       const slideDown = document.getElementById('slidedown');
       
       slideUp?.addEventListener("click", () => {
         splide.go('-1');
-        const slideIndex = splide.index;
-        setCurrentSlide(slideIndex);
       });
   
       slideDown?.addEventListener("click", () => {
         splide.go('+1');
-        const slideIndex = splide.index;
-        setCurrentSlide(slideIndex);
       });
+
+      splide.on( 'pagination:mounted', function ( data ) {
+        // data.list.classList.add( 'custompage' );
+      
+        // // `items` contains all dot items
+        // data.items.forEach( function ( item ) {
+        //   (item as HTMLButtonElement).
+        // });
+      } );
   
       splide.on(["mounted", "move"], () => {
         const currentIndex = splide.index;
-  
+        
         const slideElements = document.querySelectorAll(
           '#slide-card'
         );
-      
+
+        const paginationButtons = document.querySelectorAll(
+          '.custompage'
+        );
+
         slideElements.forEach((slide, index) => {
           slide.classList.remove(
               "border-4",
               "border-coral-pink"
           );
-  
+          
+          (paginationButtons[index] as HTMLButtonElement).style.border="2px solid var(--coral-pink)";
+          (paginationButtons[index] as HTMLButtonElement).style.backgroundColor="";
+
           if (index === currentIndex) {
-              slide.classList.add(
-                  "border-4",
-                  "border-coral-pink"
-              );
+            slide.classList.add(
+                "border-4",
+                "border-coral-pink"
+            );
+            (paginationButtons[index] as HTMLButtonElement).style.border="";
+            (paginationButtons[index] as HTMLButtonElement).style.backgroundColor="var(--coral-pink)";
           }
         });
         
-        setIsMaxSlideUp(currentIndex === 0);
-        setIsMaxSlideDown(slideElements.length === currentIndex+1);
+        setIsMaxSlideLeft(currentIndex === 0);
+        setIsMaxSlideRight(slideElements.length === currentIndex+1);
       });
   
       splide.on(["click"], (slide: { index: any; },e: any) =>{
@@ -97,53 +103,50 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   
       splide.mount();
 
-      splide.go(currentSlide);
       return () => {
         splide.destroy();
       }
-    },[isMobileMode]);
+    },[]);
 
   return (
-    <div className="flex flex-col max-sm:flex-row items-center justify-center w-2/12 max-sm:w-full max-sm:h-1/12">
-      <div id="slideup" className="flex justify-center h-[30px] w-[30px]">
-        { 
-        !isMaxSlideUp && (
-          <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            {
-              isMobileMode ? (<AiOutlineLeft/>) : (<AiOutlineUp/>)
-            }
-          </button>
-        )}
-      </div>
+    <div className="flex flex-row items-center justify-center w-full h-full">
                 
-      <div id="my_splide" className="splide overflow-hidden w-[120px] h-[300px] max-sm:h-[100px] max-sm:w-[100px]">
-        <div className="splide__track">
-          <ul className="splide__list flex flex-col max-sm:flex-row h-[100px] items-center">
-            {
-              slides.map((slide, index)=>(
-                <li key={index} className="splide__slide flex justify-center">
-                  <div id="slide-card" className="h-[100px] w-[100px]">
-                    <iframe src={slide} 
-                      width="100%" height="100%">
-                    </iframe>
-                  </div>
-                </li>
-              ))
-            }
+      {/* <div id="splide" className="splide overflow-hidden w-[120px] h-[300px] max-sm:h-[100px] max-sm:w-[100px]"> */}
+      <div id="splide" className="splide flex flex-col h-11/12">
+        <div className="flex flex-row items-center">
+          <div id="slideup" className=" s-full h-[30px] w-[30px]">
+            <button className={`flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold ${isMaxSlideLeft && "invisible"}`}>
+              <AiOutlineLeft/>
+            </button>
+          </div>
+
+          <div className="splide__track">
+            <ul className="splide__list">
+              {
+                slides.map((slide, index)=>(
+                  <li key={index} className="splide__slide grid">
+                    <div id="slide-card" className="grid bg-slate-600 items-center">
+                      <img src={slide}></img>
+                    </div>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div id="slidedown" className="h-[30px] w-[30px]">
+            <button className={`flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold ${isMaxSlideRight && "invisible"}`}>
+                <AiOutlineRight/>
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-10">
+          <ul className="splide__pagination custompagination flex items-center justify-center">
           </ul>
         </div>
       </div>
 
-      <div id="slidedown" className="flex justify-center h-[30px] w-[30px]">
-        { 
-        !isMaxSlideDown && (
-          <button className="flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold">
-            {
-              isMobileMode ? (<AiOutlineRight/>) : (<AiOutlineDown/>)
-            }
-          </button>
-        )}
-      </div>
     </div>
   );
 };
