@@ -60,12 +60,44 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
         </div>
         <div className="flex flex-col ml-5 mr-10 my-10">
           <div className="text-4xl max-sm:text-3xl font-bold text-end text-coral-pink pt-5">{groupname}</div>
-          <div className="text-3xl max-sm:text-2xl font-bold text-end pt-5">{thesisTitle}</div>
+          <div className="text-3xl max-sm:text-2xl font-bold text-end pt-3">{thesisTitle}</div>
         </div>
       </div>
 
-      <div className="flex bg-timberwolf w-full pt-24">
+      <div className="flex bg-timberwolf w-full pt-3">
         <div className="flex flex-col px-6">
+            {/** */}
+            <div className="flex flex-col">
+              <div className="flex flex-row pt-4 sm:pt-2 md:pt-4 lg:pt-20 xl:pt-20"> 
+                <div className="flex items-center justify-center max-h-none w-full mt-10">
+                  <div className="text-3xl font-bold">Abstract</div>
+                  <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
+                </div>
+              </div>
+              { isReadMore ? (
+              <div id="abstract" className="max-h-none overflow-hidden text-xl">
+                  {abstract}
+              </div>
+              ): (
+                <div id="abstract" className="max-h-20 overflow-hidden text-xl">
+                  {abstract}
+                </div>
+              )}
+            <div className="flex flex-col">
+              <div className="flex flex-row justify-end w-full bg-timberwolf pb-4 relative">
+                {isReadMore?
+                  (<></>):
+                  (<div className="w-full h-[20px] bg-timberwolf opacity-90 absolute bottom-9"/>)}
+                
+                <button onClick={toggleReadMore} className="flex items-center text-coral-pink font-bold cursor-pointer">
+                  {isReadMore?(<>Read less</>):(<>Read more</>)}
+                  <span className="ml-2">
+                    {isReadMore?(<AiOutlineUp/>):(<AiOutlineRight/>)}
+                  </span>
+                </button>
+              </div>
+            </div>    
+          </div>
 
           <div className="flex flex-col bg-timberwolf">
             <div className="flex flex-row py-5"> 
@@ -112,39 +144,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <div className="flex flex-row"> 
-              <div className="flex items-center justify-center w-full">
-                <div className="text-3xl font-bold">Abstract</div>
-                <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
-              </div>
-            </div>
-              { isReadMore ? (
-              <div id="abstract" className="max-h-none overflow-hidden text-xl">
-                  {abstract}
-              </div>
-              ): (
-                <div id="abstract" className="max-h-20 overflow-hidden text-xl">
-                  {abstract}
-                </div>
-              )}
-            <div className="flex flex-col">
-              <div className="flex flex-row justify-end w-full bg-timberwolf pb-4 relative">
-                {isReadMore?
-                  (<></>):
-                  (<div className="w-full h-[20px] bg-timberwolf opacity-90 absolute bottom-9"/>)}
-                
-                <button onClick={toggleReadMore} className="flex items-center text-coral-pink font-bold cursor-pointer">
-                  {isReadMore?(<>Read less</>):(<>Read more</>)}
-                  <span className="ml-2">
-                    {isReadMore?(<AiOutlineUp/>):(<AiOutlineRight/>)}
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            
-          </div>
+        
 
         </div>
       </div>
