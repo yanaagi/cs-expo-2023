@@ -254,8 +254,8 @@ const defaultMenu = () => {
                       <Image
                           src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
                           alt="logo"
-                          width={117}
-                          height={85}
+                          width={isMobile ? 90 : 120}
+                          height={isMobile ? 60 : 80}
                           className="object-contain"
                       />
                   </Link>
