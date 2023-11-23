@@ -15,7 +15,6 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   }) => {
     const [isMaxSlideLeft, setIsMaxSlideLeft] = useState(true);
     const [isMaxSlideRight, setIsMaxSlideRight] = useState(false);
-    const [currentSlideName, setCurrentSlideName] = useState("");
 
     const splideOptions: Options = {
       type: 'slide',
@@ -47,12 +46,10 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       
       slideLeft?.addEventListener("click", () => {
         splide.go('-1');
-        setCurrentSlideName(slides[splide.index][1]);
       });
   
       slideRight?.addEventListener("click", () => {
         splide.go('+1');
-        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(['pagination:mounted',"mounted", "move"], () => {
@@ -87,17 +84,14 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         
         setIsMaxSlideLeft(currentIndex === 0);
         setIsMaxSlideRight(slideElements.length === currentIndex+1);
-        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(["click"], (slide: { index: any; },e: any) =>{
         splide.go(slide.index);
-        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.mount();
 
-      setCurrentSlideName(slides[splide.index][1]);
       return () => {
         splide.destroy();
       }
@@ -121,17 +115,18 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
               {
                 slides.map((slide, index)=>(
                   <li key={index} className="splide__slide flex items-center">
-                    <div id="slide-card" className="splide__slide__container bg-slate-600 flex justify-center">
-                      <img src={slide[0]}></img>
-                      <div className="absolute flex items-center justify-center text-sm font-bold text-coral-pink">
+                    <div className="relative flex flex-col items-center py-10">
+                      <div id="slide-card" className="splide__slide__container bg-slate-600 flex justify-center">
+                        <img src={slide[0]}></img>
+                      </div>
+                      <div className="absolute flex items-center -bottom-1 justify-center text-md font-bold text-coral-pink px-3">
                         {slide[1]}
                       </div>
                     </div>
-                    
                   </li>
                 ))
               }
-            </ul>
+            </ul> 
           </div>
 
           <div id="slidedown" className="h-[30px] w-[30px]">
