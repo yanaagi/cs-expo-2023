@@ -45,6 +45,7 @@ export default function RootLayout({
         ></script>
         
         {/* SplideJS */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"></link>
         <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" async/>
       </head>
       <body>
