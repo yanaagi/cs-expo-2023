@@ -131,7 +131,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
                   <hr className="w-full h-px border-0 dark:bg-gray-700 ml-7"/>
                 </div>
             </div>
-            <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center justify-center">
+            <div className="flex flex-col w-full h-full bg-timberwolf mb-10 ">
               <GallerySlider
                 slides={galleryPaths}
               />
