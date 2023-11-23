@@ -7,7 +7,7 @@ interface ButtonComponentProps {
 
 const ButtonComponent: React.FC<ButtonComponentProps> = ({ currentButton, changeButton }) => {
   return (
-    <div className="flex space-x-2 mt-1 ml-6 sm:ml-28 sm:space-x-3">
+    <div className="flex space-x-2 mt-1 ml-6 sm:ml-96 sm:space-x-3">
       <div className="flex space-x-1 sm:space-x-2">
         <div
           key={1}
