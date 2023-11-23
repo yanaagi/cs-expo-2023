@@ -174,7 +174,7 @@ const defaultMenu = () => {
                     )}
                </div>
 
-               <Link href="/progress" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
+               <Link href="/partners" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
                     Partners {/** /partners */}
                </Link>
           </>

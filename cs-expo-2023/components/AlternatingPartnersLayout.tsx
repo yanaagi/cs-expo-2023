@@ -1,5 +1,6 @@
-import React from 'react';
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { useClient } from 'next/client';
 
 interface PartnersLayoutProps {
   partner: {
@@ -104,26 +105,39 @@ const PartnersRightLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
     
     
 };
-
 interface AlternatingPartnersLayoutProps {
-  partners: Array<any>; // Adjust the type if needed
+  partners: Array<any>;
 }
 
 const AlternatingPartnersLayout: React.FC<AlternatingPartnersLayoutProps> = ({ partners }) => {
-  const alternatingPartners = [];
+  // Mark the component as a client component
+  useClient();
 
-  for (let i = 0; i < partners.length; i++) {
-    if (((i+1)%2)==1) {
-      alternatingPartners.push(
-        <PartnersLeftLayout key={i} partner={partners[i]} />
-      );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const alternatingPartners = partners.map((partner, index) => {
+    if (isMobile) {
+      return <PartnersRightLayout key={index} partner={partner} />;
+    } else {
+      if ((index + 1) % 2 === 1) {
+        return <PartnersLeftLayout key={index} partner={partner} />;
+      } else {
+        return <PartnersRightLayout key={index} partner={partner} />;
+      }
     }
-    else {
-      alternatingPartners.push(
-        <PartnersRightLayout key={i} partner={partners[i]} />
-      );
-    }
-  }
+  });
 
   return <>{alternatingPartners}</>;
 };
