@@ -15,15 +15,18 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   }) => {
     const [isMaxSlideLeft, setIsMaxSlideLeft] = useState(true);
     const [isMaxSlideRight, setIsMaxSlideRight] = useState(false);
+    const [showLargeImage, setShowLargeImage] = useState(false);
+    const [largerImagePath, setLargerImagePath] = useState("");
+    const [currentSlideName, setCurrentSlideName] = useState("");
 
     const splideOptions: Options = {
       type: 'slide',
       arrows: false,
+      // padding: "3rem",
       perPage  : 2,
       focus    : 'center',
       trimSpace: false,
       gap: 20,
-      autoHeight:true,
       pagination:true,
       paginationDirection: 'ltr',
       classes: {
@@ -39,6 +42,26 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       },
     };
 
+    const imgPreviewOutsideClickHandler = () => {
+      if (showLargeImage) {
+        setShowLargeImage(false);
+      }
+    }
+
+    useEffect(() => {
+      const handleImgPreviewKeyDown = (event: { key: string; }) => {
+        if (showLargeImage && event.key === 'Escape') {
+          setShowLargeImage(false);
+        }
+      }
+
+      document.addEventListener('keydown', handleImgPreviewKeyDown);
+
+      return() => {
+        document.removeEventListener('keydown', handleImgPreviewKeyDown)
+      }
+    });
+
     useEffect(() => {
       const splide = new Splide('#splide',splideOptions);
       const slideLeft = document.getElementById('slideup');
@@ -46,10 +69,12 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       
       slideLeft?.addEventListener("click", () => {
         splide.go('-1');
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       slideRight?.addEventListener("click", () => {
         splide.go('+1');
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(['pagination:mounted',"mounted", "move"], () => {
@@ -84,14 +109,23 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         
         setIsMaxSlideLeft(currentIndex === 0);
         setIsMaxSlideRight(slideElements.length === currentIndex+1);
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(["click"], (slide: { index: any; },e: any) =>{
-        splide.go(slide.index);
+        const index = slide.index;
+        if (splide.index === index) {
+          setLargerImagePath(slides[index][0]);
+          setShowLargeImage(true);
+        } 
+        else {
+          splide.go(slide.index);
+          setCurrentSlideName(slides[slide.index][1]);
+        }
       });
   
       splide.mount();
-
+      setCurrentSlideName(slides[splide.index][1]);
       return () => {
         splide.destroy();
       }
@@ -141,6 +175,17 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
           </ul>
         </div>
       </div>
+
+      {showLargeImage && (
+        <div className="fixed w-full h-full flex top-[0] left-[0] z-[100] items-center justify-center bg-slate-950 bg-opacity-90" onClick={imgPreviewOutsideClickHandler}>
+          <div className="relative flex w-3/4 h-full justify-center"> 
+            <div className="absolute text-coral-pink text-xl font-bold pt-5">
+              {currentSlideName}
+            </div>
+            <img src={largerImagePath} className="object-contain" alt="Selected Image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
