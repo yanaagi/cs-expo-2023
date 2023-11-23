@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectArticle from '../../../components/ProjectArticle'
 import GroupsData from "../../../thesis-projects.json"
-import GroupPictures from "../../../group-pictures.json"
 
 interface GroupProps {
   params: {
@@ -24,7 +23,7 @@ const Page: React.FC<GroupProps> = ({params}) => {
         category={groupData?.category} 
         posterFilePath={groupData?.posterFilePath} 
         AVPLink={groupData?.AVPLink} 
-        galleryDirectory={groupData?.galleryDirectory}     
+        groupPicturesCount={groupData?.groupPicturesCount}     
       />
     </main>
   );

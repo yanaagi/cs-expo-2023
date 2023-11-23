@@ -7,7 +7,7 @@ import Splide, {Options, PaginationItem } from '@splidejs/splide';
 
 
 interface GallerySliderProps {
-  slides: string[];
+  slides: string[][];
 }
 
 const GallerySlider: React.FC<GallerySliderProps> = ({
@@ -15,6 +15,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   }) => {
     const [isMaxSlideLeft, setIsMaxSlideLeft] = useState(true);
     const [isMaxSlideRight, setIsMaxSlideRight] = useState(false);
+    const [currentSlideName, setCurrentSlideName] = useState("");
 
     const splideOptions: Options = {
       type: 'slide',
@@ -23,6 +24,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       focus    : 'center',
       trimSpace: false,
       gap: 20,
+      autoHeight:true,
       pagination:true,
       paginationDirection: 'ltr',
       classes: {
@@ -32,9 +34,6 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       direction: 'ltr',
       mediaQuery: 'max',
       breakpoints: {
-        420: {
-          width: "210px",
-        },
         640: {
           perPage:1
         }
@@ -43,15 +42,17 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
 
     useEffect(() => {
       const splide = new Splide('#splide',splideOptions);
-      const slideUp = document.getElementById('slideup');
-      const slideDown = document.getElementById('slidedown');
+      const slideLeft = document.getElementById('slideup');
+      const slideRight = document.getElementById('slidedown');
       
-      slideUp?.addEventListener("click", () => {
+      slideLeft?.addEventListener("click", () => {
         splide.go('-1');
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
-      slideDown?.addEventListener("click", () => {
+      slideRight?.addEventListener("click", () => {
         splide.go('+1');
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(['pagination:mounted',"mounted", "move"], () => {
@@ -86,14 +87,17 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
         
         setIsMaxSlideLeft(currentIndex === 0);
         setIsMaxSlideRight(slideElements.length === currentIndex+1);
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.on(["click"], (slide: { index: any; },e: any) =>{
         splide.go(slide.index);
+        setCurrentSlideName(slides[splide.index][1]);
       });
   
       splide.mount();
 
+      setCurrentSlideName(slides[splide.index][1]);
       return () => {
         splide.destroy();
       }
@@ -101,9 +105,10 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
 
   return (
     <div className="flex flex-row items-center justify-center w-full h-full">
-                
-      {/* <div id="splide" className="splide overflow-hidden w-[120px] h-[300px] max-sm:h-[100px] max-sm:w-[100px]"> */}
-      <div id="splide" className="splide flex flex-col h-11/12">
+      <div id="splide" className="splide flex flex-col h-11/12 items-center justify-center">
+        {/* <div className="text-xl font-bold text-coral-pink pb-2">
+          {currentSlideName}
+        </div> */}
         <div className="flex flex-row items-center">
           <div id="slideup" className=" s-full h-[30px] w-[30px]">
             <button className={`flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold ${isMaxSlideLeft && "invisible"}`}>
@@ -115,10 +120,14 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
             <ul className="splide__list">
               {
                 slides.map((slide, index)=>(
-                  <li key={index} className="splide__slide grid">
-                    <div id="slide-card" className="grid bg-slate-600 items-center">
-                      <img src={slide}></img>
+                  <li key={index} className="splide__slide flex items-center">
+                    <div id="slide-card" className="splide__slide__container bg-slate-600 flex justify-center">
+                      <img src={slide[0]}></img>
+                      <div className="absolute flex items-center justify-center text-sm font-bold text-coral-pink">
+                        {slide[1]}
+                      </div>
                     </div>
+                    
                   </li>
                 ))
               }
@@ -137,9 +146,9 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
           </ul>
         </div>
       </div>
-
     </div>
   );
 };
+
 
 export default GallerySlider;

@@ -15,7 +15,7 @@ interface ProjectArticleProps {
   category: string | undefined;
   posterFilePath: string | undefined;
   AVPLink: string | undefined;
-  galleryDirectory: string | undefined;
+  groupPicturesCount: number[];
 }
 
 const ProjectArticle: React.FC<ProjectArticleProps> = ({
@@ -27,7 +27,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   category,
   posterFilePath,
   AVPLink,
-  galleryDirectory
+  groupPicturesCount
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
   const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
@@ -36,11 +36,20 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
     setReadMoreState(!isReadMore);
   };
 
-  // let galleryPicturesUrl:string[]=[];
-  // for (let index = members!.length*3+3; index >= 13; index--) {
-  //   galleryPicturesUrl.push("/group-images/"+galleryDirectory+"/"+(index)+".jpg");
-  // }
-  
+  let galleryPaths:string[][]=[];
+
+  // group picture paths
+  for (let index = 0; index < (groupPicturesCount[0]); index++) {
+    galleryPaths.push(["/group-images/"+groupname+"/"+(index+1)+".jpg",""]);
+  }
+  // individual picture paths
+  let tmp = groupPicturesCount[0]+1; 
+  for (let i = 1; i < groupPicturesCount.length; i++) {
+    for (let j = 0; j < groupPicturesCount[i]; j++,tmp++) {
+      galleryPaths.push(["/group-images/"+groupname+"/"+(tmp)+".jpg",members!==undefined?members[i-1]:""]);
+    }
+  }
+
   return (
     <div className="flex flex-row  max-lg:flex-col max-md:flex-col max-sm:flex-col w-screen max-w-full">
       <div className="flex flex-col w-full pt-24">
@@ -124,22 +133,7 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
             </div>
             <div className="flex flex-row max-sm:flex-col h-full bg-timberwolf gap-10 max-sm:gap-2 mb-10 items-center justify-center">
               <GallerySlider
-                slides={
-                  [
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  "/nlp/stark.png",
-                  ]
-                }
+                slides={galleryPaths}
               />
             </div>
           </div>
