@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { useClient } from 'next/client';
+import { useClient } from 'next/react-dev-overlay';
+
 
 interface PartnersLayoutProps {
   partner: {
@@ -105,27 +106,29 @@ const PartnersRightLayout: React.FC<PartnersLayoutProps> = ({ partner }) => {
     
     
 };
+
+const useWindowSize = () => {
+  const [size, setSize] = useState([0, 0]);
+
+  useEffect(() => {
+    const updateSize = () => {
+      setSize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  return size;
+};
+
 interface AlternatingPartnersLayoutProps {
   partners: Array<any>;
 }
 
 const AlternatingPartnersLayout: React.FC<AlternatingPartnersLayoutProps> = ({ partners }) => {
-  // Mark the component as a client component
-  useClient();
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const [width] = useWindowSize();
+  const isMobile = width < 768;
 
   const alternatingPartners = partners.map((partner, index) => {
     if (isMobile) {
