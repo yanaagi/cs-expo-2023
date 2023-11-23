@@ -4,11 +4,11 @@ import Carousel from "@/components/HallOfFameCarousel";
 
 const HallOfFame = () => {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="pt-24 sm:flex sm:flex-col sm:items-center">
             <ProjectsHeader
                 headerText="HALL OF FAME"
                 subheaderText="
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nesciunt voluptatum in, minus quis eos placeat dolorum repellendus rem sint, ex excepturi accusamus."
+                Excellence must not only be achieved, but also rewarded with recognition. The following are the standouts of the CS EXPO 2023 V2.0, acknowledged for their relentless pursuit of knowledge through exemplary research and industry-ready technical skills."
             />
 
             {/* Overall Best Thesis */}
@@ -38,8 +38,7 @@ const HallOfFame = () => {
                         thesis: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
                         link: "/",
                     },
-                ]}
-                perView={2} // Number of slides per view(Don't change this)
+                ]}  
                 id="carousel-overall-best-thesis" // ID of the carousel
                 carouselNumber={1} // Page number of the carousel
                 carouselUp="hidden" // Hide/Show the up arrow (options: "hidden", "")
@@ -75,8 +74,7 @@ const HallOfFame = () => {
                         thesis: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
                         link: "/",
                     },
-                ]}
-                perView={2} // Number of slides per view(Don't change this)
+                ]}  
                 id="carousel-innovative-award" // ID of the carousel
                 carouselNumber={2} // Page number of the carousel
                 carouselUp="" // Hide/Show the up arrow (options: "hidden", "")

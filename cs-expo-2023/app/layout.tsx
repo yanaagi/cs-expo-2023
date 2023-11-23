@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "CS Expo 2023 2.0",
   description: "", //to follow
 };
@@ -22,15 +22,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
         />
 
-        {/* GlideJS's two CDN (both required) */}
+        {/* GlideJS's CDN */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
-        />
-
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
         />
 
         <script
@@ -50,7 +45,8 @@ export default function RootLayout({
         ></script>
         
         {/* SplideJS */}
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"></link>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" async/>
       </head>
       <body>
         <NavBar />

@@ -1,6 +1,7 @@
 {
     "speakers": [
       {
+<<<<<<< HEAD
         "name": "SPEAKER 1",
         "photoNumber": "Photo 1",
         "profession": "Software Engineer",
@@ -64,6 +65,34 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
         "photo": ""
         
+=======
+        "name": "Kenneth L. Molina",
+        "profession": "Lead Data Scientist",
+        "intOrExt": "KEYNOTE SPEAKER",
+        "description": "Data-Driven and result-oriented consulting professional with over ten (10) years of experience in implementing technology and operational improvement solutions ni the Telcommunication, Banking and Finance induestries, in a global context.",
+        "photo": "http://drive.google.com/uc?export=view&id=1Zc-FmwrTI_O8k67vqRld9U6va4Dejnfk"
+      },
+      {
+        "name": "Ellen Solosad",
+        "profession": "Software Analyst",
+        "intOrExt": "RESOURCE SPEAKER",
+        "description": "Ellen has more than 20 years of experience in managing and overseeing complex Information Technology, Network, and Cyber Security Projects. She is a Portfolio, Program, and Project Management Practitioner who leads project strategy, planning, implementation, and operationalization. She is Assistant Vice President and PLDT-SMART Deputy CISO, reporting directly to the PLDT Group CISO. As Deputy CISO, she supports the Group's Chief Information Security Officer (CISO) in establishing and communicating the organization's cyber security vision and strategy. These efforts are aligned with organizational priorities, enable and facilitate business objectives, and ensure stakeholder buy-in.",
+        "photo": "http://drive.google.com/uc?export=view&id="
+      },
+      {
+        "name": "Sherwin Pelayo",
+        "profession": "Executive Director",
+        "intOrExt": "KEYNOTE SPEAKER",
+        "description": "Sherwin Pelayo is the Executive Director and a founding board member of the Analytics Association of the Philippines which is the country’s National Industry Board for Analytics and Artificial Intelligence. As Executive Director, he executes AAP’s nationwide programs in, among others, education, labor market research, and policies and standards, in support of AAP’s mission of building a healthy and vibrant Philippines Analytics and Artificial Intelligence sector through the forging of relations of trust with the government, academic and learning institutions, and the private sector. He continuously shares this advocacy to learners of Analytics most notably with DOST’s Project SPARTA and the University of Asia and the Pacific’s Master’s in Applied Business Analytics program.",
+        "photo": "http://drive.google.com/uc?export=view&id=1m12HXwrl1xAkJOZbi7wo2rX38ClCiMfo"
+      },
+      {
+        "name": "Coline Christie",
+        "profession": "Chairman",
+        "intOrExt": "KEYNOTE SPEAKER",
+        "description": "Colin Christie is an entrepreneur, global connector, educator, and a frequent speaker on digital topics. He is the Chairman and CTO of Navix Health Inc., developer of an AI-powered platform for behavioral health. Colin was the Founding President of the  Analytics & Artificial Intelligence Association of the Philippines (AAP) and serves as Chair of its Advisory Committee.  He is the Executive Director of Global Chamber® Manila. He was a co-founder and Trustee of the Health Information Management Association of the Philippines (HIMAP). Colin is active on private and public corporate boards.  He began his career in the semiconductor industry in California’s Silicon Valley and holds a Bachelor of Science Degree in Chemical Engineering from the University of California Berkeley.",
+        "photo": "http://drive.google.com/uc?export=view&id=1TD4tmGhw66pLConF7viOcRPRh_ADIYa9"
+>>>>>>> f675e18bcc7bff0dc5d605c99d8f0019755b0804
       }
     ]
   }
