@@ -22,7 +22,6 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
     const splideOptions: Options = {
       type: 'slide',
       arrows: false,
-      // padding: "3rem",
       perPage  : 2,
       focus    : 'center',
       trimSpace: false,
@@ -42,7 +41,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       },
     };
 
-    const imgPreviewOutsideClickHandler = () => {
+    const imgPreviewClickHandler = () => {
       if (showLargeImage) {
         setShowLargeImage(false);
       }
@@ -134,9 +133,6 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
   return (
     <div className="flex flex-row items-center justify-center w-full h-full">
       <div id="splide" className="splide flex flex-col h-11/12 items-center justify-center">
-        {/* <div className="text-xl font-bold text-coral-pink pb-2">
-          {currentSlideName}
-        </div> */}
         <div className="flex flex-row items-center">
           <div id="slideup" className=" s-full h-[30px] w-[30px]">
             <button className={`flex items-top justify-center text-coral-pink cursor-pointer text-3xl font-bold ${isMaxSlideLeft && "invisible"}`}>
@@ -177,7 +173,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
       </div>
 
       {showLargeImage && (
-        <div className="fixed w-full h-full flex top-[0] left-[0] z-[100] items-center justify-center bg-slate-950 bg-opacity-90" onClick={imgPreviewOutsideClickHandler}>
+        <div className="fixed w-full h-full flex top-[0] left-[0] z-[100] items-center justify-center bg-slate-950 bg-opacity-90" onClick={imgPreviewClickHandler}>
           <div className="relative flex w-3/4 h-full justify-center"> 
             <div className="absolute text-coral-pink text-xl font-bold pt-5">
               {currentSlideName}
