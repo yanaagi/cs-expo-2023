@@ -7,32 +7,24 @@ interface PartnerIconProps {
   }
 }
 
-const PartnerIcon: React.FC<PartnerIconProps> = ({ partner }) => {
-  const backgroundImageStyle = partner.imagePath
-    ? { backgroundImage: `url(${partner.imagePath})`, backgroundSize: 'cover' }
-    : undefined;
-  return (
-    <div>
-      {partner.imagePath && (
-        <div
-          className="flex-shrink-0 w-[170px] h-[170px] bg-blue-500 rounded-full ml-3"
-          style={backgroundImageStyle}
-        />
-      )}
-    </div>
-  );
-}
-
 interface PartnersIconLayoutProps {
   partners: Array<any>;
 }
 const PartnerIconsLayout: React.FC<PartnersIconLayoutProps> = ({ partners }) => {
   const partnerIcons: React.ReactElement[] = [];
 
-  partners.forEach((partner,index) => {
-    partnerIcons.push(<PartnerIcon key={index} partner={partner}/>);
-  });
-  return <>{partnerIcons}</>;
+  return (
+    <div className="grid grid-cols-7 max-2xl:grid-cols-5 max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1  h-full w-full items-center justify-center place-items-center">
+      {
+        partners.map((partner,index) => (
+          // <div key={index} className="w-[1/2] h-1/2 rounded-full bg-slate-800 "> 
+          <div key={index} className="flex h-48 w-48 rounded-full bg-slate-800"> 
+            <img src={partner.imagePath} className="rounded-full"></img>
+          </div>
+        ))
+      }
+    </div>
+  )
 } 
 
 export default PartnerIconsLayout;
