@@ -15,7 +15,7 @@ interface ProjectArticleProps {
   category: string | undefined;
   posterFilePath: string | undefined;
   AVPLink: string | undefined;
-  groupPicturesCount: number[];
+  groupPicturesCount: number[] | undefined;
 }
 
 const ProjectArticle: React.FC<ProjectArticleProps> = ({
@@ -39,13 +39,13 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   let galleryPaths:string[][]=[];
 
   // group picture paths
-  for (let index = 0; index < (groupPicturesCount[0]); index++) {
+  for (let index = 0; index < (groupPicturesCount!==undefined?groupPicturesCount[0]:0); index++) {
     galleryPaths.push(["/group-images/"+groupname+"/"+(index+1)+".jpg",""]);
   }
   // individual picture paths
-  let tmp = groupPicturesCount[0]+1; 
-  for (let i = 1; i < groupPicturesCount.length; i++) {
-    for (let j = 0; j < groupPicturesCount[i]; j++,tmp++) {
+  let tmp = (groupPicturesCount!==undefined?groupPicturesCount[0]+1:0); 
+  for (let i = 1; i < (groupPicturesCount!==undefined?groupPicturesCount.length:0); i++) {
+    for (let j = 0; j < (groupPicturesCount!==undefined?groupPicturesCount[i]:0); j++,tmp++) {
       galleryPaths.push(["/group-images/"+groupname+"/"+(tmp)+".jpg",members!==undefined?members[i-1]:""]);
     }
   }
