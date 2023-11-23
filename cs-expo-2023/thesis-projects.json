@@ -11,8 +11,9 @@
             "Evangelista, Erica Francia G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/adorables.png",
+        "AVPLink": "https://drive.google.com/file/d/1QPj0XjRm_lqWDkPiOwanLXO1kVOUQskg/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     },
     "AiM": {
         "groupname": "Aim",
@@ -26,8 +27,9 @@
             "Jan Miguel A. Pinlac"
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/aim.png",
+        "AVPLink": "https://drive.google.com/file/d/1vK5J6w24ncX65UqzTDmSYehr2QWSM1uL/preview",
+        "groupPicturesCount": [4,3,3,3,3]
     },
     "Array-Co": {
         "groupname": "Array Co",
@@ -42,8 +44,9 @@
             "Yap, John Angelo B."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/arrayco.png",
+        "AVPLink": "https://drive.google.com/file/d/1KZ6sRZaOgkFTOa5j8E89X7cckK2B_j8Y/preview",
+        "groupPicturesCount": [2,6,3,3,3,3]
     },
     "Codebebs": {
         "groupname": "Codebebs",
@@ -58,11 +61,12 @@
             "Paul Andre A. Gabriel"
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/codebebs.png",
+        "AVPLink": "https://drive.google.com/file/d/1MKOPu9cs_AzTCYLvsK3nT0fYhaRNHS9y/preview",
+        "groupPicturesCount": [3,2,3,3,4,3]
     },
     "DEoS": {
-        "groupname": "DEoS",
+        "groupname": "Deos",
         "thesisTitle": "A BROWSER EXTENSION FOR IDENTIFYING RELEVANT PRODUCT REVIEWS ON ONLINE SHOPPING PLATFORMS USING IMAGE AND NATURAL LANGUAGE PROCESSING ALGORITHMS",
         "abstract": "The study's aims to create a web tool designed to help general users  navigate through the reviews on the e-commerce website and help  them navigate relevant product reviews to the irrelevant ones. This  tool will help in giving users information on the relevancy of the  reviews that are displayed on e-commerce websites with the aim of  making the shopping experience easier and more efficient.  Convenient sampling was utilized and was conducted with 30  respondents gathered from different age brackets including Gen Z  composed of ages 18-24 mostly teenagers, Millennials ages 25-40,  Gen X, Merchants & CS/IT Professionals that were part of the  respondents who answered the technical and nontechnical  questionnaire based from the ISO 25010 standard, ensuring that  the respondents were knowledgeable in using e-commerce  platforms. Data from the e-commerce website was gathered using  Selenium automation to extract data from the testing environment  and processing it with Cross-correlation Template Matching  algorithm for images and Multinomial Naive Bayes algorithm for  text sentiment analysis, combining the results using a weighted  average with weights 50/50 for both algorithms. Although the  results were similar to simple mean, weighted mean was chosen for  easier manipulation of values during testing. The results were  determined by a 4-point likert-type rating scale with proper colors  for easier understanding: 76%-100% for Highly Relevant (Darker  Green), 51%-75% for Relevant (Light Green), 26%-50% for  Slightly Relevant (Orange), and 0%-25% for Irrelevant (Red)  results. ",
         "summary": "Summary3",
@@ -73,11 +77,12 @@
             "John Felix M. Agda"
         ],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/deos.png",
+        "AVPLink": "https://drive.google.com/file/d/13yYbBI7J0ghzBcqiB3UOVHf3u70nwE9Y/preview",
+        "groupPicturesCount": [3,3,3,7,4]
     },
     "Engeenz": {
-        "groupname": "Engeenaz",
+        "groupname": "Engeenz",
         "thesisTitle": "Recognizance: An Instagram-Based Recommender System using Naïve Bayes Classifier with TensorFlow for T-Cup-Zone in the City of Manila",
         "abstract": "Recognizance is an Instagram-based recommender system designed to address the challenges faced by T-Cup-Zone, a small food and milk tea business in Manila. This research focuses on developing a recommendation system using Naïve Bayes Classifier and Decision Tree to help them in expanding their business, identifying suitable locations for expansion, and enhancing visibility by suggesting potential influencers for product promotion. Recognizance aims to differentiate itself from traditional practices by leveraging Instagram as a platform for generating recommendations. The FURPS software quality model is utilized as the development and evaluation approach. A total of 50 respondents, consisting of CS/IT students from FEU Tech, professionals, and small business owners within Manila, evaluated the application. The assessment provided an average weighted mean of 4.5, indicating a high level of satisfaction. For users, Recognizance offers a valuable tool for small businesses aiming to enhance their marketing strategies and boost their competitiveness in the market. The proponents suggest that future researchers explore alternative social media platforms for data scraping to access a broader range of data sources, improving data quality and diversity. Additionally, the proponents recommend expanding the recommender system's categories to support a wider variety of small businesses. ",
         "summary": "Summary3",
@@ -89,8 +94,9 @@
             "Gerald Z. Gueco"
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/engeenz.png",
+        "AVPLink": "https://drive.google.com/file/d/1elwQr-RI6sfMFjoA29pBj8KkLv7m9Ktd/preview",
+        "groupPicturesCount": [3,3,3,3,3,3]
     },
     "Hello-World": {
         "groupname": "Hello World",
@@ -104,12 +110,13 @@
             "Valerio, Andre Martee G."
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/helloworld.png",
+        "AVPLink": "https://drive.google.com/file/d/1Ap5HsAQuSDjvPxs891_Vo6nqQdweW2MT/preview",
+        "groupPicturesCount": [3,4,3,3,3]
     },
     "INNOV8": {
-        "groupname": "INNOV8",
-        "thesisTitle": "Name3",
+        "groupname": "Innov8",
+        "thesisTitle": "Indoor Air Quality Monitoring and Recommendation System",
         "abstract": "An Android-based mobile application called the Indoor Air Quality  Monitoring and Recommendation System (AIRZEN) can help the  FEU Tech’s Facilities Office (FO) and general Indoor spaces in  assessing the Air Quality inside indoor spaces. This system is a tool  used to monitor and check the Air Quality inside Indoor spaces as  well as give recommendations to help mitigate the effects of bad  Indoor Air Quality. The KNN algorithm was utilized for the  prediction of the AQI value and classification of  Recommendations. To determine whether the system works as  intended, testing was administered together with a survey  participated by 50 respondents consisting of professionals from the  IT/CS/IAQ Industry, IT/CS/CPE students, IT/CS Faculty, and  Office workers. This capstone project’s output received an Above  Average rating of (4.56) in terms of Functionality, Reliability, and  Efficiency. Future researchers can make system improvements by  adding a Backup and Restore feature for times of data outage as  well as an Ios integration for a bigger range of users. An additional  Recommendation is also to add feedback from existing users inside  the application as well as a notification system that notifies users  while they are out of their homes. The proponents also recommend  the implementation of multiple monitoring device support for  bigger scalability. ",
         "summary": "Summary3",
         "members": [
@@ -120,8 +127,9 @@
             "Dela Cruz, Cyrill James G."
         ],
         "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/iot/innov8.jpg",
+        "AVPLink": "https://drive.google.com/file/d/1jI0Zk-jC1yFCbDa2lViqrq0ZrO3Qv0YJ/preview",
+        "groupPicturesCount": [3,3,4,3,4,3]
     },
     "Javangers": {
         "groupname": "Javangers",
@@ -135,8 +143,9 @@
             "Limyu, Alan Gabriel D.A."
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/javangers.png",
+        "AVPLink": "https://drive.google.com/file/d/1AvKnErfCDHLSjA_fl23odV-XfuJjn_cu/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     },
     "Midnight-Coders": {
         "groupname": "Midnight Coders",
@@ -150,8 +159,9 @@
             "Bucsit, Mark Wilson W."        
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/midnightcoders.png",
+        "AVPLink": "https://drive.google.com/file/d/1-PdvUB8mUwMF4m7oIjZwYWuHwB85eO04/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     },
     "Peaky-Blinders": {
         "groupname": "Peaky Blinders",
@@ -165,8 +175,9 @@
             "Sapnu, Dioshua D."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/peakyblinders.png",
+        "AVPLink": "https://drive.google.com/file/d/1YfCi3mrcoPHpHwxqPCzeJFKymnvvwwOq/preview",
+        "groupPicturesCount": [3,3,3,3,1]
     },
     "Quinta": {
         "groupname": "Quinta",
@@ -181,11 +192,12 @@
             "Sapida, Charles Christian D."            
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/quinta.jpg",
+        "AVPLink": "https://drive.google.com/file/d/1o4xQP7iULSTcVHWUKOfVtNKjAW_2JoUG/preview",
+        "groupPicturesCount": [5,5,4,3,3,3]
     },
     "return-to_sleep": {
-        "groupname": "return to_sleep",
+        "groupname": "Return to_sleep",
         "thesisTitle": "TomatoCare: A supply and demand forecasting support tool for tomatoes using ARIMA modeling.",
         "abstract": "The tomato industry plays a crucial role in the agricultural sector, necessitating accurate supply and demand forecasting to aid farmers and stakeholders in making informed decisions. This study aimed to design and develop TomatoCare, a forecasting system that leverages ARIMA (AutoRegressive Integrated Moving Average) modeling to provide reliable forecasts and valuable insights for effective resource allocation and market planning. The research followed a mixed-methods approach, combining various data collection methods such as interviews with Subject Matter Experts (SMEs), data scraping, and data mining from external sources, including the Department of Agriculture, Department of Trade and Industry, and Philippine Statistics Authority websites. These methods facilitated the collection of comprehensive and up-to-date data on tomato supply and demand.",
         "summary": "Summary3",
@@ -196,8 +208,9 @@
             "Ramoso, Zedric James D."  
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/returntosleep.png",
+        "AVPLink": "https://drive.google.com/file/d/1j9q44bbxFP8qRx01XJNpVcBD6ji1FyKI/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     },
     "Rob_lux": {
         "groupname": "Rob_lux",
@@ -211,11 +224,12 @@
             "Fragata, Mark Revin G."        
         ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/roblux.png",
+        "AVPLink": "https://drive.google.com/file/d/1AYxeW0t9jwUgscwaUpCEzZswtAlq9fjp/preview",
+        "groupPicturesCount": [3,3,4,3,3]
     },
     "SOFTIES": {
-        "groupname": "SOFTIES",
+        "groupname": "Softies",
         "thesisTitle": "PoseCheckr: Exercise Posture Correction Application Using Image Processing",
         "abstract": "Fitness activities are tremendously beneficial to personal health and fitness; yet, if performed incorrectly by the user, they can be unproductive and perhaps hazardous. Workout mistakes occur when the user fails to adopt proper form or stance. PoseCheckr was developed to help people monitor and track their form and posture when performing a specific exercise with the utilization of Image Processing through Convolutional Neural Networks and MoveNet, a pose estimation model. The application is able to track 17 key points of the body and make a judgment whether their form is proper or improper. If an improper form was detected, the application will give helpful feedback on how to improve their form. The application also stores the progress of the user. The application has been developed to be used by different kinds of people for their own advantages. It is mainly developed to be used by everyday citizens to avoid and prevent injuries while performing an exercise. To assess the application, the developers conducted a survey with 50 participants, including gym goers, instructors, professors, students, and experts . Within the range of categories provided by the developers, the respondents gave the program an average rating of 4.29 out of 5.0. This value is reflected as Satisfactory. The findings of this study and the developed software have significant implications in the field of fitness and Pose Estimation. For future studies, the developers recommended diversifying poses for various fitness levels, providing detailed pose explanations, collecting user feedback, and conducting long-term studies to enhance the inclusivity, safety, and effectiveness of pose exercises.",
         "summary": "Summary3",
@@ -226,8 +240,9 @@
             "Mazo, Alijah Ethan E."
         ],
         "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/health/softies.png",
+        "AVPLink": "https://drive.google.com/file/d/1285hI_OPFX3-AwXaYGtjob-Hpxals0Wd/preview",
+        "groupPicturesCount": [5,4,4,3,5]
     },
     "Softyware": {
         "groupname": "Softyware",
@@ -242,25 +257,28 @@
             "Andrada, Micko Alhwin T."
         ],
         "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/data-analytics/softyware.png",
+        "AVPLink": "https://drive.google.com/file/d/1geymhwOn-jNkYWz5gXrxM0WUokt2w6wA/preview",
+        "groupPicturesCount": [3,3,3,3,4,2]
     },
     "S.T.A.R.K.": {
-        "groupname": "S.T.A.R.K.",
+        "groupname": "Stark",
         "thesisTitle": "Video Content Analysis through Computer Vision and Natural Language Processing",
         "abstract": "Online education has gained widespread popularity due to its delivery of high-quality educational content, rich visual resources, and access to expert instructors. However, maintaining student engagement and comprehension in online classes remains a challenge. In response, we introduce a software that analyzes educational videos, designed to enhance students' understanding of these videos efficiently. We present Video Lens, a web application that leverages Natural Language Processing (NLP) and Computer Vision techniques, rooted in deep learning foundation models. It has four video analysis features: searching in video, transcription, summarization, and topic detection.\nWe have found in the evaluation, involving students and teaching staff, the potential for Video Lens as a valuable educational tool. As a result, Video Lens has allowed us to let students test a tool for those who would like to efficiently use their time and efforts in studying their courses accompanied by video materials. This efficiency allows teaching staff to allocate more time to prepare and understand the content of lecture videos beforehand. These findings emphasize its potential to enhance the learning experience when engaging with lecture videos.",
         "summary": "Summary3",
         "members": [
-            "Cajipe, Ralph Henrik I.", 
-            "Santos, Charles Andrew G.", 
-            "Español, Kyle G.", 
-            "Segundo Jr., Sally P."],
+          "Cajipe, Ralph Henrik I.", 
+          "Santos, Charles Andrew G.", 
+          "Español, Kyle G.", 
+          "Segundo Jr., Sally P.",
+          "Kyle Baltazar"],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/stark.png",
+        "AVPLink": "https://drive.google.com/file/d/18nOirihdg6jokZgvMMa0A13LtlcGDfy1/preview",
+        "groupPicturesCount": [4,4,3,3,3,4]
     },
     "TeaSis": {
-        "groupname": "TeaSis",
+        "groupname": "Teasis",
         "thesisTitle": "GameFace: Head Tracking and Facial Recognition and Detection as Inputs for Gaming using Haar Cascade and MediaPipe Framework",
         "abstract": "Video games have been around for a long time and have become a big part of people’s lives. The number of people that enjoy them are numerous; however, not everyone who enjoys them can actually play them due to physical limitations. This study aims to help people with disabilities, specifically those on the arms or hands, by providing them a new way to play games, specifically computer games, through the use of face detection, face recognition, and a face and head movement tracking system to control the video game. The program is made to be utilized in playing only simple games with at most seven controls, and can only input at maximum, two controls simultaneously. Special focus was given in making the program lightweight in order to be capable of real-time gameplay. The respondents for this study were sampled using the purposive sampling technique. The program was used by the respondents using computer vision and rated the program in accordance with ISO 25010. Their answers were obtained by utilizing surveys. On the other hand, the accuracy of the program was evaluated through alpha testing results utilizing the confusion matrix and real-world testing results. The results showed that the respondents strongly agree with the functional suitability, compatibility, and portability of the software, while they agree with the performance efficiency, usability, reliability, security, and maintainability of the software. Furthermore, the program yielded an average accuracy of 88% and an average F1 score of 0.86 or 86% in the alpha testing results, and an average accuracy of 89% for real world testing results. These results show that the program produced satisfactory results and can be used to play computer games hands-free.",
         "summary": "Summary3",
@@ -271,11 +289,12 @@
             "Contreras, John Dominic S."
         ],
         "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/imgproc-cv/teasis.png",
+        "AVPLink": "https://drive.google.com/file/d/1f1F5IyFr_t8aJGVlPHu8dLwfqZN-wt4q/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     },
     "TechniQ": {
-        "groupname": "TechniQ",
+        "groupname": "Techniq",
         "thesisTitle": "Digital Action Officer: A Recommendation System using Machine Learning for the Streamlining of Workflow in Public Assistance Offices",
         "abstract": "The availability of public services to meet the needs of each community is one of the most important aspects of a country. People who require government assistance submit requests for assistance through public assistance offices, however, the number of complaints and requests received by these offices has become disproportionate to the number of people processing them. To address this, the researchers proposed the development of an automated system that can assist employees in streamlining the workflow within public assistance offices, which can help enhance workplace efficiency and quicken the resolution of cases. The system uses the Multinomial Naive Bayes algorithm to extract relevant information from emails and classify them based on the training data, determining the appropriate agency for the email to be sent to. Emails received are initially processed and then stored in a database that can be easily edited and re-processed. During testing, the researchers conducted a trial using a testing dataset of 150 emails, which took three and a half minutes (3m30s) to classify and send emails to their appropriate agencies, which is a significant improvement compared to the manual system that is able to process 300-500 emails within a 3-day timeframe. The researchers surveyed 45 respondents comprising students, teachers, professionals, and public assistance officers to evaluate the application. The respondents rated the application an average of 4.6 out of 5.0 across the categories given by the developers which corresponds to a Satisfactory rating. For future studies, the researchers recommended for the program to accommodate more classifications, separate the nature of concern and agency in the classification, implement alternative algorithms, implement stronger security measures, and add filtering options.",
         "summary": "Summary2",
@@ -286,8 +305,9 @@
             "Alido, Rico Ray R."
         ],
         "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/nlp/techniq.png",
+        "AVPLink": "https://drive.google.com/file/d/19OZR5ZUlm2vlj6vgTTUmOR0yxJTJ4uoA/preview",
+        "groupPicturesCount": [5,3,4,3,5]
     },
     "Yaymiko": {
         "groupname": "Yaymiko",
@@ -301,8 +321,9 @@
         "Vicencio, Vernon GabrielAngelo A."
     ],
         "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
+        "posterFilePath": "/education/yaymiko.png",
+        "AVPLink": "https://drive.google.com/file/d/1kXsabLJ9iQg3yQOQeLr2dK-HzHXUwjAC/preview",
+        "groupPicturesCount": [3,3,3,3,3]
     }
   } 
   

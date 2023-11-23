@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NextPage } from "next";
 
 import CollectionOfProjectsHeader from '../../../components/CollectionOfProjectsHeader';
@@ -18,28 +18,25 @@ import GroupsData from '../../../thesis-projects.json';
     </ul> */}
 
 // Define a type for your data
-interface ThesisProjectData {
-  [key: string]: {
-    groupname: string;
-    thesisTitle: string;
-    abstract: string;
-    summary: string;
-    members: string[];
-    category: string;
-    posterFilePath: string;
-    AVPLink: string;
-  };
+interface CollectionOfProjectProps {
+  searchParams: {
+    filter:string;
+  }
 }
 
-const CollectionOfProjects: NextPage = () => {
+
+const CollectionOfProjects: NextPage<CollectionOfProjectProps> = (params: { searchParams: { filter: string; }; }) => {
+  
   return (
-    <main className="flex min-h-screen flex-col p-24">
-      <CollectionOfProjectsHeader 
-        headerText ="COLLECTION OF PROJECTS" 
-        subheaderText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic doloribus pariatur sapiente error iste, reiciendis, minima odit tenetur, rerum consequatur harum? Rerum molestiae fugit cupiditate pariatur corrupti, error quo quas."/>
-      <GroupCardLayout groupData={GroupsData}/>
+    <main className="">
+      <div className="flex flex-col justify-center items-center p-24">
+        <CollectionOfProjectsHeader 
+          headerText ="COLLECTION OF PROJECTS" 
+          subheaderText="Explore the culmination of the students' academic journey through their impactful thesis projects. Dive into this collection of projects — sorted below by category — which highlights the dedication, creativity, and skill of each thesis group, exemplifying the depth of knowledge these students bring to not only their academic pursuits, but also the advancement of society."/>
+        <GroupCardLayout groupData={GroupsData} initialFilter={params.searchParams.filter}/>
+      </div>
     </main>
   )
 }
 
-export default CollectionOfProjects
+export default  CollectionOfProjects;
