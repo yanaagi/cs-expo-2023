@@ -9,7 +9,7 @@ const CircularSidebar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleButtonClick = (buttonName) => {
+  const handleButtonClick = (buttonName: string) => {
     console.log(`Clicked on ${buttonName} Button`);
   
     const sectionElement = document.getElementById(buttonName.toLowerCase());

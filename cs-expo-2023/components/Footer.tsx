@@ -28,59 +28,72 @@ const Footer: React.FC = () => {
           <div className="md:justify-center w-full mx-auto flex px-6 py-4 max-sm:grid grid-cols-2 gap-2">
 
                <div className="flex flex-col">
-                    <Link href="/events/cs-expo">
-                    <span className="font-bold hover:text-coral-pink cursor-pointer">CS Expo</span>
+                    <Link href="/progress">
+                         {/*"/events/cs-expo"*/}
+                    <span className="font-bold hover:underline cursor-pointer">CS Expo</span>
                     </Link>
-                    <a href="/events/cs-expo#cs-expo-about">
-                    <span className="hover:text-coral-pink cursor-pointer">About</span>
+                    <a href="/progress">
+                         {/*"/events/cs-expo#cs-expo-about"*/}
+                    <span className="hover:underline cursor-pointer">About</span>
                     </a>
-                    <a href="/events/cs-expo#cs-expo-panelists">
-                    <span className="hover:text-coral-pink cursor-pointer">Panelists</span>
+                    <a href="/progress">
+                         {/*"/events/cs-expo#cs-expo-panelists"*/}
+                    <span className="hover:underline cursor-pointer">Panelists</span>
                     </a>
-                    <a href="/events/cs-expo#cs-expo-gallery">
-                    <span className="hover:text-coral-pink cursor-pointer">Gallery</span>
+                    <a href="/progress">
+                         {/*"/events/cs-expo#cs-expo-gallery"*/}
+                    <span className="hover:underline cursor-pointer">Gallery</span>
                     </a>
                </div>
 
                <div className="flex flex-col sm:pl-10">
-                    <Link href="/events/dev-day">
-                    <span className="font-bold hover:text-coral-pink cursor-pointer">Dev Day</span>
+                    <Link href="/progress">
+                         {/*"/events/dev-day"*/}
+                    <span className="font-bold hover:underline cursor-pointer">Dev Day</span>
                     </Link>
-                    <a href="/events/dev-day#dev-day-about">
-                    <span className="hover:text-coral-pink cursor-pointer">About</span>
+                    <a href="/progress">
+                         {/*"/events/dev-day#dev-day-about"*/}
+                    <span className="hover:underline cursor-pointer">About</span>
                     </a>
-                    <a href="/events/dev-day#dev-day-speakers">
-                    <span className="hover:text-coral-pink cursor-pointer">Speakers</span>
+                    <a href="/progress">
+                         {/*"/events/dev-day#dev-day-speakers"*/}
+                    <span className="hover:underline cursor-pointer">Speakers</span>
                     </a>
-                    <a href="/events/dev-day#dev-day-gallery">
-                    <span className="hover:text-coral-pink cursor-pointer">Gallery</span>
+                    <a href="/progress">
+                         {/*"/events/dev-day#dev-day-gallery"*/}
+                    <span className="hover:underline cursor-pointer">Gallery</span>
                     </a>
                </div>
 
                <div className="flex flex-col sm:pl-10">
                     <Link href="/projects">
-                    <span className="font-bold hover:text-coral-pink cursor-pointer">Projects</span>
+                    <span className="font-bold hover:underline cursor-pointer">Projects</span>
                     </Link>
-                    <a href="/projects/hall-of-fame">
-                    <span className="hover:text-coral-pink cursor-pointer">Hall of Fame</span>
+                    <a href="/progress">
+                         {/*"/projects/hall-of-fame"*/}
+                    <span className="hover:underline cursor-pointer">Hall of Fame</span>
                     </a>
                     <a href="/projects/collections-of-projects">
-                    <span className="hover:text-coral-pink cursor-pointer">Collection of Projects</span>
+                    <span className="hover:underline cursor-pointer">Collection of Projects</span>
                     </a>
                </div>
 
                <div className="flex flex-col pr-5 sm:pl-10">
-                    <Link href="/partners">
-                    <span className="font-bold hover:text-coral-pink cursor-pointer">Partners</span>
+                    <Link href="/progress">
+                         {/*"/partners"*/}
+                    <span className="font-bold hover:underline cursor-pointer">Partners</span>
                     </Link>
-                    <a href="/partners#partners-major">
-                    <span className="hover:text-coral-pink cursor-pointer">Major</span>
+                    <a href="/progress">
+                         {/*"/partners#partners-major"*/}
+                    <span className="hover:underline cursor-pointer">Major</span>
                     </a>
-                    <a href="/partners#partners-minor">
-                    <span className="hover:text-coral-pink cursor-pointer">Minor</span>
+                    <a href="/progress">
+                         {/*"/partners#partners-minor"*/}
+                    <span className="hover:underline cursor-pointer">Minor</span>
                     </a>
-                    <a href="/partners#partners-media">
-                    <span className="hover:text-coral-pink cursor-pointer">Media</span>
+                    <a href="/progress">
+                         {/*"/partners#partners-media"*/}
+                    <span className="hover:underline cursor-pointer">Media</span>
                     </a>
 
      

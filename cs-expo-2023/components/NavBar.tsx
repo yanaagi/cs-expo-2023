@@ -8,6 +8,24 @@ import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 
 const NavBar: React.FC = () => {
+
+     const useWindowSize = () => {
+          const [size, setSize] = useState([0, 0]);
+      
+          useEffect(() => {
+              const updateSize = () => {
+                  setSize([window.innerWidth, window.innerHeight]);
+              };
+              window.addEventListener('resize', updateSize);
+              updateSize();
+              return () => window.removeEventListener('resize', updateSize);
+          }, []);
+      
+          return size;
+      };
+      
+      const [width] = useWindowSize(); 
+      const isMobile = width < 768;
 const [showEventsDropdown, setShowEventsDropdown] = useState(false);
 const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
 const [showMobileEventsDropdown, setShowMobileEventsDropdown] = useState(false);
@@ -92,11 +110,16 @@ useEffect(() => {
      };
 }, [mobileMenuVisible]);
 
+const [menuOpen, setMenuOpen] = useState(false);
+const handleNav = () => {
+     setMenuOpen(!menuOpen);
+}
+
 const defaultMenu = () => {
      return (
           <>
                <div className="relative group">
-                    <button onClick={toggleEventsDropdown} className="flex items-center cursor-pointer font-medium hover:text-coral-pink">
+                    <button onClick={toggleEventsDropdown} className={`flex items-center cursor-pointer font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                          Events
 
                          <span className="pl-2">
@@ -105,28 +128,28 @@ const defaultMenu = () => {
                     </button>
                     
                     {showEventsDropdown && (
-                         <div ref={dropdownRef} className="absolute mt-2 bg-white border rounded-md text-left font-normal w-max">
+                         <div ref={dropdownRef} className="absolute mt-2 bg-white border rounded-md text-left">
                               <Link href="/events" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Overview
                               </Link>
                               
-                              <Link href="/events/dev-day" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Dev Day
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/events/cs-expo" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   CS Expo
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   CS Expo {/** /events/cs-expo */}
                               </Link>
 
-                              <Link href="/events/committees" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Committees
-                              </Link>
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Committees {/** /events/dev-day */}
+                              </Link> 
                          </div>
                     )}
                </div>
 
                <div className="relative group">
-                    <button onClick={toggleProjectsDropdown} className="flex items-center cursor-pointer ml-4 font-medium hover:text-coral-pink">
+                    <button onClick={toggleProjectsDropdown} className={`flex items-center cursor-pointer ml-4 hover:text-coral-pink font-medium ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                          Projects
 
                     <span className="pl-2">
@@ -140,26 +163,29 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/projects/hall-of-fame" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
-                                   Hall of Fame
+                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                                   Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
-                              <Link href="/projects/collections-of-projects" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                              <Link href={{pathname:"/projects/collections-of-projects", query:{filter:"All"}}}  className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Collections of Projects
                               </Link>
                          </div>
                     )}
                </div>
 
-               <Link href="/partners" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
-                    Partners
+               <Link href="/progress" className={`cursor-pointer mx-4 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
+                    Partners {/** /partners */}
                </Link>
           </>
      );};
 
-const mobileMenu = () => {
-     return (
-          <div className="mobile-menu flex flex-col px-6 py-3 items-start font-semibold text-timberwolf">
+     const mobileMenu = () => {
+          // Dynamic class for text color
+          const textColorClass = isNavbarAtTop ? 'text-black' : 'text-timberwolf';
+     
+          return (
+               <div className={`mobile-menu relative flex flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
                <div className="relative group">
                     <button onClick={toggleMobileEventsDropdown} className="flex items-center cursor-pointer hover:text-coral-pink">
                          Events
@@ -174,16 +200,16 @@ const mobileMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/events/dev-day" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Dev Day
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/events/cs-expo" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   CS Expo
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   CS Expo {/** /events/cs-expo */}
                               </Link>
 
-                              <Link href="/events/committees" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Committees
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Committees {/** /events/committees */}
                               </Link>
                          </div>
                     )}
@@ -203,50 +229,53 @@ const mobileMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/projects/hall-of-fame" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Hall of Fame
+                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                                   Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
                               <Link href="/projects/collections-of-projects" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
-                                   Collections of Projects
+                                   Collections of Projects 
                               </Link>
                          </div>
                     )}
                </div>
 
-               <Link href="/partners" className="cursor-pointer hover:text-coral-pink">
-                    Partners
+               <Link href="/progress" className="cursor-pointer hover:text-coral-pink">
+                    Partners {/** /partners */}
                </Link>
           </div>
      );
      };
 
      return (
-          <header ref={mobileNavbarRef} className={`w-full fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'h-auto' : 'bg-eerie-black'}`}>
-               <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
-                    <Link href="/">
-                         <Image
-                              src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
-                              alt="logo"
-                              width={117}
-                              height={85}
-                              className="object-contain"
-                         />
-                    </Link>
-
-                    <div className="cursor-pointer ml-auto flex" onClick={toggleMobileMenu}>
-                         {isNavbarAtTop ? (defaultMenu()) : (
-                              mobileMenuVisible ? (
-                                   <div className='text-coral-pink'><IoClose /></div>) : (
-                                        (!mobileMenuVisible && isNavbarAtTop) ? (<> {toggleMobileMenu()} {defaultMenu()} </>) : (
-                                        <div className='text-coral-pink'><FaBars /></div>)))
-                              }
-                    </div>
-               </nav>
-
-               {mobileMenuVisible && !isNavbarAtTop ? mobileMenu() : null}
+          <header ref={mobileNavbarRef} className={`w-screen fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
+              <nav className="w-screen mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
+                  <Link href="/">
+                      <Image
+                          src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
+                          alt="logo"
+                          width={117}
+                          height={85}
+                          className="object-contain"
+                      />
+                  </Link>
+  
+                  <div className="cursor-pointer ml-auto flex" onClick={isMobile ? toggleMobileMenu: defaultMenu}>
+                      {isMobile ? (
+                          mobileMenuVisible ? <div className='text-coral-pink'><IoClose /></div> : <div className='text-coral-pink'><FaBars /></div>
+                      ) : (
+                         isNavbarAtTop ? (defaultMenu()) : (
+                         mobileMenuVisible ? (
+                              <div className='text-coral-pink'><IoClose /></div>) : (
+                                   (!mobileMenuVisible && isNavbarAtTop) ? (<> {defaultMenu()} </>) : (
+                                   defaultMenu())))
+                      )}
+                  </div>
+              </nav>
+  
+              {((isMobile && mobileMenuVisible) || (mobileMenuVisible && !isNavbarAtTop)) ? mobileMenu() : null}
           </header>
-     );
-     };
-     
-     export default NavBar;
+      );
+  };
+  
+  export default NavBar;
