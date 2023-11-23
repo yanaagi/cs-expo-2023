@@ -177,7 +177,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({
 
       {showLargeImage && (
         <div className="fixed w-full h-full flex top-[0] left-[0] z-[666] items-center justify-center bg-slate-950 bg-opacity-90" onClick={imgPreviewClickHandler}>
-          <div className="relative flex w-3/4 h-full justify-center"> 
+          <div className="relative flex w-auto h-full justify-center"> 
             <div className="absolute text-coral-pink text-xl font-bold pt-5">
               {currentSlideName}
             </div>
