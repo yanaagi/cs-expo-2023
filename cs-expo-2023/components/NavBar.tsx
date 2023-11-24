@@ -119,7 +119,7 @@ const defaultMenu = () => {
      return (
           <>
                <div className="relative group">
-                    <button onClick={toggleEventsDropdown} className="flex items-center cursor-pointer font-medium hover:text-coral-pink hidden md:flex">
+                    <button onClick={toggleEventsDropdown} className={`flex items-center cursor-pointer font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                          Events
 
                          <span className="pl-2">
@@ -128,7 +128,7 @@ const defaultMenu = () => {
                     </button>
                     
                     {showEventsDropdown && (
-                         <div ref={dropdownRef} className="absolute mt-2 bg-white border rounded-md text-left font-normal w-max">
+                         <div ref={dropdownRef} className="absolute mt-2 bg-white border rounded-md text-left">
                               <Link href="/events" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Overview
                               </Link>
@@ -149,7 +149,7 @@ const defaultMenu = () => {
                </div>
 
                <div className="relative group">
-                    <button onClick={toggleProjectsDropdown} className="flex items-center cursor-pointer ml-4 font-medium hover:text-coral-pink hidden md:flex">
+                    <button onClick={toggleProjectsDropdown} className={`flex items-center cursor-pointer ml-4 hover:text-coral-pink font-medium ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                          Projects
 
                     <span className="pl-2">
@@ -174,7 +174,7 @@ const defaultMenu = () => {
                     )}
                </div>
 
-               <Link href="/progress" className="cursor-pointer ml-4 font-medium hover:text-coral-pink">
+               <Link href="/progress" className={`cursor-pointer mx-4 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                     Partners {/** /partners */}
                </Link>
           </>
@@ -248,27 +248,27 @@ const defaultMenu = () => {
      };
 
      return (
-          <header ref={mobileNavbarRef} className={`w-full relative fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
-              <nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
+          <header ref={mobileNavbarRef} className={`w-screen fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
+              <nav className="w-screen mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
                   <Link href="/">
                       <Image
                           src={isNavbarAtTop ? '/cs-expo-logo-black.png' : '/cs-expo-logo-white.png'}
                           alt="logo"
-                          width={117}
-                          height={85}
+                          width={isMobile ? 90 : 120}
+                          height={isMobile ? 60 : 80}
                           className="object-contain"
                       />
                   </Link>
   
-                  <div className="cursor-pointer ml-auto flex" onClick={toggleMobileMenu}>
+                  <div className="cursor-pointer ml-auto flex" onClick={isMobile ? toggleMobileMenu: defaultMenu}>
                       {isMobile ? (
                           mobileMenuVisible ? <div className='text-coral-pink'><IoClose /></div> : <div className='text-coral-pink'><FaBars /></div>
                       ) : (
                          isNavbarAtTop ? (defaultMenu()) : (
                          mobileMenuVisible ? (
                               <div className='text-coral-pink'><IoClose /></div>) : (
-                                   (!mobileMenuVisible && isNavbarAtTop) ? (<> {toggleMobileMenu()} {defaultMenu()} </>) : (
-                                   <div className='text-coral-pink'><FaBars /></div>)))
+                                   (!mobileMenuVisible && isNavbarAtTop) ? (<> {defaultMenu()} </>) : (
+                                   defaultMenu())))
                       )}
                   </div>
               </nav>

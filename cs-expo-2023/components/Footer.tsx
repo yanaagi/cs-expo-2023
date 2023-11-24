@@ -1,8 +1,27 @@
-import React from 'react';
+'use client'
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const useWindowSize = () => {
+  const [size, setSize] = useState([0, 0]);
+
+  useEffect(() => {
+    const updateSize = () => {
+      setSize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  return size;
+};
+
 const Footer: React.FC = () => {
+  const [width] = useWindowSize(); 
+  const isMobile = width < 768;
     return (
           <footer className="relative bottom-0 right-0 left-0 w-full bg-white text-black py-6">
 
@@ -85,8 +104,8 @@ const Footer: React.FC = () => {
                     <Image 
                          src="/cs-expo-logo-black.png" 
                          alt="Description of your image" 
-                         width={160} 
-                         height={120}
+                         width={isMobile ? 90 : 120}
+                         height={isMobile ? 60 : 80}
                     />
                </Link>
                </div>
@@ -97,8 +116,8 @@ const Footer: React.FC = () => {
                     <Image 
                          src="/cs-expo-logo-black.png" 
                          alt="Description of your image" 
-                         width={120} 
-                         height={80}
+                         width={isMobile ? 90 : 120}
+                         height={isMobile ? 60 : 80}
                     />
                </Link>
                </div>
