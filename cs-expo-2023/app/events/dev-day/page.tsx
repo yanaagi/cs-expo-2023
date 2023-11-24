@@ -6,9 +6,9 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import speakersData from "@/speakers.json";
+import panelistsData from '@/speakers.json'; 
 
-const EventsDevDay = () => {
+const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,13 +16,13 @@ const EventsDevDay = () => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakers = speakersData.speakers;
+    const speakers = panelistsData.speakers;
 
-    const speakerNames = speakers.map((speaker) => speaker.name);
-    const speakerProfession = speakers.map((speaker) => speaker.profession);
-    const intOrExt = speakers.map((speaker) => speaker.intOrExt);
-    const description = speakers.map((speakers) => speakers.description);
-    const photo = speakers.map((speakers) => speakers.photo);
+    const speakerNames = speakers.map(panelist => panelist.name);
+    const speakerProfession = speakers.map(panelist => panelist.profession);
+    const intOrExt = speakers.map(panelist => panelist.intOrExt);
+    const description = speakers.map(panelists => panelists.description);
+    const photo = speakers.map(panelists => panelists.photo);
 
     const changeSpeaker = (direction: string) => {
         if (direction === "above") {
@@ -41,19 +41,19 @@ const EventsDevDay = () => {
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
-                    customText="Experience the best in student innovation at CS EXPO 2023 V2.0. Join us for an exciting two-day showcase, featuring projects and meaningful talks from tech leaders."
+                    customText="Join us at DevDay, the first event of CS EXPO 2023 V2.0. Discover the tech world as experts talk about ideas, tips, and help students."
                 />
                 <ButtonComponent
                     currentButton={currentButton}
                     changeButton={changeButton}
                 />
-                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                    CS EXPO
+                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">
+                    DEV DAY
                 </h1>
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
-                    customText="The main event of CS EXPO 2023 V2.0 will showcase student projects over two days to a group of panelists composed of faculty members and industry professionals. Each thesis group will have a representative, and awards will be given for exceptional research and innovation. Beyond that, there will also be talks from tech leaders, fostering discussions on current tech trends."
-                    sampleText="SamplePhoto2"
+                    customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
+                    sampleText="Sample Photo"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
@@ -65,12 +65,12 @@ const EventsDevDay = () => {
                     panelOrSpeaker="SPEAKERS"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
-                {/* <div className="mx-4 lg:mx-11">
+                <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS CS EXPO
+                        PREVIOUS DEV DAY
                     </h1>
 
-                    
+{/*                     
                     <Carousel
                         title="2022"
                         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -97,11 +97,11 @@ const EventsDevDay = () => {
                             { backgroundColor: "var(--timberwolf)" },
                         ]}
                         id="carousel-2023"
-                    />
-                </div> */}
+                    /> */}
+                </div>
             </div>
         </main>
     );
 };
 
-export default EventsDevDay;
+export default EventsCSExpo;

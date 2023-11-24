@@ -2,14 +2,14 @@
     "panelists": [
       {
         "name": "Dr. Shaneth C. Ambat",
-        "profession": "",
+        "profession": "Computer Science Program Director",
         "intOrExt": "INTERNAL",
         "description": "Dr. Shaneth C. Ambat, the Computer Science Program Director at FEU Institute of Technology, boasts a robust academic background, including a Bachelor's and Master's in Computer Science from AMA University-Makati City, and a Ph.D. in Engineering majoring in Information Technology from Hannam University, South Korea. With over 25 years in academia and a decade as a program head and dean, she's significantly shaped curriculum delivery in various HEIs. Notable roles include being a founding Board of Trustees member for the Council of Deans of Information Technology Education – INC., NCR, and serving as a paper reviewer for national and international publications. Her career spans roles from faculty at Philippine Christian University to leadership positions at Cavite State University and St. Dominic College of Asia. Dr. Ambat's commitment to research and teaching aligns with her current role in overseeing 367 members as a Board of Trustees member for the Council of Deans for ITE-NCR, focusing on emerging trends in IT and computing.",
         "photo": "/csexpo-panelists/ambat.jpg"
       },
       {
         "name": "Ms. Beau Gray Habal",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Ms. Beau Gray Habal is a highly accomplished teacher with an impressive 19 years of experience in the field of education. Currently serving as a professor at FEU Institute of Technology, she has also taught at other universities locally and abroad. Ms. Beau's exceptional teaching skills and her dedication to providing her students with a quality education have made her a highly respected and sought-after teacher in the field of computer science.",
         "photo": "/csexpo-panelists/habal.jpg"
@@ -23,7 +23,7 @@
       },
       {
         "name": "Mr. Abraham T. Magpantay",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "A talented computer science professional and tech enthusiast, whose deep passion for exploring the latest advancements in technology is matched by his exceptional credentials. With a master's degree in computer science from the esteemed Ateneo de Manila University, his field of knowledge spans a range of areas, including computer vision, image processing, remote sensing, algorithms, and software engineering. Currently exercising his expertise as a faculty member and adviser for the Association for Computing Machinery (ACM) Student Chapter of FEU Tech.",
         "photo": "/csexpo-panelists/magpantay.jpg"
@@ -37,73 +37,59 @@
       },
       {
         "name": "Ms. Elisa V. Malasaga",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Ms. Elisa Villamor Malasaga a graduate of Bachelor of Science in Information Science and Bachelor of Science in Computer Science both at AMA University and has graduated with Master’s degree as a Master of Science in Computer Science at AMA University. Another Masteral course – Master in Business Administration graduated at EARIST and Academic units for Doctor of Philosophy in Human Resourse Management, She passed certification from IBM – IBM Certified Rapid Application Developer 7 and IBM Certified Database2, from Microsoft- Certified Microsoft Innovative Educator Program and from Project Management Institute certified – PMI - Project Management. ",
         "photo": "/csexpo-panelists/malasaga.jpeg"
       },
       {
         "name": "Mr. John Kenneth Andales",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Mr. Andales, a dedicated Software Engineering professional, recently joined FEU TECH as a professor after completing his Bachelor's Degree in Computer Science, specializing in Software Engineering, from the same institution. His multifaceted experience includes freelance work alongside his studies, honing his skills across diverse technologies, which now inform his teaching and professional endeavors. Notably, he presented his undergraduate paper on A Mobile Messaging Application using End-to-End Encryption Technology at CS EXPO 2022. Passionate about open-source projects, Mr. Andales actively collaborates via Discord and GitHub while balancing his interests in watching Anime or Western TV Shows for relaxation. His commitment to staying updated in the field is evident through his membership in ACM throughout his undergraduate years. Highly praised by both his supervisor at Realtair Inc. and his client, RageZone, for his work ethic and software engineering expertise, Mr. Andales remains driven to further expand his knowledge and skills, channeling this enthusiasm into his teaching role at FEU TECH.",
         "photo": "/csexpo-panelists/andales.jpg"
       },
       {
         "name": "Mr. Reginald S. Cheng",
-        "profession": "Software Consultant",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "He was a faculty of feutech for more than a decade, he even was a pioneer batch of East Asia College that was a former name of feutech, he is very commendable and one of the student favorites since he teaches programing and web development with different approach to the subjects.",
         "photo": "/csexpo-panelists/cheng.jpg"
       },
       {
         "name": "Dr. Hadji Tejuco",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Dr. Hadji J. Tejuco is a educator in the field of computer science. Currently serving as a faculty member in the Computer Science Department, Dr. Tejuco has a rich educational background, marked by an  array of advanced degrees.",
         "photo": "/csexpo-panelists/tejuco.jpg"
       },
       {
         "name": "Ms. May Florence D. San Pablo",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "May Florence San Pablo is a highly accomplished individual with a strong academic background in the field of computer science. She holds a Bachelor of Science degree in Information Technology, a Masters in Computer Education, and a Master of Science in Computer Science. Currently, she serves as a faculty member and coordinator of the Computer Science department",
         "photo": "/csexpo-panelists/san-pablo.jpg"
       },
       {
         "name": "Mr. Anthony D. Aquino",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Anthony D. Aquino is a Master of Science in Computer Science graduate and a full-time CS professor at FEU Institute of Technology. He has been in academia for almost 13 years with various certifications and research partnerships. Mr. Aquino is fascinated by the power of AI and Data Science and he loves to share in his classes. As a professor, Mr. Aquino handles subjects with embedded certification, preparing students with industry-based requirements. He is also handling mentorship to guide students in the design and development of their projects.",
         "photo": "/csexpo-panelists/aquino.jpg"
       },
       {
         "name": "Mr. Jennefer Sabonsolin",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Develops lesson plans, curricula, and instructional materials for computer science courses. This involves selecting appropriate textbooks, designing assignments and projects, and planning class activities. He imparts knowledge, skills and understanding related to programming and other advanced concepts in the field of computer. He experienced educator with a 13-year track record in teaching, leveraging a comprehensive background in computer science. Completing a Master's of Science in Computer Science at UP Cebu, posed to graduate later this year.",
         "photo": "/csexpo-panelists/sabonsolin.jpg"
       },
       {
         "name": "Dr. Angelo C. Arguson",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Dr. Angelo C. Arguson is currently a Full-time Professor of the Computer Science Department at FEU Institute of Technology. He is a graduate of Bachelor of Science in Computer Science (BSCS), Master of Information Technology (MIT) at Technological University of the Philippines. His team was awarded as Best in Thesis during his BS in Computer Science final defense. His latest degree was Doctor of Information Technology (DIT) earned at University of the East Manila last July 13, 2023. His dissertation was nominated as Best Dissertation of his batch. During his teaching in tertiary levels, he was awarded for Excellence in Research last 2016.",
         "photo": "/csexpo-panelists/arguson.jpg"
-      },
-      {
-        "name": "Sherwin Pelayo",
-        "profession": "Executive Director",
-        "intOrExt": "KEYNOTE SPEAKER",
-        "description": "Sherwin Pelayo is the Executive Director and a founding board member of the Analytics Association of the Philippines which is the country’s National Industry Board for Analytics and Artificial Intelligence. As Executive Director, he executes AAP’s nationwide programs in, among others, education, labor market research, and policies and standards, in support of AAP’s mission of building a healthy and vibrant Philippines Analytics and Artificial Intelligence sector through the forging of relations of trust with the government, academic and learning institutions, and the private sector. He continuously shares this advocacy to learners of Analytics most notably with DOST’s Project SPARTA and the University of Asia and the Pacific’s Master’s in Applied Business Analytics program.",
-        "photo": "/csexpo-panelists/pelayo.jpg"
-      },
-      {
-        "name": "Coline Christie",
-        "profession": "Chairman",
-        "intOrExt": "KEYNOTE SPEAKER",
-        "description": "Colin Christie is an entrepreneur, global connector, educator, and a frequent speaker on digital topics. He is the Chairman and CTO of Navix Health Inc., developer of an AI-powered platform for behavioral health. Colin was the Founding President of the  Analytics & Artificial Intelligence Association of the Philippines (AAP) and serves as Chair of its Advisory Committee.  He is the Executive Director of Global Chamber® Manila. He was a co-founder and Trustee of the Health Information Management Association of the Philippines (HIMAP). Colin is active on private and public corporate boards.  He began his career in the semiconductor industry in California’s Silicon Valley and holds a Bachelor of Science Degree in Chemical Engineering from the University of California Berkeley.",
-        "photo": "/csexpo-panelists/christie.png"
       }
     ]
   }
