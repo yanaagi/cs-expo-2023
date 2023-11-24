@@ -17,7 +17,6 @@ const EventsCSExpo = () => {
     };
 
     const speakers = panelistsData.panelists;
-
     const speakerNames = speakers.map(panelist => panelist.name);
     const speakerProfession = speakers.map(panelist => panelist.profession);
     const intOrExt = speakers.map(panelist => panelist.intOrExt);
@@ -37,7 +36,7 @@ const EventsCSExpo = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+        <main className="flex min-h-screen flex-col sm:p-8 lg:p-12">
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
@@ -48,7 +47,7 @@ const EventsCSExpo = () => {
                     changeButton={changeButton}
                 />
                 <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">
-                    DEV DAY
+                    CS EXPO
                 </h1>
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
@@ -64,10 +63,10 @@ const EventsCSExpo = () => {
                     photo={photo}
                     panelOrSpeaker="PANELISTS"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                  <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS DEV DAY
+                        PREVIOUS CS EXPO
                     </h1>
 
                     {/* 2022 */}
@@ -98,7 +97,7 @@ const EventsCSExpo = () => {
                         ]}
                         id="carousel-2023"
                     />
-                </div>
+                    </div>
             </div>
         </main>
     );

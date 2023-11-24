@@ -8,6 +8,7 @@ import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
 import speakersData from "@/speakers.json";
 
+
 const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,7 +38,7 @@ const EventsDevDay = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+        <main className="flex min-h-screen flex-col sm:p-8 lg:p-12">
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
@@ -64,10 +65,10 @@ const EventsDevDay = () => {
                     photo={photo}
                     panelOrSpeaker="SPEAKERS"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                  <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS CS EXPO
+                        PREVIOUS DEV DAY
                     </h1>
 
                     {/* 2022 */}
@@ -98,7 +99,7 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2023"
                     />
-                </div>
+                    </div>
             </div>
         </main>
     );
