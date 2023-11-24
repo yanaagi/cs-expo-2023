@@ -46,7 +46,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
         <div className="grid grid-cols-12">
 
           {/* Profession and Description Grid */}  
-          <div className="col-span-4 p-4 ml-20 mb-14 text-right"> 
+          <div className="col-span-4 p-4 ml-20 mb-14 text-right" style={{ minHeight: '600px', minWidth: '200px' }}>
             <h1 className="font-black text-6xl">
               {speakerProfession[currentIndex]}
             </h1>
@@ -115,7 +115,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
         <h1 className="font-black text-5xl text-center">{panelOrSpeaker}</h1>
 
         {/* Grid Wrapper */}
-        <div className="grid grid-cols-1 grid-cols-1">
+        <div className="grid grid-cols-1">
 
           {/* Panelist's Names Grid */}
           <div className="col-span-1 justfiy-center">
@@ -167,7 +167,7 @@ const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
         <h1 className="font-black text-5xl text-center">{panelOrSpeaker}</h1>
 
         {/* Grid Wrapper */}
-        <div className="grid grid-cols-1 grid-cols-1">
+        <div className="grid grid-cols-1">
 
           {/* Panelist's Names Grid */}
           <div className="col-span-1 justfiy-center">
