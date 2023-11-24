@@ -56,6 +56,7 @@ const EventsDevDay = () => {
     };
 
 
+
     return (
         <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
@@ -95,7 +96,6 @@ const EventsDevDay = () => {
                 />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS CS EXPO
                         PREVIOUS CS EXPO
                     </h1>
 
