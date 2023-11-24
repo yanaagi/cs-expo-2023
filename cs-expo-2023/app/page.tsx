@@ -123,13 +123,13 @@ export default function Home() {
                             <img src="/cgi-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <img src="/pldt-smart-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/qube-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
                             <img src="/uas-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <img src="/qube-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/pldt-smart-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
@@ -139,37 +139,37 @@ export default function Home() {
                             <img src="/kooapps-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/gadgets-mag-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/diyaryo-milenyo-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         {/* BLOCK: These will disappear when medium or below viewport */}
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/journal-ol-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/iecep-musc-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/icpep-plm-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/compile-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/acomms-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/jpcs-apc-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/comssa-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/cvsu-sites-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         {/* ENDBLOCK */}
                     </div>
@@ -177,56 +177,52 @@ export default function Home() {
                 <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2">
                     {/* BLOCK: This will appear when medium or below viewport */}
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                            <img src="/journal-ol-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/iecep-musc-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/icpep-plm-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/compile-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
+                    </div>
+                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
+                        <img src="/acomms-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
 
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/jpcs-apc-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/comssa-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
-                    </div>
-                    <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/cvsu-sites-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     {/* ENDBLOCK */}
 
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/csso-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/bu-access-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/tech-acm-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
-                    </div>
-
-                    <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/cs-pup-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/pup-guild-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/pupascii-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
+                        <img src="/csa-logo.jpg"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                 </div>
             </details>
