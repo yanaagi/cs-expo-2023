@@ -5,7 +5,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Glide from "@glidejs/glide";
 
 interface Slide {
-    backgroundColor: string;
+    backgroundImage: string;
 }
 
 interface CarouselProps {
@@ -47,14 +47,13 @@ const Carousel: React.FC<CarouselProps> = ({
                                             className="glide__slide"
                                             key={index}
                                         >
-                                            <div
-                                                className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]"
-                                                style={{
-                                                    backgroundColor:
-                                                        slide.backgroundColor ||
-                                                        "var(--timberwolf)",
-                                                }}
-                                            ></div>
+                                            <div className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]">
+                                                <img
+                                                    src={slide.backgroundImage}
+                                                    alt="image"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>

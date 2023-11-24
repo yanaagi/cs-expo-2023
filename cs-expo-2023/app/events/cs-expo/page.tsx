@@ -6,7 +6,7 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from '@/panelists.json'; 
+import panelistsData from "@/panelists.json";
 
 const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
@@ -18,11 +18,11 @@ const EventsCSExpo = () => {
 
     const speakers = panelistsData.panelists;
 
-    const speakerNames = speakers.map(panelist => panelist.name);
-    const speakerProfession = speakers.map(panelist => panelist.profession);
-    const intOrExt = speakers.map(panelist => panelist.intOrExt);
-    const description = speakers.map(panelists => panelists.description);
-    const photo = speakers.map(panelists => panelists.photo);
+    const speakerNames = speakers.map((panelist) => panelist.name);
+    const speakerProfession = speakers.map((panelist) => panelist.profession);
+    const intOrExt = speakers.map((panelist) => panelist.intOrExt);
+    const description = speakers.map((panelists) => panelists.description);
+    const photo = speakers.map((panelists) => panelists.photo);
 
     const changeSpeaker = (direction: string) => {
         if (direction === "above") {
@@ -67,36 +67,148 @@ const EventsCSExpo = () => {
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS DEV DAY
+                        PREVIOUS CS EXPO
                     </h1>
-
-                    {/* 2022 */}
-                    <Carousel
-                        title="2022"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                        // Don't forget to change the type of the slides in the Carousel component when changing it to photos
-                        slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                        ]}
-                        id="carousel-2022"
-                    />
 
                     {/* 2023 */}
                     <Carousel
                         title="2023"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
                         slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-4.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-5.jpg",
+                            },
                         ]}
                         id="carousel-2023"
+                    />
+
+                    {/* 2022 */}
+                    <Carousel
+                        title="2022"
+                        description="Leveraging Communities to Greater Possibilities with Computing Technologies"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2022/2022-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2022/2022-2.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2022/2022-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2022/2022-4.png",
+                            },
+                        ]}
+                        id="carousel-2022"
+                    />
+
+                    {/* 2021 */}
+                    <Carousel
+                        title="2019"
+                        description="CS EXPO 2019"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2019/2019-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2019/2019-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2019/2019-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2019/2019-4.jpg",
+                            },
+                        ]}
+                        id="carousel-2019"
+                    />
+
+                    {/* 2018 */}
+                    <Carousel
+                        title="2018"
+                        description="CSCON 2018"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-4.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-6.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2018/2k18-8.jpg",
+                            },
+                        ]}
+                        id="carousel-2018"
+                    />
+
+                    {/* 2017 */}
+                    <Carousel
+                        title="2017"
+                        description="CSCON 2017"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2017/2k17-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2017/2k17-2.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2017/2k17-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2017/2k17-4.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2017/2k17-5.jpg",
+                            },
+                        ]}
+                        id="carousel-2017"
                     />
                 </div>
             </div>

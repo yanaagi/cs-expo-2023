@@ -67,36 +67,65 @@ const EventsDevDay = () => {
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
-                        PREVIOUS CS EXPO
+                        PREVIOUS DEV DAY
                     </h1>
-
-                    {/* 2022 */}
-                    <Carousel
-                        title="2022"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                        // Don't forget to change the type of the slides in the Carousel component when changing it to photos
-                        slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                        ]}
-                        id="carousel-2022"
-                    />
 
                     {/* 2023 */}
                     <Carousel
                         title="2023"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
                         slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-4.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-5.jpg",
+                            },
                         ]}
                         id="carousel-2023"
+                    />
+
+                    {/* 2022 */}
+                    <Carousel
+                        title="2022"
+                        description="Leveraging Communities to Greater Possibilities with Computing Technologies"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-1.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-2.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-3.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-4.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-5.png",
+                            },
+                        ]}
+                        id="carousel-2022"
                     />
                 </div>
             </div>
