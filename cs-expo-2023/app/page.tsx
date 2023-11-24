@@ -120,56 +120,56 @@ export default function Home() {
 
                     <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2 gap-y-2">
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/cgi-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/pldt-smart-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/uas-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/qube-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/pointwest-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kooapps-logo.png"  className="shadow-lg h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         {/* BLOCK: These will disappear when medium or below viewport */}
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
 
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         <div className="col-span-2 lg:col-span-1 lg:flex justify-center hidden">
-                            <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                            <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                         </div>
                         {/* ENDBLOCK */}
                     </div>
@@ -177,56 +177,56 @@ export default function Home() {
                 <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2">
                     {/* BLOCK: This will appear when medium or below viewport */}
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
 
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center visible lg:hidden">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     {/* ENDBLOCK */}
 
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
 
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                     <div className="col-span-2 lg:col-span-1 flex justify-center">
-                        <div className="h-20 md:h-28 aspect-square rounded-full bg-gray-300"></div>
+                        <img src="/kekl.jpg"  className=" h-20 md:h-28 aspect-square object-cover rounded-full" />
                     </div>
                 </div>
             </details>
