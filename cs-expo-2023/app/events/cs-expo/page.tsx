@@ -17,7 +17,9 @@ const EventsDevDay = () => {
         setCurrentButton(buttonNumber);
     };
 
-    {/** INTERNAL AND EXTERNAL PANELISTS */}
+    {
+        /** INTERNAL AND EXTERNAL PANELISTS */
+    }
     const speakers = speakersData.panelists;
     const speakerNames = speakers.map((speaker) => speaker.name);
     const speakerProfession = speakers.map((speaker) => speaker.profession);
@@ -36,7 +38,9 @@ const EventsDevDay = () => {
         }
     };
 
-    {/** SPEAKERS */}
+    {
+        /** SPEAKERS */
+    }
     const speakers1 = speakersData1.speakers;
     const speakerNames1 = speakers1.map((speaker) => speaker.name);
     const speakerProfession1 = speakers1.map((speaker) => speaker.profession);
@@ -54,8 +58,6 @@ const EventsDevDay = () => {
             );
         }
     };
-
-
 
     return (
         <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
@@ -128,36 +130,6 @@ const EventsDevDay = () => {
                         id="carousel-2023"
                     />
 
-                    {/* 2023 */}
-                    <Carousel
-                        title="2023"
-                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
-                        slides={[
-                            {
-                                backgroundImage:
-                                    "/prev-cs-expo/2023/2023-1.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-cs-expo/2023/2023-2.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-cs-expo/2023/2023-3.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-cs-expo/2023/2023-4.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-cs-expo/2023/2023-5.jpg",
-                            },
-                        ]}
-                        id="carousel-2023"
-                    />
-
-                    
                     <Carousel
                         title="2022"
                         description="Leveraging Communities to Greater Possibilities with Computing Technologies"
@@ -268,7 +240,7 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2017"
                     />
-                </div> 
+                </div>
             </div>
         </main>
     );

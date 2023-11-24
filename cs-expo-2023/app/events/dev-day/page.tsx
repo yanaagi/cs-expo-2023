@@ -6,7 +6,7 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from '@/speakers.json'; 
+import panelistsData from "@/speakers.json";
 
 const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
@@ -18,11 +18,11 @@ const EventsCSExpo = () => {
 
     const speakers = panelistsData.speakers;
 
-    const speakerNames = speakers.map(panelist => panelist.name);
-    const speakerProfession = speakers.map(panelist => panelist.profession);
-    const intOrExt = speakers.map(panelist => panelist.intOrExt);
-    const description = speakers.map(panelists => panelists.description);
-    const photo = speakers.map(panelists => panelists.photo);
+    const speakerNames = speakers.map((panelist) => panelist.name);
+    const speakerProfession = speakers.map((panelist) => panelist.profession);
+    const intOrExt = speakers.map((panelist) => panelist.intOrExt);
+    const description = speakers.map((panelists) => panelists.description);
+    const photo = speakers.map((panelists) => panelists.photo);
 
     const changeSpeaker = (direction: string) => {
         if (direction === "above") {
@@ -99,36 +99,6 @@ const EventsCSExpo = () => {
                         id="carousel-2023"
                     />
 
-                    {/* 2023 */}
-                    <Carousel
-                        title="2023"
-                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
-                        slides={[
-                            {
-                                backgroundImage:
-                                    "/prev-dev-day/2023/2023-1.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-dev-day/2023/2023-2.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-dev-day/2023/2023-3.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-dev-day/2023/2023-4.jpg",
-                            },
-                            {
-                                backgroundImage:
-                                    "/prev-dev-day/2023/2023-5.jpg",
-                            },
-                        ]}
-                        id="carousel-2023"
-                    />
-
-                 
                     <Carousel
                         title="2022"
                         description="Leveraging Communities to Greater Possibilities with Computing Technologies"
