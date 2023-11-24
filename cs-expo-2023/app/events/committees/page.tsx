@@ -55,7 +55,7 @@ const EventsCommittees = () => {
             '/group-images/Adorables/7.jpg',
             '/group-images/Engeenz/11.jpg',
             '/group-images/Engeenz/9.jpg',
-            '/group-images/Engeenz/.jpg',
+            '/cs-expo-logo-black.png',
             '/group-images/Midnight Coders/12.jpg',
           ]}
           memberName={[
@@ -79,13 +79,11 @@ const EventsCommittees = () => {
             '/group-images/Array Co/16.jpg',
             '/group-images/Array Co/20.jpg',
             '/group-images/Softyware/14.jpg',
-            '/group-images/Softyware/',
           ]}
           memberName={[
             'Bianca Goldman',
             'John Angelo Yap',
             'Drennix Jean-Roe Guerrero',
-            'Daniel Marco Rafanan',
           ]}
           />
 </div>
@@ -95,16 +93,10 @@ const EventsCommittees = () => {
           committeePic={[
             '/group-images/Deos/5.jpg',
             '/group-images/Deos/9.jpg',
-            '/group-images/-/-',
-            '/group-images/-/-',
-            '/group-images/-/-',
           ]}
           memberName={[
             'Wilem Joshua Offemaria',
             'Christian Dale Selisana',
-            'Cyril John Altares',
-            'John Jordan Espiritu',
-            'Elijah Edgard Velasco',
           ]}
           />
 </div>
@@ -233,7 +225,7 @@ const EventsCommittees = () => {
             '/group-images/Javangers/13.jpg',
             '/group-images/Javangers/4.jpg',
             '/group-images/Stark/6.jpg',
-            '/group-images/-/Regie',
+            '/cs-expo-logo-black.png',
             '/group-images/Javangers/11.jpg',
             '/group-images/Midnight Coders/5.jpg',
             '/group-images/Javangers/8.jpg',
@@ -246,16 +238,16 @@ const EventsCommittees = () => {
             '/group-images/Stark/9.jpg',
           ]}
           memberName={[
-            'Jerico John Almoro',
+            'Jericho John Almoro',
             'Alan Gabriel Limyu',
-            'Nichole Anne Avañez', 
+            'Nichole Anne Marie Avañez', 
             'Ralph Henrik Cajipe',
             'Reggie Noel Guday',
             'Vence Carl Esquivel',
             'Lorenzo Miguel Dela Cruz',
             'Richard Lyndon Espino',
             'Jeri-Michael Joseph Advincula',
-            'Zeno Gilrence Donate',
+            'Zeno Gilrence Donato',
             'David John Bas',
             'Patrick Nicolae Agbayani',
             'Francis Dale Cañon', 
