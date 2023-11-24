@@ -1,0 +1,18 @@
+{
+    "speakers": [
+        {
+            "name": "Sherwin Pelayo",
+            "profession": "Executive Director",
+            "intOrExt": "KEYNOTE SPEAKER",
+            "description": "Sherwin Pelayo is the Executive Director and a founding board member of the Analytics Association of the Philippines which is the country’s National Industry Board for Analytics and Artificial Intelligence. As Executive Director, he executes AAP’s nationwide programs in, among others, education, labor market research, and policies and standards, in support of AAP’s mission of building a healthy and vibrant Philippines Analytics and Artificial Intelligence sector through the forging of relations of trust with the government, academic and learning institutions, and the private sector. He continuously shares this advocacy to learners of Analytics most notably with DOST’s Project SPARTA and the University of Asia and the Pacific’s Master’s in Applied Business Analytics program.",
+            "photo": "/csexpo-panelists/pelayo.jpg"
+          },
+          {
+            "name": "Coline Christie",
+            "profession": "Chairman",
+            "intOrExt": "KEYNOTE SPEAKER",
+            "description": "Colin Christie is an entrepreneur, global connector, educator, and a frequent speaker on digital topics. He is the Chairman and CTO of Navix Health Inc., developer of an AI-powered platform for behavioral health. Colin was the Founding President of the  Analytics & Artificial Intelligence Association of the Philippines (AAP) and serves as Chair of its Advisory Committee.  He is the Executive Director of Global Chamber® Manila. He was a co-founder and Trustee of the Health Information Management Association of the Philippines (HIMAP). Colin is active on private and public corporate boards.  He began his career in the semiconductor industry in California’s Silicon Valley and holds a Bachelor of Science Degree in Chemical Engineering from the University of California Berkeley.",
+            "photo": "/csexpo-panelists/christie.png"
+          }
+    ]
+}

@@ -6,9 +6,10 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from "@/panelists.json";
+import speakersData from "@/panelists.json";
+import speakersData1 from "@/speakers-csexpo.json";
 
-const EventsCSExpo = () => {
+const EventsDevDay = () => {
     const [currentButton, setCurrentButton] = useState(1);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,14 +17,13 @@ const EventsCSExpo = () => {
         setCurrentButton(buttonNumber);
     };
 
-    const speakers = panelistsData.panelists;
-
-    const speakerNames = speakers.map((panelist) => panelist.name);
-    const speakerProfession = speakers.map((panelist) => panelist.profession);
-    const intOrExt = speakers.map((panelist) => panelist.intOrExt);
-    const description = speakers.map((panelists) => panelists.description);
-    const photo = speakers.map((panelists) => panelists.photo);
-
+    {/** INTERNAL AND EXTERNAL PANELISTS */}
+    const speakers = speakersData.panelists;
+    const speakerNames = speakers.map((speaker) => speaker.name);
+    const speakerProfession = speakers.map((speaker) => speaker.profession);
+    const intOrExt = speakers.map((speaker) => speaker.intOrExt);
+    const description = speakers.map((speakers) => speakers.description);
+    const photo = speakers.map((speakers) => speakers.photo);
     const changeSpeaker = (direction: string) => {
         if (direction === "above") {
             setCurrentIndex((prevIndex) =>
@@ -36,24 +36,44 @@ const EventsCSExpo = () => {
         }
     };
 
+    {/** SPEAKERS */}
+    const speakers1 = speakersData1.speakers;
+    const speakerNames1 = speakers1.map((speaker) => speaker.name);
+    const speakerProfession1 = speakers1.map((speaker) => speaker.profession);
+    const intOrExt1 = speakers1.map((speaker) => speaker.intOrExt);
+    const description1 = speakers1.map((speakers) => speakers.description);
+    const photo1 = speakers1.map((speakers) => speakers.photo);
+    const changeSpeaker1 = (direction: string) => {
+        if (direction === "above") {
+            setCurrentIndex((prevIndex) =>
+                prevIndex - 1 >= 0 ? prevIndex - 1 : speakerNames1.length - 1
+            );
+        } else if (direction === "below") {
+            setCurrentIndex((prevIndex) =>
+                prevIndex + 1 < speakerNames1.length ? prevIndex + 1 : 0
+            );
+        }
+    };
+
+
     return (
         <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
-                    customText="Join us at DevDay, the first event of CS EXPO 2023 V2.0. Discover what it's like to be in the tech world today as experts talk about new ideas, share tips, and help students."
+                    customText="Experience the best in student innovation at CS EXPO 2023 V2.0. Join us for an exciting two-day showcase, featuring projects and meaningful talks from tech leaders."
                 />
                 <ButtonComponent
                     currentButton={currentButton}
                     changeButton={changeButton}
                 />
-                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">
-                    DEV DAY
+                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
+                    CS EXPO
                 </h1>
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
-                    customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
-                    sampleText="Sample Photo"
+                    customText="The main event of CS EXPO 2023 V2.0 will showcase student projects over two days to a group of panelists composed of faculty members and industry professionals. Each thesis group will have a representative, and awards will be given for exceptional research and innovation. Beyond that, there will also be talks from tech leaders, fostering discussions on current tech trends."
+                    sampleText="SamplePhoto2"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
@@ -65,8 +85,17 @@ const EventsCSExpo = () => {
                     panelOrSpeaker="PANELISTS"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <SpeakerPanelistLayout
+                    speakerNames={speakerNames1}
+                    speakerProfession={speakerProfession1}
+                    intOrExt={intOrExt1}
+                    description={description1}
+                    photo={photo1}
+                    panelOrSpeaker="SPEAKERS"
+                />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
+                        PREVIOUS CS EXPO
                         PREVIOUS CS EXPO
                     </h1>
 
@@ -99,7 +128,36 @@ const EventsCSExpo = () => {
                         id="carousel-2023"
                     />
 
-                    {/* 2022 */}
+                    {/* 2023 */}
+                    <Carousel
+                        title="2023"
+                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-4.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-cs-expo/2023/2023-5.jpg",
+                            },
+                        ]}
+                        id="carousel-2023"
+                    />
+
+                    
                     <Carousel
                         title="2022"
                         description="Leveraging Communities to Greater Possibilities with Computing Technologies"
@@ -210,10 +268,10 @@ const EventsCSExpo = () => {
                         ]}
                         id="carousel-2017"
                     />
-                </div>
+                </div> 
             </div>
         </main>
     );
 };
 
-export default EventsCSExpo;
+export default EventsDevDay;

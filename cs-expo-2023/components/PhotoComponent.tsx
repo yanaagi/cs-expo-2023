@@ -23,9 +23,11 @@ const PhotoComponent: React.FC<PhotoComponentProps> = ({ currentButton, customTe
       src={imageSource}
       className="object-cover w-full h-full"
     />
-   <div className="absolute bottom-[-2.5rem] right-[-1.5rem] p-4 sm:p-6 font-normal sm:font-medium bg-coral-pink text-white mb-6 h-36 sm:h-64 w-36 sm:w-72 text-left sm:bottom-[-3.8rem] sm:right-[-4rem] text-sm sm:text-base md:text-lg lg:text-xl">
-    {customText}
+      <div className="absolute bottom-[-2.5rem] right-[-1.5rem] p-4 sm:p-6 font-normal sm:font-medium xs:text-3xs bg-coral-pink text-white mb-6 h-36 sm:h-64 w-36 sm:w-72 text-left sm:bottom-[-3.8rem] sm:right-[-4rem] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+        {customText}
       </div>
+
+
     </div>
   );
 };

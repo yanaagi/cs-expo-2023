@@ -2,122 +2,94 @@
     "panelists": [
       {
         "name": "Dr. Shaneth C. Ambat",
-        "profession": "",
+        "profession": "Computer Science Program Director",
         "intOrExt": "INTERNAL",
         "description": "Dr. Shaneth C. Ambat, the Computer Science Program Director at FEU Institute of Technology, boasts a robust academic background, including a Bachelor's and Master's in Computer Science from AMA University-Makati City, and a Ph.D. in Engineering majoring in Information Technology from Hannam University, South Korea. With over 25 years in academia and a decade as a program head and dean, she's significantly shaped curriculum delivery in various HEIs. Notable roles include being a founding Board of Trustees member for the Council of Deans of Information Technology Education – INC., NCR, and serving as a paper reviewer for national and international publications. Her career spans roles from faculty at Philippine Christian University to leadership positions at Cavite State University and St. Dominic College of Asia. Dr. Ambat's commitment to research and teaching aligns with her current role in overseeing 367 members as a Board of Trustees member for the Council of Deans for ITE-NCR, focusing on emerging trends in IT and computing.",
-        "photo": "http://drive.google.com/uc?export=view&id=1ewZpMoUoHHwOJ_0litCfPkNlsaqntA2u"
+        "photo": "/csexpo-panelists/ambat.jpg"
       },
       {
         "name": "Ms. Beau Gray Habal",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "description": "Ms. Beau Gray Habal is a highly accomplished teacher with an impressive 19 years of experience in the field of education. Currently serving as a professor at FEU Institute of Technology, she has also taught at other universities locally and abroad. Ms. Beau's exceptional teaching skills and her dedication to providing her students with a quality education have made her a highly respected and sought-after teacher in the field of computer science.",
+        "photo": "/csexpo-panelists/habal.jpg"
       },
       {
         "name": "Dr. Jennalyn G. Raviz",
         "profession": "",
         "intOrExt": "EXTERNAL",
         "description": "Ms. Raviz has earned her doctorate degree in Information Technology and is currently working on her dissertation for her Doctor of Philosophy in Computer Science degree. She has been an educator for almost two decades with experience teaching from Basic Education to Graduate School programs. She is a licensed teacher for secondary school Mathematics subjects. She has served as lecturer, professor and administrator for undergraduate and graduate programs for Information Technology Education in different higher education institutions. She was the pioneer administrator for the first full online institution in the country. In government service, she was handling ICT training rollout initiatives from DICT and is the current OIC-Director of the Management Information Systems Service of the DOTr.",
-        "photo": "http://drive.google.com/uc?export=view&id=1q1LXlRSOZtqpa91Hz9IH-5a1n6QG2zIO"
+        "photo": "/csexpo-panelists/raviz.jpg"
       },
       {
         "name": "Mr. Abraham T. Magpantay",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "A talented computer science professional and tech enthusiast, whose deep passion for exploring the latest advancements in technology is matched by his exceptional credentials. With a master's degree in computer science from the esteemed Ateneo de Manila University, his field of knowledge spans a range of areas, including computer vision, image processing, remote sensing, algorithms, and software engineering. Currently exercising his expertise as a faculty member and adviser for the Association for Computing Machinery (ACM) Student Chapter of FEU Tech.",
-        "photo": "http://drive.google.com/uc?export=view&id=1lMUVI0ofWb4LvNRH0wrRJk0g1UkdYXuW"
-      },
-      {
-        "name": "Ms. Fanny Almeniana",
-        "profession": "",
-        "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "photo": "/csexpo-panelists/magpantay.jpg"
       },
       {
         "name": "Dr. Alexen Elacio",
         "profession": "",
         "intOrExt": "EXTERNAL",
         "description": "Alexen A. Elacio has more than two decades of solid IT experience specializing in the areas of Delivery Management (Country level), IT Resource and vendor Management Quality Management, Software Quality Assurance, Software Testing for Batch Processing and  Web Application, Development, and Production Support. He has over 14 years of experience as Delivery Manager serving the United States and AMEA accounts from different industry domains such as Fresh Produce, Retail, Telco, Utilities, Healthcare, and Insurance. He has a proven track record of excellent project delivery, Proactive risk and issues management, ability to manage a team in an offshore and onshore setting with experience running Development, Software Testing, and Production Support Group. He has also experience in leading CMMI 5 and BS7799/ ISO97001 Quality Management certification. Technical expertise includes Batch mainframe system programming using MVS JCL, COBOL DB2, Software Testing. ",
-        "photo": "http://drive.google.com/uc?export=view&id=1bsj1yJih5fzia9cWSOVeI7ucV58MMcPY"
+        "photo": "/csexpo-panelists/elacio.jpg"
       },
       {
         "name": "Ms. Elisa V. Malasaga",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "description": "Ms. Elisa Villamor Malasaga a graduate of Bachelor of Science in Information Science and Bachelor of Science in Computer Science both at AMA University and has graduated with Master’s degree as a Master of Science in Computer Science at AMA University. Another Masteral course – Master in Business Administration graduated at EARIST and Academic units for Doctor of Philosophy in Human Resourse Management, She passed certification from IBM – IBM Certified Rapid Application Developer 7 and IBM Certified Database2, from Microsoft- Certified Microsoft Innovative Educator Program and from Project Management Institute certified – PMI - Project Management. ",
+        "photo": "/csexpo-panelists/malasaga.jpeg"
       },
       {
         "name": "Mr. John Kenneth Andales",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "Mr. Andales, a dedicated Software Engineering professional, recently joined FEU TECH as a professor after completing his Bachelor's Degree in Computer Science, specializing in Software Engineering, from the same institution. His multifaceted experience includes freelance work alongside his studies, honing his skills across diverse technologies, which now inform his teaching and professional endeavors. Notably, he presented his undergraduate paper on A Mobile Messaging Application using End-to-End Encryption Technology at CS EXPO 2022. Passionate about open-source projects, Mr. Andales actively collaborates via Discord and GitHub while balancing his interests in watching Anime or Western TV Shows for relaxation. His commitment to staying updated in the field is evident through his membership in ACM throughout his undergraduate years. Highly praised by both his supervisor at Realtair Inc. and his client, RageZone, for his work ethic and software engineering expertise, Mr. Andales remains driven to further expand his knowledge and skills, channeling this enthusiasm into his teaching role at FEU TECH.",
-        "photo": "http://drive.google.com/uc?export=view&id=15-ykaizkbl_uME-8o3m4vCDQ-SYpC8he"
+        "photo": "/csexpo-panelists/andales.jpg"
       },
       {
         "name": "Mr. Reginald S. Cheng",
-        "profession": "Software Consultant",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "He was a faculty of feutech for more than a decade, he even was a pioneer batch of East Asia College that was a former name of feutech, he is very commendable and one of the student favorites since he teaches programing and web development with different approach to the subjects.",
-        "photo": "http://drive.google.com/uc?export=view&id=1ef4iKBNDk7nEpRg4taIKWnHJDWpGvBL0"
+        "photo": "/csexpo-panelists/cheng.jpg"
       },
       {
         "name": "Dr. Hadji Tejuco",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
-      },
-      {
-        "name": "Dr. Menchita F. Dumlao",
-        "profession": "",
-        "intOrExt": "EXTERNAL",
-        "description": "Her scholarly interests range widely, from data mining/data science, predictive analytics and database integration. She is greatly inspired to work on topics related to analytics, data mining, cloud computing, ubiquitous computing and Internet-of-Things. At the same time, she is serving as a lecturer in the graduate program for Master of Science in Information Technology of PWU.",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "description": "Dr. Hadji J. Tejuco is a educator in the field of computer science. Currently serving as a faculty member in the Computer Science Department, Dr. Tejuco has a rich educational background, marked by an  array of advanced degrees.",
+        "photo": "/csexpo-panelists/tejuco.jpg"
       },
       {
         "name": "Ms. May Florence D. San Pablo",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
         "description": "May Florence San Pablo is a highly accomplished individual with a strong academic background in the field of computer science. She holds a Bachelor of Science degree in Information Technology, a Masters in Computer Education, and a Master of Science in Computer Science. Currently, she serves as a faculty member and coordinator of the Computer Science department",
-        "photo": "http://drive.google.com/uc?export=view&id=12wFoNguvmMChIiu0Wr-8EoysT-Ct4IYc"
+        "photo": "/csexpo-panelists/san-pablo.jpg"
       },
       {
         "name": "Mr. Anthony D. Aquino",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
-      },
-      {
-        "name": "Dr. Amelia Damian",
-        "profession": "",
-        "intOrExt": "EXTERNAL",
-        "description": "Maria Amelia E. Damian, PhD IT, professor at the Department of Computer Studies and Systems, College of Engineering, University of the East. Her academic journey began at Hannam University, South Korea, where she obtained my Master in Information Technology (2002-2003) and later a PhD (2006-2014). Her dissertation explored the utilization of signcryption for machine-to-machine communication in the Philippines, laying a foundation for her research interests in Network Security, IoT, and Al.",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "description": "Anthony D. Aquino is a Master of Science in Computer Science graduate and a full-time CS professor at FEU Institute of Technology. He has been in academia for almost 13 years with various certifications and research partnerships. Mr. Aquino is fascinated by the power of AI and Data Science and he loves to share in his classes. As a professor, Mr. Aquino handles subjects with embedded certification, preparing students with industry-based requirements. He is also handling mentorship to guide students in the design and development of their projects.",
+        "photo": "/csexpo-panelists/aquino.jpg"
       },
       {
         "name": "Mr. Jennefer Sabonsolin",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id=1tm_rL8x2tdM7zKk7k9SnbT8G0nK6zecf"
+        "description": "Develops lesson plans, curricula, and instructional materials for computer science courses. This involves selecting appropriate textbooks, designing assignments and projects, and planning class activities. He imparts knowledge, skills and understanding related to programming and other advanced concepts in the field of computer. He experienced educator with a 13-year track record in teaching, leveraging a comprehensive background in computer science. Completing a Master's of Science in Computer Science at UP Cebu, posed to graduate later this year.",
+        "photo": "/csexpo-panelists/sabonsolin.jpg"
       },
       {
         "name": "Dr. Angelo C. Arguson",
-        "profession": "",
+        "profession": "Computer Science Faculty",
         "intOrExt": "INTERNAL",
-        "description": "",
-        "photo": "http://drive.google.com/uc?export=view&id="
-      },
-      {
-        "name": "Dr. Jennefer Contreras",
-        "profession": "",
-        "intOrExt": "EXTERNAL",
-        "description": "Dr. Jennifer Contreras is a founder of JOCTech ICT Consultancy and Training Services and a faculty member in the Department of Software Technology at De La Salle University - Manila. With over two decades of experience in academia, she had the privilege of teaching and connecting with students from diverse backgrounds across the globe (Libya, Sudan, Malaysia, Sweden, and the Philippines). This journey has exposed her to a rich array of beliefs, cultures, and educational backgrounds among her students. Furthermore, Doc Jen as they call her, at the Department of Information and Communications Technology is leading MOOCS and Learning Management System for reskilling and upskilling projects.",
-        "photo": "http://drive.google.com/uc?export=view&id="
+        "description": "Dr. Angelo C. Arguson is currently a Full-time Professor of the Computer Science Department at FEU Institute of Technology. He is a graduate of Bachelor of Science in Computer Science (BSCS), Master of Information Technology (MIT) at Technological University of the Philippines. His team was awarded as Best in Thesis during his BS in Computer Science final defense. His latest degree was Doctor of Information Technology (DIT) earned at University of the East Manila last July 13, 2023. His dissertation was nominated as Best Dissertation of his batch. During his teaching in tertiary levels, he was awarded for Excellence in Research last 2016.",
+        "photo": "/csexpo-panelists/arguson.jpg"
       }
     ]
   }
