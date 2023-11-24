@@ -1,10 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
+// ... (imports remain unchanged)
+
 const CommitteesGrid = () => {
   const committeeNames = [
     'PROGRAMS COMMITTEE',
-    'SECRETARIAT COMMITTEE',
+    'SECRETARIAT & AWARDS COMMITTEE',
     'SPONSORSHIP & PARTNERSHIP COMMITTEE',
     'SPEAKERS & PANELIST COMMITTEE',
     'LOGISTICS COMMITTEE',
@@ -34,7 +36,7 @@ const CommitteesGrid = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center"> {/* Center the columns in smaller screens */}
+    <div className="flex flex-col justify-center items-center">
       <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4`}>
         {committeeNames.map((committeeName, index) => (
           <a
@@ -43,6 +45,7 @@ const CommitteesGrid = () => {
             style={{ textDecoration: 'none', cursor: 'pointer' }}
           >
             <div
+              id={committeeName.replace(/\s+/g, '-').toLowerCase()} // Add the ID reference
               className={`p-4 bg-coral-pink text-white text-center sm:text-right font-bold relative transform scale-100 hover:scale-105 ${
                 hovered === index ? 'scale-105' : ''
               }`}
@@ -65,3 +68,4 @@ const CommitteesGrid = () => {
 };
 
 export default CommitteesGrid;
+

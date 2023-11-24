@@ -11,27 +11,45 @@ const EventsCommittees = () => {
         <MeetTheCommitteesHeader
           headerText="meet the COMMITTEES"
         />
-
         <CommitteesGrid />
-        <CommitteesPic 
-          committeeName='SECRETARIAT AND AWARDS COMMITTEE'
-          committeePic={[
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-            '/cs-expo-logo-black.png',
-
-
-          ]}
+        <div id="SECRETARIAT & AWARDS COMMITTEE">
+          <CommitteesPic
+            committeeName='SECRETARIAT AND AWARDS COMMITTEE'
+            committeePic={[
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+            ]}
           />
+        </div>
+
+        <div id="PROGRAMS COMMITTEE">
+          <CommitteesPic
+            committeeName='PROGRAMS COMMITTEE'
+            committeePic={[
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+              '/cs-expo-logo-black.png',
+            ]}
+          />
+        </div>
+
+        {/* Add other committee sections with unique IDs */}
       </div>
-      
     </main>
   );
 };
