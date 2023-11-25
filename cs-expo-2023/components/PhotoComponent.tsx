@@ -9,16 +9,16 @@ const PhotoComponent: React.FC<PhotoComponentProps> = ({ currentButton, customTe
   let imageSource = ''; // Define a variable to hold the image source
 
   if (currentButton === 1) {
-    imageSource = '/path-to-photo1.jpg';
+    imageSource = '/dev-day/dev-day01.jpg';
   } else if (currentButton === 2) {
-    imageSource = '/path-to-photo2.jpg';
+    imageSource = '/dev-day/dev-day02.jpg';
   } else if (currentButton === 3) {
-    imageSource = '/path-to-photo3.jpg';
+    imageSource = '/dev-day/dev-day03.jpg';
   }
 
   return (
     <div className="p-24 text-center font-medium bg-timberwolf w-auto h-auto mt-11 mb-2 ml-6 mr-10 sm:p-64 sm:mt-2 sm:mb-4 sm:ml-28 sm:mr-40 relative">
-    Sample Photo {currentButton}
+      Sample Photo {currentButton}
     <img
       src={imageSource}
       className="object-cover w-full h-full"
