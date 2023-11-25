@@ -89,13 +89,12 @@ const EventsCommittees = () => {
             '/group-images/Array Co/16.jpg',
             '/group-images/Array Co/20.jpg',
             '/group-images/Softyware/14.jpg',
-            '/group-images/Softyware/11.jpg',
+            '/group-images/Softyware/',
           ]}
           memberName={[
             'Bianca Goldman',
             'John Angelo Yap',
             'Drennix Jean-Roe Guerrero',
-            'Daniel Marco Rafanan',
           ]}
           />
 </div>
@@ -239,7 +238,7 @@ const EventsCommittees = () => {
             '/group-images/Javangers/13.jpg',
             '/group-images/Javangers/4.jpg',
             '/group-images/Stark/6.jpg',
-            '/group-images/-/Regie',
+            '/cs-expo-logo-black.png',
             '/group-images/Javangers/11.jpg',
             '/group-images/Midnight Coders/5.jpg',
             '/group-images/Javangers/8.jpg',
@@ -261,7 +260,7 @@ const EventsCommittees = () => {
             'Lorenzo Miguel Dela Cruz',
             'Richard Lyndon Espino',
             'Jeri-Michael Joseph Advincula',
-            'Zeno Gilrence DonatO',
+            'Zeno Gilrence Donato',
             'David John Bas',
             'Patrick Nicolae Agbayani',
             'Francis Dale Cañon', 
