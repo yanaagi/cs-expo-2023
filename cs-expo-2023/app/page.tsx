@@ -38,7 +38,7 @@ export default function Home() {
       }
   
       // Start the animation when the component mounts
-      timer = setInterval(typeText, 90);
+      timer = setInterval(typeText, 65);
   
       // Clean up the animation when the component unmounts
       return () => {
@@ -80,10 +80,9 @@ export default function Home() {
             <div className="h-screen">
                 <h1
                     ref={textElementRef}
-                    className="absolute text-[min(5vw,4rem)] mt-48 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
+                    className="absolute text-[min(7vw,4.5rem)] mt-64 xl:ml-40 text-eerie-black font-helvetica font-bold xl:text-left min-[320px]:text-left min-[320px]:ml-10"
                 ></h1>
             </div>
-
             <details
                 id="details"
                 className="min-[320px]:-mt-52 xl:mt-32 min-[320px]:-mb-44 xl:mb-48"
