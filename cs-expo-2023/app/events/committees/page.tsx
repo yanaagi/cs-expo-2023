@@ -11,8 +11,18 @@ const EventsCommittees = () => {
         <MeetTheCommitteesHeader
           headerText="meet the COMMITTEES"
         />
+        <CommitteesGrid/>
 
-<CommitteesGrid/>
+        <CommitteesPic 
+          committeeName='PROJECT HEAD'
+          committeePic={[
+            '/group-images/Array Co/5.jpg',
+          ]}
+           memberName={[
+            'Micah Sophia Tan',
+          ]}
+          />
+
 <div id="PROGRAMS COMMITTEE">
 <CommitteesPic 
           committeeName='PROGRAMS COMMITTEE'
@@ -55,7 +65,7 @@ const EventsCommittees = () => {
             '/group-images/Adorables/7.jpg',
             '/group-images/Engeenz/11.jpg',
             '/group-images/Engeenz/9.jpg',
-            '/group-images/Engeenz/.jpg',
+            '/solo-images/3_vicencio.jpg',
             '/group-images/Midnight Coders/12.jpg',
           ]}
           memberName={[
@@ -79,7 +89,7 @@ const EventsCommittees = () => {
             '/group-images/Array Co/16.jpg',
             '/group-images/Array Co/20.jpg',
             '/group-images/Softyware/14.jpg',
-            '/group-images/Softyware/',
+            '/group-images/Softyware/11.jpg',
           ]}
           memberName={[
             'Bianca Goldman',
@@ -95,16 +105,12 @@ const EventsCommittees = () => {
           committeePic={[
             '/group-images/Deos/5.jpg',
             '/group-images/Deos/9.jpg',
-            '/group-images/-/-',
-            '/group-images/-/-',
-            '/group-images/-/-',
+           
           ]}
           memberName={[
             'Wilem Joshua Offemaria',
             'Christian Dale Selisana',
-            'Cyril John Altares',
-            'John Jordan Espiritu',
-            'Elijah Edgard Velasco',
+            
           ]}
           />
 </div>
@@ -246,16 +252,16 @@ const EventsCommittees = () => {
             '/group-images/Stark/9.jpg',
           ]}
           memberName={[
-            'Jerico John Almoro',
+            'Jericho John Almoro',
             'Alan Gabriel Limyu',
-            'Nichole Anne Avañez', 
+            'Nichole Anne Marie Avañez', 
             'Ralph Henrik Cajipe',
             'Reggie Noel Guday',
             'Vence Carl Esquivel',
             'Lorenzo Miguel Dela Cruz',
             'Richard Lyndon Espino',
             'Jeri-Michael Joseph Advincula',
-            'Zeno Gilrence Donate',
+            'Zeno Gilrence DonatO',
             'David John Bas',
             'Patrick Nicolae Agbayani',
             'Francis Dale Cañon', 
