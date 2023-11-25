@@ -55,7 +55,6 @@ const EventsCommittees = () => {
             '/group-images/Adorables/7.jpg',
             '/group-images/Engeenz/11.jpg',
             '/group-images/Engeenz/9.jpg',
-            '/cs-expo-logo-black.png',
             '/group-images/Midnight Coders/12.jpg',
           ]}
           memberName={[
@@ -67,7 +66,6 @@ const EventsCommittees = () => {
             'Clintt Adora',
             'Gerardo Joshua Dela Cruz',
             'Curt Russel Celeste',
-            'Vernon Gabriel Angelo Vicencio',
             'Phoebe Kelly Liwanag',
           ]}
           />
@@ -225,7 +223,6 @@ const EventsCommittees = () => {
             '/group-images/Javangers/13.jpg',
             '/group-images/Javangers/4.jpg',
             '/group-images/Stark/6.jpg',
-            '/cs-expo-logo-black.png',
             '/group-images/Javangers/11.jpg',
             '/group-images/Midnight Coders/5.jpg',
             '/group-images/Javangers/8.jpg',
@@ -242,7 +239,6 @@ const EventsCommittees = () => {
             'Alan Gabriel Limyu',
             'Nichole Anne Marie Avañez', 
             'Ralph Henrik Cajipe',
-            'Reggie Noel Guday',
             'Vence Carl Esquivel',
             'Lorenzo Miguel Dela Cruz',
             'Richard Lyndon Espino',
