@@ -19,7 +19,7 @@ import React from 'react';
                 <br />
 
                 <div>
-                <p className="text-[min(12vw,7rem)] min-[320px]:py-2 xl:mb-14 text-eerie-black flex flex-col items-center font-bold font-family-helvetica">
+                <p className="text-[min(12vw,7rem)] min-[320px]:py-2 xl:mb-14 text-eerie-black flex flex-col items-center custom-font">
                     {title}
                 </p>
                 </div>
