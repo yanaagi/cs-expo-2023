@@ -17,8 +17,8 @@ const PhotoComponent: React.FC<PhotoComponentProps> = ({ currentButton, customTe
   }
 
   return (
-    <div className="p-24 text-center font-medium bg-timberwolf w-auto h-auto mt-11 mb-2 ml-6 mr-10 sm:p-64 sm:mt-2 sm:mb-4 sm:ml-28 sm:mr-40 relative">
-      Sample Photo {currentButton}
+    <div className="p-1 sm:2 text-center font-medium bg-timberwolf w-auto h-auto mt-11 mb-2 ml-6 mr-10 sm:mt-2 sm:mb-4 sm:ml-28 sm:mr-40 relative">
+      <div className="hidden"> {currentButton} </div>
     <img
       src={imageSource}
       className="object-cover w-full h-full"
