@@ -14,7 +14,7 @@ const AboutComponent: React.FC<AboutComponentProps> = ({ customText, sampleText 
           {customText}
         </p>
       </div>
-      <div className="p-2 w-3/4 bg-timberwolf mt-3 mb-12">
+      <div className="p-1 w-3/4 bg-coral-pink mt-3 mb-12">
         <img src="/dev-day/dev-day04.jpg"/>
       </div>
     </div>
