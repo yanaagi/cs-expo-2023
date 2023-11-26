@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { useClient } from 'next/react-dev-overlay';
 
 
 interface PartnersLayoutProps {
