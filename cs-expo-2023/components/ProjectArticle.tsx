@@ -16,6 +16,7 @@ interface ProjectArticleProps {
   posterFilePath: string | undefined;
   AVPLink: string | undefined;
   groupPicturesCount: number[] | undefined;
+  groupPicDir: string | undefined;
 }
 
 const ProjectArticle: React.FC<ProjectArticleProps> = ({
@@ -27,7 +28,8 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
   category,
   posterFilePath,
   AVPLink,
-  groupPicturesCount
+  groupPicturesCount,
+  groupPicDir
 }) => {
   const [isReadMore, setReadMoreState] = useState(false);
   const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
@@ -40,13 +42,13 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 
   // group picture paths
   for (let index = 0; index < (groupPicturesCount!==undefined?groupPicturesCount[0]:0); index++) {
-    galleryPaths.push(["/group-images/"+groupname+"/"+(index+1)+".jpg",""]);
+    galleryPaths.push(["/group-images/"+groupPicDir+"/"+(index+1)+".jpg",""]);
   }
   // individual picture paths
   let tmp = (groupPicturesCount!==undefined?groupPicturesCount[0]+1:0); 
   for (let i = 1; i < (groupPicturesCount!==undefined?groupPicturesCount.length:0); i++) {
     for (let j = 0; j < (groupPicturesCount!==undefined?groupPicturesCount[i]:0); j++,tmp++) {
-      galleryPaths.push(["/group-images/"+groupname+"/"+(tmp)+".jpg",members!==undefined?members[i-1]:""]);
+      galleryPaths.push(["/group-images/"+groupPicDir+"/"+(tmp)+".jpg",members!==undefined?members[i-1]:""]);
     }
   }
 
