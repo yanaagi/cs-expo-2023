@@ -43,7 +43,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           </Link>
         )}
         {currentEvent === 2 && (
-          <Link href="/progress" className={detailclassName}>
+          <Link href="/events/dev-day" className={detailclassName}>
             View event details &gt;
           </Link>
         )}

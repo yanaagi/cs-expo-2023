@@ -9,25 +9,20 @@ const PhotoComponent: React.FC<PhotoComponentProps> = ({ currentButton, customTe
   let imageSource = ''; // Define a variable to hold the image source
 
   if (currentButton === 1) {
-    imageSource = '/path-to-photo1.jpg';
+    imageSource = '/dev-day/dev-day01.jpg';
   } else if (currentButton === 2) {
-    imageSource = '/path-to-photo2.jpg';
+    imageSource = '/dev-day/dev-day02.jpg';
   } else if (currentButton === 3) {
-    imageSource = '/path-to-photo3.jpg';
+    imageSource = '/dev-day/dev-day03.jpg';
   }
 
   return (
-    <div className="p-24 text-center font-medium bg-timberwolf w-auto h-auto mt-11 mb-2 ml-6 mr-10 sm:p-64 sm:mt-2 sm:mb-4 sm:ml-28 sm:mr-40 relative">
-    Sample Photo {currentButton}
-    <img
-      src={imageSource}
-      className="object-cover w-full h-full"
-    />
-      <div className="absolute bottom-[-2.5rem] right-[-1.5rem] p-4 sm:p-6 font-normal sm:font-medium xs:text-3xs bg-coral-pink text-white mb-6 h-36 sm:h-64 w-36 sm:w-72 text-left sm:bottom-[-3.8rem] sm:right-[-4rem] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+    <div className="p-1.5 text-center font-medium bg-coral-pink w-auto sm:w-auto h-auto mt-1 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-5 2xl:mt-6 mb-0.5 sm:mb-1 md:mb-1.5 lg:mb-2 xl:mb-2.5 2xl:mb-3 ml-5 sm:ml-6 md:ml-20 lg:ml-28 xl:ml-36 2xl:ml-40 mr-1 sm:mr-2 md:mr-3 lg:mr-4 xl:mr-14 2xl:mr-10 relative">
+  <div className="hidden">{currentButton}</div>
+  <img src={imageSource} className="object-cover w-full h-full" />
+  <div className="absolute bottom-[-2.5rem] right-[-0.5rem] p-3 lg:p-4 font-normal sm:font-medium xs:text-2xs sm:text-xs bg-coral-pink text-white mb-6 h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56 2xl:h-64 w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 2xl:w-72 text-left lg:bottom-[-3.8rem] lg:right-[-4rem] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl overflow-ellipsis overflow-hidden transition-all duration-300">
         {customText}
       </div>
-
-
     </div>
   );
 };

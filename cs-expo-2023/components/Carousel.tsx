@@ -5,7 +5,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Glide from "@glidejs/glide";
 
 interface Slide {
-    backgroundColor: string;
+    backgroundImage: string;
 }
 
 interface CarouselProps {
@@ -34,7 +34,7 @@ const Carousel: React.FC<CarouselProps> = ({
         <div className="grid grid-cols-12 mt-8">
             <div className="col-span-12 lg:col-span-3">
                 <h1 className="font-bold text-5xl">{title}</h1>
-                <p className="font-medium pe-12">{description}</p>
+                <p className="font-medium pe-12 pb-10">{description}</p>
             </div>
             <div className="col-span-12 lg:col-span-9 relative">
                 <div className={`${id} glide`} id={id}>
@@ -47,14 +47,13 @@ const Carousel: React.FC<CarouselProps> = ({
                                             className="glide__slide"
                                             key={index}
                                         >
-                                            <div
-                                                className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]"
-                                                style={{
-                                                    backgroundColor:
-                                                        slide.backgroundColor ||
-                                                        "var(--timberwolf)",
-                                                }}
-                                            ></div>
+                                            <div className="w-[256px] h-[144px] lg:w-[320px] lg:h-[180px]">
+                                                <img
+                                                    src={slide.backgroundImage}
+                                                    alt="image"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>

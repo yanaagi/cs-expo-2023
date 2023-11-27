@@ -47,19 +47,19 @@ const Footer: React.FC = () => {
                </div>
 
                <div className="flex flex-col sm:pl-10">
-                    <Link href="/progress">
+                    <Link href="/events/dev-day">
                          {/*"/events/dev-day"*/}
                     <span className="font-bold hover:underline cursor-pointer">Dev Day</span>
                     </Link>
-                    <a href="/progress">
+                    <a href="/events/dev-day#dev-day-about">
                          {/*"/events/dev-day#dev-day-about"*/}
                     <span className="hover:underline cursor-pointer">About</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/events/dev-day#dev-day-speakers">
                          {/*"/events/dev-day#dev-day-speakers"*/}
                     <span className="hover:underline cursor-pointer">Speakers</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/events/dev-day#dev-day-gallery">
                          {/*"/events/dev-day#dev-day-gallery"*/}
                     <span className="hover:underline cursor-pointer">Gallery</span>
                     </a>
