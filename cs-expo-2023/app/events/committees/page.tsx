@@ -12,7 +12,6 @@ const EventsCommittees = () => {
           headerText="meet the COMMITTEES"
         />
         <CommitteesGrid/>
-
         <CommitteesPic 
           committeeName='PROJECT HEAD'
           committeePic={[
