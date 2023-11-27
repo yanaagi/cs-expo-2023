@@ -50,12 +50,20 @@ const EventsCSExpo = () => {
                 <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">
                     DEV DAY
                 </h1>
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="dev-day-about">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
                     customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
                     sampleText="Sample Photo"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="dev-day-speakers">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
                     speakerNames={speakerNames}
                     speakerProfession={speakerProfession}
@@ -64,7 +72,11 @@ const EventsCSExpo = () => {
                     photo={photo}
                     panelOrSpeaker="SPEAKERS"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="dev-day-gallery">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
                         PREVIOUS DEV DAY
