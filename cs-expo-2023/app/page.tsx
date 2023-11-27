@@ -242,7 +242,7 @@ export default function Home() {
                 what it means to be a person in technology today. Industry leaders will discuss\n
                 innovations, offer insights for the attendees, and guide students on upskilling\n
                 and keeping their tech stack relevant in an evolving landscape.`}
-                button="/progress"
+                button="/events/dev-day"
             />
 
             <div className="min-[320px]:mb-60 xl:mb-80"></div>
