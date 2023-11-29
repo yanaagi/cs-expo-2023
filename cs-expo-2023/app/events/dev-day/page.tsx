@@ -42,6 +42,7 @@ const EventsCSExpo = () => {
                 <PhotoComponent
                     currentButton={currentButton}
                     customText="Join us at DevDay, the first event of CS EXPO 2023 V2.0. Discover the tech world as experts talk about ideas, tips, and help students."
+                    filePath="/events/dev-day/page.tsx"
                 />
                 <ButtonComponent
                     currentButton={currentButton}
@@ -57,7 +58,8 @@ const EventsCSExpo = () => {
                 <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
                     customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
-                    sampleText="Sample Photo"
+                    imageSource="/dev-day/dev-day04.jpg"
+
                 />
                 <section id="dev-day-speakers">
                 <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />

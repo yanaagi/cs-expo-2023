@@ -65,7 +65,8 @@ const EventsDevDay = () => {
                 <PhotoComponent
                     currentButton={currentButton}
                     customText="Experience the best in student innovation at CS EXPO 2023 V2.0. Join us for an exciting two-day showcase, featuring projects and meaningful talks from tech leaders."
-                />
+                    filePath="/events/cs-expo/page.tsx"
+                    />
                 <ButtonComponent
                     currentButton={currentButton}
                     changeButton={changeButton}
@@ -76,7 +77,7 @@ const EventsDevDay = () => {
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
                     customText="The main event of CS EXPO 2023 V2.0 will showcase student projects over two days to a group of panelists composed of faculty members and industry professionals. Each thesis group will have a representative, and awards will be given for exceptional research and innovation. Beyond that, there will also be talks from tech leaders, fostering discussions on current tech trends."
-                    sampleText="SamplePhoto2"
+                    imageSource="/cs-expo/cs-expo04.jpg"
                 />
                 <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
