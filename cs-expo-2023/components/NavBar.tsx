@@ -118,7 +118,7 @@ const handleNav = () => {
 const defaultMenu = () => {
      return (
           <>
-               <div className="relative group">
+               <div className="relative group z-30">
                     <button onClick={toggleEventsDropdown} className={`flex items-center cursor-pointer font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                          Events
 
@@ -185,7 +185,7 @@ const defaultMenu = () => {
           const textColorClass = isNavbarAtTop ? 'text-black' : 'text-timberwolf';
      
           return (
-               <div className={`mobile-menu relative flex flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
+               <div className={`mobile-menu relative flex z-30 flex-col px-6 py-3 items-start font-semibold ${textColorClass}`}>
                <div className="relative group">
                     <button onClick={toggleMobileEventsDropdown} className="flex items-center cursor-pointer hover:text-coral-pink">
                          Events
@@ -248,7 +248,7 @@ const defaultMenu = () => {
      };
 
      return (
-          <header ref={mobileNavbarRef} className={`w-screen fixed z-10 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
+          <header ref={mobileNavbarRef} className={`w-screen fixed z-30 top-0 right-0 left-0 transition-all ${isNavbarAtTop ? 'bg-white' : 'bg-eerie-black'}`}>
               <nav className="w-screen mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
                   <Link href="/">
                       <Image
@@ -260,7 +260,7 @@ const defaultMenu = () => {
                       />
                   </Link>
   
-                  <div className="cursor-pointer ml-auto flex" onClick={isMobile ? toggleMobileMenu: defaultMenu}>
+                  <div className="cursor-pointer ml-auto z-30 flex" onClick={isMobile ? toggleMobileMenu: defaultMenu}>
                       {isMobile ? (
                           mobileMenuVisible ? <div className='text-coral-pink'><IoClose /></div> : <div className='text-coral-pink'><FaBars /></div>
                       ) : (
