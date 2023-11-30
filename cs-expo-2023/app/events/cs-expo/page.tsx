@@ -71,15 +71,22 @@ const EventsDevDay = () => {
                     currentButton={currentButton}
                     changeButton={changeButton}
                 />
-                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
+                <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20"> 
                     CS EXPO
                 </h1>
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="cs-expo-about">
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                 </section>
+                 <hr className="border-t-1 border-white mt-20 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
-                    customText="The main event of CS EXPO 2023 V2.0 will showcase student projects over two days to a group of panelists composed of faculty members and industry professionals. Each thesis group will have a representative, and awards will be given for exceptional research and innovation. Beyond that, there will also be talks from tech leaders, fostering discussions on current tech trends."
+                    customText="The main event of CS EXPO 2023 V2.0 will showcase student projects over two days to a group of panelists composed of faculty members and industry professionals. Awards will be given for exceptional research and innovation. Current tech trends will be discussed by industry leaders."
                     imageSource="/cs-expo/cs-expo04.jpg"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                 <section id="cs-expo-panelists">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
                     speakerNames={speakerNames}
                     speakerProfession={speakerProfession}
@@ -97,11 +104,10 @@ const EventsDevDay = () => {
                     photo={photo1}
                     panelOrSpeaker="SPEAKERS"
                 />
-                <div className="mx-4 lg:mx-11">
+                   <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
                         PREVIOUS CS EXPO
                     </h1>
-
                     {/* 2023 */}
                     <Carousel
                         title="2023"
@@ -130,7 +136,6 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2023"
                     />
-
                     <Carousel
                         title="2022"
                         description="Leveraging Communities to Greater Possibilities with Computing Technologies"
@@ -154,7 +159,6 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2022"
                     />
-
                     {/* 2021 */}
                     <Carousel
                         title="2019"
@@ -179,7 +183,6 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2019"
                     />
-
                     {/* 2018 */}
                     <Carousel
                         title="2018"
@@ -212,7 +215,6 @@ const EventsDevDay = () => {
                         ]}
                         id="carousel-2018"
                     />
-
                     {/* 2017 */}
                     <Carousel
                         title="2017"
