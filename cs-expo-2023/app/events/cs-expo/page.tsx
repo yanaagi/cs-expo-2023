@@ -64,7 +64,7 @@ const EventsDevDay = () => {
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
-                    customText="Experience the best in student innovation at CS EXPO 2023 V2.0. Join us for an exciting two-day showcase, featuring projects and meaningful talks from tech leaders."
+                    customText="Join us on CS-EXPO V2 2023, a two-day event featuring projects with meaningful talks from tech leaders and experience the best in student innovation."
                     filePath="/events/cs-expo/page.tsx"
                     />
                 <ButtonComponent
@@ -145,6 +145,8 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2023"
+                        link = "https://cs-expo.tech/#"
+                        linkName = "CS EXPO 2023 WEBSITE"
                     />
                     <Carousel
                         title="2022"
@@ -168,6 +170,8 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2022"
+                        link = "https://cs-expo.tech/#"
+                        linkName = "CS EXPO 2022 WEBSITE"
                     />
                     {/* 2021 */}
                     <Carousel
@@ -192,6 +196,8 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2019"
+                        link = ""
+                        linkName = ""
                     />
                     {/* 2018 */}
                     <Carousel
@@ -224,6 +230,8 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2018"
+                        link = ""
+                        linkName = ""
                     />
                     {/* 2017 */}
                     <Carousel
@@ -252,6 +260,8 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2017"
+                        link = ""
+                        linkName = ""
                     />
                 </div>
             </div>
