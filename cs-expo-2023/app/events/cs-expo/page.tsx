@@ -170,7 +170,7 @@ const EventsDevDay = () => {
                             },
                         ]}
                         id="carousel-2022"
-                        link = "https://cs-expo.tech/#"
+                        link = "https://feutech.acm.org/csexpo2022/"
                         linkName = "CS EXPO 2022 WEBSITE"
                     />
                     {/* 2021 */}

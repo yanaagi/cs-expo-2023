@@ -109,6 +109,8 @@ const EventsCSExpo = () => {
                             },
                         ]}
                         id="carousel-2023"
+                        link = ""
+                        linkName = ""
                     />
                     <Carousel
                         title="2022"
@@ -132,6 +134,8 @@ const EventsCSExpo = () => {
                             },
                         ]}
                         id="carousel-2022"
+                        link = ""
+                        linkName = ""
                     />
                 </div>
             </div>
