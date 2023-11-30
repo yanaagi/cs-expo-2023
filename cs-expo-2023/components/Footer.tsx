@@ -32,15 +32,19 @@ const Footer: React.FC = () => {
                          {/*"/events/cs-expo"*/}
                     <span className="font-bold hover:text-coral-pink cursor-pointer">CS Expo</span>
                     </Link>
-                    <a href="/progress">
+                    <a href="/events/cs-expo#cs-expo-about">
                          {/*"/events/cs-expo#cs-expo-about"*/}
                     <span className="hover:text-coral-pink cursor-pointer">About</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/events/cs-expo#cs-expo-panelists">
                          {/*"/events/cs-expo#cs-expo-panelists"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Panelists</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/events/cs-expo#cs-expo-speakers">
+                         {/*"/events/cs-expo#cs-expo-speakers"*/}
+                    <span className="hover:text-coral-pink cursor-pointer">Speakers</span>
+                    </a>
+                    <a href="/events/cs-expo#cs-expo-gallery">
                          {/*"/events/cs-expo#cs-expo-gallery"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Gallery</span>
                     </a>

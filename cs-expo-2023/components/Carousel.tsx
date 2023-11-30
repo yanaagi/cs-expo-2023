@@ -13,6 +13,8 @@ interface CarouselProps {
     description: string;
     slides: Slide[];
     id: string;
+    link: string;
+    linkName: string;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -20,6 +22,8 @@ const Carousel: React.FC<CarouselProps> = ({
     description,
     slides,
     id,
+    link,
+    linkName
 }) => {
     useEffect(() => {
         new Glide(`#${id}`, {
@@ -34,7 +38,10 @@ const Carousel: React.FC<CarouselProps> = ({
         <div className="grid grid-cols-12 mt-8">
             <div className="col-span-12 lg:col-span-3">
                 <h1 className="font-bold text-5xl">{title}</h1>
-                <p className="font-medium pe-12 pb-10">{description}</p>
+                <p className="font-medium pe-12">{description} </p>
+                <a href={link} className="font-medium text-coral-pink">
+                    {linkName}
+                </a>
             </div>
             <div className="col-span-12 lg:col-span-9 relative">
                 <div className={`${id} glide`} id={id}>
