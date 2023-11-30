@@ -96,8 +96,11 @@ const EventsDevDay = () => {
                     panelOrSpeaker="PANELISTS"
                 />
                 <section id="cs-expo-speakers">
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+    
                 <SpeakerPanelistLayout
                     speakerNames={speakerNames1}
                     speakerProfession={speakerProfession1}
@@ -108,6 +111,9 @@ const EventsDevDay = () => {
                 />
                    <div className="mx-4 lg:mx-11">
                    <section id="cs-expo-gallery">
+                   <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
                         PREVIOUS CS EXPO
                     </h1>
