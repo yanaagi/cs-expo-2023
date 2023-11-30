@@ -137,7 +137,7 @@ const defaultMenu = () => {
                                    Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                              <Link href="/events/cs-expo" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    CS Expo {/** /events/cs-expo */}
                               </Link>
 
@@ -204,7 +204,7 @@ const defaultMenu = () => {
                                    Dev Day {/** /events/dev-day */}
                               </Link>
 
-                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                              <Link href="/events/cs-expo" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
                                    CS Expo {/** /events/cs-expo */}
                               </Link>
 
