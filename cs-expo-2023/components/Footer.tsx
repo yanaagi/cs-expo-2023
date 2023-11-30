@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           <div className="md:justify-center w-full mx-auto flex px-6 py-4 max-sm:grid grid-cols-2 gap-2">
 
                <div className="flex flex-col">
-                    <Link href="/progress">
+                    <Link href="/events/cs-expo">
                          {/*"/events/cs-expo"*/}
                     <span className="font-bold hover:text-coral-pink cursor-pointer">CS Expo</span>
                     </Link>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                     <Link href="/projects">
                     <span className="font-bold hover:text-coral-pink cursor-pointer">Projects</span>
                     </Link>
-                    <a href="/progress">
+                    <a href="/projects/hall-of-fame">
                          {/*"/projects/hall-of-fame"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Hall of Fame</span>
                     </a>

@@ -163,7 +163,7 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/progress" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
+                              <Link href="/projects/hall-of-fame" className="block px-4 py-2 hover:text-coral-pink" onClick={handleDropdownLinkClick}>
                                    Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
@@ -229,7 +229,7 @@ const defaultMenu = () => {
                                    Overview
                               </Link>
 
-                              <Link href="/progress" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
+                              <Link href="/projects/hall-of-fame" onClick={handleDropdownLinkClick} className='hover:text-coral-pink'>
                                    Hall of Fame {/** /projects/hall-of-fame */}
                               </Link>
 
