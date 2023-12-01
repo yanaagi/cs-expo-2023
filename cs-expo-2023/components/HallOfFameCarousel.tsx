@@ -142,14 +142,14 @@ const Carousel: React.FC<CarouselProps> = ({
                             className={`text-5xl text-[var(--coral-pink)] cursor-pointer m-2 ${carouselDown}`}
                         />
                     </div>
-                    <div className="col-span-12 lg:col-span-1 grid grid-cols-3 lg:grid-cols-3 md:ms-8">
+                    <div className="col-span-12 lg:col-span-1 grid grid-cols-3 lg:grid-cols-3 mx-8">
                         <div className="col-span-2 flex flex-col md:pe-6">
                             <div className="flex justify-start">
                                 <h1
-                                    className={`hall-of-fame-header font-bold h-36 w-full md:text-right ms-12 md:ms-0 me-4 md:me-0`}
+                                    className={`hall-of-fame-header font-bold h-36 w-full text-left lg:text-right`}
                                     style={{
                                         fontSize: titleSize,
-                                        lineHeight: "1.1",
+                                        lineHeight: "1",
                                     }}
                                 >
                                     {title}
@@ -167,7 +167,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </div>
 
                         <div className="col-span-1 flex flex-col md:ms-4">
-                            <div className="flex justify-left">
+                            <div className="flex justify-end">
                                 <h1 className="hall-of-fame-header font-bold md:text-xl flex items-center">
                                     EXPO&nbsp;
                                     <span className="text-[var(--coral-pink)]">
@@ -179,7 +179,7 @@ const Carousel: React.FC<CarouselProps> = ({
                                     </span>
                                 </h1>
                             </div>
-                            <div className="flex-grow mt-4 ms-3 hidden lg:block">
+                            <div className="flex-grow mt-4 hidden lg:block">
                                 <div className="w-0.5 h-full bg-black"></div>
                             </div>
                         </div>
