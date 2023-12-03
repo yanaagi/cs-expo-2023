@@ -228,7 +228,7 @@ export default function Home() {
                 will be represented by a member of their own choosing, with awards granted for\n
                 outstanding research and innovation. This event will also feature talks from key\n
                 figures in tech, providing a medium for healthy discourse about current trends.`}
-                button="/progress"
+                button="/events/cs-expo"
             />
 
             <HomeHeader
