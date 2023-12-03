@@ -42,7 +42,6 @@ const Partners: NextPage = () => {
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>
         </div>
-      <CircularSidebar />
     </main>
   );
 }
