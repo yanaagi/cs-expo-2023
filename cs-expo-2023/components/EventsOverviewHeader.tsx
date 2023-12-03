@@ -16,7 +16,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   const detailclassName: string = 'text-base font-bold bg-transparent flex my-4 justify-center items-center text-coral-pink';
 
   return (
-    <div className='flex flex-col pt-[5%] xs:pt-0'>
+    <div className='flex flex-col pt-[1%] xs:pt-20'>
       <div className='flex flex-col'>
         {title.map((word, index) => (
           <p
@@ -38,17 +38,17 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
           ))}
           {currentEvent === 0 && <p className="mb-14"></p>}
           {currentEvent === 1 && (
-          <Link href="/progress" className={detailclassName}>
+          <Link href="/events/cs-expo" className={detailclassName}>
             View event details &gt;
           </Link>
         )}
         {currentEvent === 2 && (
-          <Link href="/progress" className={detailclassName}>
+          <Link href="/events/dev-day" className={detailclassName}>
             View event details &gt;
           </Link>
         )}
         {currentEvent === 3 && (
-          <Link href="/progress" className={detailclassName}>
+          <Link href="/events/committees" className={detailclassName}>
             View event details &gt;
           </Link>
         )}

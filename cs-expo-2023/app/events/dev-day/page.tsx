@@ -6,7 +6,7 @@ import PhotoComponent from "@/components/PhotoComponent";
 import AboutComponent from "@/components/AboutComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from '@/speakers.json'; 
+import panelistsData from "@/speakers.json";
 
 const EventsCSExpo = () => {
     const [currentButton, setCurrentButton] = useState(1);
@@ -18,11 +18,11 @@ const EventsCSExpo = () => {
 
     const speakers = panelistsData.speakers;
 
-    const speakerNames = speakers.map(panelist => panelist.name);
-    const speakerProfession = speakers.map(panelist => panelist.profession);
-    const intOrExt = speakers.map(panelist => panelist.intOrExt);
-    const description = speakers.map(panelists => panelists.description);
-    const photo = speakers.map(panelists => panelists.photo);
+    const speakerNames = speakers.map((panelist) => panelist.name);
+    const speakerProfession = speakers.map((panelist) => panelist.profession);
+    const intOrExt = speakers.map((panelist) => panelist.intOrExt);
+    const description = speakers.map((panelists) => panelists.description);
+    const photo = speakers.map((panelists) => panelists.photo);
 
     const changeSpeaker = (direction: string) => {
         if (direction === "above") {
@@ -37,11 +37,12 @@ const EventsCSExpo = () => {
     };
 
     return (
-        <main className="flex min-h-screen flex-col mt-0 p-1 sm:mt-14 sm:p-8 lg:p-12">
+        <main className="flex min-h-screen flex-col p-1 sm:mt-14 sm:p-8 lg:p-12">
             <div className="my-24 mx-2 sm:mx-24 sm:my-3 border-l border-black">
                 <PhotoComponent
                     currentButton={currentButton}
                     customText="Join us at DevDay, the first event of CS EXPO 2023 V2.0. Discover the tech world as experts talk about ideas, tips, and help students."
+                    filePath="/events/dev-day/page.tsx"
                 />
                 <ButtonComponent
                     currentButton={currentButton}
@@ -50,12 +51,20 @@ const EventsCSExpo = () => {
                 <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mb-10 sm:mb-20">
                     DEV DAY
                 </h1>
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="dev-day-about">
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-20 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <AboutComponent
                     customText="DevDay is the official kick-off event of CS EXPO 2023 V2.0, happening on November 22, 2023. Respected thought leaders and industry professionals will grace the stage to share their experiences and shed light on what is required to galvanize a paradigm shift."
-                    sampleText="Sample Photo"
+                    imageSource="/dev-day/dev-day04.jpg"
+
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <section id="dev-day-speakers">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <SpeakerPanelistLayout
                     speakerNames={speakerNames}
                     speakerProfession={speakerProfession}
@@ -64,40 +73,70 @@ const EventsCSExpo = () => {
                     photo={photo}
                     panelOrSpeaker="SPEAKERS"
                 />
-                <hr className="border-t-1 border-black mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                 <section id="dev-day-gallery">
+                <hr className="border-t-1 border-white mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                </section>
+                <hr className="border-t-1 border-white mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
+                <hr className="border-t-1 border-black mt-12 mb-2 ml-4 sm:mb-4 sm:ml-4 md:ml-8 lg:ml-12" />
                 <div className="mx-4 lg:mx-11">
                     <h1 className="custom-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center mt-5 mb-10 sm:mb-20">
                         PREVIOUS DEV DAY
                     </h1>
-
-{/*                     
-                    <Carousel
-                        title="2022"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                        // Don't forget to change the type of the slides in the Carousel component when changing it to photos
-                        slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                        ]}
-                        id="carousel-2022"
-                    />
-
-                    
+                    {/* 2023 */}
                     <Carousel
                         title="2023"
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        description="Catalyzing Change in Society Through Cutting-Edge System Applications"
                         slides={[
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
-                            { backgroundColor: "var(--timberwolf)" },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-1.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-2.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-3.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-4.jpg",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2023/2023-5.jpg",
+                            },
                         ]}
                         id="carousel-2023"
-                    /> */}
+                        link = ""
+                        linkName = ""
+                    />
+                    <Carousel
+                        title="2022"
+                        description="Leveraging Communities to Greater Possibilities with Computing Technologies"
+                        slides={[
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-1.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-2.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-3.png",
+                            },
+                            {
+                                backgroundImage:
+                                    "/prev-dev-day/2022/2022-4.png",
+                            },
+                        ]}
+                        id="carousel-2022"
+                        link = ""
+                        linkName = ""
+                    />
                 </div>
             </div>
         </main>

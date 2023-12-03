@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
     AiOutlineLeft,
     AiOutlineRight,
@@ -9,10 +9,10 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import Glide from '@glidejs/glide';
+import Glide from "@glidejs/glide";
 
 interface Slide {
-    backgroundColor: string;
+    backgroundImage: string;
     ranking: string;
     group: string;
     thesis: string;
@@ -21,26 +21,30 @@ interface Slide {
 
 interface CarouselProps {
     title: string;
+    titleSize?: string;
     slides: Slide[];
-    perView?: number;
     id: string;
     carouselNumber: number;
     carouselUp: string;
     carouselDown: string;
     carouselUpTarget: string;
     carouselDownTarget: string;
+    carouselLeft: string;
+    carouselRight: string;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
     title,
+    titleSize,
     slides,
-    perView,
     id,
     carouselNumber,
     carouselUp,
     carouselDown,
     carouselUpTarget,
     carouselDownTarget,
+    carouselLeft,
+    carouselRight,
 }) => {
     useEffect(() => {
         // Navigation
@@ -50,7 +54,6 @@ const Carousel: React.FC<CarouselProps> = ({
         const targetDivDown = document.getElementById(carouselDownTarget);
 
         carouselUp?.addEventListener("click", () => {
-            console.log("up clicked");
             if (targetDivUp) {
                 const targetPosition = targetDivUp.offsetTop;
                 const headerHeight = 200; // Adjust this value as needed. The more the value, the less the scroll will be.
@@ -64,7 +67,6 @@ const Carousel: React.FC<CarouselProps> = ({
         });
 
         carouselDown?.addEventListener("click", () => {
-            console.log("down clicked");
             if (targetDivDown) {
                 const targetPosition = targetDivDown.offsetTop;
                 const headerHeight = 200; // Adjust this value as needed. The more the value, the less the scroll will be.
@@ -120,6 +122,11 @@ const Carousel: React.FC<CarouselProps> = ({
         glide.mount();
     }, []);
 
+    // Image hover
+    const [hoveredSlide, setHoveredSlide] = useState<number | undefined>(
+        undefined
+    );
+
     return (
         <div className="w-full max-w-[1300px] grid grid-cols-12 mt-16">
             <div className="relative col-span-12 lg:col-span-3 h-20 lg:h-3/4 flex flex-col">
@@ -135,17 +142,23 @@ const Carousel: React.FC<CarouselProps> = ({
                             className={`text-5xl text-[var(--coral-pink)] cursor-pointer m-2 ${carouselDown}`}
                         />
                     </div>
-                    <div className="col-span-12 lg:col-span-1 grid grid-cols-3 lg:grid-cols-3 md:ms-16">
+                    <div className="col-span-12 lg:col-span-1 grid grid-cols-3 lg:grid-cols-3 mx-8">
                         <div className="col-span-2 flex flex-col md:pe-6">
                             <div className="flex justify-start">
-                                <h1 className="hall-of-fame-header font-bold text-2xl md:text-2xl h-36 md:text-right ms-12 md:ms-0 me-4 md:me-0">
+                                <h1
+                                    className={`hall-of-fame-header font-bold h-36 w-full text-left lg:text-right`}
+                                    style={{
+                                        fontSize: titleSize,
+                                        lineHeight: "1",
+                                    }}
+                                >
                                     {title}
                                 </h1>
                             </div>
                             <div className="flex-grow relative">
                                 <Image
                                     src={"/halftone.png"}
-                                    className="mt-4 ms-2"
+                                    className="mt-4"
                                     layout="fill"
                                     objectFit="cover"
                                     alt="halftone"
@@ -154,7 +167,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </div>
 
                         <div className="col-span-1 flex flex-col md:ms-4">
-                            <div className="flex justify-left">
+                            <div className="flex justify-end">
                                 <h1 className="hall-of-fame-header font-bold md:text-xl flex items-center">
                                     EXPO&nbsp;
                                     <span className="text-[var(--coral-pink)]">
@@ -166,7 +179,7 @@ const Carousel: React.FC<CarouselProps> = ({
                                     </span>
                                 </h1>
                             </div>
-                            <div className="flex-grow mt-4 ms-3 hidden lg:block">
+                            <div className="flex-grow mt-4 hidden lg:block">
                                 <div className="w-0.5 h-full bg-black"></div>
                             </div>
                         </div>
@@ -183,16 +196,31 @@ const Carousel: React.FC<CarouselProps> = ({
                         <div className="glide__track" data-glide-el="track">
                             <ul className="glide__slides">
                                 {slides.map((slide, index) => (
-                                    <li key={index} className="glide__slide flex flex-col items-center justify-center">
+                                    <li
+                                        key={index}
+                                        className="glide__slide flex flex-col items-center justify-center"
+                                    >
                                         <div
                                             id={`slide-image-${id}`}
-                                            className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]"
-                                            style={{
-                                                backgroundColor:
-                                                    slide.backgroundColor ||
-                                                    "var(--timberwolf)",
-                                            }}
-                                        ></div>
+                                            key={index}
+                                            className="relative w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] overflow-hidden bg-[var(--timberwolf)]"
+                                            onMouseEnter={() =>
+                                                setHoveredSlide(index)
+                                            }
+                                            onMouseLeave={() =>
+                                                setHoveredSlide(undefined)
+                                            }
+                                        >
+                                            <img
+                                                src={slide.backgroundImage}
+                                                alt="image"
+                                                className={`w-full h-full transition-transform transform-gpu ${
+                                                    hoveredSlide === index
+                                                        ? "object-contain"
+                                                        : "object-cover"
+                                                }`}
+                                            />
+                                        </div>
                                         <div className="mt-4 p-4 sm:p-0">
                                             <div className="font-bold text-lg">
                                                 {slide.ranking}
@@ -230,7 +258,7 @@ const Carousel: React.FC<CarouselProps> = ({
                     >
                         <button
                             data-glide-dir="<"
-                            className="absolute top-24 md:top-36 left-3 sm:left-3.5 text-4xl sm:text-5xl font-bold"
+                            className={`absolute top-24 md:top-36 left-3 sm:left-3.5 text-4xl sm:text-5xl font-bold ${carouselLeft}`}
                         >
                             <span className="flex-auto">
                                 <AiOutlineLeft />
@@ -238,7 +266,7 @@ const Carousel: React.FC<CarouselProps> = ({
                         </button>
                         <button
                             data-glide-dir=">"
-                            className="absolute top-24 md:top-36 right-0 text-4xl sm:text-5xl font-bold"
+                            className={`absolute top-24 md:top-36 right-0 text-4xl sm:text-5xl font-bold ${carouselRight}`}
                         >
                             <span className="flex-auto">
                                 <AiOutlineRight />
