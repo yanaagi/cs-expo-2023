@@ -7,7 +7,7 @@
     "twitter": "https://twitter.com/partner1",
     "instagram": "https://instagram.com/partner1",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
-    "imagePath": "/kekw-kek.gif"
+    "imagePath": "/kekl.jpg"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
     "twitter": "https://twitter.com/partner3",
     "instagram": "https://instagram.com/partner3",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
-    "imagePath": "/kekw.jpg"
+    "imagePath": "/kekl.jpg"
   },
   {
     "id": 4,
@@ -47,7 +47,7 @@
     "twitter": "https://twitter.com/partner5",
     "instagram": "https://instagram.com/partner5",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
-    "imagePath": "/kekw.jpg"
+    "imagePath": "/kekl.jpg"
   },
   {
     "id": 6,
@@ -59,6 +59,36 @@
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
     "imagePath": "/kekl.jpg"
   },    
+  {
+    "id": 6,
+    "name": "Partner 6",
+    "Web": "https://partner6.com",
+    "facebook": "https://facebook.com/partner6",
+    "twitter": "https://twitter.com/partner6",
+    "instagram": "https://instagram.com/partner6",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Partner 6",
+    "Web": "https://partner6.com",
+    "facebook": "https://facebook.com/partner6",
+    "twitter": "https://twitter.com/partner6",
+    "instagram": "https://instagram.com/partner6",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Partner 6",
+    "Web": "https://partner6.com",
+    "facebook": "https://facebook.com/partner6",
+    "twitter": "https://twitter.com/partner6",
+    "instagram": "https://instagram.com/partner6",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },
   {
     "id": 6,
     "name": "Partner 6",

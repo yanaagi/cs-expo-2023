@@ -10,14 +10,15 @@ const Partners: NextPage = () => {
   const partners = partnerArray.map(partnersData => partnersData.imagePath); // Assuming 'imagePath' is the correct property
 
   return (
-    <main className="p-24">
-<div className="ms-28 ml-[-4rem] sm:ml-0 lg:ml-28">
-  <h1 className="font-regular text-[clamp(48px,3vw,72px)] m-0 mb-[-2.5rem] sm:mb-0 lg:mb-[-2.5rem]">our</h1>
-  <h2 className="custom-font text-[clamp(48px,10vw,72px)] m-0 mt-[-1rem] sm:mt-0 lg:mt-[-1rem]">PARTNERS</h2>
-  <div className="flex items-center justify-center p-24">
-    <PartnerIconsLayout partners={partnerArray} />
-  </div>
-</div>
+    <main className="pt-24">
+      <div className="ms-28 ml-[-4rem] sm:ml-0 mx-12 pt-10">
+        <h1 className="font-regular text-[clamp(48px,3vw,72px)] m-0 mb-[-2.5rem] sm:mb-0 lg:mb-[-2.5rem]">our</h1>
+        <h2 className="custom-font text-[clamp(48px,10vw,72px)] m-0 mt-[-1rem] sm:mt-0 lg:mt-[-1rem]">PARTNERS</h2>
+      </div>
+
+      <div className="">
+          <PartnerIconsLayout partners={partnerArray} />
+      </div>
 
         <section id="partners-major">
         <h2 id="major" className="custom-font text-[clamp(48px,5vw,72px)] m-0  flex justify-center">MAJOR PARTNERS</h2>
@@ -41,7 +42,6 @@ const Partners: NextPage = () => {
             <AlternatingPartnersLayout partners={partnerArray} />
           </div>
         </div>
-      <CircularSidebar />
     </main>
   );
 }
