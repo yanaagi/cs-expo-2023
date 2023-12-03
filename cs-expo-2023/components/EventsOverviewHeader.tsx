@@ -16,7 +16,7 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({ title, description 
   const detailclassName: string = 'text-base font-bold bg-transparent flex my-4 justify-center items-center text-coral-pink';
 
   return (
-    <div className='flex flex-col pt-[5%] xs:pt-0'>
+    <div className='flex flex-col pt-[1%] xs:pt-20'>
       <div className='flex flex-col'>
         {title.map((word, index) => (
           <p
