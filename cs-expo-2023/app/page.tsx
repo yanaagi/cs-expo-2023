@@ -5,7 +5,7 @@ import HomeHeader from "@/components/HomeOverviewHeader";
 
 export default function Home() {
     const [text, setText] = useState('');
-    const textElementRef = useRef<HTMLDivElement>(null); // Add type assertion here
+    const textElementRef = useRef<HTMLDivElement>(null);
     let timer: NodeJS.Timeout | null = null;
   
     useEffect(() => {
@@ -45,11 +45,6 @@ export default function Home() {
         if (timer) clearInterval(timer);
       };
     }, []);
-
-    // Reset the typewriter animation
-    const resetTypewriterAnimation = () => {
-        setText("");
-    };
 
     const handleDetailsToggle = () => {
         // Disable details toggle
@@ -93,10 +88,10 @@ export default function Home() {
                 >
                     <div
                         id="details-down-button"
-                        className="cursor-pointer absolute inset-0 z-20 h-full flex justify-center items-end opacity-100"
+                        className="cursor-pointer absolute inset-0 h-full flex justify-center items-end opacity-100"
                     >
                         <svg
-                            className="xl:scale-[-1] min-[320px]:scale-[-1] h-20 rotate-180 transform text-coral-pink group-open:rotate-0"
+                            className="xl:scale-[-1] min-[320px]:scale-[-1] h-20 z-10 rotate-180 transform text-coral-pink group-open:rotate-0"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -114,7 +109,7 @@ export default function Home() {
 
                     <div
                         id="details-blur"
-                        className="absolute -bottom-4 w-full bg-white h-20 blur-lg z-10 opacity-100"
+                        className="absolute -bottom-4 w-full bg-white h-20 blur-lg opacity-100"
                     ></div>
 
                     <div className="mx-4 lg:mx-12 grid grid-cols-8 gap-y-2 gap-y-2">
@@ -233,7 +228,7 @@ export default function Home() {
                 will be represented by a member of their own choosing, with awards granted for\n
                 outstanding research and innovation. This event will also feature talks from key\n
                 figures in tech, providing a medium for healthy discourse about current trends.`}
-                button="/progress"
+                button="/events/cs-expo"
             />
 
             <HomeHeader
