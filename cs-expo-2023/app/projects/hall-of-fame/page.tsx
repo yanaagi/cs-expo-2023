@@ -229,7 +229,7 @@ const HallOfFame = () => {
                     {
                         backgroundImage:
                             "/hall-of-fame/best-poster/1st-place-1-min.webp",
-                        ranking: "1st Place",
+                        ranking: "1st Place (TIE)",
                         group: "Engeenz",
                         thesis: "RECOGNIZANCE: An Instagram-Based Recommender System using Naïve Bayes Classifier with TensorFlow for T-Cup-Zone in the City of Manila",
                         link: "/projects/Engeenz",
@@ -237,7 +237,7 @@ const HallOfFame = () => {
                     {
                         backgroundImage:
                             "/hall-of-fame/best-poster/1st-place-2-min.webp",
-                        ranking: "1st Place",
+                        ranking: "1st Place (TIE)",
                         group: "DEoS",
                         thesis: "RevSentinel: A Browser Extension for Identifying Relevant Product Reviews on Online Shopping Platforms Using Image and Natural Language Processing Algorithms",
                         link: "/projects/DEoS",
