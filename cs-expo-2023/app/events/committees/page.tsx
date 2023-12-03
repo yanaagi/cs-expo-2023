@@ -13,6 +13,19 @@ const EventsCommittees = () => {
         />
 
 <CommitteesGrid/>
+
+<div id = "ProjectHead">
+    <CommitteesPic
+          committeeName='PROJECT HEAD'
+          committeePic={[
+            '/group-images/Array Co/5.jpg'
+          ]}
+          memberName={[
+            'Micah Sophia Q. Tan'
+          ]}
+          />
+</div>
+
 <div id="PROGRAMS COMMITTEE">
 <CommitteesPic 
           committeeName='PROGRAMS COMMITTEE'

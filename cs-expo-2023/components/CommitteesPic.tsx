@@ -9,7 +9,7 @@ interface CommitteesPicProps {
 
 const EventsCommittees: React.FC<CommitteesPicProps> = ({committeeName, committeePic, memberName}) => {
   return (
-  <main className="flex min-h-screen flex-col px-10 -mx-10 pt-10">
+  <main className="flex pb-5 flex-col px-10 -mx-10 pt-10">
   
    {/* WEB VIEW */}
    <div className="mt-5 justify-center hidden lg:block">
