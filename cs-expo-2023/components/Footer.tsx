@@ -87,15 +87,15 @@ const Footer: React.FC = () => {
                          {/*"/partners"*/}
                     <span className="font-bold hover:text-coral-pink cursor-pointer">Partners</span>
                     </Link>
-                    <a href="/progress">
+                    <a href="/partners">
                          {/*"/partners#partners-major"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Major</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/partners">
                          {/*"/partners#partners-minor"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Minor</span>
                     </a>
-                    <a href="/progress">
+                    <a href="/partners">
                          {/*"/partners#partners-media"*/}
                     <span className="hover:text-coral-pink cursor-pointer">Media</span>
                     </a>

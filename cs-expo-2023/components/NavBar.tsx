@@ -174,7 +174,7 @@ const defaultMenu = () => {
                     )}
                </div>
 
-               <Link href="/progress" className={`cursor-pointer mx-4 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
+               <Link href="/partners" className={`cursor-pointer mx-4 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                     Partners {/** /partners */}
                </Link>
           </>
@@ -240,7 +240,7 @@ const defaultMenu = () => {
                     )}
                </div>
 
-               <Link href="/progress" className="cursor-pointer hover:text-coral-pink">
+               <Link href="/partners" className="cursor-pointer hover:text-coral-pink">
                     Partners {/** /partners */}
                </Link>
           </div>
