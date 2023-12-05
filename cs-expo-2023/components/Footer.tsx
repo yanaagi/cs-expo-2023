@@ -83,21 +83,29 @@ const Footer: React.FC = () => {
                </div>
 
                <div className="flex flex-col pr-5 sm:pl-10">
-                    <Link href="/progress">
+                    <Link href="/partners">
                          {/*"/partners"*/}
                     <span className="font-bold hover:text-coral-pink cursor-pointer">Partners</span>
                     </Link>
-                    <a href="/partners">
+                    <a href="/partners#gold-spons">
                          {/*"/partners#partners-major"*/}
-                    <span className="hover:text-coral-pink cursor-pointer">Major</span>
+                    <span className="hover:text-coral-pink cursor-pointer">Gold Sponsors</span>
                     </a>
-                    <a href="/partners">
+                    <a href="/partners#bronze-spons">
                          {/*"/partners#partners-minor"*/}
-                    <span className="hover:text-coral-pink cursor-pointer">Minor</span>
+                    <span className="hover:text-coral-pink cursor-pointer">Bronze Sponsors</span>
                     </a>
-                    <a href="/partners">
+                    <a href="/partners#partners-media">
                          {/*"/partners#partners-media"*/}
-                    <span className="hover:text-coral-pink cursor-pointer">Media</span>
+                    <span className="hover:text-coral-pink cursor-pointer">Media Partners</span>
+                    </a>
+                    <a href="/partners#partners-major">
+                         {/*"/partners#partners-media"*/}
+                    <span className="hover:text-coral-pink cursor-pointer">Major Partners</span>
+                    </a>
+                    <a href="/partners#partners-minor">
+                         {/*"/partners#partners-media"*/}
+                    <span className="hover:text-coral-pink cursor-pointer">Minor Partners</span>
                     </a>
 
      
