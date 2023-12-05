@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "JournalOnline",
+      "Web": "https://partner1.com",
+      "facebook": "https://www.facebook.com/JournalOnlinePH/",
+      "twitter": "https://twitter.com/partner1",
+      "instagram": "https://instagram.com/partner1",
+      "intro": "",
+      "imagePath": "/journal-ol-logo.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Gadgets",
+        "Web": "https://partner1.com",
+        "facebook": "https://www.facebook.com/GadgetsMagazine/",
+        "twitter": "https://twitter.com/partner1",
+        "instagram": "https://instagram.com/partner1",
+        "intro": "",
+        "imagePath": "/gadgets-mag-logo.jpg"
+      },    
+      {
+        "id": 3,
+        "name": "Dyaryo Milenyo",
+        "Web": "https://partner1.com",
+        "facebook": "https://www.facebook.com/diyaryomilenyo/",
+        "twitter": "https://twitter.com/partner1",
+        "instagram": "https://instagram.com/partner1",
+        "intro": "",
+        "imagePath": "/diyaryo-milenyo-logo.jpg"
+      }
+]

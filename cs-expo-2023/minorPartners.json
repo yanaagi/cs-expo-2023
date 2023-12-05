@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "PUP The Programmers' Guild",
+      "Web": "https://partner1.com",
+      "facebook": "https://www.facebook.com/PUPTPG",
+      "twitter": "https://twitter.com/partner1",
+      "instagram": "https://instagram.com/partner1",
+      "intro": "",
+      "imagePath": "/pup-guild-logo.jpg"
+    },
+    {
+        "id": 1,
+        "name": "PUP Association of Students for Computer Intelligence Integration",
+        "Web": "https://partner1.com",
+        "facebook": "https://www.facebook.com/PUPASCII",
+        "twitter": "https://twitter.com/partner1",
+        "instagram": "https://instagram.com/partner1",
+        "intro": "",
+        "imagePath": "/pupascii-logo.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Computer Society of the Atheneo",
+        "Web": "https://partner1.com",
+        "facebook": "https://www.facebook.com/CompSAteneo",
+        "twitter": "https://twitter.com/partner1",
+        "instagram": "https://instagram.com/partner1",
+        "intro": "",
+        "imagePath": "/csa-logo.jpg"
+      }
+]

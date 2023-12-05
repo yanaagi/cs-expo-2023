@@ -1,0 +1,112 @@
+[
+    {
+      "id": 1,
+      "name": "SITES CVSU",
+      "Web": "https://partner1.com",
+      "facebook": "https://www.facebook.com/cvsu.elex.sites",
+      "twitter": "https://twitter.com/partner1",
+      "instagram": "https://instagram.com/partner1",
+      "intro": "",
+      "imagePath": "/cvsu-sites-logo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "PUP Taguig Computer Society",
+      "Web": "https://partner2.com",
+      "facebook": "https://www.facebook.com/PUPTCS",
+      "twitter": "https://twitter.com/partner2",
+      "instagram": "https://instagram.com/partner2",
+      "intro": "",
+      "imagePath": "/cs-pup-logo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "PLM - Institute of Computer Engineering of the Philippines",
+      "Web": "https://partner3.com",
+      "facebook": "https://www.facebook.com/ICpEP.sePLM",
+      "twitter": "https://twitter.com/partner3",
+      "instagram": "https://instagram.com/partner3",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/icpep-plm-logo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Junior Philippine Computer Society - Asia Pacific College",
+      "Web": "https://partner4.com",
+      "facebook": "https://www.facebook.com/JPCSAPC",
+      "twitter": "https://twitter.com/partner4",
+      "instagram": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/jpcs-apc-logo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "IECEP - MUSC (Computer Engineering Student Society)",
+      "Web": "https://partner5.com",
+      "facebook": "https://www.facebook.com/iecep.musc",
+      "twitter": "https://twitter.com/partner5",
+      "instagram": "https://instagram.com/partner5",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/iecep-musc-logo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "FEU Tech ACM",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/feutechACM",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/tech-acm-logo.jpg"
+    },    
+    {
+      "id": 6,
+      "name": "Computer Science Student Organization - CSSO",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/CSSO2016",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/csso-logo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Computer Science Student Association - CAS",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/tatakComsa",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/comssa-logo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "COMPILE iACADEMY",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/iacademycompile",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/compile-logo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Adamson Computer Science Students Society (ACOMSS)",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/ACOMSSofficial",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/acomms-logo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Academic Consortium of Computer Science Students (BU ACCESS)",
+      "Web": "https://partner6.com",
+      "facebook": "https://www.facebook.com/ACCeSSBicolU",
+      "twitter": "https://twitter.com/partner6",
+      "instagram": "https://instagram.com/partner6",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+      "imagePath": "/bu-access-logo.jpg"
+    }
+  ]

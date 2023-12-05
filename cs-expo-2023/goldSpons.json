@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "name": "CGI",
+      "Web": "https://cgi.com",
+      "facebook": "https://www.facebook.com/connect2CGI/",
+      "twitter": "https://twitter.com/cgi_global",
+      "instagram": "https://www.instagram.com/qubesmartlockers/",
+      "intro": "Founded in 1976, CGI is a global IT and business process services provider delivering high-quality business consulting, systems integration and outsourcing services. With 91,500 professionals serving clients from hundreds of locations worldwide, CGI has an industry-leading track record of on-time, within budget projects, aligning our teams with clients’ business strategies to achieve top-to-bottom line results. \n\nWith global delivery capabilities in centers located across five continents, we offer our clients the best value, advantages of scale and operational efficiencies, as well as the ability to reduce their time to market.",
+      "imagePath": "cgi-logo.png"
+    },
+    {
+      "id": 2,
+      "name": "Qube",
+      "Web": "https://www.qubesmartlockers.com",
+      "facebook": "https://www.facebook.com/qubesmartlockers/",
+      "twitter": "https://twitter.com/qubesmartlockers",
+      "instagram": "https://www.instagram.com/qubesmartlockers/",
+      "intro": "QUBE Smart Technology Corporation is an IoT-Based company that offers innovative solutions to help expedite businesses and customers into the future-ready world.",
+      "imagePath": "qube-logo.png"
+    }
+]
