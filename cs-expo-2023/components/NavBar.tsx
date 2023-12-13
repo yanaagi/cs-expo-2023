@@ -177,6 +177,10 @@ const defaultMenu = () => {
                <Link href="/partners" className={`cursor-pointer mx-4 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
                     Partners {/** /partners */}
                </Link>
+
+               <Link href="/article" className={`cursor-pointer mx-2 font-medium hover:text-coral-pink ${isNavbarAtTop ? 'text-eerie-black' : 'text-white'}`}>
+                    Article {/** /partners */}
+               </Link>
           </>
      );};
 
@@ -242,6 +246,10 @@ const defaultMenu = () => {
 
                <Link href="/partners" className="cursor-pointer hover:text-coral-pink">
                     Partners {/** /partners */}
+               </Link>
+
+               <Link href="/article" className="cursor-pointer hover:text-coral-pink">
+                    Article {/** /partners */}
                </Link>
           </div>
      );
